@@ -32,7 +32,7 @@ public class PromptBox {
         if (text.equals("查看原因")) {
             System.out.println(text + ":提示框打开");
             driver.findElement(By.cssSelector("a[class=aui_close]")).click();
-            driver.manage().timeouts().implicitlyWait(2,TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         } else {
             System.out.println("查看原因提示框打开出错");
         }
@@ -75,11 +75,11 @@ public class PromptBox {
                     driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
                     //获取表单中的所有数据，通过id进行比较。如果相等然后在比较排序值是否相等，相等说明通过了
-                    formRecapture(number,split[0]);
+                    formRecapture(number, split[0]);
 
                 } else {
                     //点击取消
-                    Preservation.getButtonCssSelector("button[class=sortNone][type=button]");
+                   new  Preservation().buttonCssSelector("button[class=sortNone][type=button]");
                     SystemOut.getStringOut("用例显示不需要进行输入操作");
                 }
             } else {
@@ -132,14 +132,14 @@ public class PromptBox {
     }
 
     //获取表单中的所有数据，通过id进行比较。如果相等然后在比较排序值是否相等，相等说明通过了
-    private void formRecapture(String number,String split){
-        //通过id进行筛选
-        new InfoSelect().getGoodsStatus(driver, "select[id=by][name=by]", "商品编号");
+    private void formRecapture(String number, String split) throws InterruptedException {
+        By by = By.cssSelector("select[id=by][name=by]");
+        //通过css进行筛选
+        new InfoSelect().categoryText(driver, by, "商品编号");
         driver.findElement(By.cssSelector("input[id=val][type=search]")).sendKeys(number);
 
         //点击搜索按钮
-        driver.findElement(By.xpath(".//div[@class='col-xs-12']/form/button")).click();
-
+        new Preservation().buttonXpath(".//div[@class='col-xs-12']/form/button");
         String colist = driver.findElement(By.xpath("//*[@id='sample-table-1']/tbody/tr[1]/td[7]")).getText();
 
         if (colist.equals(split)) {
@@ -149,8 +149,9 @@ public class PromptBox {
         }
 
         //选择之后恢复界面初始样
-         driver.manage().timeouts().implicitlyWait(2,TimeUnit.SECONDS);
-        new InfoSelect().getGoodsStatus(driver, "select[id=by][name=by]", "商品名称");
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        By byCss = By.cssSelector("select[id=by][name=by]");
+        new InfoSelect().categoryText(driver, byCss, "商品名称");
         driver.findElement(By.cssSelector("input[id=val][type=search]")).clear();
     }
 

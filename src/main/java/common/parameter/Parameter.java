@@ -9,17 +9,17 @@ public class Parameter {
     private String account = "111";
     //    登录的密码
     private String passWord = "123456";
-    //订货的密码
+    //  大货的密码
     private String supplyPassWord = "33";
 
     //    登录的账号
-    private String bossAccount = "panhui";
+    private String bossAccount = "--";
     //    登录的密码
-    private String bossPassWord = "123456";
+    private String bossPassWord = "//";
 
     //    商品总数的计算
     private int releaseSun;
-    //    店铺分组的计算
+    //    分组的计算
     private int groupSun;
 
     public String getAccount() {

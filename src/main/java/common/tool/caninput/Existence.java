@@ -15,94 +15,101 @@ import java.util.NoSuchElementException;
  */
 public class Existence {
 
-    private static WebDriver driver = FoxDriver.getFoxDriver();
+    private WebDriver driver = FoxDriver.getFoxDriver();
 
     //    根据传入的ID来判断该元是否存在
-    public  static  boolean getId(String id){
+    public boolean elementId(String id) {
 
         try {
             driver.findElement(By.id(id));
             System.out.println(id + "：该元素存在");
-            return  true;
-        }
-        catch (Exception x){
+            return true;
+        } catch (Exception x) {
             System.out.println(id + "：该元素不存在");
-            return  false;
+            return false;
         }
     }
 
     //    根据传入的tagname来判断该元是否存在
-    public  static  boolean getTagName(String tagName){
+    public boolean elementTagName(String tagName) {
 
         try {
             driver.findElement(By.tagName(tagName));
             System.out.println(tagName + "：该元素存在");
-            return  true;
-        }
-        catch (Exception x){
+            return true;
+        } catch (Exception x) {
             System.out.println(tagName + "：该元素不存在");
-            return  false;
+            return false;
         }
     }
 
     //    根据传入的linkText来判断该元是否存在
-    public  static  boolean getLinkText(String linkText){
+    public boolean elementLinkText(String linkText) {
 
         try {
             driver.findElement(By.linkText(linkText));
             System.out.println(linkText + "：该元素存在");
-            return  true;
-        }
-        catch (Exception x){
+            return true;
+        } catch (Exception x) {
             System.out.println(linkText + "：该元素不存在");
-            return  false;
+            return false;
         }
     }
 
     //    根据传入的name来判断该元是否存在
-    public  static  boolean getNamw(String name){
+    public boolean elementName(String name) {
 
         try {
             driver.findElement(By.name(name));
             System.out.println(name + "：该元素存在");
-            return  true;
-        }
-        catch (Exception x){
+            return true;
+        } catch (Exception x) {
             System.out.println(name + "：该元素不存在");
-            return  false;
+            return false;
         }
     }
 
     //    根据传入的classname来判断该元是否存在
-    public  static  boolean getClassName(String className){
+    public boolean elementClassName(String className) {
 
         try {
             driver.findElement(By.className(className));
             System.out.println(className + "：该元素存在");
-            return  true;
-        }
-        catch (Exception x){
+            return true;
+        } catch (Exception x) {
             System.out.println(className + "：该元素不存在");
-            return  false;
+            return false;
+        }
+    }
+
+    //    根据传入的classname来判断该元是否存在
+    public boolean elementCssSelector(String css) {
+
+        try {
+            driver.findElement(By.cssSelector(css));
+            System.out.println(css + "：该元素存在");
+            return true;
+        } catch (Exception x) {
+            System.out.println(css + "：该元素不存在");
+            return false;
         }
     }
 
     //    根据传入的xpath来判断该元是否存在
-    public  static  boolean getXPath(String xpath){
+    public boolean elementXPath(String xpath) {
 
         try {
             driver.findElement(By.xpath(xpath));
             System.out.println(xpath + "：该元素存在");
-            return  true;
-        }
-        catch (Exception x){
+            return true;
+        } catch (Exception x) {
             System.out.println(xpath + "：该元素不存在");
-            return  false;
+            return false;
         }
     }
 
     //每500毫秒扫描一次页面，检查元素是否存在，存在的话返回true，不存在继续等到，直到等到时间超过2秒报错
-    public static boolean waitForElement(final By elementLocator) {
+    public boolean waitForElement(final By elementLocator) {
 
         try {
             WebDriverWait driverWait = (WebDriverWait) new WebDriverWait(driver, 2, 500).ignoring(

@@ -5,6 +5,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
 import java.io.File;
 import java.net.URL;
 import java.net.MalformedURLException;
@@ -21,16 +23,16 @@ public class app {
     //before Test Annotation makes a java function to run every time before a TestNG test case
     @BeforeTest
     protected void createAppiumDriver() throws MalformedURLException, InterruptedException {
-
+        System.out.println("666");
         //relative path to apk file
         final File classpathRoot = new File(System.getProperty("user.dir"));
-        final File appDir = new File(classpathRoot, "C:\\Users\\Administrator\\Desktop\\");
+        final File appDir = new File(classpathRoot, "E:\\drivers");
         final File app = new File(appDir, "weixin6510android1080.apk");
 
         //setting up desired capability
         DesiredCapabilities caps = new DesiredCapabilities();
         //指定测试机的ID,通过adb命令`adb devices`获取
-        caps.setCapability("browserName", "NX511J");
+        caps.setCapability("browserName", "72836533");
         //指定测试平台
         caps.setCapability("platform", "ANDROID");
         caps.setCapability("platformVersion", "5.1.1");
@@ -52,10 +54,14 @@ public class app {
         wait = new WebDriverWait(driver, 10);
     }
 
+    @Test
+    public void setUp(){
+        System.out.println("开始");
+    }
     //After Test Annotation makes a java function to run every time after a TestNG test case
     @AfterTest
     public void afterTest(){
-
+        System.out.println("结束");
         //quit the driver
         driver.quit();
     }

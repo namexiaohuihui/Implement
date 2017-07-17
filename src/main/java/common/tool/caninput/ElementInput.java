@@ -14,11 +14,8 @@ import static java.lang.Thread.sleep;
  */
 public class ElementInput {
 
-    private WebDriver driver;
+    private WebDriver driver = FoxDriver.getWebDrivaer();
 
-    public ElementInput() {
-        driver = FoxDriver.getWebDrivaer();
-    }
 
     //    获取元素对象并点击输入内容
     public void accordingToId(String id, String content) throws InterruptedException {
@@ -52,7 +49,7 @@ public class ElementInput {
 
     //  直接通过对象然后输入内容
     private void operation(WebElement cfmpassword, String content) throws InterruptedException {
- //        点击元素
+        //        点击元素
         cfmpassword.click();
 //        清空输入框里面的内容
         cfmpassword.clear();
