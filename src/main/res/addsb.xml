@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite1"  parallel="classes" thread-count="2">
+    <parameter name="name" value="大佬"/>
+    <test name="test1">
+        <parameter name="name" value="dage"/>
+        <parameter name="password" value="datou"/>
+        <classes>
+            <class name="Text.testDemo" />
+            <class name="Text.testDemo2" />
+        </classes>
+    </test>
+    <!--
+    <test name="test2">
+        <classes>
+            <class name="Text.testDemo2" />
+        </classes>
+    </test>
+    -->
+</suite>

@@ -1,0 +1,196 @@
+xml:
+    -结-构-树
+    suite
+    --tests
+    ----parameters
+    ----groups
+    ------definitions
+    ------runs
+    ----classes
+    --parameters
+    比较详细的结构如下：
+    <test name="xxxx">
+    　　<!-- 参数定义的方法 -->
+    　　<parameter name="first-name" value="Cedric"/>
+
+    　　<!-- groups的用法，前提是需要存在classes的组，否则所有方法不被运行 -->
+    　　<groups>
+    　　<!-- 定义组中组的方法 -->
+    　　　　<define name="groups_name">
+    　　　　　　<include name="group1"/>
+    　　　　　　<include name="group2"/>
+    　　　　</define>
+
+    　　　　<run>
+    　　　　　　<!-- 此处用组名来区别 -->
+    　　　　　　<inclue name="groups_name" />
+    　　　　　　<exclue name="groups_name" />
+    　　　　　　</run>
+    　　</groups>
+
+    　　<!-- classes的用法，classes中包含类名，类名底下可以包含方法名或排除方法名 -->
+    　　<classes>
+    　　　　<class name="class1">
+    　　　　　　<methods>
+    　　　　　　　　<!-- 此处用方法名来区别 -->
+    　　　　　　　　<inclue name="method_name" />
+    　　　　　　　　<exclue name="method_name" />
+    　　　　　　</methods>
+    　　　　</class>
+    　　</classes>
+    </test>
+
+    具体的元素说明：
+    <suite>   testng.xml文档中最上层的元素
+    说明：一个xml文件只能有一个<suites>,，是一个xml文件的根级
+    <suite>由<test>和<parameters>组成
+    参数 ------	说明	***** 使用方法++++参数值
+    name ------ 必选项，<suite>的名字，将出现在reports里 ***** name="XXX" +++ suite名字
+    junit ------ 	是否执行Junit模式(识别setup()等) ***** 	junit="true" +++ true和false，默认false
+    verbose	------ 控制台输出的详细内容等级,0-10级（0无，10最详细）*****	verbose="5"  +++ 0到10
+    parent-module ------	和Guice框架有关，只运行一次，创建一个parent injector给所有guice injectors +++ 详见表格下内容，默认false
+    guice-stage ------	和Guice框架有关 *****	guice-stage="DEVELOPMENT" +++	DEVELOPMENT，PRODUCTION，TOOL，默认"DEVELOPMENT"
+    configfailurepolicy ------	测试失败后是再次执行还是跳过，值skip和continue	 ***** configfailurepolicy="skip" +++	skip、continue，默认skip
+    thread-count ------	与parallel配套使用，线程池的大小，决定并行线程数量 *****	thread-count="10" +++  整数，默认5
+    annotations ------	获取注解，值为javadoc时，使用JavaDoc的注释；否则用JDK5注释	***** annotations="javadoc"	+++ javadoc
+    time-out ------	设置parallel时，终止执行单元之前的等待时间（毫秒）*****	time-out="10000" +++	整数，单位毫秒
+    skipfailedinvocationcounts ------	是否跳过失败的调用	***** skipfailedinvocationcounts="true" +++	true和false，默认false
+    data-provider-thread-count ------	并发时data-provider的线程池数量 *****	data-provider-thread-count="5" +++	整数
+    object-factory ------	一个实现IObjectFactory接口的类，实例化测试对象	 ***** object-factory="classname"	+++ 类名
+    allow-return-values ------	是否允许返回函数值	 ***** all-return-values="true"	 +++ true和false
+    preserve-order ------	是否按照排序执行	***** preserve-order="true"	 +++ true和false，默认true
+    group-by-instances ------	按照实例分组	***** group-by-instances="true"	 +++ true和false，默认false
+
+    --<parameter>
+    说明：提供测试数据，有name和value两个参数
+    声明方法：<parameter name = "parameter_name" value = "parameter_value "/>
+    testng.xml文件中的<parameter>可以声明在<suite>或者<test>级别，在<test>下的<parameter>会覆盖在<suite>下声明的同名变量
+
+    --<method-selectors>
+    说明：方法选择器定义了哪些类的方法需要去执行，类必须继承自org.testng.IMethodSelector
+    声明方法：
+    <method-selectors>
+         <method-selector>
+              <selector-class name="classname" priority="1"></selector-class>
+              <script language="java"></script>    （language还可以用beanshell等）
+         </method-selector>
+    </method-selectors>
+    备注：<method-selectors>这个我没用过，所以了解，如果有错的欢迎指出来~
+
+    --<groups>
+    说明：要运行的组，可以自定义一个组，可以包括要执行的，还排除要执行的方法。必须和<classes>配套使用，从下面的类中找到对应名字的方法
+    <groups>由<difine>和<run>、<dependencies>三部分组成。<diffine>可以将group组成一个新组，包括要执行和不执行的大组；<run>要执行的方法；<dependencies>指定了某group需要依赖的group（比如下面的例子，group1需要依赖group2和group3先执行）。
+    声明方法：
+    <groups>
+         <define name ="all">
+              <include name ="testgroup1"/>
+              <exclude name ="testgroup2'/>
+         </define>
+         <run>
+              <include name ="all"/>
+              <include name ="testmethod1"/>
+              <exclude name="testmethod2"/>
+         </run>
+         <dependencies>
+              <group name ="group1" depends-on="goup2 group3"/>
+         </dependencies>
+    </groups>
+
+    --<classes>
+    说明：方法选择器，要执行的方法写在这里，参数有name和priority。
+    注释：
+    1.<classes>下必须写要执行的<class>，否则不会执行任何内容，如果填写了class没有写methods，会按照填写的class的下的注释@Test去执行所有的方法
+    2.<classes>下的<methods>如果填写了<include>，那只会执行所填写的方法，没有填写的方法不会去执行
+
+    声明方法：
+    <classes>
+         <class name="要执行的class名">
+              <methods>
+                   <include name ="要执行的方法名"></include>
+              </methods>
+         </class>
+    </classes>
+
+    --<packages>
+    说明：<packages>指定包名代替类名。查找包下的所有包含testNG annotation的类进行测试
+    声明方法：
+    <packages>
+         <package name="packagename"/>
+         <package name="packagename">
+              <include name="methodname"/>
+              <exclude name="methodname"/>
+         </package>
+    </packages>
+
+    <listener>
+    说明：指定listeners，这个class必须继承自org.testng.ITestNGListener。在java中使用@Listeners({com.example.MyListener.class,com.example.MyMethodInterceptor.class})的注释也可以有同样效果
+    声明方法：
+    <listeners>
+         <listener class-name="com.example.MyListener"/>
+         <listener class-name="com.example.MyMehodIntercepor"/>
+    </listeners>
+
+
+    一个简单的testng.xml文档
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+    <suite name="Suite" parallel="classes" thread-count="3">
+        <test verbose="2" preserve-order="true" name="TestDebug">
+
+            <classes>
+                <class name="com.hera.util.MathTest" />
+
+            </classes>
+        </test> <!-- Test -->
+    </suite> <!-- Suite -->
+
+     suite定义一个测试套件，可以设置是否使用多线程，可包含多个测试用例或者测试group
+                 parallel = classes  每个测试用例class级别多线程
+                 thread-count =3  线程数为5，可同时执行3个case
+                 preserve-order = true   classes和methods按照配置中的顺序执行，false为乱序执行。（If you want the classes and methods listed in this file to be run in an unpredictible order, set the preserve-order attribute to false）
+                 parameter 标签传递参数
+
+
+java:
+   @BeforeMethod	在每个测试方法 前 执行
+   @AfterMethod	 在每个测试方法 后 执行
+   @BeforeClass	 被注释的方法将在当前类的第一个测试方法调用前运行
+   @AfterClass	 被注释的方法将在当前类的所有测试方法调用后运行
+   @BeforeGroups	被配置的方法将在列表中的gourp前运行。这个方法保证在第一个属于这些组的测试方法调用前立即执行
+   @BeforeTest	 被注释的方法将在测试运行前运行
+   @AfterTest	 被注释的方法将在测试运行后运行
+   @BeforeSuite	 被注释的方法将在所有测试运行前运行
+   @AfterSuite	 被注释的方法将在所有测试运行后运行
+   alwaysRun 	 对于每个bufore方法(beforeSuite, beforeTest, beforeTestClass 和 beforeTestMethod, 但是不包括 beforeGroups):
+                 如果设置为true，被配置的方法将总是运行而不管它属于哪个组。
+                 对于after方法(afterSuite, afterClass, ...): 如果设置为true，被配置的方法甚至在一个或多个先调用的方法失败或被忽略时也将运行。
+   dependsOnGroups  这个方法依赖的组列表
+   dependsOnMethods	这个方法依赖的方法列表
+   enabled      	这个类的方法是否激活
+   groups	        这个类或方法所属的分组列表
+   inheritGroups	如果设置为true，这个方法被属于在类级别被@Test annotation指定的组
+   @DataProvider	为测试方法提供数据
+
+
+
+
+使用：
+    1.testng参数执行case：
+        在xml中通过parameter来传递参数
+        使用dataprovider来传递参数
+
+    2.TestNG依赖性测试：
+        @Test后面添加dependsOnMethods={"testName"},则这个case依赖于testName这个case
+           忽略了testName，那么这个依赖也不能执行
+    3.通过xml多线程并发执行
+        paraller : 表示你需要对那个级别进行多线程
+            例子：
+                paraller=“methods”每个方法都将采用独立的线程进行测试
+                paraller=“methods”将把每个<class>标签内的所有方法在同一个
+                    线程中执行，但是<classes>中的不同<class>将会以不同的线程执行
+                paraller=“instances”testng将把同一个实例内的所有方法运行在
+                    同一个线程中，但是如果两个方法是在不同的实例中，那么他们将会在不同点线程中执行
+        thread-count:用于指定线程的个数
+
+     4.忽略测试：@Test(enabled = false)有助于禁用此测试案例。

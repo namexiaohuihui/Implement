@@ -1,0 +1,40 @@
+junit的用法：极客学院
+http://wiki.jikexueyuan.com/project/junit/test-framework.html
+
+python单元测试框架
+http://pyunit.sourceforge.net/pyunit_cn.html
+
+1.测试工具
+在所有测试调用指令发起前的 setUp() 方法。
+在测试方法运行后的 tearDown() 方法。
+
+selenium 资料
+http://kzp.mof.gov.cn/cjcx/1_a4036a0225962.jsp
+selenium-python.readthedocs.io/api.html
+http://www.runoob.com/python/python-mysql.html
+
+
+selenium-server:
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-firefox-driver</artifactId>
+    <version>2.46.0</version>
+</dependency>
+
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-chrome-driver</artifactId>
+    <version>2.46.0</version>
+</dependency>
+
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-safari-driver</artifactId>
+    <version>2.46.0</version>
+</dependency>
+
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-ie-driver</artifactId>
+    <version>2.47.0</version>
+</dependency>
