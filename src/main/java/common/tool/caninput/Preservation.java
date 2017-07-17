@@ -1,6 +1,6 @@
 package common.tool.caninput;
 
-import LnsmInitialize.FoxDriver;
+import common.FoxDriver;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +13,7 @@ import static java.lang.Thread.sleep;
  * 负责点击某个元素对象
  * Created by Administrator on 2016/11/15.
  */
-public class preservation {
+public class Preservation {
 
     private static WebDriver driver = FoxDriver.getWebDrivaer();
 

@@ -9,7 +9,7 @@ import LnsmOperation.conversion.dateConversionTime;
 import LnsmUitl.LnsmExcel;
 import LnsmUitl.LnsmList;
 import LnsmUitl.LnsmPreservation;
-import LnsmUitl.LnsmSystemOut;
+import LnsmUitl.SystemOut;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -84,9 +84,9 @@ public class CommodityGrouping extends Comments {
             int size = i % pc.size();
             PacketContent packetContent = pc.get(size);
             //打印数据
-            LnsmSystemOut.getStringOut(packetContent.toString(), i + "");
+            SystemOut.getStringOut(packetContent.toString(), i + "");
 
-            LnsmSystemOut.getStringOut(packetSorting.toString(), i + "");
+            SystemOut.getStringOut(packetSorting.toString(), i + "");
             //代码执行，list下标是从0开始，列表数据是从1开始的，excle也是从0开始的
               editNameSort(size);
         }
@@ -113,7 +113,7 @@ public class CommodityGrouping extends Comments {
                 executionJudgment();
                 break;
             default:
-                LnsmSystemOut.getStringOut("商品分组操作出现第三方", packetSorting.getImplement());
+                SystemOut.getStringOut("商品分组操作出现第三方", packetSorting.getImplement());
                 break;
         }
     }
@@ -125,13 +125,13 @@ public class CommodityGrouping extends Comments {
      */
     private void executionJudgment() {
         if (packetSorting.getImplement().equals(tr)) {
-            LnsmSystemOut.getStringOut("商品分组执行点击确定按钮", packetSorting.getImplement());
+            SystemOut.getStringOut("商品分组执行点击确定按钮", packetSorting.getImplement());
             getAlert(true);
         } else if (packetSorting.getImplement().equals(fa)) {
-            LnsmSystemOut.getStringOut("商品分组执行点击取消按钮", packetSorting.getImplement());
+            SystemOut.getStringOut("商品分组执行点击取消按钮", packetSorting.getImplement());
             getAlert(false);
         } else {
-            LnsmSystemOut.getStringOut("商品分组执行出现第三方", packetSorting.getImplement());
+            SystemOut.getStringOut("商品分组执行出现第三方", packetSorting.getImplement());
         }
     }
 
@@ -145,14 +145,14 @@ public class CommodityGrouping extends Comments {
         List<PacketContent> packetContents = setPacketList();
 
         if (sJ && nJ) {//名字和排序都进行修改之后的查找
-            LnsmSystemOut.getStringOut("分组编辑时，名字和排序都进行修改了");
+            SystemOut.getStringOut("分组编辑时，名字和排序都进行修改了");
 
         } else if (sJ) {//排序修改之后就比较排序的位置
-            LnsmSystemOut.getStringOut("分组编辑时，只对对排序进行修改");
+            SystemOut.getStringOut("分组编辑时，只对对排序进行修改");
             //找出编辑之后，分组的所在位置
             int i = modifyLocation(packetContents);
 
-            LnsmSystemOut.getStringOut(i + "新编辑之后的商品位置");
+            SystemOut.getStringOut(i + "新编辑之后的商品位置");
             //根据指定位置来读取数据，判断时间是否正确
             List<String> list = modifyRead(i);
             //根据读取的排序和之前设置的排序进行比较
@@ -161,7 +161,7 @@ public class CommodityGrouping extends Comments {
         } else if (nJ) {//名字修改之后就比较时间的位置
 
         } else {
-            LnsmSystemOut.getStringOut("分组编辑时，什么也没有进行修改");
+            SystemOut.getStringOut("分组编辑时，什么也没有进行修改");
         }
 
     }
@@ -217,9 +217,9 @@ public class CommodityGrouping extends Comments {
      */
     private void judgmentModify(String data, String date) throws IOException {
         if (data.equals(date)) {
-            LnsmSystemOut.getStringOut(data, "编辑之后数据正确", date);
+            SystemOut.getStringOut(data, "编辑之后数据正确", date);
         } else {
-            LnsmSystemOut.getStringOut(data, "编辑之后数据错误", date);
+            SystemOut.getStringOut(data, "编辑之后数据错误", date);
         }
 
     }
@@ -239,9 +239,9 @@ public class CommodityGrouping extends Comments {
         }
         int i = new dateConversionTime().conversionTime(listTime);
         if (i == size) {
-            LnsmSystemOut.getStringOut("分组修改之后，时间所在的位置跟排序所在的位置相同");
+            SystemOut.getStringOut("分组修改之后，时间所在的位置跟排序所在的位置相同");
         } else {
-            LnsmSystemOut.getStringOut("分组修改之后，时间所在的位置跟排序所在的位置出现了明显的差异");
+            SystemOut.getStringOut("分组修改之后，时间所在的位置跟排序所在的位置出现了明显的差异");
         }
     }
 
@@ -269,7 +269,7 @@ public class CommodityGrouping extends Comments {
      */
     private void getAlert(boolean bl) {
         String alert = LnsmPreservation.getAlert(bl);//点击系统对话框上的操作
-        LnsmSystemOut.getStringOut("系统对话框的标题是", alert);
+        SystemOut.getStringOut("系统对话框的标题是", alert);
     }
 
 
@@ -281,9 +281,9 @@ public class CommodityGrouping extends Comments {
     private void getoutPrompt(String prompt) {
         try {
             driver.findElement(By.cssSelector("div.aui_content>div"));
-            LnsmSystemOut.getStringOut("保存之后的提示框名字出现了");
+            SystemOut.getStringOut("保存之后的提示框名字出现了");
         } catch (Exception e) {
-            LnsmSystemOut.getStringOut("保存之后的名字没有出现");
+            SystemOut.getStringOut("保存之后的名字没有出现");
             e.printStackTrace();
         }
     }

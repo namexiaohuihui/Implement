@@ -5,7 +5,7 @@ import LnsmElement.LnsmUrl;
 import LnsmInitialize.FoxDriver;
 import LnsmInitialize.LnsmRegister;
 import LnsmUi.ElementInput;
-import LnsmUitl.LnsmSystemOut;
+import LnsmUitl.SystemOut;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -33,7 +33,7 @@ public class assignRedPackets {
         LnsmRegister openBrowser = FoxDriver.getOpenBrowser();
         openBrowser.openBrowser(lnsmUrl.getBossshopUrlLog());
         driver = FoxDriver.getWebDrivaer();
-        LnsmSystemOut.getStringOut("-----");
+        SystemOut.getStringOut("-----");
     }
 
 
@@ -55,7 +55,7 @@ public class assignRedPackets {
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
         for (int i = 1; i <= 10; i++) {
-            LnsmSystemOut.getStringOut("红包发放:" + i);
+            SystemOut.getStringOut("红包发放:" + i);
             driver.findElement(By.xpath("//*[@id='datatatle']/tbody/tr[" + i + "]/td[7]/button[2]")).click();
             sleep(2000);
             WebElement element = driver.findElement(By.cssSelector("input[class=form-control][id=userid][name=userids]"));

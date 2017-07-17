@@ -1,25 +1,24 @@
 package common.tool.caninput;
 
+import common.tool.SystemOut;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import static java.lang.Thread.sleep;
 
 /**
  * 获取表格长度以及表格中按钮的位置
  * Created by Administrator on 2016/12/18.
  */
-public class readList {
+public class ReadList {
 
     private WebDriver driver;
 
-    public readList(WebDriver driver) {
+    public ReadList(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -107,7 +106,7 @@ public class readList {
         List<WebElement> tr = element.findElements(By.tagName(one));
         List<List> list = new ArrayList();
 //        循环读取那个自提点的整体数据
-        LnsmSystemOut.getStringOut("进入循环", "tr的数量" + tr.size());
+        SystemOut.getStringOut("进入循环", "tr的数量" + tr.size());
         for (int i = 0; i < tr.size(); i++) {
             //        获取表中某列的数据,并保存到sb当中
             list.add(getData(tr.get(i), two));
@@ -134,7 +133,7 @@ public class readList {
         List<WebElement> tr = element.findElements(By.tagName(one));
         List<List> list = new ArrayList();
 //        循环读取那个自提点的整体数据
-        LnsmSystemOut.getStringOut("进入循环", "tr的数量" + tr.size());
+        SystemOut.getStringOut("进入循环", "tr的数量" + tr.size());
         for (int i = 0; i < tr.size(); i++) {
             //        获取表中某列的数据,并保存到sb当中
             list.add(getData(tr.get(i), two));

@@ -4,7 +4,7 @@ import LnsmElement.LnsmParameter;
 import LnsmElement.LnsmUrl;
 import LnsmInitialize.FoxDriver;
 import LnsmUitl.LnsmPreservation;
-import LnsmUitl.LnsmSystemOut;
+import LnsmUitl.SystemOut;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -55,19 +55,19 @@ public class signin {
         switch (str) {
             case "请输入11位正确的手机号":
                 //    System.out.println("你的手机号输入有误，请查证后重新输入");
-                LnsmSystemOut.getStringOut(str);
+                SystemOut.getStringOut(str);
                 break;
             case "请输入登录密码":
                 //   System.out.println("请输入密码在点击登录按钮");
-                LnsmSystemOut.getStringOut(str);
+                SystemOut.getStringOut(str);
                 break;
             case "用户名或密码错误":
                 //   System.out.println("用户名或密码错误，请查证后重新输入");
-                LnsmSystemOut.getStringOut(str);
+                SystemOut.getStringOut(str);
                 break;
             default:
                 //       设置验证判断是否登录成功
-                LnsmSystemOut.getStringOut("登录成功", str);
+                SystemOut.getStringOut("登录成功", str);
                 break;
         }
         FoxDriver.shotSelenium();

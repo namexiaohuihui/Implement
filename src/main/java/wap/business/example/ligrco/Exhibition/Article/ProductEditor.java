@@ -42,7 +42,7 @@ public class ProductEditor {
         if (firstCid) {
             System.out.println("主类需要改" + comm.getFirstCid());
             //商品主类目的设定
-          new LnsmSelect().PropertyValue(driver, "first_cid", comm.getFirstCid());
+          new InfoSelect().PropertyValue(driver, "first_cid", comm.getFirstCid());
         } else {
             System.out.println("主类不需要改" + comm.getFirstCid());
         }
@@ -51,7 +51,7 @@ public class ProductEditor {
         if (SecondCid) {
             System.out.println("子类需要改" + comm.getSecondCid());
             //商品子类目的设定
-            new LnsmSelect().PropertyValue(driver, "second_cid", comm.getSecondCid());
+            new InfoSelect().PropertyValue(driver, "second_cid", comm.getSecondCid());
         } else {
             System.out.println("子类不需要改" + comm.getSecondCid());
         }
@@ -67,12 +67,12 @@ public class ProductEditor {
                     int size = elements.size();
                     if (i <= size) {
                         elements.get(i - 1).click();
-                        LnsmSystemOut.getStringOut("商品分组进来了。" + i);
+                        SystemOut.getStringOut("商品分组进来了。" + i);
                     } else {
-                        LnsmSystemOut.getStringOut("所需点击的分组位置大于了当前所需的。");
+                        SystemOut.getStringOut("所需点击的分组位置大于了当前所需的。");
                     }
                 } else {
-                    LnsmSystemOut.getStringOut("全部分组默认勾选。不需要进行点击");
+                    SystemOut.getStringOut("全部分组默认勾选。不需要进行点击");
                 }
             }
         } else {
@@ -127,13 +127,13 @@ public class ProductEditor {
             int number = goodStatus.pictureStatistics(5);//获取需要上传的图片数量
 
             //实现上传
-            LnsmSystemOut.getStringOut("编辑时的图片需要上传的数量 ", number + "");
+            SystemOut.getStringOut("编辑时的图片需要上传的数量 ", number + "");
             for (int i = 0; i < number && i < logoStr.length; i++) {//上传的图片数量应当小于可上传的空余数量以及文档中给出的数据
                 LnsmPreservation.getButtonCssSelector("object[id=SWFUpload_0][class=swfupload]");
                 LnsmPicture.getLogo(driver, "SWFUpload_0", logoStr[i]);
             }
         } else {
-            LnsmSystemOut.getStringOut("编辑时的图片不需要进行上传");
+            SystemOut.getStringOut("编辑时的图片不需要进行上传");
         }
 
         boolean Content = comm.getContent().equals(fa) ? false : true;//详情
@@ -158,7 +158,7 @@ public class ProductEditor {
 
             //商品详情预览数据对比
             if (!detailsPreview()) {
-                LnsmSystemOut.getStringOut("商品预览上面的数据不对");
+                SystemOut.getStringOut("商品预览上面的数据不对");
             }
 
             LnsmPreservation.getButtonCssSelector("a[class=aui_close]");
@@ -178,7 +178,7 @@ public class ProductEditor {
             driver.navigate().back();
             //得到alert\confirm\prompt对话框的对象
             String alert = LnsmPreservation.getAlert(true);//点击系统对话框的确定按钮
-            LnsmSystemOut.getStringOut("系统对话框的标题是",alert);
+            SystemOut.getStringOut("系统对话框的标题是",alert);
         }
 
     }
@@ -196,7 +196,7 @@ public class ProductEditor {
         String position = "ul[id=J_pic-box][class=uploadPict]";//定义图片按钮的位置
         GoodStatus goodStatus = new GoodStatus(driver, position, "li");//定义类对象,实例化参数
         if (Integer.parseInt(picture) == goodStatus.pictureQuantity()) {
-            LnsmSystemOut.getStringOut("预览上面的商品图片总数量相等");
+            SystemOut.getStringOut("预览上面的商品图片总数量相等");
         } else {
             return false;
         }
@@ -204,7 +204,7 @@ public class ProductEditor {
 //        商品名称比较
         String name = textData("div.detail-goods-cont>p");
         if (name.equals(names)) {
-            LnsmSystemOut.getStringOut("预览上面的商品名称正确");
+            SystemOut.getStringOut("预览上面的商品名称正确");
         } else {
             return false;
         }
@@ -212,7 +212,7 @@ public class ProductEditor {
 //        商品价格比较
         String price = textData("span.detail-goods-pirce > strong");
         if (price.equals(prices)) {
-            LnsmSystemOut.getStringOut("预览上面的商品价格正确");
+            SystemOut.getStringOut("预览上面的商品价格正确");
         } else {
             return false;
         }
@@ -220,7 +220,7 @@ public class ProductEditor {
 //        商品描述比较
         String content = textData("div.detail-cont>div");
         if (content.equals(contents)) {
-            LnsmSystemOut.getStringOut("预览上面的商品描述正确");
+            SystemOut.getStringOut("预览上面的商品描述正确");
         } else {
             return false;
         }

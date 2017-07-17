@@ -1,6 +1,6 @@
 package common.tool.caninput;
 
-import LnsmData.CommoditiesList;
+import common.tool.SystemOut;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -50,22 +50,22 @@ public class PromptBox {
         try {
             //提示框标题
             String aui_title = driver.findElement(By.cssSelector("div[class=aui_title]")).getText();
-            LnsmSystemOut.getStringOut("弹框标题", aui_title);
+            SystemOut.getStringOut("弹框标题", aui_title);
 
             //获取排序提示框中的商品名称
             String editsort = driver.findElement(By.xpath(".//*[@id='editsort']/table/tbody/tr[1]/td/span")).getText();
 
             //获取列表中读取到的商品名称
             if (editsort.equals(trim)) {
-                LnsmSystemOut.getStringOut("排序框中商品的名字读取正确");
+                SystemOut.getStringOut("排序框中商品的名字读取正确");
 
                 //输入框对象
                 WebElement element = driver.findElement(By.cssSelector("input[id =sort][name=sort]"));
-                LnsmSystemOut.getStringOut("排序框表中读取的数据到底是什么" + oplog);
+                SystemOut.getStringOut("排序框表中读取的数据到底是什么" + oplog);
                 if (oplog) {//如果需要执行就输入内容
 
                     String[] split = att.split("\\.");
-                    LnsmSystemOut.getStringOut(split[0]);
+                    SystemOut.getStringOut(split[0]);
                     element.sendKeys(split[0]);//输入排序值
 
                     sleep(2000);
@@ -79,11 +79,11 @@ public class PromptBox {
 
                 } else {
                     //点击取消
-                    LnsmPreservation.getButtonCssSelector("button[class=sortNone][type=button]");
-                    LnsmSystemOut.getStringOut("用例显示不需要进行输入操作");
+                    Preservation.getButtonCssSelector("button[class=sortNone][type=button]");
+                    SystemOut.getStringOut("用例显示不需要进行输入操作");
                 }
             } else {
-                LnsmSystemOut.getStringOut("排序框中商品的名字读取正确错误");
+                SystemOut.getStringOut("排序框中商品的名字读取正确错误");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -94,11 +94,11 @@ public class PromptBox {
     public void setGoodsStatusOnTheShelf(boolean oplog) {
         //提示框标题
         String aui_title = driver.findElement(By.cssSelector("div[class=aui_title]")).getText();
-        LnsmSystemOut.getStringOut("上架·下架弹窗提示框标题", aui_title);
+        SystemOut.getStringOut("上架·下架弹窗提示框标题", aui_title);
 
         //提示框内容
         String aui_content = driver.findElement(By.cssSelector("div[class=aui_content]")).getText();
-        LnsmSystemOut.getStringOut("上架·下架弹窗提示框内容", aui_content);
+        SystemOut.getStringOut("上架·下架弹窗提示框内容", aui_content);
 
         //  List<WebElement> elements =   driver.findElements(By.cssSelector("button[type=button]"));
         //   List<WebElement> elements = driver.findElements(By.cssSelector("div > button[type=button]"));
@@ -109,7 +109,7 @@ public class PromptBox {
             //判断是否点确定
             if (oplog) {
                 if ("确定".equals(we.getText())) {
-                    LnsmSystemOut.getStringOut("大王要我们下架的操作", we.getText());
+                    SystemOut.getStringOut("大王要我们下架的操作", we.getText());
                     we.click();
                     try {
                         //上下架操作之后提示框有3s等待时间
@@ -123,7 +123,7 @@ public class PromptBox {
             } else {
                 //判断是否点取消
                 if ("取消".equals(we.getText())) {
-                    LnsmSystemOut.getStringOut("大王要我们下架的操作", we.getText());
+                    SystemOut.getStringOut("大王要我们下架的操作", we.getText());
                     we.click();
                     break;
                 }
@@ -134,7 +134,7 @@ public class PromptBox {
     //获取表单中的所有数据，通过id进行比较。如果相等然后在比较排序值是否相等，相等说明通过了
     private void formRecapture(String number,String split){
         //通过id进行筛选
-        new LnsmSelect().getGoodsStatus(driver, "select[id=by][name=by]", "商品编号");
+        new InfoSelect().getGoodsStatus(driver, "select[id=by][name=by]", "商品编号");
         driver.findElement(By.cssSelector("input[id=val][type=search]")).sendKeys(number);
 
         //点击搜索按钮
@@ -143,20 +143,15 @@ public class PromptBox {
         String colist = driver.findElement(By.xpath("//*[@id='sample-table-1']/tbody/tr[1]/td[7]")).getText();
 
         if (colist.equals(split)) {
-            LnsmSystemOut.getStringOut("设置排序之后的排序值相等");
+            SystemOut.getStringOut("设置排序之后的排序值相等");
         } else {
-            LnsmSystemOut.getStringOut("设置排序之后的排序值不相等");
+            SystemOut.getStringOut("设置排序之后的排序值不相等");
         }
 
         //选择之后恢复界面初始样
          driver.manage().timeouts().implicitlyWait(2,TimeUnit.SECONDS);
-        new LnsmSelect().getGoodsStatus(driver, "select[id=by][name=by]", "商品名称");
+        new InfoSelect().getGoodsStatus(driver, "select[id=by][name=by]", "商品名称");
         driver.findElement(By.cssSelector("input[id=val][type=search]")).clear();
     }
-
-
-
-
-
 
 }

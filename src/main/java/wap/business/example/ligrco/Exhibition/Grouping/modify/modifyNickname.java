@@ -2,7 +2,7 @@ package wap.business.example.ligrco.Exhibition.Grouping.modify;
 
 import LnsmData.PacketSorting;
 import LnsmData.StatementOperation;
-import LnsmUitl.LnsmSystemOut;
+import LnsmUitl.SystemOut;
 
 /**
  * 分组名字修改类
@@ -42,10 +42,10 @@ public class modifyNickname extends modify {
      */
     boolean nameJudge(String edit) throws InterruptedException {
         if (edit.equals(fa)) {
-            LnsmSystemOut.getStringOut("商品名字不需要修改");
+            SystemOut.getStringOut("商品名字不需要修改");
             return false;
         } else if (edit.length() < 2 || edit.length() > 10) {
-            LnsmSystemOut.getStringOut("商品分组名字进行修改时发现出错", edit);
+            SystemOut.getStringOut("商品分组名字进行修改时发现出错", edit);
             return false;
         }
         String lo = "//*[@id='grouping']/tr[2]/td[1]/input";

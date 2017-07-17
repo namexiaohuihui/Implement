@@ -175,7 +175,7 @@ public class StoreInformation {
             System.out.println(value + "为现在省份");
         } else {
 //            长度小于1说明没有设置过，然后调用方法进行设置
-           new LnsmSelect().getAddress(driver, number, value, options);
+           new InfoSelect().getAddress(driver, number, value, options);
         }
     }
 

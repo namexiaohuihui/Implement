@@ -91,11 +91,11 @@ public class GoodsList extends Comments {
 
         for (int i = 0; i < 1; i++) {
             sleep(1000);
-            LnsmSystemOut.getStringOut("-------------------------------------------------开始执行",(i+1) + "");
+            SystemOut.getStringOut("-------------------------------------------------开始执行",(i+1) + "");
 
             CommodityOperation commOperation = goodsOplog.get(i);
 
-            new LnsmSelect().getGoodsStatus(driver, statusSelect, commOperation.getState());
+            new InfoSelect().getGoodsStatus(driver, statusSelect, commOperation.getState());
 
             //点击搜索按钮
             driver.findElement(By.xpath(".//div[@class='col-xs-12']/form/button")).click();

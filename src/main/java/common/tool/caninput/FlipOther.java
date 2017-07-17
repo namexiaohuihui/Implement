@@ -11,6 +11,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
+ * 翻页按钮的判断
  * Created by Administrator on 2017/1/17.
  */
 public class FlipOther {

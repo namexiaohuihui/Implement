@@ -5,10 +5,11 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import static LnsmUitl.LnsmFile.getIntroductionFile;
+import static common.tool.excelfile.readFile.getIntroductionFile;
 import static java.lang.Thread.sleep;
 
 /**
+ * frame文本框内容的输入
  * Created by XiaoHuiHui on 2016/12/28.
  */
 public class InfoFrame {

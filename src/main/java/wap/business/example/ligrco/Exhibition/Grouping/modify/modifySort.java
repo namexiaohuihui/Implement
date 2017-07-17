@@ -2,7 +2,7 @@ package wap.business.example.ligrco.Exhibition.Grouping.modify;
 
 import LnsmData.PacketContent;
 import LnsmData.PacketSorting;
-import LnsmUitl.LnsmSystemOut;
+import LnsmUitl.SystemOut;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,12 +47,12 @@ public class modifySort extends  modify{
         try {
             sort = Integer.parseInt(edit);
             if (sort > 999) {
-                LnsmSystemOut.getStringOut("商品分组排序只能输入0-999之间的正整数", edit);
+                SystemOut.getStringOut("商品分组排序只能输入0-999之间的正整数", edit);
                 return false;
             }
         } catch (NumberFormatException e) {
             //   e.printStackTrace();
-            LnsmSystemOut.getStringOut("商品分组排序进行修改时出现了类型转换异常", edit);
+            SystemOut.getStringOut("商品分组排序进行修改时出现了类型转换异常", edit);
             return false;
         }
         String lo = "//*[@id='grouping']/tr[2]/td[3]/input";

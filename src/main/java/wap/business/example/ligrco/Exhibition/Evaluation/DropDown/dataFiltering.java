@@ -2,7 +2,7 @@ package wap.business.example.ligrco.Exhibition.Evaluation.DropDown;
 
 import LnsmInitialize.FoxDriver;
 import LnsmUitl.LnsmPreservation;
-import LnsmUitl.LnsmSelect;
+import LnsmUitl.InfoSelect;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -29,7 +29,7 @@ public class dataFiltering {
      */
     public void gradeSelcect(String grade){
 
-        new LnsmSelect().getGoodsStatus(driver, gradeload, grade);
+        new InfoSelect().getGoodsStatus(driver, gradeload, grade);
     }
 
     /**
@@ -37,12 +37,12 @@ public class dataFiltering {
      * @param date 数据
      */
     public void replySelcect(String reply){
-        new LnsmSelect().getGoodsStatus(driver, replyload, reply);
+        new InfoSelect().getGoodsStatus(driver, replyload, reply);
     }
 
     public void selectFreed(String grade,String reply){
-        new LnsmSelect().getGoodsStatus(driver, gradeload, grade);
-        new LnsmSelect().getGoodsStatus(driver, replyload, reply);
+        new InfoSelect().getGoodsStatus(driver, gradeload, grade);
+        new InfoSelect().getGoodsStatus(driver, replyload, reply);
     }
 
     //按钮

@@ -6,7 +6,7 @@ import LnsmInitialize.FoxDriver;
 import LnsmList.CommodityManage;
 import LnsmUitl.LnsmOther;
 import LnsmUitl.LnsmPreservation;
-import LnsmUitl.LnsmSystemOut;
+import LnsmUitl.SystemOut;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -51,7 +51,7 @@ public class Interface {
             String[] split = number.split("\\.");
             value.sendKeys(split[0]);
         } else {
-            LnsmSystemOut.getStringOut("从操作表中读取的数据为", number + ",因此不需要做输入的操作");
+            SystemOut.getStringOut("从操作表中读取的数据为", number + ",因此不需要做输入的操作");
         }
     }
 
@@ -59,26 +59,26 @@ public class Interface {
     public void setSupplyButton(String but) {
         if (button) {
             if (but.equals("N")) {
-                LnsmSystemOut.getStringOut("从操作表中读取的数据为", but + ",因此不需要做点击按钮的操作");
+                SystemOut.getStringOut("从操作表中读取的数据为", but + ",因此不需要做点击按钮的操作");
             } else {
                 driver.findElement(By.cssSelector("input[id=ordersave][type=submit]")).click();
             /*    //通过表格里面的数据和最小值的比较
                 WebElement value = driver.findElement(By.cssSelector("td>input[id=text_box]"));
                 String minNumber = value.getAttribute("value");
                 if (setStringToInt(number) < setStringToInt(minNumber)) {
-                    LnsmSystemOut.getStringOut("最小订货量应为", minNumber + ",请重新输入");
+                    SystemOut.getStringOut("最小订货量应为", minNumber + ",请重新输入");
                 }*/
                 //通过点击按钮之后，来识别最小值的弹窗是否出现
                 By by = By.cssSelector("div[class=aui_content]");
                 String text = driver.findElement(by).getText();
                 int length = text.length();
                 if (length > 5) {
-                    LnsmSystemOut.getStringOut("订货出现最小值的提示", text);
+                    SystemOut.getStringOut("订货出现最小值的提示", text);
                     button = false;
                 }
             }
         } else {
-            LnsmSystemOut.getStringOut("表中输入的不是数量而已坑所以不用进行点击处理");
+            SystemOut.getStringOut("表中输入的不是数量而已坑所以不用进行点击处理");
         }
     }
 
@@ -103,7 +103,7 @@ public class Interface {
             boolean b = new LnsmOther().doesWebElementExist(driver, by);
             if (b) {
                 String text = driver.findElement(by).getText();
-                LnsmSystemOut.getStringOut("订货输入密码之后提示框的内容", text);
+                SystemOut.getStringOut("订货输入密码之后提示框的内容", text);
                 LnsmPreservation.getButtonCssSelector("button[class=payNone][type=button]");
             }
         }
@@ -115,8 +115,8 @@ public class Interface {
         String currentUrl = driver.getCurrentUrl();
         String suppluOrder = new LnsmUrl().getSuppluOrder();
 
-        LnsmSystemOut.getStringOut("订单页面获取的url", currentUrl);
-        LnsmSystemOut.getStringOut("订单页面的url", suppluOrder);
+        SystemOut.getStringOut("订单页面获取的url", currentUrl);
+        SystemOut.getStringOut("订单页面的url", suppluOrder);
 
         assertEquals("订单页面", currentUrl, suppluOrder);
     }

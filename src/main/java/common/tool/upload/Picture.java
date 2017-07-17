@@ -30,7 +30,7 @@ public class Picture {
             try {
                 Runtime.getRuntime().exec("E:/StopData/AutoPicture/" + route);
                 //   Runtime.getRuntime().exec("E:/picture/" + route);
-                LnsmSystemOut.getStringOut("图片上传的名称是", route);
+                SystemOut.getStringOut("图片上传的名称是", route);
                 sleep(6000);
             } catch (IOException e) {
                 e.printStackTrace();

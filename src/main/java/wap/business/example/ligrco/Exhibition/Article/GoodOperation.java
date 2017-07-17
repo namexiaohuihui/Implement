@@ -9,7 +9,7 @@ import LnsmOperation.SupplyOrderOperation;
 import LnsmUitl.LnsmExcel;
 import LnsmUitl.LnsmPreservation;
 import LnsmUitl.LnsmPromptBox;
-import LnsmUitl.LnsmSystemOut;
+import LnsmUitl.SystemOut;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -62,8 +62,8 @@ public class GoodOperation {
         this.load = ".//*[@id='sample-table-1']/tbody/tr[" + (this.commList.getRow() + 1) + "]";
         this.row = row;
 
-        LnsmSystemOut.getStringOut(this.commList.toString());
-        LnsmSystemOut.getStringOut(this.commOperation.toString());
+        SystemOut.getStringOut(this.commList.toString());
+        SystemOut.getStringOut(this.commOperation.toString());
         try {
             //temperament();
             getStatus();
@@ -125,7 +125,7 @@ public class GoodOperation {
                     setEditTable(1);
                     //需要点击按钮就执行按钮的点击任务..
                 } else {
-                    LnsmSystemOut.getStringOut(commOperation.getState(),
+                    SystemOut.getStringOut(commOperation.getState(),
                             commOperation.getOperation(),
                             "的操作" + commOperation.getImplement());
                 }
@@ -142,7 +142,7 @@ public class GoodOperation {
                     setPosition(2);
                     new LnsmPromptBox(driver).getGoodsReason();
                 } else {
-                    LnsmSystemOut.getStringOut(commOperation.getState(),
+                    SystemOut.getStringOut(commOperation.getState(),
                             commOperation.getOperation(),
                             "的操作" + commOperation.getImplement());
                 }
@@ -210,7 +210,7 @@ public class GoodOperation {
                     driver.navigate().back();
                     */
                 } else {
-                    LnsmSystemOut.getStringOut("这是供货商品没有编辑的功能");
+                    SystemOut.getStringOut("这是供货商品没有编辑的功能");
                 }
 
                 break;
@@ -249,7 +249,7 @@ public class GoodOperation {
     private void OrderOperation() {
         if (setJudge()) {
             if (commOperation.getImplement().equals(fa)) {//按钮是否需要点击
-                LnsmSystemOut.getStringOut("从操作表中读取的数据为", button + ",因此不需要做点击按钮的操作");
+                SystemOut.getStringOut("从操作表中读取的数据为", button + ",因此不需要做点击按钮的操作");
                 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                 //waitForCondition("selenium.browserbot.getUserWindow().$.active == 0;", 30000);
                 driver.navigate().back();//浏览器后退
@@ -283,7 +283,7 @@ public class GoodOperation {
             setPosition(3);//如果有订货按钮就点击
             bl = true;
         } else {
-            LnsmSystemOut.getStringOut("该商品没有订货按钮，请重新编辑操作步骤");
+            SystemOut.getStringOut("该商品没有订货按钮，请重新编辑操作步骤");
         }
         return bl;
     }
@@ -345,7 +345,7 @@ public class GoodOperation {
         //  driver.switchTo().frame(driver.findElement(By.xpath(frame)));
         String text = driver.findElement(By.xpath(".//*[@id='showcodwrap']/div[1]/p[1]")).getText();
         if (text.endsWith(commList.getNumber())){
-            LnsmSystemOut.getStringOut("点击商品名称之后打开的二维码详情对话框","商品编号正确。。。");
+            SystemOut.getStringOut("点击商品名称之后打开的二维码详情对话框","商品编号正确。。。");
         }
         driver.switchTo().defaultContent();
         sleep(1000);

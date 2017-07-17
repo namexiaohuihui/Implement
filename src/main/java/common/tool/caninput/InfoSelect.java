@@ -1,5 +1,6 @@
 package common.tool.caninput;
 
+import common.tool.SystemOut;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -13,6 +14,7 @@ import java.util.List;
 import static java.lang.Thread.sleep;
 
 /**
+ * select下拉框的显示
  * Created by Administrator on 2016/12/5.
  */
 public class InfoSelect {
@@ -157,7 +159,7 @@ public class InfoSelect {
         List<String> list = new ArrayList<>();
         for (WebElement op : options) {
             list.add(op.getText());
-            LnsmSystemOut.getStringOut(op.getText());
+            SystemOut.getStringOut(op.getText());
         }
         return list;
     }

@@ -1,7 +1,7 @@
 package wap.business.example.ligrco.Exhibition.Grouping.delect;
 
 import wap.business.example.ligrco.Exhibition.Grouping.Operating;
-import LnsmUitl.LnsmSystemOut;
+import LnsmUitl.SystemOut;
 import org.openqa.selenium.WebDriver;
 
 import java.io.IOException;
@@ -20,15 +20,15 @@ public class executionDelect extends Operating {
      */
     public void executionJudgment(String str) {
         if (str.equals(tr)) {
-            LnsmSystemOut.getStringOut("商品分组执行点击确定按钮", str);
+            SystemOut.getStringOut("商品分组执行点击确定按钮", str);
             String alert = getAlert(true);
-            LnsmSystemOut.getStringOut("系统对话框的标题是", alert);
+            SystemOut.getStringOut("系统对话框的标题是", alert);
         } else if (str.equals(fa)) {
-            LnsmSystemOut.getStringOut("商品分组执行点击取消按钮", str);
+            SystemOut.getStringOut("商品分组执行点击取消按钮", str);
             String alert =  getAlert(false);
-            LnsmSystemOut.getStringOut("系统对话框的标题是", alert);
+            SystemOut.getStringOut("系统对话框的标题是", alert);
         } else {
-            LnsmSystemOut.getStringOut("商品分组执行出现第三方", str);
+            SystemOut.getStringOut("商品分组执行出现第三方", str);
         }
     }
 

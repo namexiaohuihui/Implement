@@ -89,7 +89,7 @@ public class ReleaseCommodity extends Comments {
     }
 
     private void setCategory() throws InterruptedException {
-        //  LnsmSelect.getCategory(driver, first_cid, second_cid);//商品主类目和子类目的设定
+        //  InfoSelect.getCategory(driver, first_cid, second_cid);//商品主类目和子类目的设定
     }
 
     //    分组按钮的点击。。先是数据库分组的数量和页面分组的数量比较，然后是页面分组数量和用户需要点击的兑现比较

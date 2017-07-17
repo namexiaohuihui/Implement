@@ -6,7 +6,7 @@ import LnsmInitialize.FoxDriver;
 import LnsmUi.ElementInput;
 import LnsmUi.MysqlInquire;
 import LnsmUitl.LnsmPreservation;
-import LnsmUitl.LnsmSystemOut;
+import LnsmUitl.SystemOut;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -65,10 +65,10 @@ public class modify {
                 break;
             case fa:
                 getoutPrompt("保存成功");
-                LnsmSystemOut.getStringOut("商品分组点击分组之后直接点击保存不需要修改其他", packetSorting.getImplement());
+                SystemOut.getStringOut("商品分组点击分组之后直接点击保存不需要修改其他", packetSorting.getImplement());
                 break;
             default:
-                LnsmSystemOut.getStringOut("商品分组执行出现第三方", packetSorting.getImplement());
+                SystemOut.getStringOut("商品分组执行出现第三方", packetSorting.getImplement());
                 break;
         }
     }
@@ -126,9 +126,9 @@ public class modify {
         try {
             modifyEdit(2);
             driver.findElement(By.cssSelector("div.aui_content>div"));
-            LnsmSystemOut.getStringOut("保存之后的提示框名字出现了");
+            SystemOut.getStringOut("保存之后的提示框名字出现了");
         } catch (Exception e) {
-            LnsmSystemOut.getStringOut("保存之后的名字没有出现");
+            SystemOut.getStringOut("保存之后的名字没有出现");
             e.printStackTrace();
         }
     }
@@ -153,7 +153,7 @@ public class modify {
         */
         String lnsm_group = statementOperation.statementInquire(content, structure, condition, sorting);
         List<List> dataMysql = inquire.getDataMysql(lnsm_group);
-        LnsmSystemOut.getStringOut(dataMysql);
+        SystemOut.getStringOut(dataMysql);
     }
 
 }

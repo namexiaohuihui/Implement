@@ -4,7 +4,7 @@ import LnsmInitialize.FoxDriver;
 import LnsmInitialize.LnsmRegister;
 import LnsmUi.ElementInput;
 import LnsmUitl.LnsmPreservation;
-import LnsmUitl.LnsmSystemOut;
+import LnsmUitl.SystemOut;
 import SingleStep.Generallist;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -70,7 +70,7 @@ public class ordinaryOrder {
 
         //选择地址
         WebElement el = driver.findElement(By.cssSelector("div.m-map-location li:nth-child(2)"));
-        LnsmSystemOut.getStringOut(el.getText() + "--");
+        SystemOut.getStringOut(el.getText() + "--");
         LnsmPreservation.getWebElementOb(el);
     }
 
@@ -87,11 +87,11 @@ public class ordinaryOrder {
         String cur = "span.tab-item.tab-item-cur";
         LnsmPreservation.getButtonCssSelector(cur);
         for (int i = 0; i < 2; i++) {
-            LnsmSystemOut.getStringOut(i + "选择");
+            SystemOut.getStringOut(i + "选择");
             WebElement good = goods.get(i);
             LnsmPreservation.getWebElementOb(good);
         }
-        LnsmSystemOut.getStringOut("选择完了");
+        SystemOut.getStringOut("选择完了");
         //去结算:按钮不可点击时是dis。。
         // String dis = "a.J_goBuy.m-cart-by.m-cart-by-dis";
         String by = "a.J_goBuy.m-cart-by";
@@ -131,60 +131,60 @@ public class ordinaryOrder {
             double price = stringMap.get("price");
             double sum = stringMap.get("sum");
             pric[i] = price * sum;
-            LnsmSystemOut.getStringOut(i + "个商品的总价" + pric[i]);
+            SystemOut.getStringOut(i + "个商品的总价" + pric[i]);
             sunNumber = sunNumber + pric[i];
         }
-        LnsmSystemOut.getStringOut("商品的总价" + sunNumber);
+        SystemOut.getStringOut("商品的总价" + sunNumber);
 
         try {
             //满减
             String prv = driver.findElement(By.id("J_prv")).getText();
             generallist.setFullCut(qiege(prv, 2, "."));
             fullCut = generallist.getFullCut();
-            LnsmSystemOut.getStringOut("满减的金额" + fullCut);
+            SystemOut.getStringOut("满减的金额" + fullCut);
         } catch (Exception e) {
-            LnsmSystemOut.getStringOut("满减不存在ya");
+            SystemOut.getStringOut("满减不存在ya");
         }
         //红包
         String spans = "div.J_result.order-result>a>p span:nth-child(2)";
         String span = driver.findElement(By.cssSelector(spans)).getText();
         generallist.setRed(qiege(span, 2, ">"));
         red = generallist.getRed();
-        LnsmSystemOut.getStringOut("红包" + red);
+        SystemOut.getStringOut("红包" + red);
 
         //数量
         String cn2 = driver.findElement(By.cssSelector("span.c-b2")).getText();
         generallist.setNumber(qiege(cn2, 0, "件"));
         number = generallist.getNumber();
-        LnsmSystemOut.getStringOut("数量" + number);
+        SystemOut.getStringOut("数量" + number);
 
         //配送
         String cb2 = driver.findElement(By.cssSelector("span.J_freight.c-b2")).getText();
         generallist.setDistribution(qiege(cb2, 1, "."));
         distribution = generallist.getDistribution();
-        LnsmSystemOut.getStringOut("配送" + distribution);
+        SystemOut.getStringOut("配送" + distribution);
 
         //合计
         String cff = driver.findElement(By.cssSelector("span.J_total.c-ff")).getText();
         generallist.setTotal(qiege(cff, 1, "."));
         total = generallist.getTotal();
-        LnsmSystemOut.getStringOut("合计" + total);
+        SystemOut.getStringOut("合计" + total);
 
         //代码计算的价格
         Double prive = sunNumber - fullCut - red;
         if (prive <= 0) {
-            LnsmSystemOut.getStringOut("红包大于了总价");
+            SystemOut.getStringOut("红包大于了总价");
             BigDecimal data1 = new BigDecimal(total);
             BigDecimal data2 = new BigDecimal(distribution);
             int i = data1.compareTo(data2);
             if (i == 0) {
-                LnsmSystemOut.getStringOut("实付的价格就是配送费");
+                SystemOut.getStringOut("实付的价格就是配送费");
             }
         } else {
             prive = prive + distribution;
-            LnsmSystemOut.getStringOut("红包小于了总价");
+            SystemOut.getStringOut("红包小于了总价");
             if (prive == total) {
-                LnsmSystemOut.getStringOut("实付的价格就是计算的");
+                SystemOut.getStringOut("实付的价格就是计算的");
             }
         }
     }

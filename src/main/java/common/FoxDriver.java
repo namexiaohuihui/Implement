@@ -1,6 +1,6 @@
 package common;
 
-import LnsmUitl.LnsmSystemOut;
+import LnsmUitl.SystemOut;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -45,7 +45,7 @@ public class FoxDriver {
 
     public static WebDriver getWebDrivaer(){
         if (driver==null){
-            LnsmSystemOut.getStringOut("浏览器对象为空");
+            SystemOut.getStringOut("浏览器对象为空");
         }
        return driver;
     }
@@ -62,7 +62,7 @@ public class FoxDriver {
      */
     public static WebDriver getFoxDriver() {
         if (driver==null){
-            LnsmSystemOut.getStringOut("浏览器对象为空");
+            SystemOut.getStringOut("浏览器对象为空");
             System.setProperty("webdriver.firefox.bin", "E:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
             driver = new FirefoxDriver();
         }

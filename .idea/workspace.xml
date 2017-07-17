@@ -1,7 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a41ba70-32a3-43a6-aa3c-a0189bf6bfbd" name="Default" comment="" />
+    <list default="true" id="2a41ba70-32a3-43a6-aa3c-a0189bf6bfbd" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Implement/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Implement/src/main/java/common/common" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../Implement/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Implement/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/Implement.iml" afterPath="$PROJECT_DIR$/../Implement/Implement.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/src/main/java/app/app.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/app/app.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/src/main/java/common/FoxDriver.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/common/FoxDriver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/ElementInput.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/ElementInput.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/Existence.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/Existence.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/FlipOther.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/FlipOther.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/InfoFrame.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/InfoFrame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/InfoSelect.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/InfoSelect.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/PromptBox.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/PromptBox.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/src/main/java/common/tool/upload/Picture.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/common/tool/upload/Picture.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/src/main/java/wap/backstage/assignRedPackets.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/wap/backstage/assignRedPackets.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/StartEntrance.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/StartEntrance.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/cooperation/boundary/Interface.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/cooperation/boundary/Interface.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/innose/information/StoreInformation.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/innose/information/StoreInformation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Article/GoodOperation.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Article/GoodOperation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Article/GoodsList.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Article/GoodsList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Article/ProductEditor.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Article/ProductEditor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Evaluation/DropDown/dataFiltering.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Evaluation/DropDown/dataFiltering.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Grouping/CommodityGrouping.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Grouping/CommodityGrouping.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Grouping/delect/executionDelect.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Grouping/delect/executionDelect.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Grouping/modify/modify.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Grouping/modify/modify.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Grouping/modify/modifyNickname.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Grouping/modify/modifyNickname.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Grouping/modify/modifySort.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Grouping/modify/modifySort.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Release/ReleaseCommodity.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Release/ReleaseCommodity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/signin.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/signin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/src/main/java/wap/wap.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/wap/wap.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Implement/src/main/java/wechat/ordinaryOrder.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/wechat/ordinaryOrder.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/preservation.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/Preservation.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/readList.java" afterPath="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/ReadList.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/../Implement/out/" />
     <ignored path="$PROJECT_DIR$/../Implement/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,7 +47,30 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="PromptBox.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/PromptBox.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3825">
+              <caret line="155" column="0" lean-forward="false" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReadList.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/ReadList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -27,12 +84,19 @@
       <find>ManagementStore</find>
       <find>OrderManagement</find>
       <find>Generallist</find>
+      <find>LnsmSystemOut</find>
+      <find>LnsmSelect</find>
     </findStrings>
     <replaceStrings>
       <replace />
       <replace>Information</replace>
       <replace>interactivve</replace>
+      <replace>SystemOut</replace>
+      <replace>InfoSelect</replace>
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../Implement" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -42,40 +106,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/common/emailSend/SimpleMailSender.java" />
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/common/FoxDriver.java" />
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/content/LnsmRegister.java" />
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/LnsmRegister.java" />
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/homeAddress/ManagementHomepage.java" />
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/informationStrtus/ManagementStore.java" />
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/inNoSe/ManagementStore.java" />
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/inNoSe/information/StoreSettings.java" />
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/innose/information/StoreSettings.java" />
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/innose/ManagementStore.java" />
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/innose/Information.java" />
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/CommodityManage.java" />
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition.java" />
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/special/MarketingCampaign.java" />
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/interactive/interactivve" />
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/interactive/OrderManagement.java" />
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/interactive/interactivve.java" />
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/statistics/statistics" />
         <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/statistics/StatisticsData.java" />
         <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/security/securityDefence.java" />
         <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/cooperation/cooperation.java" />
         <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/cooperation/SupplyOrderOperation.java" />
         <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/cooperation/Interface/SupplyOrderOperation.java" />
         <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/cooperation/Interface/Interface.java" />
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/cooperation/boundary/Interface.java" />
         <option value="$PROJECT_DIR$/../Implement/src/main/java/common/tool/conversion/TesseractTest.java" />
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/ElementInput.java" />
         <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/LnsmExit.java" />
         <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/LnsmRegistered.java" />
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/StartEntrance.java" />
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/signin.java" />
         <option value="$PROJECT_DIR$/../Implement/src/main/java/common/tool/mysqls/MysqlInquire.java" />
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/wechat/ordinaryOrder.java" />
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/backstage/assignRedPackets.java" />
         <option value="$PROJECT_DIR$/../Implement/src/main/java/wechat/Generallist.java" />
         <option value="$PROJECT_DIR$/../Implement/src/main/java/common/tool/conversion/timeConversionDate.java" />
         <option value="$PROJECT_DIR$/../Implement/src/main/java/content/demo/testDemo2.java" />
@@ -83,27 +123,51 @@
         <option value="$PROJECT_DIR$/../Implement/src/main/java/common/tool/excel/CSVReadWriteFile.java" />
         <option value="$PROJECT_DIR$/../Implement/src/main/java/common/tool/excelfile/LnsmFile.java" />
         <option value="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/infoFrame.java" />
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/readList.java" />
         <option value="$PROJECT_DIR$/../Implement/src/main/java/common/tool/conversion/CharacterString.java" />
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/Existence.java" />
         <option value="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/Other.java" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/common/tool/SystemOut.java" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/test.java" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/wap.java" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/app/app.java" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/common/common" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/ElementInput.java" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/Existence.java" />
         <option value="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/FlipOther.java" />
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/PromptBox.java" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/InfoFrame.java" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/common/FoxDriver.java" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/readList.java" />
         <option value="$PROJECT_DIR$/../Implement/src/main/java/common/tool/upload/Picture.java" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/backstage/assignRedPackets.java" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/StartEntrance.java" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/cooperation/boundary/Interface.java" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Article/GoodOperation.java" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Grouping/CommodityGrouping.java" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Grouping/delect/executionDelect.java" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Grouping/modify/modify.java" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Grouping/modify/modifyNickname.java" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Grouping/modify/modifySort.java" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/signin.java" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/wechat/ordinaryOrder.java" />
         <option value="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/InfoSelect.java" />
         <option value="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/preservation.java" />
-        <option value="$PROJECT_DIR$/../Implement/src/main/java/common/tool/SystemOut.java" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/innose/information/StoreInformation.java" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Article/GoodsList.java" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Article/ProductEditor.java" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Evaluation/DropDown/dataFiltering.java" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Release/ReleaseCommodity.java" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/PromptBox.java" />
+        <option value="$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/ReadList.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="845" />
-    <option name="y" value="6" />
-    <option name="width" value="1028" />
+    <option name="x" value="600" />
+    <option name="y" value="23" />
+    <option name="width" value="1285" />
     <option name="height" value="1018" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="PackagesPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -117,6 +181,121 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="caninput" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parameter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -203,43 +382,14 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../java" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/../Implement/src/main/java" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.593318" />
   </component>
@@ -486,7 +636,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="845" y="6" width="1028" height="1018" extended-state="0" />
+    <frame x="600" y="23" width="1285" height="1018" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3272933" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -496,20 +646,20 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31257078" sideWeight="0.51348436" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20838052" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31257078" sideWeight="0.48651564" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.20838052" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961586" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5901442" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20163265" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.58926487" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37485844" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37485844" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -531,175 +681,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/emailSend/MailAuthenticator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/FoxDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="41" column="13" lean-forward="false" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/instantiation/CommoditiesList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/homeAddress/ManagementHomepage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/innose/information/SelfSetting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/innose/information/ShopNotices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/innose/information/StoreInformation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/innose/information/StoreSettings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="30" column="33" lean-forward="true" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/innose/Information.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/tootl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/special/MarketingCampaign.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/interactive/interactivve">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/interactive/Interactivve.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/statistics/statistics">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/statistics/Statistics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/security/securityDefence.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/cooperation/cooperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/cooperation/boundary/Interface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/exitsysos.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="3" column="30" lean-forward="false" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -707,23 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/StartEntrance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="36" column="25" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/signin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -731,23 +699,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/backstage/assignRedPackets.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="28" column="11" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wechat/ordinaryOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="102" column="33" lean-forward="false" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -755,7 +706,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -763,7 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -771,7 +720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -779,7 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -787,31 +734,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/ElementInput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/InfoFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/readList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2817">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -819,22 +741,107 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/conversion/timeConversionDate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="959">
+          <caret line="58" column="5" lean-forward="false" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/conversion/dateConversionTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="709">
+          <caret line="67" column="19" lean-forward="false" selection-start-line="67" selection-start-column="15" selection-end-line="67" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/SystemOut.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/excelfile/readExcel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/mysqls/MysqlInquire.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/mysqls/DBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/mysqls/TextMysql.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/Existence.java">
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/app/app.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="132" column="5" lean-forward="false" selection-start-line="132" selection-start-column="5" selection-end-line="132" selection-end-column="5" />
+        <state relative-caret-position="200">
+          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/FlipOther.java">
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/wap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="46" column="4" lean-forward="false" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
+        <state relative-caret-position="250">
+          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding>
+            <element signature="e#576#577#0" expanded="false" />
+            <element signature="e#621#622#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/parameter/Parameter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/parameter/WapUrl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -849,50 +856,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/conversion/timeConversionDate.java">
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/common">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="959">
-          <caret line="58" column="5" lean-forward="false" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+        <state relative-caret-position="200">
+          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/conversion/dateConversionTime.java">
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/ElementInput.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
-          <caret line="67" column="19" lean-forward="false" selection-start-line="67" selection-start-column="15" selection-end-line="67" selection-end-column="19" />
+        <state relative-caret-position="250">
+          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/Existence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2197">
+          <caret line="103" column="56" lean-forward="false" selection-start-line="103" selection-start-column="56" selection-end-line="103" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/FlipOther.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/PromptBox.java">
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/excelfile/readFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="352">
+          <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/InfoSelect.java">
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/InfoFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="275">
+          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/preservation.java">
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/FoxDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/SystemOut.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="50">
+          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -900,62 +923,198 @@
     <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/upload/Picture.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <caret line="32" column="16" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/excelfile/readFile.java">
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/backstage/assignRedPackets.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="97">
+          <caret line="57" column="12" lean-forward="false" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/StartEntrance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="68" column="8" lean-forward="false" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/cooperation/boundary/Interface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="118" column="8" lean-forward="false" selection-start-line="118" selection-start-column="8" selection-end-line="118" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Article/GoodOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="347" column="12" lean-forward="false" selection-start-line="347" selection-start-column="12" selection-end-line="347" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Grouping/CommodityGrouping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="285" column="12" lean-forward="false" selection-start-line="285" selection-start-column="12" selection-end-line="285" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Grouping/delect/executionDelect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="30" column="12" lean-forward="false" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Grouping/modify/modify.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="155" column="8" lean-forward="false" selection-start-line="155" selection-start-column="8" selection-end-line="155" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Grouping/modify/modifyNickname.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="47" column="12" lean-forward="false" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Grouping/modify/modifySort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="54" column="12" lean-forward="false" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/signin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="69" column="16" lean-forward="false" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wechat/ordinaryOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="922">
+          <caret line="186" column="16" lean-forward="false" selection-start-line="186" selection-start-column="16" selection-end-line="186" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/InfoSelect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="158" column="42" lean-forward="false" selection-start-line="158" selection-start-column="42" selection-end-line="158" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/excelfile/readExcel.java">
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/Preservation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        <state relative-caret-position="75">
+          <caret line="3" column="32" lean-forward="false" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/innose/information/StoreInformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="177" column="15" lean-forward="false" selection-start-line="177" selection-start-column="15" selection-end-line="177" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Article/GoodsList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="97" column="16" lean-forward="false" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Article/ProductEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="53" column="16" lean-forward="false" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Evaluation/DropDown/dataFiltering.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="44" column="12" lean-forward="false" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#815#816#0" expanded="true" />
+            <element signature="e#888#889#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/wap/business/example/ligrco/Exhibition/Release/ReleaseCommodity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="91" column="12" lean-forward="false" selection-start-line="91" selection-start-column="12" selection-end-line="91" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/PromptBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3825">
+          <caret line="155" column="0" lean-forward="false" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/test.java">
+    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/caninput/ReadList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        <state relative-caret-position="100">
+          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/mysqls/MysqlInquire.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/mysqls/DBHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Implement/src/main/java/common/tool/mysqls/TextMysql.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -968,7 +1127,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.593318" />
               </list>
             </option>
           </splitter-proportions>
@@ -976,11 +1135,11 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited>Detection</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.593318" />
               </list>
             </option>
           </splitter-proportions>
@@ -991,7 +1150,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.593318" />
               </list>
             </option>
           </splitter-proportions>
@@ -999,11 +1158,11 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.7</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.593318" />
               </list>
             </option>
           </splitter-proportions>

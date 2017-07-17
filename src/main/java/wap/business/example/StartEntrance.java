@@ -3,7 +3,7 @@ package wap.business.example;
 import LnsmElement.LnsmUrl;
 import LnsmList.CommodityManage;
 import LnsmUi.LnsmAccount;
-import LnsmUitl.LnsmSystemOut;
+import LnsmUitl.SystemOut;
 import common.FoxDriver;
 import org.junit.Before;
 import org.junit.Test;
@@ -66,7 +66,7 @@ public class StartEntrance {
     private void setDangDuTest(){
         driver.get("http://seller.52lin.net/sporders/order/10325");
         String text = driver.findElement(By.cssSelector("td>input[id=text_box]")).getAttribute("value");
-        LnsmSystemOut.getStringOut("最小订货量",text);
+        SystemOut.getStringOut("最小订货量",text);
     }
 
     public void openBrowser(String webHttp){
