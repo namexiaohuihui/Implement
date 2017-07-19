@@ -1,6 +1,5 @@
-package wap.business.instantiation;
+package common.tool.mysqls;
 
-import LnsmUi.MysqlInquire;
 
 import java.util.List;
 

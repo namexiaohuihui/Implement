@@ -1,8 +1,9 @@
 package wap.business.example;
 
-import LnsmElement.LnsmParameter;
-import LnsmElement.LnsmUrl;
-import LnsmInitialize.FoxDriver;
+import common.FoxDriver;
+import common.parameter.Parameter;
+import common.parameter.WapUrl;
+import common.tool.caninput.ElementInput;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,30 +15,30 @@ import static org.junit.Assert.assertEquals;
  * 实现注册
  * Created by Administrator on 2016/9/28.
  */
-public class possessor {
+public class Possessor {
 
     private WebDriver driver = FoxDriver.getFoxDriver();
     private String passWord ;
     private String name ;
-    private LnsmUrl lnsmUrl = new LnsmUrl();
-    private LnsmParameter lnsmParameter = new LnsmParameter();
+    private WapUrl wapurl = new WapUrl();
+    private Parameter parameter = new Parameter();
     private ElementInput elementInput = new ElementInput();
     public void getUrl() throws InterruptedException {
 
-        name = lnsmParameter.getAccount();
-        passWord = lnsmParameter.getPassWord();
+        name = parameter.getAccount();
+        passWord = parameter.getPassWord();
 
         //        在忘记密码界面点击找回密码
         driver.findElement(By.linkText("找回密码")).click();
         sleep(1000);
 //        在找回密码界面设立检查点，如果为真就点击进入注册页面
-        String url = lnsmUrl.getPasswordRetrieval();
+        String url = wapurl.getPasswordRetrieval();
         assertEquals("找回密码页面",driver.getCurrentUrl(),url);
         driver.findElement(By.xpath("//*[@title = '注册']")).click();
         System.out.println("忘记密码页面检查通过");
 
 //        在注册页面设立检查点，如果为真就开始在输入框输入内容
-        String registrteredUrl =lnsmUrl.getRegister();
+        String registrteredUrl =wapurl.getRegister();
         assertEquals("找回密码页面",driver.getCurrentUrl(),registrteredUrl);
         System.out.println("注册页面检查通过");
 

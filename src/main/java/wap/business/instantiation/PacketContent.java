@@ -1,6 +1,7 @@
 package wap.business.instantiation;
 
-import LnsmUitl.LnsmList;
+import common.tool.caninput.ReadList;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import java.io.IOException;
@@ -86,9 +87,9 @@ public class PacketContent {
      * @throws IOException
      */
     public PacketContent setPacketNumber(WebDriver driver,int size) throws IOException {
-        LnsmList lnsmList = new LnsmList(driver);
-        List<String> cellContent = lnsmList.getColumnContent(
-                ".//tbody[@id='grouping']/tr["+size+"]", "td");
+        ReadList readList = new ReadList(driver);
+        By by = By.xpath(".//tbody[@id='grouping']/tr["+size+"]");
+        List<String> cellContent = readList.columnContent(by, "td");
 
         //将数据转换成类对象进行储存
         PacketContent pc = null;

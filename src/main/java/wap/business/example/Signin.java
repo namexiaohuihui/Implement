@@ -1,10 +1,10 @@
 package wap.business.example;
 
-import LnsmElement.LnsmParameter;
-import LnsmElement.LnsmUrl;
-import LnsmInitialize.FoxDriver;
-import LnsmUitl.LnsmPreservation;
-import LnsmUitl.SystemOut;
+import common.FoxDriver;
+import common.parameter.Parameter;
+import common.parameter.WapUrl;
+import common.tool.SystemOut;
+import common.tool.caninput.Preservation;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,31 +17,32 @@ import static org.junit.Assert.assertEquals;
  * Created by Administrator on 2016/9/26.
  * http://seller.52lin.net/goods/comment?page=1
  */
-public class signin {
+public class Signin {
     private WebDriver driver = FoxDriver.getFoxDriver();
 
     public void getRegister() throws InterruptedException {
-        LnsmParameter lnsmParameter = new LnsmParameter();
+       Parameter Parameter = new Parameter();
         //        获取账号输入框并输入内容
         WebElement phone = driver.findElement(By.id("phone"));
         phone.click();
         phone.clear();
-        phone.sendKeys(lnsmParameter.getAccount());
+        phone.sendKeys(Parameter.getAccount());
 
 //        获取密码输入框并输入内容
         WebElement password = driver.findElement(By.id("password"));
         password.click();
         password.clear();
-        password.sendKeys(lnsmParameter.getPassWord());
+        password.sendKeys(Parameter.getPassWord());
 
 //        点击登录
-        LnsmPreservation.getButtonClassName("loginwater");
+        Preservation preser = new Preservation();
+        preser.buttonClassName("loginwater");
         //点击登录之后，等待页面加载数据
         // driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         sleep(5);
-        LnsmUrl lnsmUrl = new LnsmUrl();
-        // assertEquals("登录页面的判断",driver.getCurrentUrl(),lnsmUrl.getLoginUrl());
-        if (driver.getCurrentUrl().equals(lnsmUrl.getWebHttp())) {
+        WapUrl webUrl = new WapUrl();
+        // assertEquals("登录页面的判断",driver.getCurrentUrl(),WapUrl.getLoginUrl());
+        if (driver.getCurrentUrl().equals(webUrl.getWebHttp())) {
             getWebElement(driver.findElement(By.className("errormsg")));
         } else {
             System.out.println("登录成功");

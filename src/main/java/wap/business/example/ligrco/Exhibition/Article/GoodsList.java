@@ -1,13 +1,16 @@
 package wap.business.example.ligrco.Exhibition.Article;
 
-import LnsmData.CommoditiesList;
-import LnsmData.CommodityIntroduction;
-import LnsmData.CommodityOperation;
-import LnsmInitialize.FoxDriver;
-import LnsmOperation.CommodityOperation.Comments;
-import LnsmUitl.*;
+import common.FoxDriver;
+import common.tool.SystemOut;
+import common.tool.caninput.FlipOther;
+import common.tool.caninput.InfoSelect;
+import common.tool.caninput.ReadList;
+import common.tool.excelfile.ReadExcel;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import wap.business.instantiation.CommoditiesList;
+import wap.business.instantiation.CommodityIntroduction;
+import wap.business.instantiation.CommodityOperation;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -37,7 +40,7 @@ import static java.lang.Thread.sleep;
  * 2.判断其状态。兑取相应excel表中的数据
  * 3.根据excel表中的数据来进行相应的操作
  */
-public class GoodsList extends Comments {
+public class GoodsList {
 
     /**
      * 从excle表格中读取的每一行数据都是一个对象，这个集合用于存储读取出来的每一个对象。。
@@ -70,18 +73,16 @@ public class GoodsList extends Comments {
      * 列表数量显示对象的Xpath路径
      */
     private String dataroute = ".//*[@class = 'page-content']/div[1]/div[2]/div[1]/div[1]";
-    private LnsmList lnsmList;  //列表对象
-    private LnsmExcel lnsmExcel; //excel对象
+    private ReadList readList;  //列表对象
+    private ReadExcel readExcel; //excel对象
 
 
     public GoodsList(String url) throws Exception {
-        super(url);
 
-        lnsmList = new LnsmList(driver);
-        lnsmList = new LnsmList(driver);
-        lnsmExcel = new LnsmExcel();
+        readList = new ReadList(driver);
+        readExcel = new ReadExcel();
 
-        int singleXlsx = lnsmExcel.getSingleXlsx(".//src//main//java//商品编辑.xlsx");//读取商品编辑表中的长度
+        int singleXlsx = readExcel.singleXlsx(".//src//main//java//商品编辑.xlsx");//读取商品编辑表中的长度
 
         int single = 1;//编辑表中的第N行
 
@@ -95,22 +96,25 @@ public class GoodsList extends Comments {
 
             CommodityOperation commOperation = goodsOplog.get(i);
 
-            new InfoSelect().getGoodsStatus(driver, statusSelect, commOperation.getState());
+            By bystatus = By.cssSelector(statusSelect);
+            InfoSelect infoSelect = new InfoSelect();
+            infoSelect.categoryText(bystatus,commOperation.getState());
 
             //点击搜索按钮
             driver.findElement(By.xpath(".//div[@class='col-xs-12']/form/button")).click();
-            int row = lnsmList.getCellSize(tablePath, "tr", "td");
+            By bytable = By.cssSelector(statusSelect);
+            int row = readList.cellSize(bytable, "tr", "td");
 
             row = ((int) Math.random()) * row;
 
             if (single <= singleXlsx) {
                 //商品的操作
-                CommoditiesList colist = new CommoditiesList().setComodityList(lnsmList, row, tablePath);
+                CommoditiesList colist = new CommoditiesList().setComodityList(readList, row, tablePath);
                 GoodOperation goodOperation = new GoodOperation(colist, commOperation, single);
                 single = 1;
             } else {
                 single = 1;
-                CommoditiesList colist = new CommoditiesList().setComodityList(lnsmList, row, tablePath);
+                CommoditiesList colist = new CommoditiesList().setComodityList(readList, row, tablePath);
                 GoodOperation goodOperation = new GoodOperation(colist, commOperation, single);
             }
         }
@@ -125,7 +129,7 @@ public class GoodsList extends Comments {
      */
     private List<CommodityOperation> setGoodsOplog() throws IOException {
         //读取数据
-        List<List> wholeReadXlsx = lnsmExcel.getWholeReadXlsx(".//src//main//java//商品操作统计表.xlsx");
+        List<List> wholeReadXlsx = readExcel.wholeReadXlsx(".//src//main//java//商品操作统计表.xlsx");
 
 
         //创建存储对象的集合
@@ -153,14 +157,15 @@ public class GoodsList extends Comments {
      * 判断数据的长度是否等于翻页的长度
      */
     private void getDataSize() throws InterruptedException {
-        int other = new LnsmOther().getOther(driver, dataroute);
+        int other = new FlipOther().getOther(driver, dataroute);
         /*
         判断翻页的长度：
             1.如果最后一个li为“下一页”，说明还可以继续翻页
             2.如果最后一个为“N”，说明已经到底了。。
          */
         String route = ".//*[@class = 'page-content']/div[1]/div[2]/div[2]/div[1]/ul";
-        int flip = lnsmList.getFlip(route);
+        By by = By.xpath(route);
+        int flip = readList.numberFlip(by);
         if (other == flip) {
             System.out.println("数据长度和翻页的长度一致");
         } else {
@@ -171,8 +176,9 @@ public class GoodsList extends Comments {
 
 
     private void getLeng() {
-        String dataroute = ".//*[@class = 'page-content']/div[1]/div[2]";
-        List<List> cellContent = lnsmList.getCellContent(dataroute + "/div[2]/div[1]/ul", "li", "a");
+        String dataroute = ".//*[@class = 'page-content']/div[1]/div[2]/div[2]/div[1]/ul";
+        By by = By.xpath(dataroute);
+        List<List> cellContent = readList.cellContent(by, "li", "a");
         List list = cellContent.get(cellContent.size() - 2);
         List list2 = cellContent.get(cellContent.size() - 1);
         int flipSize = Integer.parseInt(list.get(0).toString());
@@ -186,7 +192,7 @@ public class GoodsList extends Comments {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        List<List> cellContent1 = lnsmList.getCellContent(dataroute + "/div[2]/div[1]/ul", "li", "a");
+        List<List> cellContent1 = readList.cellContent(by, "li", "a");
         List list1 = cellContent1.get(cellContent1.size() - 1);
 
         if ("下一页".equals(list1.get(0).toString())) {

@@ -23,188 +23,36 @@ public class ReadList {
     }
 
     /**
-     * 通过路径来计算子tr的子td的路径
-     *
-     * @param driver
-     * @param route
-     * @return
-     */
-    public List getCellRoute(String route) {
-        System.out.println("获取开始" + new Date());
-//        获取表对象
-        By by = By.xpath(route);
-//        获取列表对象
-        WebElement element = driver.findElement(by);
-//        找到表中全部为tr的元素
-        List<WebElement> tr = element.findElements(By.tagName("tr"));
-        List list = new ArrayList();
-//        循环读取那个自提点的整体数据
-        int j = 1;
-        System.out.println("进入循环" + new Date());
-        for (int i = 0; i < tr.size(); i++) {
-            //        获取表中某列的数据,并保存到sb当中
-            list.add(getCellData(tr.get(i), "/tr[" + (++j) + "]"));
-        }
-        return list;
-    }
-
-    /**
-     * 通过路径来读取子元素的路径
-     *
-     * @param element
-     * @param route
-     * @return
-     */
-    private String getCellData(WebElement element, String route) {
-//      列里面可能有"<th>"、"<td>"两种标签，所以分开处理。
-        System.out.println("th开始" + new Date());
-        /*先隐藏该段代码：因为网页都是td的，没有th，如果th不存在时运行了改程序需要5s，比较耗时
-        if (element.findElements(By.tagName("th")).size()>0){
-            return  getRoute(element.findElements(By.tagName("th")),route);
-        }
-        */
-        if (element.findElements(By.tagName("td")).size() > 0) {
-            System.out.println("th结束" + new Date());
-            return getRoute(element.findElements(By.tagName("td")), route);
-        }
-        return null;
-    }
-
-    /**
-     * 通过路径来返回子元素的路径
-     *
-     * @param cells
-     * @param route
-     * @return
-     */
-    private String getRoute(List<WebElement> cells, String route) {
-        System.out.println("td开始" + new Date());
-        for (int i = 0; i < cells.size(); i++) {
-            if (i == 3) {
-                route = route + "/td[" + (++i) + "]";
-            }
-        }
-        System.out.println("td结束" + new Date());
-        return route;
-    }
-
-    /**
-     * 通过指定路径来获取该路径下的全部列表数据
-     *
-     * @param route 路径
-     * @param one   第一个标签
-     * @param two   第二个标签
-     * @return
-     */
-    public List<List> getCellContent(String route, String one, String two) {
-    //    System.out.println("获取开始" + new Date());
-//        获取表对象
-        By by = By.xpath(route);
-//        获取列表对象
-        WebElement element = driver.findElement(by);
-//        找到表中全部为tr的元素
-        List<WebElement> tr = element.findElements(By.tagName(one));
-        List<List> list = new ArrayList();
-//        循环读取那个自提点的整体数据
-        SystemOut.getStringOut("进入循环", "tr的数量" + tr.size());
-        for (int i = 0; i < tr.size(); i++) {
-            //        获取表中某列的数据,并保存到sb当中
-            list.add(getData(tr.get(i), two));
-        }
-     //   System.out.println("获取结束" + new Date());
-        return list;
-    }
-
-    /**
-     * 通过指定路径来获取该路径下的全部列表数据
-     *
-     * @param route 路径
-     * @param one   第一个标签
-     * @param two   第二个标签
-     * @return
-     */
-    public List<List> getCellContentcss(String route, String one, String two) {
-        System.out.println("获取开始" + new Date());
-//        获取表对象
-        By by = By.cssSelector(route);
-//        获取列表对象
-        WebElement element = driver.findElement(by);
-//        找到表中全部为tr的元素
-        List<WebElement> tr = element.findElements(By.tagName(one));
-        List<List> list = new ArrayList();
-//        循环读取那个自提点的整体数据
-        SystemOut.getStringOut("进入循环", "tr的数量" + tr.size());
-        for (int i = 0; i < tr.size(); i++) {
-            //        获取表中某列的数据,并保存到sb当中
-            list.add(getData(tr.get(i), two));
-        }
-        System.out.println("获取结束" + new Date());
-        return list;
-    }
-
-    /**
-     * 指定路径获取指定行数的数据
-     * @param route  指定路径
-     * @param one   指定元素对象
-     * @param two   指定元素对象
-     * @param row   指定位置
-     * @return
-     */
-    public List getColumnContent(String route, String one, String two, int row) {
-        //System.out.println("获取开始" + new Date());
-//        获取表对象
-        By by = By.xpath(route);
-//        获取列表对象
-        WebElement element = driver.findElement(by);
-//        找到表中全部为tr的元素
-        List<WebElement> tr = element.findElements(By.tagName(one));
-//        循环读取那个自提点的整体数据
-        return getData(tr.get(row), two);
-    }
-
-    /**
-     * 通过指定路径和指定元素名称来获取数据
-     * @param route
-     * @param one
-     * @return  返回指定路径的数据,如果没有找到就返回Null
-     */
-    public List getColumnContent(String route, String one) {
-        //System.out.println("获取开始" + new Date());
-//        获取表对象
-        By by = By.xpath(route);
-//        获取列表对象
-        WebElement element = driver.findElement(by);
-        if (element.findElements(By.tagName(one)).size() > 0){
-            //        找到表中全部为tr的元素,循环读取那个自提点的整体数据
-            List<WebElement> tr = element.findElements(By.tagName(one));
-            return  getRoute(tr);
-        }else {
-            return null;
-        }
-    }
-
-    /**
-     * 通过路径来读取子元素的内容
+     * 获取一级菜单tb下的二级菜单td的长度以及内容
+     * <p>
+     * 例如：
+     * 某个菜单下有一级tb元素以及二级td元素
+     * if判断出td是否存在，存在的长度为多少
+     * 然后再获取td中的Text
      *
      * @param element
      * @return
      */
-    private List getData(WebElement element, String two) {
+    private List dataLevel(WebElement element, String two) {
 //      列里面可能有"<th>"、"<td>"两种标签，所以分开处理。
         if (element.findElements(By.tagName(two)).size() > 0) {
-            return getRoute(element.findElements(By.tagName(two)));
+            return returnRoute(element.findElements(By.tagName(two)));
         }
         return null;
     }
 
 
     /**
-     * 通过路径来返回子元素的內容
+     * 获取二级菜单td的text
+     * <p>
+     * 例如：
+     * 想获取td的text，只能判断他的长度是否符合。
+     * for将其遍历之后找出他的text内容
      *
      * @param cells
      * @return
      */
-    private List getRoute(List<WebElement> cells) {
+    private List returnRoute(List<WebElement> cells) {
         List list = new ArrayList();
 //        获取表中某列的数据,并保存到sb当中
         for (int i = 0; i < cells.size(); i++) {
@@ -215,14 +63,85 @@ public class ReadList {
     }
 
     /**
-     * 通过指定的路径和tagname名来打印相应行的内容
+     * 传入by表单对象，以及一级菜单tb和二级菜单td
+     * 例如：
+     * 在一个表单下tb和td，我们只需要知道表单对象以及一二对象就可以返回该对象中的全部数据
+     *
+     * @param by
+     * @param one
+     * @param two
+     * @return
+     */
+    public List<List> cellContent(By by, String one, String two) {
+        //    System.out.println("获取开始" + new Date());
+//        获取列表对象
+        WebElement element = driver.findElement(by);
+//        找到表中全部为tr的元素
+        List<WebElement> tr = element.findElements(By.tagName(one));
+        List<List> list = new ArrayList();
+//        循环读取那个自提点的整体数据
+        SystemOut.getStringOut("进入循环", "tr的数量" + tr.size());
+        for (int i = 0; i < tr.size(); i++) {
+            //        获取表中某列的数据,并保存到sb当中
+            list.add(dataLevel(tr.get(i), two));
+        }
+        //   System.out.println("获取结束" + new Date());
+        return list;
+    }
+
+    /**
+     * 传入by表单对象，和一级菜单tb和二级菜单td,以及我们需要读取的某行
+     * 例如：
+     * 在一个表单下tb和td，我们只需要知道某行的数据。。那我们就可以直接返回指定行的数据
+     *
+     * @param by
+     * @param one
+     * @param two
+     * @param row
+     * @return
+     */
+    public List columnContent(By by, String one, String two, int row) {
+        //System.out.println("获取开始" + new Date());
+//        获取列表对象
+        WebElement element = driver.findElement(by);
+//        找到表中全部为tr的元素
+        List<WebElement> tr = element.findElements(By.tagName(one));
+//        循环读取那个自提点的整体数据
+        return dataLevel(tr.get(row), two);
+    }
+
+    /**
+     * 传入by表单对象，和一级菜单tb
+     * 例如：
+     * 在一个表单下tb，我们只需要一级菜单的内容。。
+     *
+     * @param route
+     * @param one
+     * @return 返回指定路径的数据, 如果没有找到就返回Null
+     */
+    public List columnContent(By by, String one) {
+        //System.out.println("获取开始" + new Date());
+//        获取列表对象
+        WebElement element = driver.findElement(by);
+        if (element.findElements(By.tagName(one)).size() > 0) {
+            //        找到表中全部为tr的元素,循环读取那个自提点的整体数据
+            List<WebElement> tr = element.findElements(By.tagName(one));
+            return returnRoute(tr);
+        } else {
+            return null;
+        }
+    }
+
+    /**
+     * 暂时没有什么用。。待续
+     * 例子：
+     * 后续开发
      *
      * @param route
      * @param name
      * @return
      */
-    public List getSingle(String route, String name) {
-        By by = By.xpath(route);//对象路径创建一个实体
+    public List single(By by, String name) {
         WebElement element = driver.findElement(by);//通过实体创建一个element
         List<WebElement> tagName = element.findElements(By.tagName(name));//找出这个element里面的子目录
         List list = new ArrayList();//创建集合来装子目录的内容
@@ -231,32 +150,40 @@ public class ReadList {
             if (i == (size - 1)) {//判断是否等于最后一个
                 WebElement element1 = tagName.get(i);
                 List<WebElement> a = element1.findElements(By.tagName("a"));
-                //待审核的商品，操作列是没有操作展示的
-                if (a.size() > 1) {
+                if (a.size() > 1) { //商品操作列中是否有分列
                     for (int j = 0; j < a.size(); j++) {
                         list.add(a.get(j).getText());
                     }
-                    System.out.print("单列的长度" + a.size() + "\t");
-                    System.out.println();
-                } else {
+                }
+                //没有分列就直接添加
+                else {
                     list.add(tagName.get(i).getText());
                 }
-            } else {
+            }
+            //如果是最后一个数据列就直接添加
+            else {
                 list.add(tagName.get(i).getText());
             }
         }
         return list;
     }
 
-    //    返回列表的长度
-    public int getCellSize(String route, String name, String two) {
+    /**
+     * 返回一个表单下的行数。。。设置if>3的目的是。。过滤某些行只是功能显示行并不是我们需要的数据
+     * 例子：
+     *  想知道一个表单下全部的行，但是有些只是一些表明，他们的二级菜单长度比较小，就不是我们想要的数据
+     *  我们可以通过过滤达到一些效果...
+     * @param by
+     * @param name
+     * @param two
+     * @return int
+     */
+    public int cellSize(By by, String one, String two) {
         //   System.out.println("获取开始" + new Date());
-//        获取表对象
-        By by = By.xpath(route);
 //        获取列表对象
         WebElement element = driver.findElement(by);
 //        找到表中全部为tr的元素
-        List<WebElement> tr = element.findElements(By.tagName(name));
+        List<WebElement> tr = element.findElements(By.tagName(one));
         int number = 0;
         for (int i = 0; i < tr.size(); i++) {
             if (tr.get(i).findElements(By.tagName(two)).size() > 3) {
@@ -267,11 +194,16 @@ public class ReadList {
         return number;
     }
 
-    //    返回列表的长度,不需要考虑第二个元素
-    public int getCellSize(String route, String name) {
+    /**
+     * 返回列表的长度,不需要考虑第二个元素
+     * 例子：
+     *  不管表单下的行用来干嘛的我只要全部长度..
+     * @param by
+     * @param name
+     * @return
+     */
+    public int cellSize(By by , String name) {
         System.out.println("获取开始" + new Date());
-//        获取表对象
-        By by = By.xpath(route);
 //        获取列表对象
         WebElement element = driver.findElement(by);
 //        找到表中全部为tr的元素
@@ -287,16 +219,17 @@ public class ReadList {
      * @param element
      * @return
      */
-    public int getFlip(String load) throws InterruptedException {
-        List<List> cellContent = getCellContent(load, "li", "a");
+    public int digitalFlip(By by) throws InterruptedException {
+     /*   List<List> cellContent = cellContent(load, "li", "a");
         String s = cellContent.get(cellContent.size() - 1).get(0).toString();
         if ("下一页".equals(s)) {
             driver.findElement(By.xpath(load + "/li[" + (cellContent.size() - 1) + "]/a")).click();
             driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-            return getFlip(load);
+            return numberFlip(load);
         } else {
             return Integer.parseInt(s);
-        }
+        }*/
+        return 0;
     }
 
 }

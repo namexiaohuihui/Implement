@@ -1,5 +1,6 @@
 package common.tool.upload;
 
+import common.tool.SystemOut;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,7 +15,7 @@ import static java.lang.Thread.sleep;
  * 2.判断店铺执照和店铺实拍图片的个数，之后在进行图片的上传
  * Created by Administrator on 2016/12/5.
  */
-public class Picture {
+public class PictureImage {
 
     /**
      * @param driver WwbDriver对象
@@ -28,13 +29,13 @@ public class Picture {
             swfUpload_0.click();
             sleep(3000);
             try {
-                Runtime.getRuntime().exec("E:/StopData/AutoPicture/" + route);
+                Runtime.getRuntime().exec(route);
                 //   Runtime.getRuntime().exec("E:/picture/" + route);
-                SystemOut.getStringOut("图片上传的名称是", route);
+                SystemOut.getStringOut("图片上传的路径", route);
                 sleep(6000);
             } catch (IOException e) {
                 e.printStackTrace();
-                System.out.println("Error to run the exe 图片上传错误" + e.toString());
+                SystemOut.getStringOut("Error to run the exe 图片上传错误" + e.toString());
                 sleep(10000);
             }
         } catch (InterruptedException e) {

@@ -2,7 +2,7 @@ package wap.business.example.ligrco.Exhibition.Evaluation;
 
 import LnsmInitialize.FoxDriver;
 import LnsmOperation.CommodityOperation.Comments;
-import wap.business.example.ligrco.Exhibition.Evaluation.DropDown.dataFiltering;
+import wap.business.example.ligrco.ExhibitionShow.Evaluation.DropDown.dataFiltering;
 import org.openqa.selenium.WebDriver;
 
 /**

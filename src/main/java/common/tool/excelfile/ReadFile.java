@@ -1,9 +1,6 @@
 package common.tool.excelfile;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 import static java.lang.Thread.sleep;
 
@@ -12,17 +9,17 @@ import static java.lang.Thread.sleep;
  * 负责读取项目自带的txt文件。
  * Created by Administrator on 2016/11/14.
  */
-public class readFile {
+public class ReadFile {
 
     /**
-     * 不需要换行的
+     * 需要换行的
      * 通过IO流来获取项目中的文件内容，将内容返回之后输入到店铺介绍里面
      *
      * @param route 文件在BigDataFile文件夹下面的名称
      * @return
      * @throws InterruptedException
      */
-    public static String getIntroductionFile(String route) throws InterruptedException {
+    public static String introductionFile(String route) throws InterruptedException {
         File file = new File("E://StopData//BigDataFile//" + route);
         StringBuffer sb = new StringBuffer();
         String str = null;
@@ -48,13 +45,13 @@ public class readFile {
     }
 
     /**
-     * 需要换行的
+     * 不需要需要换行的
      * 通过IO流来获取项目中的文件内容，将内容返回之后设置到店铺公告里面
      *
      * @param route 文件在BigDataFile文件夹下面的名称
      * @return
      */
-    public static String getNoticesFile(String route) {
+    public static String noticesFile(String route) {
         File file = new File("E://StopData//BigDataFile//" + route);
         StringBuffer sb = new StringBuffer();
         String str = null;
@@ -76,5 +73,31 @@ public class readFile {
             }
         }
         return sb.toString();
+    }
+    /**
+     * 该方法用于读取txt文件
+     *
+     * @param filePath
+     */
+    public static void readTextFile(String filePath) {
+        try {
+            String encoding = "GBK";
+            File file = new File(filePath);
+            if (file.isFile() && file.exists()) { // 判断文件是否存在
+                InputStreamReader read = new InputStreamReader(
+                        new FileInputStream(file), encoding);// 考虑到编码格式
+                BufferedReader bufferedReader = new BufferedReader(read);
+                String lineTxt = null;
+                while ((lineTxt = bufferedReader.readLine()) != null) {
+                    System.out.println(lineTxt);
+                }
+                read.close();
+            } else {
+                System.out.println("找不到指定的文件");
+            }
+        } catch (Exception e) {
+            System.out.println("读取文件内容出错");
+            e.printStackTrace();
+        }
     }
 }

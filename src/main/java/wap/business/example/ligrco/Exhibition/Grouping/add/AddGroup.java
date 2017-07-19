@@ -1,14 +1,15 @@
 package wap.business.example.ligrco.Exhibition.Grouping.add;
 
-import LnsmData.PacketSorting;
+
+import common.tool.caninput.Preservation;
 import wap.business.example.ligrco.Exhibition.Grouping.Operating;
-import LnsmUitl.LnsmPreservation;
+import wap.business.instantiation.PacketSorting;
 
 /**
  * 点击添加分组之后的操作
  * Created by 70486 on 2017/6/13 on 23:31.
  */
-public class addGroup extends Operating{
+public class AddGroup extends Operating {
 
     private String route = "div[class=group-form-item][id=J_addgroup]";
 
@@ -16,7 +17,7 @@ public class addGroup extends Operating{
 
     PacketSorting packetSorting ;
 
-    public addGroup(PacketSorting packetSorting) {
+    public AddGroup(PacketSorting packetSorting) {
         this.packetSorting = packetSorting;
     }
 
@@ -28,8 +29,8 @@ public class addGroup extends Operating{
         this.size = size;
     }
 
-    public void addGroupClick(){
-        LnsmPreservation.getButtonCssSelector(route);
+    public void addGroupClick() throws InterruptedException {
+        new Preservation().buttonCssSelector(route);
     }
 
 

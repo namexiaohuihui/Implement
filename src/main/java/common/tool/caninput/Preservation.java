@@ -19,11 +19,11 @@ public class Preservation {
     private WebDriver driver = FoxDriver.getWebDrivaer();
 
     //    点击保存按钮
-    public void breservation(String presevation) throws InterruptedException {
+    public void breservation(String id) throws InterruptedException {
         //判断元素是否存在
-        boolean id = new Existence().elementId(presevation);
-        if (id) {
-            driver.findElement(By.id(presevation)).click();
+        boolean bl = new Existence().elementId(id);
+        if (bl) {
+            driver.findElement(By.id(id)).click();
             sleep(1000);
         }
     }
@@ -33,11 +33,11 @@ public class Preservation {
      *
      * @param presevation
      */
-    public void buttonClassName(String presevation) throws InterruptedException {
+    public void buttonClassName(String className) throws InterruptedException {
         //判断元素是否存在
-        boolean className = new Existence().elementClassName(presevation);
-        if (className) {
-            driver.findElement(By.className(presevation)).click();
+        boolean bl = new Existence().elementClassName(className);
+        if (bl) {
+            driver.findElement(By.className(className)).click();
             sleep(1000);
         }
     }
@@ -47,11 +47,11 @@ public class Preservation {
      *
      * @param presevation
      */
-    public void buttonXpath(String presevation) throws InterruptedException {
+    public void buttonXpath(String xPath) throws InterruptedException {
         //判断元素是否存在
-        boolean xPath = new Existence().elementXPath(presevation);
-        if (xPath) {
-            driver.findElement(By.xpath(presevation)).click();
+        boolean bl = new Existence().elementXPath(xPath);
+        if (bl) {
+            driver.findElement(By.xpath(xPath)).click();
             sleep(1000);
         }
     }
@@ -62,11 +62,11 @@ public class Preservation {
      *
      * @param presevation
      */
-    public void buttonLinkText(String presevation) throws InterruptedException {
+    public void buttonLinkText(String linkText) throws InterruptedException {
         //判断元素是否存在
-        boolean linkText = new Existence().elementLinkText(presevation);
-        if (linkText) {
-            driver.findElement(By.linkText(presevation)).click();
+        boolean bl = new Existence().elementLinkText(linkText);
+        if (bl) {
+            driver.findElement(By.linkText(linkText)).click();
             sleep(1000);
         }
     }
@@ -76,11 +76,11 @@ public class Preservation {
      *
      * @param presevation
      */
-    public void buttonName(String presevation) throws InterruptedException {
+    public void buttonName(String Name) throws InterruptedException {
         //判断元素是否存在
-        boolean namw = new Existence().elementName(presevation);
-        if (namw) {
-            driver.findElement(By.name(presevation)).click();
+        boolean bl = new Existence().elementName(Name);
+        if (bl) {
+            driver.findElement(By.name(Name)).click();
             sleep(1000);
         }
     }
@@ -90,10 +90,10 @@ public class Preservation {
      *
      * @param presevation
      */
-    public void buttonCssSelector(String presevation) throws InterruptedException {
-        boolean css = new Existence().elementCssSelector(presevation);
-        if (css) {
-            driver.findElement(By.cssSelector(presevation)).click();
+    public void buttonCssSelector(String cssSelector) throws InterruptedException {
+        boolean bl = new Existence().elementCssSelector(cssSelector);
+        if (bl) {
+            driver.findElement(By.cssSelector(cssSelector)).click();
             sleep(1000);
         }
     }
@@ -118,7 +118,7 @@ public class Preservation {
      *
      * @param bl
      */
-    public String alert(boolean bl) {
+    public String alertSystem(boolean bl) {
         Alert alert = driver.switchTo().alert();
             /*
              getText()    得到它的文本值

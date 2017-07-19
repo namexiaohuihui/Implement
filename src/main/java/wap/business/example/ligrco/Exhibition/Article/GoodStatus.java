@@ -1,7 +1,7 @@
 package wap.business.example.ligrco.Exhibition.Article;
 
-import LnsmInitialize.FoxDriver;
-import LnsmUitl.LnsmList;
+import common.FoxDriver;
+import common.tool.caninput.ReadList;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -20,7 +20,7 @@ public class GoodStatus {
     private WebDriver driver;
     private String position;//位置
     private String written;//
-    private LnsmList lnsmList;
+    private ReadList readList;
 
     /**
      * 商品列表表格xpath路径
@@ -46,8 +46,8 @@ public class GoodStatus {
         //        窗口移动。选择类目之后窗口会往下移，此时分组元素在窗口之外。所以要滑动窗口。
         ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0)");
         driver.findElement(By.xpath(".//div[@class='col-xs-12']/form/button")).click();
-
-        List<List> cellContent = lnsmList.getCellContent(tablePath, "tr", "td");
+        By by = By.xpath(tablePath);
+        List<List> cellContent = readList.cellContent(by, "tr", "td");
     }
 
     /**
@@ -56,11 +56,11 @@ public class GoodStatus {
      *
      * @return
      */
-    private LnsmList getLnsmLiseData() {
-        if (lnsmList == null) {
-            lnsmList = new LnsmList(driver);
+    private ReadList getLnsmLiseData() {
+        if (readList == null) {
+            readList = new ReadList(driver);
         }
-        return lnsmList;
+        return readList;
     }
 
     //    商品名称的输入，如果商品名称过长时应提示用户

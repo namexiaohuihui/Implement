@@ -1,15 +1,16 @@
 package wap.business.example.ligrco.Exhibition.Evaluation.DropDown;
 
-import LnsmInitialize.FoxDriver;
-import LnsmUitl.LnsmPreservation;
-import LnsmUitl.InfoSelect;
+import common.FoxDriver;
+import common.tool.caninput.InfoSelect;
+import common.tool.caninput.Preservation;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
  * select数据筛选
  * Created by 70486 on 2017/6/12 on 20:54.
  */
-public class dataFiltering {
+public class DataFiltering {
 
     private String gradeload;
 
@@ -19,8 +20,9 @@ public class dataFiltering {
 
     private WebDriver driver = FoxDriver.getWebDrivaer();
 
+    InfoSelect infoSelect = new InfoSelect();
     // -------------------------构造方法------------------------
-    public dataFiltering() {
+    public DataFiltering() {
     }
 
     /**
@@ -29,7 +31,9 @@ public class dataFiltering {
      */
     public void gradeSelcect(String grade){
 
-        new InfoSelect().getGoodsStatus(driver, gradeload, grade);
+        By by = By.cssSelector(gradeload);
+        infoSelect.categoryValue(by,gradeload);
+
     }
 
     /**
@@ -37,17 +41,21 @@ public class dataFiltering {
      * @param date 数据
      */
     public void replySelcect(String reply){
-        new InfoSelect().getGoodsStatus(driver, replyload, reply);
+        By by = By.cssSelector(replyload);
+        infoSelect.categoryValue(by,reply);
     }
 
     public void selectFreed(String grade,String reply){
-        new InfoSelect().getGoodsStatus(driver, gradeload, grade);
-        new InfoSelect().getGoodsStatus(driver, replyload, reply);
+
+        By bygrade = By.cssSelector(replyload);
+        By byreply = By.cssSelector(replyload);
+        infoSelect.categoryValue(bygrade,reply);
+        infoSelect.categoryValue(byreply,reply);
     }
 
     //按钮
-    public void buttonClick(){
-        LnsmPreservation.getButtonCssSelector(buttonload);
+    public void buttonClick() throws InterruptedException {
+        new Preservation().buttonCssSelector(buttonload);
     }
 
     // -------------------------get和set方法----------------------

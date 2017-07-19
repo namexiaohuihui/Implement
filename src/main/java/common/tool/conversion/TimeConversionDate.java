@@ -9,7 +9,7 @@ import java.util.Date;
  * Created by ${XiaoHuiHui} on 2017/6/16 on 15:59.
  * XiaoHiiHui [704866169@qq.com]
  */
-public class timeConversionDate {
+public class TimeConversionDate {
 
     /**
      * 时间戳转换成日期格式字符串
@@ -28,7 +28,7 @@ public class timeConversionDate {
         return sdf.format(new Date(Long.valueOf(seconds+"000")));
     }
 
-    public  static String  getStringToday() {
+    public  static String  stringToday() {
         Date currentTime = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy:MM:dd HH:mm:ss");
         String dateString = formatter.format(currentTime);
@@ -36,7 +36,7 @@ public class timeConversionDate {
     }
 
 
-    public static void TestDate(){
+    public static void testDate(){
         Date now = new Date();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");// 可以方便地修改日期格式
         String hehe = dateFormat.format(now);

@@ -1,7 +1,7 @@
 package wap.business.example.security;
 
-import LnsmUitl.LnsmTool;
 import common.FoxDriver;
+import common.tool.caninput.Existence;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
  * 賬戶信息菜單里的子目錄切換
  * Created by Administrator on 2016/10/31.
  */
-public class securityDefence {
+public class SecurityDefence {
     WebDriver driver = FoxDriver.getFoxDriver();
     String []listBar ;
     String [] url ;
@@ -39,7 +39,7 @@ public class securityDefence {
         System.out.println("账户安全页面打开了");
     }
     private void getElsenium(String listBar){
-        if (LnsmTool.getLinkText(listBar)){
+        if (new Existence().elementLinkText(listBar)){
             System.out.println(listBar + "元素存在。。");
         }else {
             System.out.println(listBar + "元素不存在。。");

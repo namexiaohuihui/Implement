@@ -1,6 +1,7 @@
 package common.tool.conversion;
 
-import LnsmInitialize.FoxDriver;
+import common.FoxDriver;
+import common.parameter.WapUrl;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.Point;
@@ -10,6 +11,8 @@ import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import java.io.*;
 import java.util.concurrent.TimeUnit;
+
+import static common.tool.excelfile.ReadFile.readTextFile;
 
 /**
  * 通过指定元素进行截图，并保存下来，然后在进行转换
@@ -22,7 +25,8 @@ public class TesseractTest {
             InterruptedException {
 
         WebDriver driver = FoxDriver.getFoxDriver();
-        driver.get("http://***/login?f=//");
+        WapUrl wapUrl = new WapUrl();
+        driver.get(wapUrl.getWebHttp());
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         WebElement element = driver.findElement(By.id("loginBtn"));
 
@@ -38,33 +42,6 @@ public class TesseractTest {
         Thread.sleep(1000);
         // 读取文本数据
         readTextFile("E:\\test.txt");
-    }
-
-    /**
-     * 该方法用于读取txt文件
-     *
-     * @param filePath
-     */
-    public static void readTextFile(String filePath) {
-        try {
-            String encoding = "GBK";
-            File file = new File(filePath);
-            if (file.isFile() && file.exists()) { // 判断文件是否存在
-                InputStreamReader read = new InputStreamReader(
-                        new FileInputStream(file), encoding);// 考虑到编码格式
-                BufferedReader bufferedReader = new BufferedReader(read);
-                String lineTxt = null;
-                while ((lineTxt = bufferedReader.readLine()) != null) {
-                    System.out.println(lineTxt);
-                }
-                read.close();
-            } else {
-                System.out.println("找不到指定的文件");
-            }
-        } catch (Exception e) {
-            System.out.println("读取文件内容出错");
-            e.printStackTrace();
-        }
     }
 
     /**

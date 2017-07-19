@@ -35,7 +35,8 @@ public class SendEmail {
          final String user =this.user ;
          final String pass =this.pass ;
 
-        // Assuming you are sending email from localhost(服务器的host：qq：smtp.qq.com)
+        // Assuming you are sending email from localhost
+        // (服务器的host：qq：smtp.qq.com)
         String host = "smtp.qq.com";
 
         // Get system properties
@@ -51,7 +52,7 @@ public class SendEmail {
         //开启ssl
         properties.put("mail.smtp.starttls.enable", "true");
 
-// 创建邮件验证信息，即发送邮件的用户名和密码
+        // 创建邮件验证信息，即发送邮件的用户名和密码
         Authenticator authenticator = new Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {

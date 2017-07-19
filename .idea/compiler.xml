@@ -9,7 +9,7 @@
         <module name="Implement" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8">
       <module name="Implement" target="1.8" />
     </bytecodeTargetLevel>
   </component>

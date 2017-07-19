@@ -1,8 +1,8 @@
 package wap.business.example.ligrco.Exhibition.Grouping.modify;
 
-import LnsmData.PacketContent;
-import LnsmData.PacketSorting;
-import LnsmUitl.SystemOut;
+
+import common.tool.SystemOut;
+import wap.business.instantiation.PacketContent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.List;
  * Created by ${XiaoHuiHui} on 2017/6/13 on 14:23.
  * XiaoHiiHui [704866169@qq.com]
  */
-public class modifySort extends  modify{
+public class ModifySort extends Modify {
 
     private int sort;
 

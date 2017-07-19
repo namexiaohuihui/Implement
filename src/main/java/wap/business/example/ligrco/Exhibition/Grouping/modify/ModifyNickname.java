@@ -1,26 +1,26 @@
 package wap.business.example.ligrco.Exhibition.Grouping.modify;
 
-import LnsmData.PacketSorting;
-import LnsmData.StatementOperation;
-import LnsmUitl.SystemOut;
+
+import common.tool.SystemOut;
+import wap.business.instantiation.PacketSorting;
 
 /**
  * 分组名字修改类
  * Created by ${XiaoHuiHui} on 2017/6/13 on 14:22.
  * XiaoHiiHui [704866169@qq.com]
  */
-public class modifyNickname extends modify {
+public class ModifyNickname extends Modify {
 
     private String name;
 
     //名字执行的认证
     private boolean nJ;
 
-    public modifyNickname(PacketSorting packetSorting) {
+    public ModifyNickname(PacketSorting packetSorting) {
         super(packetSorting);
     }
 
-    public modifyNickname() {
+    public ModifyNickname() {
     }
 
     /**

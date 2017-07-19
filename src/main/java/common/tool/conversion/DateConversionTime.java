@@ -11,7 +11,7 @@ import java.util.List;
  * Created by ${XiaoHuiHui} on 2017/6/16 on 15:59.
  * XiaoHiiHui [704866169@qq.com]
  */
-public class dateConversionTime {
+public class DateConversionTime {
 
 
     /**

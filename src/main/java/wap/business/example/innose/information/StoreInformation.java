@@ -1,7 +1,12 @@
 package wap.business.example.innose.information;
 
-import LnsmInitialize.FoxDriver;
-import LnsmUitl.*;
+
+import common.FoxDriver;
+import common.tool.caninput.Existence;
+import common.tool.caninput.InfoFrame;
+import common.tool.caninput.InfoSelect;
+import common.tool.caninput.Preservation;
+import common.tool.upload.PictureImage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -14,17 +19,14 @@ import java.util.concurrent.TimeUnit;
 import static org.junit.Assert.assertEquals;
 
 /**
- * 店鋪管理-->店铺信息：
- * 名稱：如果名稱存在就不進行設置
- * 品類、配送距離、起送價、聯繫方式、店鋪地址、經緯度、店鋪介紹、以及按鈕
- * 其中地圖地位需要手動設置，此時代碼休眠。
+ * 信息
  * Created by Administrator on 2016/11/1.
  */
 public class StoreInformation {
 
     //    记录店铺执照上传的对象，方便循环执行
-    String photo[] = new String[]{"photo1.exe", "photo2.exe", "photo3.exe", "photo4.exe", "photo5.exe"};
-    String license[] = new String[]{"license1.exe", "license2.exe"};
+    String photo[] ;
+    String license[];
     private WebDriver driver = FoxDriver.getFoxDriver();
     //    实拍和执照的上传按钮class名
     private String button = "uploadify-button ";
@@ -81,13 +83,13 @@ public class StoreInformation {
 //        上传LOGO图片
         //    getLogo("SWFUpload_0", "shop_logo.exe");
 //        实拍和执照的上传
-           getLicensePhoto();
+        getLicensePhoto();
 //        设置店铺的配送电话
-        getRadius("contact", "18778036666");
+        getRadius("contact", "--");
 //        设置店铺的介绍
 //        getIntroduce();
 //        保存按钮
-        LnsmPreservation.getButtonXpath("//*[@class='referBtn']/input");
+        new Preservation().buttonXpath("//*[@class='referBtn']/input");
 //        点击保存之后等待5S让页面元素进行加载
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 //        加载完成之后，判断提示用于是否为修改成功
@@ -116,7 +118,7 @@ public class StoreInformation {
         int licenseNumber = 0;
         int photoNumber = 0;
 //        判断执照第一张是否存在
-        if (LnsmTool.getXPath(".//ul[@id='J_piczz-box']/li")) {
+        if (new Existence().elementXPath(".//ul[@id='J_piczz-box']/li")) {
 //            如果第一张存在那么判断上传按钮状态是否为可点击状态
             if (real.equals(button)) {
 //                如果是可点击状态那么就上传一张图片
@@ -167,7 +169,7 @@ public class StoreInformation {
     }
 
     //    读取店铺省份
-    public void getAdd(int number, String value, String options) throws InterruptedException {
+    public void getAdd(int position, String value, String options) throws InterruptedException {
 //        读取店铺省份的内容，通过value来读取内容
         String data = driver.findElement(By.xpath("//*[@id=\"province\"]")).getAttribute("value");
 //      如果长度大于1，所以设置过
@@ -175,7 +177,13 @@ public class StoreInformation {
             System.out.println(value + "为现在省份");
         } else {
 //            长度小于1说明没有设置过，然后调用方法进行设置
-           new InfoSelect().getAddress(driver, number, value, options);
+            InfoSelect infoSelect = new InfoSelect();
+            By province = By.cssSelector("select[id=province][name=province]");
+            By city = By.cssSelector("select[id=city][name=city]");
+            By county = By.cssSelector("select[id=county][name=county]");
+            infoSelect.categoryIndex(province,position);
+            infoSelect.categoryValue(city,value);
+            infoSelect.categoryText(county,options);
         }
     }
 
@@ -191,14 +199,14 @@ public class StoreInformation {
     //    设置店铺LOGO图像
     private void getLogo(String name, String route) throws InterruptedException {
 //        统一上传的功能
-        LnsmPicture.getLogo(driver, name, route);
+        PictureImage.getLogo(driver, name, route);
     }
 
     //        设置店铺介绍
     private void getIntroduce() throws InterruptedException {
         weizhi = 18;
         String load = "//*[@id=\"shopissueform\"]/table/tbody/tr[" + weizhi + "]/td/div/div[2]/iframe";
-        new LnsmFrame(driver, load, "ShopIntroduction");
+        new InfoFrame().editInfoFrame(load, "ShopIntroduction");
     }
 
 

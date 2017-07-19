@@ -1,15 +1,19 @@
 package wechat;
 
-import LnsmInitialize.FoxDriver;
-import LnsmInitialize.LnsmRegister;
-import LnsmUi.ElementInput;
-import LnsmUitl.LnsmPreservation;
-import LnsmUitl.SystemOut;
-import SingleStep.Generallist;
+
+import common.FoxDriver;
+import common.parameter.Parameter;
+import common.parameter.WapUrl;
+import common.tool.SystemOut;
+import common.tool.caninput.ElementInput;
+import common.tool.caninput.Preservation;
+import common.tool.conversion.CharacterString;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import wap.business.example.StartEntrance;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -20,29 +24,37 @@ import java.util.Map;
 import static java.lang.Thread.sleep;
 
 /**
+ * 确认页面的数据对比
  * Created by 70486 on 2017/7/6 on 21:13.
  */
 public class ordinaryOrder {
 
-    private String shopUrl = "http://---";
-
-    private String login = shopUrl + "password?f=/goods/hot-goods";
-
-    LnsmRegister lr = new LnsmRegister();
-
-    private String zhanghao = "----";
-    private String mima = "-------";
-
+    //对象的创建
+    Parameter parameter = new Parameter();
+    Preservation preservation = new Preservation();
+    CharacterString chaStr = new CharacterString();
+    //浏览器对象
     WebDriver driver;
+
+    @BeforeClass
+    public void readyStart() {
+        //网址对象的创建
+        WapUrl wapurl = new WapUrl();
+
+        //统一网址打开的模板
+        driver =FoxDriver.openBrowser(wapurl.getHomeHot());
+    }
 
     @Test
     public void startLogin() {
         try {
-            lr.openBrowser(login);
-            driver = FoxDriver.getWebDrivaer();
+            //登录
             loginTo();
+            //地址
             address();
+            //下单
             environmentalScience();
+            //确认订单页面的数据对比
             detailedList();
         } catch (Exception e) {
             e.printStackTrace();
@@ -52,54 +64,63 @@ public class ordinaryOrder {
 
     //登录
     public void loginTo() throws InterruptedException {
+        //元素输入对象的创建
         ElementInput elementInput = new ElementInput();
+
+        //参数
+        String zhanghao = parameter.getAccountStart();
+        String mima = parameter.getPassWordStrat();
+
+        //输入
         elementInput.accordingToId("J_tel", zhanghao);
         elementInput.accordingToId("J_pwd", mima);
-        LnsmPreservation.getPreservation("J_login");
-        sleep(1000);
+
+        //点击
+        preservation.buttonCssSelector("J_login");
     }
 
     //遮盖、切换、地址
-    private void address() {
+    private void address() throws InterruptedException {
         //遮盖
-        LnsmPreservation.getButtonCssSelector("i.guide-btn");
+        preservation.buttonCssSelector("i.guide-btn");
         //切换
-        LnsmPreservation.getButtonCssSelector("a.nav-nearby");
+        preservation.buttonCssSelector("a.nav-nearby");
         //进入地址
-        LnsmPreservation.getButtonCssSelector("span.flex1.txt-elps");
+        preservation.buttonCssSelector("span.flex1.txt-elps");
 
         //选择地址
         WebElement el = driver.findElement(By.cssSelector("div.m-map-location li:nth-child(2)"));
         SystemOut.getStringOut(el.getText() + "--");
-        LnsmPreservation.getWebElementOb(el);
+        //点击地址
+        preservation.webElementOb(el);
     }
 
-    //店铺的确认订单
+    //家的确认
     private void environmentalScience() throws InterruptedException {
 
-        //进入店铺
+        //进入家
         WebElement test = driver.findElement(By.partialLinkText("哈哈丶嘟嘟噜店铺"));
-        LnsmPreservation.getWebElementOb(test);
+        preservation.webElementOb(test);
 
-        //选择商品
+        //选择东西
         String str = "span.J_add.shop-goods-add.icon-font.icon-plus-str";
         List<WebElement> goods = driver.findElements(By.cssSelector(str));
         String cur = "span.tab-item.tab-item-cur";
-        LnsmPreservation.getButtonCssSelector(cur);
+        preservation.buttonCssSelector(cur);
         for (int i = 0; i < 2; i++) {
             SystemOut.getStringOut(i + "选择");
             WebElement good = goods.get(i);
-            LnsmPreservation.getWebElementOb(good);
+            preservation.webElementOb(good);
         }
         SystemOut.getStringOut("选择完了");
         //去结算:按钮不可点击时是dis。。
         // String dis = "a.J_goBuy.m-cart-by.m-cart-by-dis";
         String by = "a.J_goBuy.m-cart-by";
-        LnsmPreservation.getButtonCssSelector(by);
+        preservation.buttonCssSelector(by);
 
     }
 
-    //确认订单页面的清单
+    //确认页面的清单
     private void detailedList() {
         Double sunNumber = 0d;
         Double fullCut = 0d;
@@ -108,14 +129,14 @@ public class ordinaryOrder {
         Double distribution = 0d;
         Double total = 0d;
         Generallist generallist = new Generallist();
-        //商品
+        //东西
         List<WebElement> prices = driver.findElements(By.cssSelector("p.order-goods-price span:nth-child(1)"));
         List<WebElement> sums = driver.findElements(By.cssSelector("span.J_goodsSum"));
         List<Map<String, Double>> jihe = new ArrayList<>();
 
         for (int i = 0; i < prices.size(); i++) {
             String price = prices.get(i).getText();
-            double nums = qiege(price, 1);
+            double nums = chaStr.cuttingCharacter(price, 1,null);
             String sum = sums.get(i).getText().split("x ")[1];
             double sumnumber = Double.parseDouble(sum);
             Map<String, Double> map = new HashMap<>();
@@ -139,7 +160,7 @@ public class ordinaryOrder {
         try {
             //满减
             String prv = driver.findElement(By.id("J_prv")).getText();
-            generallist.setFullCut(qiege(prv, 2, "."));
+            generallist.setFullCut(chaStr.cuttingCharacter(prv, 2, "."));
             fullCut = generallist.getFullCut();
             SystemOut.getStringOut("满减的金额" + fullCut);
         } catch (Exception e) {
@@ -148,25 +169,25 @@ public class ordinaryOrder {
         //红包
         String spans = "div.J_result.order-result>a>p span:nth-child(2)";
         String span = driver.findElement(By.cssSelector(spans)).getText();
-        generallist.setRed(qiege(span, 2, ">"));
+        generallist.setRed(chaStr.cuttingCharacter(span, 2, ">"));
         red = generallist.getRed();
         SystemOut.getStringOut("红包" + red);
 
         //数量
         String cn2 = driver.findElement(By.cssSelector("span.c-b2")).getText();
-        generallist.setNumber(qiege(cn2, 0, "件"));
+        generallist.setNumber(chaStr.cuttingCharacter(cn2, 0, "件"));
         number = generallist.getNumber();
         SystemOut.getStringOut("数量" + number);
 
         //配送
         String cb2 = driver.findElement(By.cssSelector("span.J_freight.c-b2")).getText();
-        generallist.setDistribution(qiege(cb2, 1, "."));
+        generallist.setDistribution(chaStr.cuttingCharacter(cb2, 1, "."));
         distribution = generallist.getDistribution();
         SystemOut.getStringOut("配送" + distribution);
 
         //合计
         String cff = driver.findElement(By.cssSelector("span.J_total.c-ff")).getText();
-        generallist.setTotal(qiege(cff, 1, "."));
+        generallist.setTotal(chaStr.cuttingCharacter(cff, 1, "."));
         total = generallist.getTotal();
         SystemOut.getStringOut("合计" + total);
 
@@ -189,23 +210,4 @@ public class ordinaryOrder {
         }
     }
 
-
-    private double qiege(String prv, int number, String data) {
-        prv = prv.replace(" ", "");
-        if (data.equals(".")) {
-            prv = prv.substring(number, prv.lastIndexOf(data));
-        } else if (data.equals("KEY")) {
-            prv = prv.substring(number, prv.length());
-        } else {
-            prv = prv.substring(number, prv.length() - 1);
-        }
-        double num = Double.parseDouble(prv);
-        return num;
-    }
-    private double qiege(String prv,int number) {
-        prv = prv.replace(" ", "");
-            prv = prv.substring(number, prv.length());
-        double v = Double.parseDouble(prv);
-        return v;
-    }
 }

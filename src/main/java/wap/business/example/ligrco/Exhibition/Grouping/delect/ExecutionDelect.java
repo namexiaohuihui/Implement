@@ -1,17 +1,17 @@
 package wap.business.example.ligrco.Exhibition.Grouping.delect;
 
-import wap.business.example.ligrco.Exhibition.Grouping.Operating;
-import LnsmUitl.SystemOut;
+import common.tool.SystemOut;
+import common.tool.caninput.Preservation;
 import org.openqa.selenium.WebDriver;
+import wap.business.example.ligrco.Exhibition.Grouping.Operating;
 
 import java.io.IOException;
 
-import static LnsmUitl.LnsmPreservation.getAlert;
 
 /**
  * Created by 70486 on 2017/6/13 on 23:16.
  */
-public class executionDelect extends Operating {
+public class ExecutionDelect extends Operating {
     
     
     /**
@@ -21,11 +21,11 @@ public class executionDelect extends Operating {
     public void executionJudgment(String str) {
         if (str.equals(tr)) {
             SystemOut.getStringOut("商品分组执行点击确定按钮", str);
-            String alert = getAlert(true);
+            String alert = new Preservation().alertSystem(true);
             SystemOut.getStringOut("系统对话框的标题是", alert);
         } else if (str.equals(fa)) {
             SystemOut.getStringOut("商品分组执行点击取消按钮", str);
-            String alert =  getAlert(false);
+            String alert =  new Preservation().alertSystem(false);
             SystemOut.getStringOut("系统对话框的标题是", alert);
         } else {
             SystemOut.getStringOut("商品分组执行出现第三方", str);

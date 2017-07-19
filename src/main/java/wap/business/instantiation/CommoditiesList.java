@@ -1,6 +1,7 @@
 package wap.business.instantiation;
 
-import LnsmUitl.LnsmList;
+import common.tool.caninput.ReadList;
+import org.openqa.selenium.By;
 
 import java.util.Arrays;
 import java.util.List;
@@ -128,9 +129,10 @@ public class CommoditiesList {
                 '}';
     }
 
-    public CommoditiesList setComodityList(LnsmList lnsmList , int row , String tablePath) {
+    public CommoditiesList setComodityList(ReadList readList, int row, String tablePath) {
+        By by = By.xpath(tablePath);
         //根据标签来获取列表的数据
-        List columnContent = lnsmList.getColumnContent(tablePath, "tr", "td", row);
+        List columnContent = readList.columnContent(by, "tr", "td", row);
         CommoditiesList comm = new CommoditiesList();
         //讲列表中读取商品的属性转成类对象进行存储
         comm.setNumber((String) columnContent.get(0));

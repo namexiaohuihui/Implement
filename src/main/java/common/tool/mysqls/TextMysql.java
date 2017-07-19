@@ -16,7 +16,7 @@ public class TextMysql {
         Connection conn = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            String url  = "jdbc:mysql://192.168.10.203/**";
+            String url  = "jdbc:mysql://load/**";
             String user = "root";
             String pass = "123456";
             conn = DriverManager.getConnection(url,user,pass);
@@ -29,7 +29,7 @@ public class TextMysql {
     }
     public static void main(String[] args){
         Connection conn=getConnection();
-        String sql="select * from -- where shop_id = 10175 ;";
+        String sql="select * from -- where 66 = 10175 ;";
         PreparedStatement stmt;
         try {
             stmt = conn.prepareStatement(sql);

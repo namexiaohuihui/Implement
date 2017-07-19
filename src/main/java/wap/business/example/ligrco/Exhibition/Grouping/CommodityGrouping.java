@@ -1,17 +1,17 @@
 package wap.business.example.ligrco.Exhibition.Grouping;
 
-import LnsmData.PacketContent;
-import LnsmData.PacketSorting;
-import LnsmInitialize.FoxDriver;
-import LnsmOperation.CommodityOperation.Comments;
-import wap.business.example.ligrco.Exhibition.Grouping.modify.modify;
-import LnsmOperation.conversion.dateConversionTime;
-import LnsmUitl.LnsmExcel;
-import LnsmUitl.LnsmList;
-import LnsmUitl.LnsmPreservation;
-import LnsmUitl.SystemOut;
+
+import common.FoxDriver;
+import common.tool.SystemOut;
+import common.tool.caninput.Preservation;
+import common.tool.caninput.ReadList;
+import common.tool.conversion.DateConversionTime;
+import common.tool.excelfile.ReadExcel;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import wap.business.example.ligrco.Exhibition.Grouping.modify.Modify;
+import wap.business.instantiation.PacketContent;
+import wap.business.instantiation.PacketSorting;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -33,7 +33,7 @@ import java.util.concurrent.TimeUnit;
  * 添加分组的按钮
  * Created by XiaoHuiHui on 2016/12/27.
  */
-public class CommodityGrouping extends Comments {
+public class CommodityGrouping {
     private WebDriver driver = FoxDriver.getWebDrivaer();
 
 
@@ -43,7 +43,7 @@ public class CommodityGrouping extends Comments {
     //商品分组排序值
     private int sort;
 
-    private LnsmExcel lnsmExcel;
+    private ReadList readList = new ReadList(driver);
 
     //判断是否需要执行操作
     private final String tr = "Y";
@@ -59,7 +59,6 @@ public class CommodityGrouping extends Comments {
     private boolean sJ;
 
     public CommodityGrouping(String url) {
-        super(url);
         try {
             PacketListContent();
         } catch (InterruptedException e) {
@@ -88,7 +87,7 @@ public class CommodityGrouping extends Comments {
 
             SystemOut.getStringOut(packetSorting.toString(), i + "");
             //代码执行，list下标是从0开始，列表数据是从1开始的，excle也是从0开始的
-              editNameSort(size);
+            editNameSort(size);
         }
     }
 
@@ -103,7 +102,7 @@ public class CommodityGrouping extends Comments {
         switch (packetSorting.getOperation()) {
             case "修改":
                 modifyEdit(1);
-                modify modify = new modify(packetSorting);
+                Modify modify = new Modify(packetSorting);
                 //分组页面的分组操作
                 modify.setSize(size + 1);
                 modify.editNameSort();
@@ -203,8 +202,8 @@ public class CommodityGrouping extends Comments {
     private List<String> modifyRead(int size) throws IOException {
         //lo:通过冒泡得出新修改的排序所在位置
         String lo = "//*[@id='grouping']/tr[" + size + "]";
-        //*[@id="grouping"]/tr[6]
-        List<String> td = new LnsmList(driver).getSingle(lo, "td");
+        By by = By.xpath(lo);
+        List<String> td = new ReadList(driver).single(by, "td");
         return td;
     }
 
@@ -237,7 +236,7 @@ public class CommodityGrouping extends Comments {
         for (int i = 1; i < packetContents.size(); i++) {
             listTime.add(packetContents.get(i).getDate());
         }
-        int i = new dateConversionTime().conversionTime(listTime);
+        int i = new DateConversionTime().conversionTime(listTime);
         if (i == size) {
             SystemOut.getStringOut("分组修改之后，时间所在的位置跟排序所在的位置相同");
         } else {
@@ -257,7 +256,7 @@ public class CommodityGrouping extends Comments {
         //positions表示第几行数据，posi表示第几个按钮
         String load = ".//tbody[@id='grouping']/" +
                 "tr[2]/td[5]/span[" + posis + "]";
-        LnsmPreservation.getButtonXpath(load);
+        new Preservation().buttonXpath(load);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
@@ -268,7 +267,7 @@ public class CommodityGrouping extends Comments {
      * @param bl 为真就点击正确，为假就点击取消
      */
     private void getAlert(boolean bl) {
-        String alert = LnsmPreservation.getAlert(bl);//点击系统对话框上的操作
+        String alert = new Preservation().alertSystem(bl);//点击系统对话框上的操作
         SystemOut.getStringOut("系统对话框的标题是", alert);
     }
 
@@ -296,9 +295,9 @@ public class CommodityGrouping extends Comments {
      * @throws IOException
      */
     private List<PacketSorting> setPacketOplog() throws IOException {
-        lnsmExcel = new LnsmExcel();
+        ReadExcel readExcel = new ReadExcel();
         //读取数据
-        List<List> wholeReadXlsx = lnsmExcel.getWholeReadXlsx(".//src//main//java//商品分组排序.xlsx");
+        List<List> wholeReadXlsx = readExcel.wholeReadXlsx(".//src//main//java//商品分组排序.xlsx");
 
         //创建存储对象的集合
         List<PacketSorting> goodsOplogList = new ArrayList<>();
@@ -326,9 +325,8 @@ public class CommodityGrouping extends Comments {
      * @throws IOException
      */
     private List<PacketContent> setPacketList() throws IOException {
-        LnsmList lnsmList = new LnsmList(driver);
-        List<List> cellContent = lnsmList.getCellContent(
-                ".//tbody[@id='grouping']", "tr", "td");
+        By by = By.xpath(".//tbody[@id='grouping']");
+        List<List> cellContent = readList.cellContent(by, "tr", "td");
 
         //将数据转换成类对象进行储存
 
@@ -351,9 +349,8 @@ public class CommodityGrouping extends Comments {
      * @throws IOException
      */
     private PacketContent setPacketNumber() throws IOException {
-        LnsmList lnsmList = new LnsmList(driver);
-        List<String> cellContent = lnsmList.getColumnContent(
-                ".//tbody[@id='grouping']/tr[2]", "td");
+        By by = By.xpath(".//tbody[@id='grouping']/tr[2]");
+        List<String> cellContent = readList.columnContent(by, "td");
 
         //将数据转换成类对象进行储存
         PacketContent pc = null;

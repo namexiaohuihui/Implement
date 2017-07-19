@@ -1,11 +1,15 @@
 package wap.business.example.ligrco.Exhibition.Article;
 
-import LnsmData.CommodityIntroduction;
-import LnsmInitialize.FoxDriver;
-import LnsmUitl.*;
+import common.FoxDriver;
+import common.tool.SystemOut;
+import common.tool.caninput.InfoFrame;
+import common.tool.caninput.InfoSelect;
+import common.tool.caninput.Preservation;
+import common.tool.upload.PictureImage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import wap.business.instantiation.CommodityIntroduction;
 
 import java.util.List;
 
@@ -30,6 +34,7 @@ public class ProductEditor {
 
     private final String fa = "N";
 
+    InfoSelect infoSelect = new InfoSelect();
     public ProductEditor(CommodityIntroduction comm) {
         this.comm = comm;
     }
@@ -42,7 +47,8 @@ public class ProductEditor {
         if (firstCid) {
             System.out.println("主类需要改" + comm.getFirstCid());
             //商品主类目的设定
-          new InfoSelect().PropertyValue(driver, "first_cid", comm.getFirstCid());
+            By by = By.cssSelector("first_cid");
+            infoSelect.categoryValue(by, comm.getFirstCid());
         } else {
             System.out.println("主类不需要改" + comm.getFirstCid());
         }
@@ -51,7 +57,8 @@ public class ProductEditor {
         if (SecondCid) {
             System.out.println("子类需要改" + comm.getSecondCid());
             //商品子类目的设定
-            new InfoSelect().PropertyValue(driver, "second_cid", comm.getSecondCid());
+            By by = By.cssSelector("second_cid");
+            infoSelect.categoryValue(by, comm.getSecondCid());
         } else {
             System.out.println("子类不需要改" + comm.getSecondCid());
         }
@@ -129,8 +136,8 @@ public class ProductEditor {
             //实现上传
             SystemOut.getStringOut("编辑时的图片需要上传的数量 ", number + "");
             for (int i = 0; i < number && i < logoStr.length; i++) {//上传的图片数量应当小于可上传的空余数量以及文档中给出的数据
-                LnsmPreservation.getButtonCssSelector("object[id=SWFUpload_0][class=swfupload]");
-                LnsmPicture.getLogo(driver, "SWFUpload_0", logoStr[i]);
+               new Preservation().buttonCssSelector("object[id=SWFUpload_0][class=swfupload]");
+                new PictureImage().getLogo(driver, "SWFUpload_0", logoStr[i]);
             }
         } else {
             SystemOut.getStringOut("编辑时的图片不需要进行上传");
@@ -141,13 +148,13 @@ public class ProductEditor {
             System.out.println("详情需要改" + comm.getContent());
             //商品编辑的入口
             String load = "iframe[class=ke-edit-iframe]";
-            new LnsmFrame().LnsmFrameCss(driver, load, comm.getContent());
+            new InfoFrame().editInfoFrame(load, comm.getContent());
             contents = comm.getContent();
         } else {
             System.out.println("详情不需要改" + comm.getContent());
             //商品编辑的入口
-            String load = "iframe[class=ke-edit-iframe]";
-            contents = new LnsmFrame().LnsmFrameCss(driver, load);
+            By by = By.cssSelector("iframe[class=ke-edit-iframe]");
+            contents = new InfoFrame().contentFrame(by);
         }
 
         boolean Preview = comm.getPreview().equals(fa) ? false : true;//预览
@@ -161,7 +168,7 @@ public class ProductEditor {
                 SystemOut.getStringOut("商品预览上面的数据不对");
             }
 
-            LnsmPreservation.getButtonCssSelector("a[class=aui_close]");
+            new Preservation().buttonCssSelector("a[class=aui_close]");
 
         } else {
             System.out.println("预览不需要改" + comm.getPreview());
@@ -177,7 +184,7 @@ public class ProductEditor {
             System.out.println("保存不需要改" + comm.getPreservation());
             driver.navigate().back();
             //得到alert\confirm\prompt对话框的对象
-            String alert = LnsmPreservation.getAlert(true);//点击系统对话框的确定按钮
+            String alert = new Preservation().alertSystem(true);//点击系统对话框的确定按钮
             SystemOut.getStringOut("系统对话框的标题是",alert);
         }
 

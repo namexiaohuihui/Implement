@@ -1,18 +1,19 @@
 package wap.business.example.ligrco.Exhibition.Article;
 
-import LnsmData.CommoditiesList;
-import LnsmData.CommodityIntroduction;
-import LnsmData.CommodityOperation;
-import LnsmElement.LnsmUrl;
-import LnsmInitialize.FoxDriver;
-import LnsmOperation.SupplyOrderOperation;
-import LnsmUitl.LnsmExcel;
-import LnsmUitl.LnsmPreservation;
-import LnsmUitl.LnsmPromptBox;
-import LnsmUitl.SystemOut;
+
+import common.FoxDriver;
+import common.parameter.WapUrl;
+import common.tool.SystemOut;
+import common.tool.caninput.Preservation;
+import common.tool.caninput.PromptBox;
+import common.tool.excelfile.ReadExcel;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import wap.business.example.cooperation.boundary.TopTransaction;
+import wap.business.instantiation.CommoditiesList;
+import wap.business.instantiation.CommodityIntroduction;
+import wap.business.instantiation.CommodityOperation;
 
 import java.io.IOException;
 import java.util.List;
@@ -111,36 +112,19 @@ public class GoodOperation {
         }
     }
 
-    //不通过商品的操作方法。操作项有：编辑和原因
+    //不通过商品的操作方法。操作项有：和原因
     public void setNotPass() throws Exception {
 
-        LnsmExcel lnsmExcel = new LnsmExcel();
+       // ReadExcel readExcel = new ReadExcel();
 
         //操作执行判断
         boolean implement = commOperation.getImplement().equals(fa) ? false : true;
         switch (commOperation.getOperation()) {
-            case "编辑"://如果是编辑就点击编辑按钮
 
-                if (implement) {//判断是否需要进行确定按钮的操作
-                    setEditTable(1);
-                    //需要点击按钮就执行按钮的点击任务..
-                } else {
-                    SystemOut.getStringOut(commOperation.getState(),
-                            commOperation.getOperation(),
-                            "的操作" + commOperation.getImplement());
-                }
-
-
-                /*
-                setPosition(1);
-                driver.manage().timeouts().implicitlyWait(3,TimeUnit.SECONDS);
-                driver.navigate().back();
-                */
-                break;
             case "原因":
                 if (implement) {//判断是否需要进行相应的操作
                     setPosition(2);
-                    new LnsmPromptBox(driver).getGoodsReason();
+                    new PromptBox(driver).boxPromptReason();
                 } else {
                     SystemOut.getStringOut(commOperation.getState(),
                             commOperation.getOperation(),
@@ -155,19 +139,19 @@ public class GoodOperation {
 
 
     //售卖中商品的操作方法。操作项有：排序、下架，如果是供货商品还有订货的按钮
-    private void setSaleIn() {
-        LnsmPromptBox lnsmPromptBox = new LnsmPromptBox(driver);
+    private void setSaleIn() throws InterruptedException {
+        PromptBox promptBox = new PromptBox(driver);
         boolean oplog = commOperation.getImplement().equals(fa) ? false : true;//判断是否需要进行相应的操作
         switch (commOperation.getOperation()) {
             case "排序":
                 //根据位置进行点击
-                SortAcquisition(lnsmPromptBox, oplog);//排序的识别
+                SortAcquisition(promptBox, oplog);//排序的识别
                 break;
             case "下架":
                 //根据位置进行点击
                 setPosition(2);
                 //商品上下架的操作
-                lnsmPromptBox.setGoodsStatusOnTheShelf(oplog);
+                promptBox.boxPromptOnTheShelf(oplog);
                 break;
             case "订货":
                 OrderOperation();//订货方法的调用
@@ -181,11 +165,11 @@ public class GoodOperation {
 
     //已下架商品的操作方法。操作项有：排序、上架、订货
     private void setRescinded() throws InterruptedException {
-        LnsmPromptBox lnsmPromptBox = new LnsmPromptBox(driver);
+        PromptBox promptBox = new PromptBox(driver);
         boolean oplog = commOperation.getImplement().equals(fa) ? false : true;//判断是否需要进行相应的操作
         switch (commOperation.getOperation()) {
             case "排序":
-                SortAcquisition(lnsmPromptBox, oplog);//排序的获取
+                SortAcquisition(promptBox, oplog);//排序的获取
                 break;
             case "上架":
 
@@ -198,21 +182,7 @@ public class GoodOperation {
                     setPosition(2);
                 }
                 //商品上下架的操作
-                lnsmPromptBox.setGoodsStatusOnTheShelf(oplog);
-                break;
-            case "编辑":
-                String[] operation1 = commList.getOperation();
-                String op1 = operation1[operation1.length - 1];
-                if (op1.equals("上架")) {
-                    setEditTable(2);
-                    /*
-                    driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-                    driver.navigate().back();
-                    */
-                } else {
-                    SystemOut.getStringOut("这是供货商品没有编辑的功能");
-                }
-
+                promptBox.boxPromptOnTheShelf(oplog);
                 break;
             case "订货":
                 OrderOperation();//订货方法的调用
@@ -228,7 +198,7 @@ public class GoodOperation {
         switch (commOperation.getOperation()) {
             case "原因":
                 setPosition(1);
-                new LnsmPromptBox(driver).getGoodsReason();
+                 new PromptBox(driver).boxPromptReason();
                 break;
             default:
                 System.out.println("商品售卖中现另类操作" + commOperation.getOperation());
@@ -237,16 +207,16 @@ public class GoodOperation {
     }
 
     //排序的获取并调用对话框的内容
-    private void SortAcquisition(LnsmPromptBox lnsmPromptBox, boolean oplog) {
+    private void SortAcquisition(PromptBox promptBox, boolean oplog) {
         setPosition(1);
         String trim = commList.getName().trim();//商品名称
         String attribute = commOperation.getAttribute();//排序值
         String number = commList.getNumber();//商品ID
         //打开排序设置框时，该方法负责往里面设置属性值。。
-        lnsmPromptBox.setGoodsSort(trim, oplog, attribute, number);
+        promptBox.boxPromptSort(trim, oplog, attribute, number);
     }
 
-    private void OrderOperation() {
+    private void OrderOperation() throws InterruptedException {
         if (setJudge()) {
             if (commOperation.getImplement().equals(fa)) {//按钮是否需要点击
                 SystemOut.getStringOut("从操作表中读取的数据为", button + ",因此不需要做点击按钮的操作");
@@ -254,7 +224,7 @@ public class GoodOperation {
                 //waitForCondition("selenium.browserbot.getUserWindow().$.active == 0;", 30000);
                 driver.navigate().back();//浏览器后退
             } else {
-                SupplyOrderOperation supply = new SupplyOrderOperation(commList.getNumber());
+                TopTransaction supply = new TopTransaction();
                 supply.setSupplyNumber(commOperation.getAttribute());//输入的内容
                 supply.setSupplyButton(tr);//按钮的点击
                 //还差密码的输入以及页面的跳转以及最小值的提示
@@ -262,7 +232,7 @@ public class GoodOperation {
                 supply.obtainUrl();//订货成功之后获取网址是否正确
 
                 //订货成功之后返回到相应的页面
-                supply.backToPage("商品管理", "商品列表");
+               // supply.backToPage("商品管理", "商品列表");
             }
         }
     }
@@ -282,44 +252,17 @@ public class GoodOperation {
         if (op.equals("订货")) {
             setPosition(3);//如果有订货按钮就点击
             bl = true;
-        } else {
-            SystemOut.getStringOut("该商品没有订货按钮，请重新编辑操作步骤");
         }
         return bl;
-    }
-
-    //读取编辑表中的数据，并进行数据封装，然后返回一个对象.
-    private void setEditTable(int po) throws InterruptedException {
-        try {
-            setPosition(po);//页面元素点击部分
-
-            LnsmUrl lnsmUrl = new LnsmUrl();
-            //获取编辑页面的前部分，然后拼接商品ID;
-            String editUrl = lnsmUrl.getEditCommodity() + commList.getNumber();
-
-            driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);//延迟一下
-
-            assertEquals("编辑商品页面打开出错", driver.getCurrentUrl(), editUrl);//判断页面是否打开
-
-            //商品编辑部分
-            new ProductEditor(setProductRead()).setProductEditor();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
 
     //读取商品表之后的数据进行类封装。。
     private CommodityIntroduction setProductRead() throws IOException {
 
-        LnsmExcel lnsmExcel = new LnsmExcel();//创建excel读取的对象
+        ReadExcel lnsmExcel = new ReadExcel();//创建excel读取的对象
 
-        // System.out.println("编辑表中的数据" + singleXlsx + ":" + row);
-
-        List<String> read = lnsmExcel.getSingleReadXlsx(".//src//main//java//商品编辑.xlsx", row);//读取指定行的内容
-
-        //   System.out.println("编辑的数据" + read.toString());
+        List<String> read = lnsmExcel.getSingleReadXlsx(".//src//main//java//商品.xlsx", row);//读取指定行的内容
 
         CommodityIntroduction comm = null;
         //减少循环时，集合长度的获取
@@ -344,12 +287,12 @@ public class GoodOperation {
 
         //  driver.switchTo().frame(driver.findElement(By.xpath(frame)));
         String text = driver.findElement(By.xpath(".//*[@id='showcodwrap']/div[1]/p[1]")).getText();
-        if (text.endsWith(commList.getNumber())){
-            SystemOut.getStringOut("点击商品名称之后打开的二维码详情对话框","商品编号正确。。。");
+        if (text.endsWith(commList.getNumber())) {
+            SystemOut.getStringOut("点击商品名称之后打开的二维码详情对话框", "商品编号正确。。。");
         }
         driver.switchTo().defaultContent();
         sleep(1000);
-        LnsmPreservation.getButtonCssSelector("a[class=aui_close]");
+        new Preservation().buttonCssSelector("a[class=aui_close]");
     }
 }
 

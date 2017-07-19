@@ -1,6 +1,6 @@
 package wap.business.example.ligrco.Exhibition.Grouping;
 
-import LnsmUitl.LnsmPreservation;
+import common.tool.caninput.Preservation;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -28,7 +28,7 @@ public class Operating {
         //positions表示第几行数据，posi表示第几个按钮
         String load = ".//tbody[@id='grouping']/" +
                 "tr[2]/td[5]/span[" + posis + "]";
-        LnsmPreservation.getButtonXpath(load);
+        new Preservation().buttonXpath(load);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 

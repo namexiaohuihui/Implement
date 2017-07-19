@@ -50,7 +50,7 @@ public class MysqlInquire {
     }
 
     /**
-     * 插叙结果中，指定位置的内容
+     * 查询结果中，获取指定行数的内容
      *
      * @param sql
      * @param i

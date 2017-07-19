@@ -9,9 +9,9 @@
     <version>1-SNAPSHOT</version>
     <name>xiaohui</name>
     <properties>
+        <junit.version>4.12</junit.version>
         <appium.version>3.3.0</appium.version>
         <driver.version>3.4.0</driver.version>
-        <junit.version>4.12</junit.version>
         <testng.version>6.10</testng.version>
     </properties>
     <dependencies>
@@ -26,9 +26,11 @@
             <artifactId>selenium-remote-driver</artifactId>
             <version>${driver.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
+            <version>2.4</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>

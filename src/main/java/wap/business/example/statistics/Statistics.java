@@ -1,7 +1,9 @@
 package wap.business.example.statistics;
 
-import LnsmInitialize.FoxDriver;
-import LnsmUitl.LnsmTool;
+import common.FoxDriver;
+import common.parameter.WapUrl;
+import common.tool.caninput.Existence;
+import common.tool.caninput.Preservation;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -15,9 +17,8 @@ public class Statistics {
 
     WebDriver driver = FoxDriver.getFoxDriver();
 
-    public void getData(){
-        driver.findElement(By.linkText("数据统计")).click();
-
+    public void getData() throws InterruptedException {
+        new Preservation().buttonLinkText("数据统计");
         getCode("二维码数据");
     }
 
@@ -25,13 +26,13 @@ public class Statistics {
     private void getCode(String bar) {
         getElsenium(bar);
         driver.findElement(By.linkText(bar)).click();
-        assertEquals("二维码数据页面没有打开了","http://seller.52lin.net/stats/qrcode/users",
+        assertEquals("二维码数据页面没有打开了",new WapUrl().getCodeFamily(),
                 driver.getCurrentUrl());
         System.out.println("二维码数据页面打开了");
     }
 
     private void getElsenium(String listBar){
-        if (LnsmTool.getLinkText(listBar)){
+        if (new Existence().elementLinkText(listBar)){
             System.out.println(listBar + "元素存在。。");
         }else {
             System.out.println(listBar + "元素不存在。。");

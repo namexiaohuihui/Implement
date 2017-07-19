@@ -9,6 +9,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.NoSuchElementException;
 
+import static java.lang.Thread.sleep;
+
 /**
  * 判断元素是否存在
  * Created by Administrator on 2016/11/11.
@@ -108,7 +110,13 @@ public class Existence {
         }
     }
 
-    //每500毫秒扫描一次页面，检查元素是否存在，存在的话返回true，不存在继续等到，直到等到时间超过2秒报错
+    /**
+     * 每500毫秒扫描一次页面，检查元素是否存在，存在的话返回true，
+     * 不存在继续等到，直到等到时间超过2秒报错
+     * driver.findElement(elementLocator).isDisplayed():isDisplayed检测是否出现
+     * @param elementLocator
+     * @return
+     */
     public boolean waitForElement(final By elementLocator) {
 
         try {
@@ -132,6 +140,28 @@ public class Existence {
         } catch (Exception e) {
             return false;
         }
+    }
+
+    /**
+     *  判断元素是否存在之後进行点击，在將判斷是否存在的數據進行返回.
+     *  页面最长等待时间为10s
+     * @param string
+     * @return
+     */
+    private Boolean existence(final String string) {
+        Boolean information = (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+            public Boolean apply(WebDriver d) {
+                try {
+                    sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                d.findElement(By.linkText(string)).click();
+                //此处是判断是否存在id为dropdown1的元素，存在返回true
+                return d.findElement(By.linkText(string)).isDisplayed();
+            }
+        });
+        return information;
     }
 
     //判断一个元素是否出现

@@ -88,12 +88,12 @@ public class SimpleMailSender {
      * @throws MessagingException
      */
     public static void main(String[] args) throws Exception {
-        //用户名，以及ssl验证码
-        SimpleMailSender sms= new SimpleMailSender("704866169@qq.com",
-                "sdjnfmbeyjribcbf");
+        //用户名，以及ssl验证码:通过邮箱设置自行获取
+        SimpleMailSender sms= new SimpleMailSender("--@qq.com",
+                "ssl验证码");
         //发送过多的话会断开连接
 //        for(int i=0;i<100;i++){
-        sms.send("3575541582@qq.com", "hello", "hello");
+        sms.send("--@qq.com", "hello", "hello");
 //            System.out.println("#######:"+i);
 //        }
     }

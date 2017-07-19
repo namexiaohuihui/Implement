@@ -5,48 +5,62 @@ package common.parameter;
  * Created by Administrator on 2016/12/26.
  */
 public class Parameter {
-    //    登录的账号
-    private String account = "111";
-    //    登录的密码
-    private String passWord = "123456";
-    //  大货的密码
-    private String supplyPassWord = "33";
+    //家的门号、口令以及于暗号
+    private String accountFamily = "111";
+    private String passWordFamily = "123456";
+    private String supplyPassWordFamily = "33";
+    private int groupSun;//桌子的数量
 
-    //    登录的账号
-    private String bossAccount = "--";
-    //    登录的密码
-    private String bossPassWord = "//";
+    //头头的门号以及口令
+    private String accountTop = "--";
+    private String passWordTop = "//";
 
-    //    商品总数的计算
-    private int releaseSun;
-    //    分组的计算
-    private int groupSun;
+    //开始的门号以及口令
+    private String accountStart = "---";
+    private String passWordStrat = "//";
 
-    public String getAccount() {
-        return account;
+    //家的照片
+    String photoFamily[] = new String[]{"photo1.exe", "photo2.exe", "photo3.exe", "photo4.exe", "photo5.exe"};
+    String licenseFamily[] = new String[]{"license1.exe", "license2.exe"};
+
+
+    public String getAccountFamily() {
+        return accountFamily;
     }
 
-    public String getPassWord() {
-        return passWord;
+    public String getPassWordFamily() {
+        return passWordFamily;
     }
 
-    public String getSupplyPassWord() {
-        return supplyPassWord;
-    }
-
-    public String getBossAccount() {
-        return bossAccount;
-    }
-
-    public String getBossPassWord() {
-        return bossPassWord;
-    }
-
-    public int getReleaseSun() {
-        return releaseSun;
+    public String getSupplyPassWordFamily() {
+        return supplyPassWordFamily;
     }
 
     public int getGroupSun() {
         return groupSun;
+    }
+
+    public String getAccountTop() {
+        return accountTop;
+    }
+
+    public String getPassWordTop() {
+        return passWordTop;
+    }
+
+    public String getAccountStart() {
+        return accountStart;
+    }
+
+    public String getPassWordStrat() {
+        return passWordStrat;
+    }
+
+    public String[] getPhotoFamily() {
+        return photoFamily;
+    }
+
+    public String[] getLicenseFamily() {
+        return licenseFamily;
     }
 }

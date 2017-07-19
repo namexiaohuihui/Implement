@@ -1,39 +1,37 @@
 package wap.backstage;
 
-import LnsmElement.LnsmParameter;
-import LnsmElement.LnsmUrl;
-import LnsmInitialize.FoxDriver;
-import LnsmInitialize.LnsmRegister;
-import LnsmUi.ElementInput;
-import LnsmUitl.SystemOut;
+
+import common.FoxDriver;
+import common.parameter.Parameter;
+import common.parameter.WapUrl;
+import common.tool.SystemOut;
+import common.tool.caninput.ElementInput;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import wap.business.example.StartEntrance;
 
 import java.util.concurrent.TimeUnit;
 
 import static java.lang.Thread.sleep;
 
 /**
- * 后台指派红包类
+ * 头头红包类
  * Created by ${XiaoHuiHui} on 2017/5/26 on 16:28.
  * XiaoHiiHui [704866169@qq.com]
  */
 public class assignRedPackets {
     private WebDriver driver;
-    private LnsmParameter lnsmParameter;
-    private LnsmUrl lnsmUrl;
+    private Parameter parameter;
+    private WapUrl wapUrl;
 
     @Before
     public void openBrowser() {
-        lnsmParameter = new LnsmParameter();
-        lnsmUrl = new LnsmUrl();
-        LnsmRegister openBrowser = FoxDriver.getOpenBrowser();
-        openBrowser.openBrowser(lnsmUrl.getBossshopUrlLog());
-        driver = FoxDriver.getWebDrivaer();
-        SystemOut.getStringOut("-----");
+        parameter = new Parameter();
+        wapUrl = new WapUrl();
+        driver = FoxDriver.openBrowser(wapUrl.getHopTop());
     }
 
 
@@ -42,8 +40,10 @@ public class assignRedPackets {
 
         //调用方法，实行元素的输入
         ElementInput elementInput = new ElementInput();
-        elementInput.accordingToCss("input[name=username][class=form-control]", lnsmParameter.getBossAccount());
-        elementInput.accordingToCss("input[name=password][class=form-control]", lnsmParameter.getBossPassWord());
+        elementInput.accordingToCss("input[name=username][class=form-control]",
+                parameter.getAccountTop());
+        elementInput.accordingToCss("input[name=password][class=form-control]",
+                parameter.getPassWordTop());
 
         driver.findElement(By.cssSelector("button[id=loginBtn][type=submint]")).click();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
@@ -65,7 +65,7 @@ public class assignRedPackets {
             sleep(1000);
 
             //   driver.findElement(By.cssSelector("button[id=sendFormBut][type=button]")).click();
-            driver.findElement(By.xpath("//*[@id='sendFormBut']")).click();
+            driver.findElement(By.xpath(".//*[@id='sendFormBut']")).click();
             sleep(1000);
 
             driver.navigate().refresh();

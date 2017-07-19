@@ -1,5 +1,6 @@
 package common.tool.caninput;
 
+import common.FoxDriver;
 import common.tool.SystemOut;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -19,6 +20,14 @@ import static java.lang.Thread.sleep;
  */
 public class InfoSelect {
 
+    private WebDriver driver;
+
+    private void wedDriver() {
+        if (driver == null || driver.equals("")) {
+            driver = FoxDriver.getWebDrivaer();
+        }
+    }
+
     /**
      * 根据text进行设置,选择之后回到顶部
      *
@@ -27,7 +36,8 @@ public class InfoSelect {
      * @param st
      * @throws InterruptedException
      */
-    public void categoryText(WebDriver driver, By by, String content) {
+    public void categoryText(By by, String content) {
+        wedDriver();
         //select对象的确认
         Select select = new Select(driver.findElement(by));
         List<WebElement> options = select.getOptions();
@@ -39,7 +49,7 @@ public class InfoSelect {
                 select.selectByVisibleText(content);
                 bl = true;
                 //        窗口移动。选择类目之后窗口会往下移，此时分组元素在窗口之外。所以要滑动窗口。
-                movesWindow(driver);
+                movesWindow();
                 break;
             }
         }
@@ -56,10 +66,11 @@ public class InfoSelect {
      * @param second_cid 第二个select对象
      * @throws InterruptedException
      */
-    public void categoryValue(WebDriver driver, By by, String content) {
+    public void categoryValue(By by, String content) {
+        wedDriver();
         new Select(driver.findElement(by)).selectByValue(content);
         //        窗口移动。选择类目之后窗口会往下移，此时分组元素在窗口之外。所以要滑动窗口。
-        movesWindow(driver);
+        movesWindow();
     }
 
     /**
@@ -70,10 +81,11 @@ public class InfoSelect {
      * @param second_cid 第二个select对象
      * @throws InterruptedException
      */
-    public void categoryIndex(WebDriver driver, By by, int position) {
+    public void categoryIndex(By by, int position) {
+        wedDriver();
         new Select(driver.findElement(by)).selectByIndex(position);
         //        窗口移动。选择类目之后窗口会往下移，此时分组元素在窗口之外。所以要滑动窗口。
-        movesWindow(driver);
+        movesWindow();
     }
 
     /**
@@ -83,7 +95,8 @@ public class InfoSelect {
      * @param statusSelect 路径
      * @return
      */
-    public List<String> propertyValueContent(WebDriver driver, By by, String statusSelect) {
+    public List<String> propertyValueContent(By by, String statusSelect) {
+        wedDriver();
         //select对象的确认
         Select select = new Select(driver.findElement(by));
         List<WebElement> options = select.getOptions();
@@ -102,7 +115,8 @@ public class InfoSelect {
      * @param statusSelect 路径
      * @return
      */
-    public Integer propertyValueSize(WebDriver driver, By by, String statusSelect) {
+    public Integer propertyValueSize(By by, String statusSelect) {
+        wedDriver();
         //select对象的确认
         Select select = new Select(driver.findElement(by));
         List<WebElement> options = select.getOptions();
@@ -114,7 +128,8 @@ public class InfoSelect {
     通过select对数据筛选之后，窗口会自动执行下移命令。
     通过js代码将其上移回来
      */
-    private void movesWindow(WebDriver driver) {
+    private void movesWindow() {
+        wedDriver();
         try {
             ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0)");
             sleep(500);
@@ -122,4 +137,6 @@ public class InfoSelect {
             e.printStackTrace();
         }
     }
+
+
 }

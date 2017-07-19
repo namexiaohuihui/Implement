@@ -1,7 +1,7 @@
 package wap.business.example.special;
 
-import LnsmInitialize.FoxDriver;
-import LnsmUitl.LnsmTool;
+import common.FoxDriver;
+import common.tool.caninput.Existence;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -41,7 +41,7 @@ public class MarketingCampaign {
     }
 
     private void getElsenium(String listBar){
-        if (LnsmTool.getLinkText(listBar)){
+        if (new Existence().elementLinkText(listBar)){
             System.out.println(listBar + "元素存在。。");
         }else {
             System.out.println(listBar + "元素不存在。。");

@@ -14,12 +14,13 @@ import javax.activation.*;
 public class SendFileEmail {
     public SendFileEmail() {
         // Recipient's email ID needs to be mentioned.
-        String to = "3575541582@qq.com";
+        String to = "---@qq.com";
 
         // Sender's email ID needs to be mentioned
-        String from = "704866169@qq.com";
+        String from = "--@qq.com";
 
-        // Assuming you are sending email from localhost(服务器的host：qq：smtp.qq.com)
+        // Assuming you are sending email from localhost
+        // (服务器的host：qq：smtp.qq.com)
         String host = "smtp.qq.com";
 
         // Get system properties
@@ -40,9 +41,9 @@ public class SendFileEmail {
         Authenticator authenticator = new Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
-                // 重写验证方法，填写用户名，以及ssl验证码
+                // 重写验证方法，填写用户名，以及ssl验证码:通过邮箱设置自行获取
                 return new PasswordAuthentication(
-                        "704866169", "sdjnfmbeyjribcbf");
+                        "--", "ssl验证码");
             }
         };
         // Get the default Session object.

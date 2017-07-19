@@ -1,6 +1,7 @@
 package common.tool.excelfile;
 
 /**
+ * excle文档中根式为CSV的文件读写
  * Created by ${XiaoHuiHui} on 2017/2/17.
  * XiaoHiiHui [704866169@qq.com]
  */
@@ -14,7 +15,7 @@ public class CSVReadWriteFile {
     public static final String ENCODE_UTF = "UTF-8";
     public static final String ENCODE_GBK = "GBK";
 
-    private static List getCsv() {
+    private static List readerCsv() {
         File inFile = new File("E://--.csv"); // 读取的CSV文件
         String inString = "";
         List list = new ArrayList();
@@ -34,7 +35,7 @@ public class CSVReadWriteFile {
         return list;
     }
 
-    private static void setCsv() {
+    private static void writerCsv() {
         String[] str = {"省", "市", "区", "街", "路", "里", "幢", "村", "室", "园", "苑", "巷", "号"};
         File outFile = new File("E://out.csv");//写出的CSV文件
         OutputStreamWriter osw = null;
@@ -54,21 +55,17 @@ public class CSVReadWriteFile {
     }
 
 
-    private void getset(){
-        String[] str = {"省", "市", "区", "街", "路", "里", "幢", "村", "室", "园", "苑", "巷", "号"};
-        File inFile = new File("E://我的余额.csv"); // 读取的CSV文件
+    private void writerCsvReader(){
+        File inFile = new File("E://int.csv"); // 读取的CSV文件
         File outFile = new File("E://out.csv");//写出的CSV文件
         String inString = "";
         String tmpString = "";
         try {
             BufferedReader reader = new BufferedReader(new FileReader(inFile));
             BufferedWriter writer = new BufferedWriter(new FileWriter(outFile));
+            //写入文件（从人家哪里读取写入到自己这）
             while ((inString = reader.readLine()) != null) {
-                for (int i = 0; i < str.length; i++) {
-                    tmpString = inString.replace(str[i], "," + str[i] + ",");
-                    inString = tmpString;
-                }
-                writer.write(inString);
+                writer.write(inString);//读取文件（从自己这里写出去给人家）
                 writer.newLine();
             }
             reader.close();

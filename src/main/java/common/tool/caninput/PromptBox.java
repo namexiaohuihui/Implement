@@ -26,15 +26,14 @@ public class PromptBox {
     /**
      * 商品查看原因提示框
      */
-    public void getGoodsReason() {
+    public void boxPromptReason() {
         WebElement element = driver.findElement(By.xpath("//div[@class='aui_title']"));
         String text = element.getText();
         if (text.equals("查看原因")) {
-            System.out.println(text + ":提示框打开");
             driver.findElement(By.cssSelector("a[class=aui_close]")).click();
             driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         } else {
-            System.out.println("查看原因提示框打开出错");
+            SystemOut.getStringOut("查看原因提示框打开出错");
         }
     }
 
@@ -46,13 +45,13 @@ public class PromptBox {
      * @param att    排序值
      * @param number 商品id
      */
-    public void setGoodsSort(String trim, boolean oplog, String att, String number) {
+    public void boxPromptSort(String trim, boolean oplog, String att, String number) {
         try {
             //提示框标题
             String aui_title = driver.findElement(By.cssSelector("div[class=aui_title]")).getText();
             SystemOut.getStringOut("弹框标题", aui_title);
 
-            //获取排序提示框中的商品名称
+            //获取排序提示框中的名称
             String editsort = driver.findElement(By.xpath(".//*[@id='editsort']/table/tbody/tr[1]/td/span")).getText();
 
             //获取列表中读取到的商品名称
@@ -91,7 +90,7 @@ public class PromptBox {
     }
 
     //商品上下架的操作
-    public void setGoodsStatusOnTheShelf(boolean oplog) {
+    public void boxPromptOnTheShelf(boolean oplog) {
         //提示框标题
         String aui_title = driver.findElement(By.cssSelector("div[class=aui_title]")).getText();
         SystemOut.getStringOut("上架·下架弹窗提示框标题", aui_title);
@@ -108,7 +107,7 @@ public class PromptBox {
         for (WebElement we : elements) {
             //判断是否点确定
             if (oplog) {
-                if ("确定".equals(we.getText())) {
+                if ("确定".equals(we.getText().trim())) {
                     SystemOut.getStringOut("大王要我们下架的操作", we.getText());
                     we.click();
                     try {
@@ -122,7 +121,7 @@ public class PromptBox {
 
             } else {
                 //判断是否点取消
-                if ("取消".equals(we.getText())) {
+                if ("取消".equals(we.getText().trim())) {
                     SystemOut.getStringOut("大王要我们下架的操作", we.getText());
                     we.click();
                     break;
@@ -135,7 +134,7 @@ public class PromptBox {
     private void formRecapture(String number, String split) throws InterruptedException {
         By by = By.cssSelector("select[id=by][name=by]");
         //通过css进行筛选
-        new InfoSelect().categoryText(driver, by, "商品编号");
+        new InfoSelect().categoryText(by, "商品编号");
         driver.findElement(By.cssSelector("input[id=val][type=search]")).sendKeys(number);
 
         //点击搜索按钮
@@ -151,7 +150,7 @@ public class PromptBox {
         //选择之后恢复界面初始样
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         By byCss = By.cssSelector("select[id=by][name=by]");
-        new InfoSelect().categoryText(driver, byCss, "商品名称");
+        new InfoSelect().categoryText(byCss, "商品名称");
         driver.findElement(By.cssSelector("input[id=val][type=search]")).clear();
     }
 

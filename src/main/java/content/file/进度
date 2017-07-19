@@ -1,41 +1,5 @@
-CommodityGrouping   随机得到数据之后进行编辑。。但是每次都是随机为4..
+selenium ??
+http://kzp.mof.gov.cn/cjcx/1_a4036a0225962.jsp
+selenium-python.readthedocs.io/api.html
+http://www.runoob.com/python/python-mysql.html
 
-遗漏：
-已上架或者已下架的商品验证
-编辑还是不行
-
-
-   /*
-                    driver.navigate().forward();// 前进
-                    driver.navigate().back();// 后退
-                    driver.navigate().refresh();// 刷新
-                    */
-
-谷歌:
-https://sites.google.com/a/chromium.org/chromedriver/
-
-ie:
-http://selenium-release.storage.googleapis.com/index.html
-
-火狐：
-http://docs.seleniumhq.org/download/
-http://ftp.mozilla.org/pub/firefox/releases/
-http://selenium-release.storage.googleapis.com/index.html
-
-版本查看器:
-http://blog.csdn.net/htdeyanlei/article/details/52818322
-
-css的用法:
-https://www.w3.org/TR/css3-selectors/
-
-   <parent>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-parent</artifactId>
-        <version>3.4.0</version>
-    </parent>
-
-    <parent>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-parent</artifactId>
-        <version>2.53.1</version>
-    </parent>

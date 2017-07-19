@@ -1,7 +1,9 @@
 package wap.business.example.innose.information;
 
-import LnsmInitialize.FoxDriver;
-import LnsmUitl.LnsmTool;
+import common.FoxDriver;
+import common.tool.caninput.Existence;
+import common.tool.caninput.Preservation;
+import common.tool.excelfile.ReadFile;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,20 +11,16 @@ import org.openqa.selenium.WebElement;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import static LnsmUitl.LnsmFile.getNoticesFile;
-import static LnsmUitl.LnsmPreservation.getPreservation;
 import static org.junit.Assert.assertEquals;
 
 /**
- * 店鋪管理--->店铺公告：
- * 店鋪公告內容的設置以及有效日期的選擇，還有一個按鈕
- * <p>
+ * 介绍
  * 点击年份元素对象之后快速选择年份需求暂时放弃。
  * Created by Administrator on 2016/11/1.
  */
 public class ShopNotices {
 
-    //    设置店铺公告的截止时间，根据格式进行设置
+    //    设置截止时间，根据格式进行设置
     String time = "2018-09-08 21:56:32";
     //    保存之后的提示
     String promptError = "开始时间必须小于结束时间";
@@ -33,7 +31,7 @@ public class ShopNotices {
 
     public void getAnnouncement(String url) throws InterruptedException {
         //    当点击店铺公告时，我们判断该页面是否打开。打开之后就能通过断点，没打开就出错。
-        assertEquals("店铺公告页面断点", url, driver.getCurrentUrl());
+        assertEquals("页面断点", url, driver.getCurrentUrl());
 
         //    获取系统的当前时间，用于设置店铺公告的起止时间
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -47,7 +45,7 @@ public class ShopNotices {
         getStartStopTime("end_time", time);
 
         //    点击保存按钮
-        getPreservation("noticesave");
+        new Preservation().breservation("noticesave");
 
         //    判断点击保存之后，提示信息是否出现，如果出现了提示信息是什么
         getData("successMessage");
@@ -76,7 +74,7 @@ public class ShopNotices {
      */
     private void getData(String string) {
 //        判断是否存在
-        if (LnsmTool.getClassName(string)) {
+        if (new Existence().elementCssSelector(string)) {
 //            读取提示信息的内容
             String successMessage = driver.findElement(By.className(string)).getText();
 //            判断提示信息的内容是否为保存成功
@@ -90,7 +88,7 @@ public class ShopNotices {
         }
     }
 
-    //    根据html定义的元id来找到店铺公告的输入框，并且利用IO原理断区本项目中txt文件的数据，
+    //    根据html定义的元id来找到的输入框，并且利用IO原理断区本项目中txt文件的数据，
     //    对公告进行设置
     private void grtNotice() {
 //        根据html定义的元素id找到店铺公告的输入框
@@ -100,7 +98,7 @@ public class ShopNotices {
         text.click();
         text.clear();
 //       通过IO流读取项目里面txt文件里面的数据进行设置
-        text.sendKeys(getNoticesFile("ShopNotices"));
+        text.sendKeys(new ReadFile().noticesFile("ShopNotices"));
     }
 
 

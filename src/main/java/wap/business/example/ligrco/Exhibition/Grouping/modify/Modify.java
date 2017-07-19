@@ -1,14 +1,14 @@
 package wap.business.example.ligrco.Exhibition.Grouping.modify;
 
-import LnsmData.PacketSorting;
-import LnsmData.StatementOperation;
-import LnsmInitialize.FoxDriver;
-import LnsmUi.ElementInput;
-import LnsmUi.MysqlInquire;
-import LnsmUitl.LnsmPreservation;
-import LnsmUitl.SystemOut;
+import common.FoxDriver;
+import common.tool.SystemOut;
+import common.tool.caninput.ElementInput;
+import common.tool.caninput.Preservation;
+import common.tool.mysqls.MysqlInquire;
+import common.tool.mysqls.StatementOperation;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import wap.business.instantiation.PacketSorting;
 
 import java.io.IOException;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
  * Created by ${XiaoHuiHui} on 2017/6/13 on 14:26.
  * XiaoHiiHui [704866169@qq.com]
  */
-public class modify {
+public class Modify {
 
     //列表数据保存的对象
     PacketSorting packetSorting;
@@ -37,11 +37,11 @@ public class modify {
     WebDriver driver = FoxDriver.getWebDrivaer();
 
 
-    public modify(PacketSorting packetSorting){
+    public Modify(PacketSorting packetSorting){
         this.packetSorting = packetSorting;
     }
 
-    public modify() {
+    public Modify() {
 
     }
 
@@ -56,8 +56,8 @@ public class modify {
      * @throws IOException
      */
     public  void editNameSort() throws InterruptedException, IOException {
-        modifyNickname mn = new modifyNickname();
-        modifySort ms = new modifySort();
+        ModifyNickname mn = new ModifyNickname();
+        ModifySort ms = new ModifySort();
         switch (packetSorting.getImplement()) {
             case tr:
                 typeJudgment(mn,ms);//名称或者排序的输入
@@ -79,7 +79,7 @@ public class modify {
      * @throws InterruptedException
      * @throws IOException
      */
-    void typeJudgment(modifyNickname mn,modifySort ms) throws InterruptedException, IOException {
+    void typeJudgment(ModifyNickname mn, ModifySort ms) throws InterruptedException, IOException {
         mn.executionEditName(packetSorting.getName());
 
         ms.executionEditSort(packetSorting.getSort());
@@ -101,7 +101,7 @@ public class modify {
         //positions表示第几行数据，posi表示第几个按钮
         String load = ".//tbody[@id='grouping']/" +
                 "tr[2]/td[5]/span[" + posis + "]";
-        LnsmPreservation.getButtonXpath(load);
+        new Preservation().buttonXpath(load);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
@@ -145,12 +145,6 @@ public class modify {
         MysqlInquire inquire = new MysqlInquire();
 
         StatementOperation statementOperation = new StatementOperation();
-        /*
-        String content = "name,goods_online,sort,update_time";
-        String structure = "lnsm_group";
-        String condition = "shop_id = 10175";
-        String sorting = " ORDER BY id DESC,update_time DESC";
-        */
         String lnsm_group = statementOperation.statementInquire(content, structure, condition, sorting);
         List<List> dataMysql = inquire.getDataMysql(lnsm_group);
         SystemOut.getStringOut(dataMysql);

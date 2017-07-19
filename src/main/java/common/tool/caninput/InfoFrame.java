@@ -1,12 +1,13 @@
 package common.tool.caninput;
 
 import common.FoxDriver;
+import common.tool.excelfile.ReadFile;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import static common.tool.excelfile.readFile.getIntroductionFile;
+import static common.tool.excelfile.ReadFile.introductionFile;
 import static java.lang.Thread.sleep;
 
 /**
@@ -38,7 +39,7 @@ public class InfoFrame {
 //        delect一键删除全选的内容
         keContent.sendKeys(Keys.BACK_SPACE);
 //        通过IO流读取文本框的内容，然后输入到介绍的输入框里面
-        keContent.sendKeys(getIntroductionFile(data));
+        keContent.sendKeys(introductionFile(data));
 //        退出frame
         driver.switchTo().defaultContent();
     }
@@ -71,7 +72,13 @@ public class InfoFrame {
     }
 
 
-    public String contentFrame(By by, String frame) throws InterruptedException {
+    /**
+     * 返回iframe里面的内容
+     * @param by
+     * @return
+     * @throws InterruptedException
+     */
+    public String contentFrame(By by) throws InterruptedException {
         sleep(1000);
 //        进入店铺介绍frame框内
         driver.switchTo().frame(driver.findElement(by));

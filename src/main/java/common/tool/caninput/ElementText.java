@@ -8,71 +8,80 @@ import org.openqa.selenium.WebElement;
 import static java.lang.Thread.sleep;
 
 /**
- * 元素的输入
- * Created by ${XiaoHuiHui} on 2017/5/26 on 17:09.
- * XiaoHiiHui [704866169@qq.com]
+ * Created by 70486 on 2017/7/19 on 23:20.
  */
-public class ElementInput {
+public class ElementText {
 
     private WebDriver driver = FoxDriver.getWebDrivaer();
 
 
     //    获取元素对象并点击输入内容
-    public void accordingToId(String id, String content) throws InterruptedException {
+    public String accordingToId(String id, String content) throws InterruptedException {
         boolean bl = new Existence().elementId(id);
         if (bl) {
             WebElement cfmpassword = driver.findElement(By.id(id));
-            operation(cfmpassword, content);
+            content =  operation(cfmpassword, content);
         }
+
+        return content;
     }
 
     //    获取元素对象并点击输入内容
-    public void accordingToName(String name, String content) throws InterruptedException {
+    public String accordingToName(String name, String content) throws InterruptedException {
         boolean bl = new Existence().elementName(name);
         if (bl) {
             WebElement cfmpassword = driver.findElement(By.name(name));
-            operation(cfmpassword, content);
+            content =  operation(cfmpassword, content);
         }
+
+        return content;
     }
 
     //    获取元素对象并点击输入内容
-    public void accordingToCss(String css, String content) throws InterruptedException {
+    public String accordingToCss(String css, String content) throws InterruptedException {
 
         boolean bl = new Existence().elementCssSelector(css);
         if (bl) {
             WebElement cfmpassword = driver.findElement(By.cssSelector(css));
-            operation(cfmpassword, content);
+            content =  operation(cfmpassword, content);
         }
+
+        return content;
     }
 
     //    获取元素对象并点击输入内容
-    public void accordingToXpath(String xpath, String content) throws InterruptedException {
+    public String accordingToXpath(String xpath, String content) throws InterruptedException {
 
         boolean bl = new Existence().elementXPath(xpath);
         if (bl) {
             WebElement cfmpassword = driver.findElement(By.xpath(xpath));
-            operation(cfmpassword, content);
+            content =  operation(cfmpassword, content);
         }
+
+        return content;
     }
 
     //    获取元素对象并点击输入内容
-    public void accordingToLinkText(String linkText, String content) throws InterruptedException {
+    public String accordingToLinkText(String linkText, String content) throws InterruptedException {
 
         boolean bl = new Existence().elementLinkText(linkText);
         if (bl) {
             WebElement cfmpassword = driver.findElement(By.linkText(linkText));
-            operation(cfmpassword, content);
+            content =  operation(cfmpassword, content);
         }
+
+        return content;
     }
 
     //  直接通过对象然后输入内容
-    private void operation(WebElement cfmpassword, String content) throws InterruptedException {
-        //        点击元素
-        cfmpassword.click();
-//        清空输入框里面的内容
-        cfmpassword.clear();
-//        输入元素
-        cfmpassword.sendKeys(content);
-        sleep(1000);
+    private String operation(WebElement cfmpassword, String content) throws InterruptedException {
+
+        if (content == null || content.equals("")) {
+            content = cfmpassword.getText();
+        } else {
+            content = cfmpassword.getAttribute(content);
+        }
+
+        return content;
     }
 }
