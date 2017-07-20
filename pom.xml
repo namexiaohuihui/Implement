@@ -13,6 +13,8 @@
         <appium.version>3.3.0</appium.version>
         <driver.version>3.4.0</driver.version>
         <testng.version>6.10</testng.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
@@ -60,4 +62,5 @@
             <version>${testng.version}</version>
         </dependency>
     </dependencies>
+
 </project>
