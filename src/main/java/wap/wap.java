@@ -30,7 +30,7 @@ public class wap {
     @Test
     public void actions() {
         //引用火狐浏览器驱动
-        WebDriver driver = FoxDriver.getFoxDriver();
+        WebDriver driver = FoxDriver.getChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         //打开禅道界面

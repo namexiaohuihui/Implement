@@ -22,7 +22,7 @@ import static java.lang.Thread.sleep;
  * Created by ${XiaoHuiHui} on 2017/5/26 on 16:28.
  * XiaoHiiHui [704866169@qq.com]
  */
-public class assignRedPackets {
+public class AssignRedPackets {
     private WebDriver driver;
     private Parameter parameter;
     private WapUrl wapUrl;

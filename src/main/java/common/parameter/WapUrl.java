@@ -8,7 +8,7 @@ package common.parameter;
 public class WapUrl {
 
     //前缀
-    private String urlFamily = "http://****/";
+    private String urlFamily = "http://66/";
     private String urlTop = "http://----/";
     private String urlStrat = "http://++++";
 

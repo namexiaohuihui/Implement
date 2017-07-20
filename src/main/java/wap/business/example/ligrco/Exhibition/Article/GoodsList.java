@@ -165,7 +165,7 @@ public class GoodsList {
          */
         String route = ".//*[@class = 'page-content']/div[1]/div[2]/div[2]/div[1]/ul";
         By by = By.xpath(route);
-        int flip = readList.numberFlip(by);
+        int flip = readList.digitalFlip(by);
         if (other == flip) {
             System.out.println("数据长度和翻页的长度一致");
         } else {

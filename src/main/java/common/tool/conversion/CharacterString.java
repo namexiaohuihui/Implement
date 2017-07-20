@@ -55,7 +55,35 @@ public class CharacterString {
         return Double.parseDouble(prv);
     }
 
+    public double cuttingCharacter(String prv, String conn, String data) {
+
+        prv = prv.trim();//将字符串里面的空格进行清空
+
+        int number = prv.indexOf(conn)+1;
+        if (data == null || data.equals("")) {//判断切割符
+            prv = prv.substring(number, prv.length());
+        }
+        //判断切割符
+        else if (data.equals(".")) {
+            //从number开始切割，一直到data出现的位置
+            prv = prv.substring(number, prv.lastIndexOf(data));
+        }
+        //判断切割符
+        else if (data.equals("KEY")) {
+            //从number开始切割，一直到data出现的位置
+            prv = prv.substring(number, prv.length());
+        }
+        //判断切割符
+        else {
+            //从number开始切割，一直到data出现的位置
+            prv = prv.substring(number, prv.length() - 1);
+        }
+
+        //将切割之后的数据进行转换然后传出去
+        return Double.parseDouble(prv);
+    }
+
     public Boolean contentOperation(String operation, String content) {
-        return operation.equals(content)?false:true;
+        return operation.equals(content) ? false : true;
     }
 }

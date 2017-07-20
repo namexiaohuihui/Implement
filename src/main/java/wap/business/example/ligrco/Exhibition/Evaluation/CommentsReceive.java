@@ -1,9 +1,8 @@
 package wap.business.example.ligrco.Exhibition.Evaluation;
 
-import LnsmInitialize.FoxDriver;
-import LnsmOperation.CommodityOperation.Comments;
-import wap.business.example.ligrco.ExhibitionShow.Evaluation.DropDown.dataFiltering;
+import common.FoxDriver;
 import org.openqa.selenium.WebDriver;
+import wap.business.example.ligrco.Exhibition.Evaluation.DropDown.DataFiltering;
 
 /**
  * 商品管理-->收到评论：
@@ -13,12 +12,11 @@ import org.openqa.selenium.WebDriver;
  * 3.是否能进行回复/回复过的是否用回复按钮
  * Created by XiaoHuiHui on 2016/12/27.
  */
-public class CommentsReceive extends Comments {
+public class CommentsReceive {
 
     private WebDriver driver = FoxDriver.getWebDrivaer();
 
     public CommentsReceive(String url) {
-        super(url);
         entranceEvaluation();
     }
 
@@ -33,12 +31,12 @@ public class CommentsReceive extends Comments {
     /**
      * select数据筛选
      */
-    private void dataDropDown() {
+    private void dataDropDown() throws InterruptedException {
 
         //数据准备
 
         //创建对象执行用例
-        dataFiltering filtering = new dataFiltering();
+        DataFiltering filtering = new DataFiltering();
         filtering.setGradeload("select[id=grade][name=grade]");
         filtering.setReplyload("select[id=reply][name=reply]");
         filtering.setButtonload("class.btn.btn-xs.btn-danger.btn-search");

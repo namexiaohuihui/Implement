@@ -1,5 +1,6 @@
 package wap.business.example;
 
+import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader;
 import common.FoxDriver;
 import common.parameter.WapUrl;
 import org.junit.Before;
@@ -17,14 +18,15 @@ public class StartEntrance {
 
     @Before
     public void setUp() throws Exception {
-        webHttp = new WapUrl().getWebHttp();
+        webHttp = new WapUrl().getUrlFamily();
         FoxDriver.openBrowser(webHttp);
     }
 
 
     @Test
     public void testXiao() throws Exception {
-
+        Signin signin = new Signin();
+        signin.getRegister();
     }
 
 /*

@@ -27,7 +27,7 @@ import static java.lang.Thread.sleep;
  * 确认页面的数据对比
  * Created by 70486 on 2017/7/6 on 21:13.
  */
-public class ordinaryOrder {
+public class ConfirmOrder {
 
     //对象的创建
     Parameter parameter = new Parameter();
@@ -42,7 +42,7 @@ public class ordinaryOrder {
         WapUrl wapurl = new WapUrl();
 
         //统一网址打开的模板
-        driver =FoxDriver.openBrowser(wapurl.getHomeHot());
+        driver =FoxDriver.openBrowser(wapurl.getHopTop());
     }
 
     @Test

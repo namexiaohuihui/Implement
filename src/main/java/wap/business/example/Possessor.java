@@ -25,20 +25,20 @@ public class Possessor {
     private ElementInput elementInput = new ElementInput();
     public void getUrl() throws InterruptedException {
 
-        name = parameter.getAccount();
-        passWord = parameter.getPassWord();
+        name = parameter.getAccountFamily();
+        passWord = parameter.getPassWordFamily();
 
         //        在忘记密码界面点击找回密码
         driver.findElement(By.linkText("找回密码")).click();
         sleep(1000);
 //        在找回密码界面设立检查点，如果为真就点击进入注册页面
-        String url = wapurl.getPasswordRetrieval();
+        String url = wapurl.getPasswordRetrievalFamily();
         assertEquals("找回密码页面",driver.getCurrentUrl(),url);
         driver.findElement(By.xpath("//*[@title = '注册']")).click();
         System.out.println("忘记密码页面检查通过");
 
 //        在注册页面设立检查点，如果为真就开始在输入框输入内容
-        String registrteredUrl =wapurl.getRegister();
+        String registrteredUrl =wapurl.getRegisterFamily();
         assertEquals("找回密码页面",driver.getCurrentUrl(),registrteredUrl);
         System.out.println("注册页面检查通过");
 

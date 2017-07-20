@@ -1,5 +1,8 @@
 package common.tool.mysqls;
 
+import common.parameter.Parameter;
+import common.tool.SystemOut;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -8,32 +11,43 @@ import java.sql.SQLException;
 /**
  * Created by Administrator on 2016/11/3.
  */
- 
+
 public class DBHelper {
-    public static final String url = "jdbc:mysql://load/--";
-    public static final String name = "com.mysql.jdbc.Driver";
-    public static final String user = "root";
-    public static final String password = "--";
-  
-    public Connection conn = null;  
-    public PreparedStatement pst = null;  
-  
-    public DBHelper(String sql) {  
-        try {  
-            Class.forName(name);//指定连接类型  
+    public String url;
+    public String name;
+    public String user;
+    public String password;
+
+    public Connection conn = null;
+    public PreparedStatement pst = null;
+
+    public DBHelper(String sql) {
+        try {
+            startData();
+            Class.forName(name);//指定连接类型
             conn = DriverManager.getConnection(url, user, password);//获取连接  
-            pst = conn.prepareStatement(sql);//准备执行语句  
-        } catch (Exception e) {  
-            e.printStackTrace();  
-        }  
-    }  
-  
-    public void close() {  
-        try {  
-            this.conn.close();  
-            this.pst.close();  
-        } catch (SQLException e) {  
-            e.printStackTrace();  
-        }  
-    }  
+            pst = conn.prepareStatement(sql);//准备执行语句
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void startData() {
+        Parameter parameter = new Parameter();
+        String[] start = parameter.getMysqlData();
+        url = start[0];
+        name = start[1];
+        user = start[2];
+        password = start[3];
+        SystemOut.getStringOut("打印数据" + url + name + user + password);
+    }
+
+    public void close() {
+        try {
+            this.conn.close();
+            this.pst.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }  

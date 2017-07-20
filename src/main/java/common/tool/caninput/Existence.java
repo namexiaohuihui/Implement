@@ -24,7 +24,6 @@ public class Existence {
 
         try {
             driver.findElement(By.id(id));
-            System.out.println(id + "：该元素存在");
             return true;
         } catch (Exception x) {
             System.out.println(id + "：该元素不存在");
@@ -37,7 +36,6 @@ public class Existence {
 
         try {
             driver.findElement(By.tagName(tagName));
-            System.out.println(tagName + "：该元素存在");
             return true;
         } catch (Exception x) {
             System.out.println(tagName + "：该元素不存在");
@@ -50,7 +48,6 @@ public class Existence {
 
         try {
             driver.findElement(By.linkText(linkText));
-            System.out.println(linkText + "：该元素存在");
             return true;
         } catch (Exception x) {
             System.out.println(linkText + "：该元素不存在");
@@ -63,7 +60,6 @@ public class Existence {
 
         try {
             driver.findElement(By.name(name));
-            System.out.println(name + "：该元素存在");
             return true;
         } catch (Exception x) {
             System.out.println(name + "：该元素不存在");
@@ -76,7 +72,6 @@ public class Existence {
 
         try {
             driver.findElement(By.className(className));
-            System.out.println(className + "：该元素存在");
             return true;
         } catch (Exception x) {
             System.out.println(className + "：该元素不存在");
@@ -89,7 +84,6 @@ public class Existence {
 
         try {
             driver.findElement(By.cssSelector(css));
-            System.out.println(css + "：该元素存在");
             return true;
         } catch (Exception x) {
             System.out.println(css + "：该元素不存在");
@@ -102,7 +96,6 @@ public class Existence {
 
         try {
             driver.findElement(By.xpath(xpath));
-            System.out.println(xpath + "：该元素存在");
             return true;
         } catch (Exception x) {
             System.out.println(xpath + "：该元素不存在");
@@ -121,7 +114,7 @@ public class Existence {
 
         try {
             WebDriverWait driverWait = (WebDriverWait) new WebDriverWait(driver, 2, 500).ignoring(
-                    StaleElementReferenceException.class).withMessage("元素在30秒内没有出现!");
+                    StaleElementReferenceException.class).withMessage("元素在2秒内没有出现!");
             return driverWait.until(new ExpectedCondition<Boolean>() {
 
                 public Boolean apply(WebDriver driver) {

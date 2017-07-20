@@ -44,11 +44,11 @@ public class FoxDriver {
 
     private static String loadRoute = "E:\\drivers\\";
 
-    private static int recording = 0;//统计网页打开错误次数
+    private static int recording = 1;//统计网页打开错误次数
 
     public static WebDriver getWebDrivaer() {
         if (driver == null) {
-            SystemOut.getStringOut("浏览器对象为空");
+            SystemOut.getStringOut("调用时提示：浏览器对象为空");
         }
         return driver;
     }
@@ -63,10 +63,9 @@ public class FoxDriver {
      */
     public static WebDriver getFoxDriver() {
         if (driver == null) {
-            SystemOut.getStringOut("浏览器对象为空");
-            System.setProperty("webdriver.firefox.bin", "E:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
-            System.setProperty("webdriver.firefox.driver",
-                    loadRoute + "geckodriver.exe");
+            SystemOut.getStringOut("创建时提示：浏览器对象为空");
+            System.setProperty("webdriver.firefox.bin", "E:\\Program Files\\Mozilla Firefox\\firefox.exe");
+           // System.setProperty("webdriver.firefox.driver", loadRoute + "geckodriver.exe");
             driver = new FirefoxDriver();
         }
         return driver;
@@ -85,6 +84,7 @@ public class FoxDriver {
      */
     public static WebDriver getIEDriver() {
         if (driver == null) {
+            SystemOut.getStringOut("创建时提示：浏览器对象为空");
             System.setProperty("webdriver.ie.driver",
                     loadRoute + "IEDriverServer.exe");
             DesiredCapabilities ieCapabilities = DesiredCapabilities.internetExplorer();
@@ -97,8 +97,8 @@ public class FoxDriver {
     //   获取对象：谷歌
     public static WebDriver getChromeDriver() {
         if (driver == null) {
-            System.setProperty("webdriver.chrome.driver",
-                    loadRoute + "chromedriver.exe");
+            SystemOut.getStringOut("创建时提示：浏览器对象为空");
+            System.setProperty("webdriver.chrome.driver", loadRoute + "chromedriver.exe");
             driver = new ChromeDriver();
         }
         return driver;
@@ -106,7 +106,7 @@ public class FoxDriver {
 
     public static WebDriver openBrowser(String webHttp) {
         //        创建浏览器对象
-        driver = FoxDriver.getFoxDriver();
+        driver = FoxDriver.getChromeDriver();
         //        是浏览器的大小
         driver.manage().window().maximize();
         //        设置测试的网页
@@ -124,7 +124,7 @@ public class FoxDriver {
             recordingStatistics(webHttp);//重新加载网页
             driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         }
-        recording = 0;//网址能打开之后就情况统计次数
+        recording = 1;//网址能打开之后就情况统计次数
         SystemOut.getStringOut("第" + recording, "次成功打开页面");
         return driver;
     }

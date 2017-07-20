@@ -6,8 +6,8 @@ package common.parameter;
  */
 public class Parameter {
     //家的门号、口令以及于暗号
-    private String accountFamily = "111";
-    private String passWordFamily = "123456";
+    private String accountFamily = "23";
+    private String passWordFamily = "12";
     private String supplyPassWordFamily = "33";
     private int groupSun;//桌子的数量
 
@@ -18,6 +18,9 @@ public class Parameter {
     //开始的门号以及口令
     private String accountStart = "---";
     private String passWordStrat = "//";
+
+    //mysql
+    private String[] mysqlData = new String[]{"jdbc:mysql://lo/aa", "com.mysql.jdbc.Driver", "root", "22"};
 
     //家的照片
     String photoFamily[] = new String[]{"photo1.exe", "photo2.exe", "photo3.exe", "photo4.exe", "photo5.exe"};
@@ -62,5 +65,9 @@ public class Parameter {
 
     public String[] getLicenseFamily() {
         return licenseFamily;
+    }
+
+    public String[] getMysqlData() {
+        return mysqlData;
     }
 }
