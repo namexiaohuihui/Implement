@@ -3,10 +3,15 @@ driver.navigate().forward();// 前进
 driver.navigate().back();// 后退
 driver.navigate().refresh();// 刷新
 
+元素聚焦：利用js将页面跳到元素的位置
+target = driver.find_element_by_xxxx()
+driver.execute_script("arguments[0].scrollIntoView();",target)
+
 css:
 div[class=aui_content]" :div元素,class标签.等号后面跟着标签的名字
 button[id=sendFormBut][type=button] :button元素,id和type标签.等号后面跟着标签的名字
 td>input[id=text_box] : td父类元素,input子类元素,id标签，等号后面跟着标签的名字
 div.aui_content>div :div父类元素,aui_content元素名,div子类元素
+
 xpath:
 .//*[@id='sendFormBut']
