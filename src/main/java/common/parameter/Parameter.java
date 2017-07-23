@@ -20,7 +20,7 @@ public class Parameter {
     private String passWordStrat = "//";
 
     //mysql
-    private String[] mysqlData = new String[]{"jdbc:mysql://lo/aa", "com.mysql.jdbc.Driver", "root", "22"};
+    private String[] mysqlData = new String[]{"jdbc:mysql://lo/aa?autoReconnect=true&useSSL=false", "com.mysql.jdbc.Driver", "root", "22"};
 
     //家的照片
     String photoFamily[] = new String[]{"photo1.exe", "photo2.exe", "photo3.exe", "photo4.exe", "photo5.exe"};

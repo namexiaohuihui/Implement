@@ -6,12 +6,15 @@ import common.parameter.QueryStatement;
 import common.tool.SystemOut;
 import common.tool.caninput.ElementInput;
 import common.tool.caninput.ElementText;
+import common.tool.caninput.Existence;
 import common.tool.caninput.Preservation;
 import common.tool.conversion.CharacterString;
 import common.tool.mysqls.MysqlInquire;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -23,7 +26,7 @@ public class Signin {
 
     private WebDriver driver = FoxDriver.getFoxDriver();
 
-    public void getRegister() throws InterruptedException {
+    public void getRegister() throws InterruptedException, SQLException {
 
         Parameter parameter = new Parameter();
 
@@ -38,48 +41,62 @@ public class Signin {
         //        点击登录
         new Preservation().buttonClassName("loginwater");
 
-        statusVerification();
+        By by =  By.cssSelector("div.errormsg");
+        boolean b = new Existence().waitForElement(by);
+        if (b){
+            statusVerification();
+        }else {
+            webElementError(driver.findElement(by));
+        }
     }
 
 
-    private void statusVerification() throws InterruptedException {
+    private void statusVerification() throws InterruptedException, SQLException {
         ElementText elementText = new ElementText();
         //找到id和手机
         String id = elementText.accordingToCss("dl.shopFigure dd:nth-child(3)", null);
         String phone = elementText.accordingToCss("dl.shopFigure dd:nth-child(2)", null);
 
-        //数据切割
+        //数据切割所在类
         CharacterString characterString = new CharacterString();
+        //通过内部方法，将数据进行有效的切割
         int v = (int) characterString.cuttingCharacter(id, ":", ")");
-        QueryStatement qs = new QueryStatement();
-        String userId = qs.getUserId();
-        userId = userId + v;
-        SystemOut.getStringOut("打印数据" + userId);
-        MysqlInquire inquire = new MysqlInquire();//创建数据库对象
-        List<List> dataMysql = inquire.getDataMysql(userId);
 
-        for (int i = 0; i < dataMysql.size(); i++) {
-            List list = dataMysql.get(i);
-            for (int j = 0 ;j<list.size();j++){
-                SystemOut.getStringOut(list.get(j).toString());
-            }
-        }
+        //通过id来判断是否登录成功
+        idIdentify(v,phone);
     }
 
-    //    输出登录失败的原因
-    private void getWebElement(WebElement element) {
+    private void idIdentify(int v,String phone) throws SQLException {
+
+        //调用sql执行语句
+        QueryStatement qs = new QueryStatement();
+        String userId = qs.getUserId();
+
+        //拼接查询语句
+        userId = userId + v;
+        SystemOut.getStringOut("sql执行语句" + userId);
+
+        //创建数据库对象
+        MysqlInquire inquire = new MysqlInquire();
+        String column = inquire.dataMysqlRow(userId,1);
+
+        SystemOut.getStringOut("查询之后返回的数据",column);
+
+        assert phone.equals(column):"Phone number recognition is wrong";
+    }
+
+
+    //    打印输出登录失败的原因
+    private void webElementError(WebElement element) {
         String str = element.getText();
         switch (str) {
             case "请输入11位正确的手机号":
-                //    System.out.println("你的手机号输入有误，请查证后重新输入");
                 SystemOut.getStringOut(str);
                 break;
             case "请输入登录密码":
-                //   System.out.println("请输入密码在点击登录按钮");
                 SystemOut.getStringOut(str);
                 break;
             case "用户名或密码错误":
-                //   System.out.println("用户名或密码错误，请查证后重新输入");
                 SystemOut.getStringOut(str);
                 break;
         }

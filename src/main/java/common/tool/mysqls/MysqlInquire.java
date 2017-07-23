@@ -16,11 +16,11 @@ public class MysqlInquire {
 
     /**
      * 通过sql返回查询的内容
-     *
+     * 返回的内容很多
      * @param sql
      * @return
      */
-    public List<List> getDataMysql(String sql) {
+    public List<List> dataMysqlAll(String sql) {
         db1 = new DBHelper(sql);//创建DBHelper对象
         int length = 0;
         List<List> ll = new ArrayList<>();
@@ -29,8 +29,9 @@ public class MysqlInquire {
             ret = db1.pst.executeQuery();//执行语句，得到结果集
             ResultSetMetaData data = ret.getMetaData();
 
-            while (ret.next()) {
+            while (ret.next()) {//循环读取每一行的数据
                 list = new ArrayList<>();
+                //每行中有多少列，将每列的数据存入
                 for (int i = 1; i <= data.getColumnCount(); i++) {
                     list.add(ret.getString(i));
                 }
@@ -57,13 +58,13 @@ public class MysqlInquire {
      * @return
      * @throws SQLException
      */
-    public String getDataLengthData(String sql, int i) throws SQLException {
+    public String dataMysqlRow(String sql, int i) throws SQLException {
         db1 = new DBHelper(sql);//创建DBHelper对象
-        String uname = "";
+        String column = "";
         try {
             ret = db1.pst.executeQuery();//执行语句，得到结果集
-            while (ret.next()) {
-                uname = ret.getString(i);
+            while (ret.next()) {//循环读取每一行的数据
+                column = ret.getString(i);
                 System.out.println("该表的字段的内容为：" + ret.getString(i));
             }//显示数据
 //            最后不要忘记关闭了。
@@ -72,7 +73,7 @@ public class MysqlInquire {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return uname;
+        return column;
     }
 
 
@@ -82,7 +83,7 @@ public class MysqlInquire {
      * @param sql
      * @return
      */
-    public int getDataLength(String sql) {
+    public int dataLength(String sql) {
         db1 = new DBHelper(sql);//创建DBHelper对象
         int length = 0;
         try {
