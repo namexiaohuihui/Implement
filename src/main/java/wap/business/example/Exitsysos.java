@@ -14,11 +14,13 @@ import static java.lang.Thread.sleep;
  */
 public class Exitsysos {
 
-    private WebDriver driver = FoxDriver.getFoxDriver();
-
-    public void getExit() throws InterruptedException {
-        Preservation preserva = new Preservation();
-        preserva.buttonClassName("user-info");
-        preserva.buttonLinkText("退出登录");
+    public Exitsysos() {
+        try {
+               Preservation preserva = new Preservation();
+               preserva.buttonCssSelector("span.user-info");
+               preserva.buttonCssSelector("a.lastone");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

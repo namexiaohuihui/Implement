@@ -1,6 +1,7 @@
 package wap.business.example.homeAddress;
 
 import common.FoxDriver;
+import common.parameter.Parameter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,12 +15,14 @@ import static org.junit.Assert.assertEquals;
  */
 public class ManagementHomepage {
 
-    private WebDriver driver = FoxDriver.getFoxDriver();
 
-    public void getHomepage() throws InterruptedException {
+    public ManagementHomepage() throws InterruptedException {
+       WebDriver driver = FoxDriver.getFoxDriver();
         sleep(1000);
-        WebElement element = driver.findElement(By.xpath(".//*[@id='breadcrumbs']/ul/li[2]"));
-        assertEquals("家门口验证失败","---",element.getText());
-        System.out.println("家门口验证成功");
+        WebElement tr = driver.findElement(By.cssSelector("li.hsub.active> a > span"));
+        String one = new Parameter().getOneLevel()[0];
+
+        assertEquals("家门口验证失败","---",tr.getText());
     }
+
 }

@@ -146,7 +146,7 @@ public class Modify {
 
         StatementOperation statementOperation = new StatementOperation();
         String lnsm_group = statementOperation.statementInquire(content, structure, condition, sorting);
-        List<List> dataMysql = inquire.getDataMysql(lnsm_group);
+        List<List> dataMysql = inquire.dataMysqlAll(lnsm_group);
         SystemOut.getStringOut(dataMysql);
     }
 

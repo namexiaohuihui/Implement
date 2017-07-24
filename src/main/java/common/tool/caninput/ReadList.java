@@ -213,13 +213,7 @@ public class ReadList {
     }
 
 
-    /**
-     * @param driver
-     * @param flip    最后一个数的内容
-     * @param element
-     * @return
-     */
-    public int digitalFlip(By by) throws InterruptedException {
+    public Integer weizhidaima(By by) throws InterruptedException {
      /*   List<List> cellContent = cellContent(load, "li", "a");
         String s = cellContent.get(cellContent.size() - 1).get(0).toString();
         if ("下一页".equals(s)) {
@@ -229,7 +223,7 @@ public class ReadList {
         } else {
             return Integer.parseInt(s);
         }*/
-        return 0;
+        return 1;
     }
 
 }

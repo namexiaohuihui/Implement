@@ -7,6 +7,10 @@ driver.navigate().refresh();// 刷新
 target = driver.find_element_by_xxxx()
 driver.execute_script("arguments[0].scrollIntoView();",target)
 
+定位查找元素。。。。有待考核。。。
+rf = driver.find_element_by_id("su")
+driver.execute_script("arguments[0].style.border=\‘1px dashed red\‘",rf)
+
 css:
 div[class=aui_content]" :div元素,class标签.等号后面跟着标签的名字
 button[id=sendFormBut][type=button] :button元素,id和type标签.等号后面跟着标签的名字

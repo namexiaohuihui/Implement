@@ -40,6 +40,6 @@ public class StatementOperation {
     public List<List> dataMysql(String content, String structure, String condition, String sorting) throws InterruptedException {
         MysqlInquire inquire = new MysqlInquire();//创建数据库对象
         String sql = statementInquire(content, structure, condition, sorting);//创建查询语句
-        return inquire.getDataMysql(sql);//返回查询结果
+        return inquire.dataMysqlAll(sql);//返回查询结果
     }
 }

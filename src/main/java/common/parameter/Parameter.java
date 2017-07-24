@@ -19,8 +19,8 @@ public class Parameter {
     private String accountStart = "---";
     private String passWordStrat = "//";
 
-    //mysql
-    private String[] mysqlData = new String[]{"jdbc:mysql://lo/aa?autoReconnect=true&useSSL=false", "com.mysql.jdbc.Driver", "root", "22"};
+    //一级菜单
+    String oneLevel[] = {""};
 
     //家的照片
     String photoFamily[] = new String[]{"photo1.exe", "photo2.exe", "photo3.exe", "photo4.exe", "photo5.exe"};
@@ -67,7 +67,7 @@ public class Parameter {
         return licenseFamily;
     }
 
-    public String[] getMysqlData() {
-        return mysqlData;
+    public String[] getOneLevel() {
+        return oneLevel;
     }
 }

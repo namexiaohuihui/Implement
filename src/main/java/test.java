@@ -31,7 +31,7 @@ public class test {
 
     public Connection connectionSql(){
          String name = "com.mysql.jdbc.Driver";
-         String url = "jdbc:mysql://192.168.1.101/xiao_ph";
+         String url = "jdbc:mysql://192.168.1.101/xiao_ph?autoReconnect=true&useSSL=false";
          String user = "xiaohuihui";
          String password = "xiaohuihui";
 
@@ -46,7 +46,7 @@ public class test {
             System.out.println("找不到类");
             e.printStackTrace();
         } catch (SQLException e) {
-            System.out.println("语句");
+           // System.out.println("语句");
             e.printStackTrace();
         }
 

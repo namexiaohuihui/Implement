@@ -7,10 +7,18 @@ package common.parameter;
  */
 public class QueryStatement {
 
+    //mysql
+    private String[] mysqlData = new String[]{"jdbc:mysql://lo/aa?autoReconnect=true&useSSL=false", "com.mysql.jdbc.Driver", "root", "22"};
+
+
     //
     private  String userId = "-- ";
 
     public String getUserId() {
         return userId;
+    }
+
+    public String[] getMysqlData() {
+        return mysqlData;
     }
 }
