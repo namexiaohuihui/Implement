@@ -1,11 +1,12 @@
 package content.demo.ioLiu;
 
+import org.apache.commons.io.input.TeeInputStream;
+import org.apache.commons.io.output.TeeOutputStream;
+import org.junit.Test;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-
-import org.apache.commons.io.input.TeeInputStream;
-import org.apache.commons.io.output.TeeOutputStream;
 
 /**
  * 包中同样有OutputStream类的实现，他们可以在多种情况下使用，一个非常有意思的类就是
@@ -15,9 +16,10 @@ import org.apache.commons.io.output.TeeOutputStream;
  */
 public final class OutputExample {
 
-    private static final String INPUT = "This should go to the output.";
+    private String INPUT = "The same content is written on both files.";
 
-    public static void runExample() {
+    @Test
+    public void runExample() {
         System.out.println("Output example...");
         TeeInputStream teeIn = null;
         TeeOutputStream teeOut = null;
@@ -34,8 +36,8 @@ public final class OutputExample {
             teeIn = new TeeInputStream(in, teeOut, true);
             teeIn.read(new byte[INPUT.length()]);
 
-            System.out.println("Output stream 1: " + out1.toString());
-            System.out.println("Output stream 2: " + out2.toString());
+            System.out.println("输出内容 1: " + out1.toString());
+            System.out.println("输出内容 2: " + out2.toString());
 
         } catch (IOException e) {
             e.printStackTrace();

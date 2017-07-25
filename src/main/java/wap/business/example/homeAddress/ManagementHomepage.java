@@ -15,7 +15,6 @@ import static org.junit.Assert.assertEquals;
  */
 public class ManagementHomepage {
 
-
     public ManagementHomepage() throws InterruptedException {
        WebDriver driver = FoxDriver.getFoxDriver();
         sleep(1000);

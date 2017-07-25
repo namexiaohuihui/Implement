@@ -7,23 +7,26 @@ package content.demo.ioLiu;
  * 可以在数据读取完毕之后自动关闭输入流和输出流。
  * Created by 70486 on 2017/7/24 on 23:38.
  */
+
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.input.TeeInputStream;
+import org.apache.commons.io.input.XmlStreamReader;
+import org.junit.Test;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.input.TeeInputStream;
-import org.apache.commons.io.input.XmlStreamReader;
-
 public final class InputExample {
 
-    private static final String XML_PATH =
-            "C:UsersLilykosworkspaceApacheCommonsExampleInputOutputExampleFolderweb.xml";
+    private final String INPUT = " Hello i am a string i was written";
 
-    private static final String INPUT = "This should go to the output.";
+    private final String XML_PATH =
+            "C:\\Users\\70486\\Desktop\\操作指令.txt";
 
-    public static void runExample() {
+    @Test
+    public void runExample() {
         System.out.println("Input example...");
         XmlStreamReader xmlReader = null;
         TeeInputStream tee = null;
@@ -37,6 +40,7 @@ public final class InputExample {
 
             xmlReader = new XmlStreamReader(xml);
             System.out.println("XML encoding: " + xmlReader.getEncoding());
+            System.out.println("XML encoding 2 : " + xmlReader.getDefaultEncoding());
 
             // TeeInputStream
 

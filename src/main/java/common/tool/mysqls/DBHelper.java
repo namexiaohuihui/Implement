@@ -1,6 +1,6 @@
 package common.tool.mysqls;
 
-import common.parameter.Parameter;
+import common.parameter.QueryStatement;
 import common.tool.SystemOut;
 
 import java.sql.Connection;
@@ -33,8 +33,8 @@ public class DBHelper {
     }
 
     private void startData() {
-        Parameter parameter = new Parameter();
-        String[] start = parameter.getMysqlData();
+        QueryStatement qs = new QueryStatement();
+        String[] start = qs.getMysqlData();
         url = start[0];
         name = start[1];
         user = start[2];

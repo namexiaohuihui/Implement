@@ -1,13 +1,10 @@
 package content.demo.ioLiu;
 
+import org.apache.commons.io.*;
+import org.junit.Test;
+
 import java.io.File;
 import java.io.IOException;
-
-import org.apache.commons.io.FileSystemUtils;
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.FilenameUtils;
-import org.apache.commons.io.LineIterator;
-import org.apache.commons.io.IOCase;
 
 /**
  *  里面多数类都是完成文件操作以及字符串比较的功能，下面列举了一下常用的工具类：
@@ -22,13 +19,15 @@ import org.apache.commons.io.IOCase;
 public class UtilityExample {
     // 我们在文件夹ExampleFolder中使用文件exampleTxt.txt，
     // 我们需要提供实用程序类的完整路径。
-    private static final String EXAMPLE_TXT_PATH =
-            "C:UsersLilykosworkspaceApacheCommonsExampleExampleFolderexampleTxt.txt";
 
-    private static final String PARENT_DIR =
-            "C:UsersLilykosworkspaceApacheCommonsExample";
+    private final String EXAMPLE_TXT_PATH =
+            "C:\\Users\\70486\\Desktop\\操作指令.txt";
 
-    public static void runExample() throws IOException {
+    private final String PARENT_DIR =
+            "C:\\Users\\70486\\Desktop";
+
+    @Test
+    public void runExample() throws IOException {
         System.out.println("实用程序类示例...");
 
         // FilenameUtils
@@ -50,7 +49,7 @@ public class UtilityExample {
         //我们可以使用新的File对象来创建 FileUtils.getFile(String)
         // 然后使用此对象从文件中获取信息.
         File exampleFile = FileUtils.getFile(EXAMPLE_TXT_PATH);
-        LineIterator iter = FileUtils.lineIterator(exampleFile);
+        LineIterator iter = FileUtils.lineIterator(exampleFile, "UTF-8");
 
         System.out.println("示例Txt的内容...");
         while (iter.hasNext()) {

@@ -4,3 +4,11 @@
 过滤器：FiltersExample
 比较器：ComparatorExample
 文件监控器：FileMonitorExample
+
+
+1.FilenameUtils文件名的以及路径的区分打印
+2.FileUtils.lineIterator文件的读取
+3.IOCase两个字符串的判断
+4.FileSystemUtils文件大小的判断
+5.XmlStreamReader读取文件的字符格式
+
