@@ -1,7 +1,4 @@
-package content.demo.ioLiu;
-
-import java.io.File;
-import java.io.IOException;
+package common.tool.excelfile;
 
 import org.apache.commons.io.FileDeleteStrategy;
 import org.apache.commons.io.FileUtils;
@@ -9,6 +6,9 @@ import org.apache.commons.io.monitor.FileAlterationListenerAdaptor;
 import org.apache.commons.io.monitor.FileAlterationMonitor;
 import org.apache.commons.io.monitor.FileAlterationObserver;
 import org.apache.commons.io.monitor.FileEntry;
+
+import java.io.File;
+import java.io.IOException;
 
 /**
  * org.apache.commons.io.monitor包下的类包含的方法可以获取文件的指定信息，

@@ -1,11 +1,11 @@
 package wap.business.example;
 
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader;
 import common.FoxDriver;
 import common.parameter.WapUrl;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
+import wap.business.example.homeAddress.ManagementHomepage;
 
 
 /**
@@ -27,6 +27,7 @@ public class StartEntrance {
     public void testXiao() throws Exception {
         Signin signin = new Signin();
         signin.getRegister();
+        ManagementHomepage managementHomepage = new ManagementHomepage();
     }
 
 /*

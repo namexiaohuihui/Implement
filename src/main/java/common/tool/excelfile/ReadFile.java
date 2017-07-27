@@ -1,5 +1,9 @@
 package common.tool.excelfile;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.LineIterator;
+import org.apache.commons.io.input.XmlStreamReader;
+
 import java.io.*;
 
 import static java.lang.Thread.sleep;
@@ -10,6 +14,53 @@ import static java.lang.Thread.sleep;
  * Created by Administrator on 2016/11/14.
  */
 public class ReadFile {
+
+    /**
+     * 返回文件的格式编码格式
+     *
+     * @param filename
+     * @return
+     */
+    public static String fileFormat(String filename) {
+        try {
+            XmlStreamReader xml = new XmlStreamReader(new File(filename));
+            filename = xml.getEncoding();
+            return filename;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    /**
+     * 输入流：读取文本上的数据
+     *
+     * @param filename
+     * @return
+     */
+    public static String readCommons(String filename) {
+        File example = FileUtils.getFile(filename);
+        String next = null;
+        LineIterator lineIterator = null;
+        if (example.isFile() && example.exists()) {
+            try {
+                lineIterator = FileUtils.lineIterator(example);
+                while (lineIterator.hasNext()) {
+                    next = lineIterator.next();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                if (lineIterator != null && lineIterator.equals("")) {
+                    lineIterator.close();
+                }
+            }
+        } else {
+            System.out.println("找不到指定的文件");
+        }
+
+        return next;
+    }
 
     /**
      * 需要换行的
@@ -74,6 +125,7 @@ public class ReadFile {
         }
         return sb.toString();
     }
+
     /**
      * 该方法用于读取txt文件
      *
@@ -81,7 +133,7 @@ public class ReadFile {
      */
     public static void readTextFile(String filePath) {
         try {
-            String encoding = "GBK";
+            String encoding = "UTF-8";
             File file = new File(filePath);
             if (file.isFile() && file.exists()) { // 判断文件是否存在
                 InputStreamReader read = new InputStreamReader(
@@ -100,4 +152,8 @@ public class ReadFile {
             e.printStackTrace();
         }
     }
+
+
+
+
 }

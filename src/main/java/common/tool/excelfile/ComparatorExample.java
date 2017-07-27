@@ -1,18 +1,19 @@
-package content.demo.ioLiu;
+package common.tool.excelfile;
 
 /**
  * 使用org.apache.commons.io.comparator 包下的类可以让你轻松的对文件或目录进行比较或者排序。
  * 你只需提供一个文件列表，选择不同的类就可以实现不同方式的文件比较。
  * Created by 70486 on 2017/7/24 on 23:31.
  */
-import java.io.File;
-import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOCase;
 import org.apache.commons.io.comparator.LastModifiedFileComparator;
 import org.apache.commons.io.comparator.NameFileComparator;
 import org.apache.commons.io.comparator.SizeFileComparator;
+
+import java.io.File;
+import java.util.Date;
 
 public final class ComparatorExample {
 
