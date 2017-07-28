@@ -2,7 +2,7 @@ package wap.business.example.statistics;
 
 import common.FoxDriver;
 import common.parameter.WapUrl;
-import common.tool.caninput.Existence;
+import common.tool.caninput.ElementExistence;
 import common.tool.caninput.Preservation;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -32,7 +32,7 @@ public class Statistics {
     }
 
     private void getElsenium(String listBar){
-        if (new Existence().elementLinkText(listBar)){
+        if (new ElementExistence().elementLinkText(listBar)){
             System.out.println(listBar + "元素存在。。");
         }else {
             System.out.println(listBar + "元素不存在。。");

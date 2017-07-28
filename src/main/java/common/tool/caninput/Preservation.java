@@ -21,7 +21,7 @@ public class Preservation {
     //    点击保存按钮
     public void breservation(String id) throws InterruptedException {
         //判断元素是否存在
-        boolean bl = new Existence().elementId(id);
+        boolean bl = new ElementExistence().elementId(id);
         if (bl) {
             driver.findElement(By.id(id)).click();
             sleep(1000);
@@ -35,7 +35,7 @@ public class Preservation {
      */
     public void buttonClassName(String className) throws InterruptedException {
         //判断元素是否存在
-        boolean bl = new Existence().elementClassName(className);
+        boolean bl = new ElementExistence().elementClassName(className);
         if (bl) {
             driver.findElement(By.className(className)).click();
             sleep(1000);
@@ -49,7 +49,7 @@ public class Preservation {
      */
     public void buttonXpath(String xPath) throws InterruptedException {
         //判断元素是否存在
-        boolean bl = new Existence().elementXPath(xPath);
+        boolean bl = new ElementExistence().elementXPath(xPath);
         if (bl) {
             driver.findElement(By.xpath(xPath)).click();
             sleep(1000);
@@ -64,7 +64,7 @@ public class Preservation {
      */
     public void buttonLinkText(String linkText) throws InterruptedException {
         //判断元素是否存在
-        boolean bl = new Existence().elementLinkText(linkText);
+        boolean bl = new ElementExistence().elementLinkText(linkText);
         if (bl) {
             driver.findElement(By.linkText(linkText)).click();
             sleep(1000);
@@ -78,7 +78,7 @@ public class Preservation {
      */
     public void buttonName(String Name) throws InterruptedException {
         //判断元素是否存在
-        boolean bl = new Existence().elementName(Name);
+        boolean bl = new ElementExistence().elementName(Name);
         if (bl) {
             driver.findElement(By.name(Name)).click();
             sleep(1000);
@@ -91,7 +91,7 @@ public class Preservation {
      * @param presevation
      */
     public void buttonCssSelector(String cssSelector) throws InterruptedException {
-        boolean bl = new Existence().elementCssSelector(cssSelector);
+        boolean bl = new ElementExistence().elementCssSelector(cssSelector);
         if (bl) {
             driver.findElement(By.cssSelector(cssSelector)).click();
             sleep(1000);

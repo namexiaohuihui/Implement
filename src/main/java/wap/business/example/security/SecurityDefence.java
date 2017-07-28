@@ -1,7 +1,7 @@
 package wap.business.example.security;
 
 import common.FoxDriver;
-import common.tool.caninput.Existence;
+import common.tool.caninput.ElementExistence;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -39,7 +39,7 @@ public class SecurityDefence {
         System.out.println("账户安全页面打开了");
     }
     private void getElsenium(String listBar){
-        if (new Existence().elementLinkText(listBar)){
+        if (new ElementExistence().elementLinkText(listBar)){
             System.out.println(listBar + "元素存在。。");
         }else {
             System.out.println(listBar + "元素不存在。。");

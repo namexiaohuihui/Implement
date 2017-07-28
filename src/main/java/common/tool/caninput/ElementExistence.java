@@ -1,9 +1,12 @@
 package common.tool.caninput;
 
 import common.FoxDriver;
+import common.tool.Interface.InheritInput;
+import common.tool.SystemOut;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -15,13 +18,13 @@ import static java.lang.Thread.sleep;
  * 判断元素是否存在
  * Created by Administrator on 2016/11/11.
  */
-public class Existence {
+public class ElementExistence implements InheritInput {
 
-    private WebDriver driver = FoxDriver.getFoxDriver();
+    public WebDriver driver = FoxDriver.getFoxDriver();
 
-    //    根据传入的ID来判断该元是否存在
-    public boolean elementId(String id) {
-
+    @Override
+    public boolean accordingToId(String id) {
+        //    根据传入的ID来判断该元是否存在
         try {
             driver.findElement(By.id(id));
             return true;
@@ -31,33 +34,9 @@ public class Existence {
         }
     }
 
-    //    根据传入的tagname来判断该元是否存在
-    public boolean elementTagName(String tagName) {
-
-        try {
-            driver.findElement(By.tagName(tagName));
-            return true;
-        } catch (Exception x) {
-            System.out.println(tagName + "：该元素不存在");
-            return false;
-        }
-    }
-
-    //    根据传入的linkText来判断该元是否存在
-    public boolean elementLinkText(String linkText) {
-
-        try {
-            driver.findElement(By.linkText(linkText));
-            return true;
-        } catch (Exception x) {
-            System.out.println(linkText + "：该元素不存在");
-            return false;
-        }
-    }
-
-    //    根据传入的name来判断该元是否存在
-    public boolean elementName(String name) {
-
+    @Override
+    public boolean accordingToName(String name) {
+        //    根据传入的tagname来判断该元是否存在
         try {
             driver.findElement(By.name(name));
             return true;
@@ -67,21 +46,21 @@ public class Existence {
         }
     }
 
-    //    根据传入的classname来判断该元是否存在
-    public boolean elementClassName(String className) {
-
+    @Override
+    public boolean accordingTagName(String tagname) {
+        //    根据传入的tagname来判断该元是否存在
         try {
-            driver.findElement(By.className(className));
+            driver.findElement(By.tagName(tagname));
             return true;
         } catch (Exception x) {
-            System.out.println(className + "：该元素不存在");
+            System.out.println(tagname + "：该元素不存在");
             return false;
         }
     }
 
-    //    根据传入的classname来判断该元是否存在
-    public boolean elementCssSelector(String css) {
-
+    @Override
+    public boolean accordingToCssSelector(String css) {
+        //    根据传入的classname来判断该元是否存在
         try {
             driver.findElement(By.cssSelector(css));
             return true;
@@ -91,9 +70,22 @@ public class Existence {
         }
     }
 
-    //    根据传入的xpath来判断该元是否存在
-    public boolean elementXPath(String xpath) {
+    @Override
+    public boolean accordingToCssName(String css) {
+        //    根据传入的classname来判断该元是否存在
+        try {
+            driver.findElement(By.className(css));
+            return true;
+        } catch (Exception x) {
+            System.out.println(css + "：该元素不存在");
+            return false;
+        }
+    }
 
+    @Override
+    public boolean accordingToXpath(String xpath) {
+
+        //    根据传入的xpath来判断该元是否存在
         try {
             driver.findElement(By.xpath(xpath));
             return true;
@@ -103,10 +95,24 @@ public class Existence {
         }
     }
 
+    @Override
+    public boolean accordingToLinkText(String linkText) {
+        //    根据传入的linkText来判断该元是否存在
+        try {
+            driver.findElement(By.linkText(linkText));
+            return true;
+        } catch (Exception x) {
+            System.out.println(linkText + "：该元素不存在");
+            return false;
+        }
+    }
+
+
     /**
      * 每500毫秒扫描一次页面，检查元素是否存在，存在的话返回true，
      * 不存在继续等到，直到等到时间超过2秒报错
      * driver.findElement(elementLocator).isDisplayed():isDisplayed检测是否出现
+     *
      * @param elementLocator
      * @return
      */
@@ -136,8 +142,9 @@ public class Existence {
     }
 
     /**
-     *  判断元素是否存在之後进行点击，在將判斷是否存在的數據進行返回.
-     *  页面最长等待时间为10s
+     * 判断元素是否存在之後进行点击，在將判斷是否存在的數據進行返回.
+     * 页面最长等待时间为10s
+     *
      * @param string
      * @return
      */
@@ -166,4 +173,12 @@ public class Existence {
             return false;
         }
     }
+
+    public String operation(WebElement cfmpassword, String content) throws InterruptedException {
+
+        SystemOut.getStringOut("元素开始使用");
+
+        return content;
+    }
+
 }

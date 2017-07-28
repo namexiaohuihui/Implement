@@ -5,8 +5,8 @@ import common.parameter.Parameter;
 import common.parameter.QueryStatement;
 import common.tool.SystemOut;
 import common.tool.caninput.ElementInput;
-import common.tool.caninput.ElementText;
-import common.tool.caninput.Existence;
+import common.tool.caninput.ElementObtain;
+import common.tool.caninput.ElementExistence;
 import common.tool.caninput.Preservation;
 import common.tool.conversion.CharacterString;
 import common.tool.mysqls.MysqlInquire;
@@ -15,7 +15,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.sql.SQLException;
-import java.util.List;
 
 /**
  * 实现登录
@@ -42,7 +41,7 @@ public class Signin {
         new Preservation().buttonClassName("loginwater");
 
         By by =  By.cssSelector("div.errormsg");
-        boolean b = new Existence().waitForElement(by);
+        boolean b = new ElementExistence().waitForElement(by);
         if (b){
             statusVerification();
         }else {
@@ -52,10 +51,10 @@ public class Signin {
 
 
     private void statusVerification() throws InterruptedException, SQLException {
-        ElementText elementText = new ElementText();
+        ElementObtain elementObtain = new ElementObtain();
         //找到id和手机
-        String id = elementText.accordingToCss("dl.shopFigure dd:nth-child(3)", null);
-        String phone = elementText.accordingToCss("dl.shopFigure dd:nth-child(2)", null);
+        String id = elementObtain.accordingToCss("dl.shopFigure dd:nth-child(3)", null);
+        String phone = elementObtain.accordingToCss("dl.shopFigure dd:nth-child(2)", null);
 
         //数据切割所在类
         CharacterString characterString = new CharacterString();

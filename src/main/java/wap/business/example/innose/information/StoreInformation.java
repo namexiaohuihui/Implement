@@ -2,7 +2,7 @@ package wap.business.example.innose.information;
 
 
 import common.FoxDriver;
-import common.tool.caninput.Existence;
+import common.tool.caninput.ElementExistence;
 import common.tool.caninput.InfoFrame;
 import common.tool.caninput.InfoSelect;
 import common.tool.caninput.Preservation;
@@ -118,7 +118,7 @@ public class StoreInformation {
         int licenseNumber = 0;
         int photoNumber = 0;
 //        判断执照第一张是否存在
-        if (new Existence().elementXPath(".//ul[@id='J_piczz-box']/li")) {
+        if (new ElementExistence().elementXPath(".//ul[@id='J_piczz-box']/li")) {
 //            如果第一张存在那么判断上传按钮状态是否为可点击状态
             if (real.equals(button)) {
 //                如果是可点击状态那么就上传一张图片

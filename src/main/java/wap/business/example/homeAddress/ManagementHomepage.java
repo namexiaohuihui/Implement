@@ -16,12 +16,12 @@ import static org.junit.Assert.assertEquals;
 public class ManagementHomepage {
 
     public ManagementHomepage() throws InterruptedException {
-       WebDriver driver = FoxDriver.getFoxDriver();
+        WebDriver driver = FoxDriver.getFoxDriver();
         sleep(1000);
         WebElement tr = driver.findElement(By.cssSelector("li.hsub.active> a > span"));
         String one = new Parameter().getOneLevel()[0];
 
-        assertEquals("家门口验证失败","---",tr.getText());
+        assertEquals("家门口验证失败", "---", tr.getText());
     }
 
 }

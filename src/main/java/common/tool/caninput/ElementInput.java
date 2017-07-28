@@ -1,6 +1,7 @@
 package common.tool.caninput;
 
 import common.FoxDriver;
+import common.tool.Interface.InheritInput;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,14 +13,14 @@ import static java.lang.Thread.sleep;
  * Created by ${XiaoHuiHui} on 2017/5/26 on 17:09.
  * XiaoHiiHui [704866169@qq.com]
  */
-public class ElementInput {
+public class ElementInput extends ElementExistence {
 
-    private WebDriver driver = FoxDriver.getWebDrivaer();
+    private WebDriver driver =super.driver;
 
 
     //    获取元素对象并点击输入内容
-    public void accordingToId(String id, String content) throws InterruptedException {
-        boolean bl = new Existence().elementId(id);
+    public void accordingToId(String id, String content) {
+        boolean bl = super.accordingToId(id);
         if (bl) {
             WebElement cfmpassword = driver.findElement(By.id(id));
             operation(cfmpassword, content);
@@ -27,8 +28,8 @@ public class ElementInput {
     }
 
     //    获取元素对象并点击输入内容
-    public void accordingToName(String name, String content) throws InterruptedException {
-        boolean bl = new Existence().elementName(name);
+    public void accordingToName(String name, String content) {
+        boolean bl = super.accordingToName(name);
         if (bl) {
             WebElement cfmpassword = driver.findElement(By.name(name));
             operation(cfmpassword, content);
@@ -36,9 +37,9 @@ public class ElementInput {
     }
 
     //    获取元素对象并点击输入内容
-    public void accordingToCss(String css, String content) throws InterruptedException {
+    public void accordingToCss(String css, String content) {
 
-        boolean bl = new Existence().elementCssSelector(css);
+        boolean bl = super.accordingToCssSelector(css);
         if (bl) {
             WebElement cfmpassword = driver.findElement(By.cssSelector(css));
             operation(cfmpassword, content);
@@ -46,9 +47,9 @@ public class ElementInput {
     }
 
     //    获取元素对象并点击输入内容
-    public void accordingToXpath(String xpath, String content) throws InterruptedException {
+    public void accordingToXpath(String xpath, String content) {
 
-        boolean bl = new Existence().elementXPath(xpath);
+        boolean bl = super.accordingToXpath(xpath);
         if (bl) {
             WebElement cfmpassword = driver.findElement(By.xpath(xpath));
             operation(cfmpassword, content);
@@ -56,9 +57,9 @@ public class ElementInput {
     }
 
     //    获取元素对象并点击输入内容
-    public void accordingToLinkText(String linkText, String content) throws InterruptedException {
+    public void accordingToLinkText(String linkText, String content) {
 
-        boolean bl = new Existence().elementLinkText(linkText);
+        boolean bl = super.accordingToLinkText(linkText);
         if (bl) {
             WebElement cfmpassword = driver.findElement(By.linkText(linkText));
             operation(cfmpassword, content);
@@ -66,13 +67,17 @@ public class ElementInput {
     }
 
     //  直接通过对象然后输入内容
-    private void operation(WebElement cfmpassword, String content) throws InterruptedException {
+    private void operation(WebElement cfmpassword, String content) {
         //        点击元素
         cfmpassword.click();
 //        清空输入框里面的内容
         cfmpassword.clear();
 //        输入元素
         cfmpassword.sendKeys(content);
-        sleep(1000);
+        try {
+            sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

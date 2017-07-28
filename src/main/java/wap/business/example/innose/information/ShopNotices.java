@@ -1,7 +1,7 @@
 package wap.business.example.innose.information;
 
 import common.FoxDriver;
-import common.tool.caninput.Existence;
+import common.tool.caninput.ElementExistence;
 import common.tool.caninput.Preservation;
 import common.tool.excelfile.ReadFile;
 import org.openqa.selenium.By;
@@ -74,7 +74,7 @@ public class ShopNotices {
      */
     private void getData(String string) {
 //        判断是否存在
-        if (new Existence().elementCssSelector(string)) {
+        if (new ElementExistence().elementCssSelector(string)) {
 //            读取提示信息的内容
             String successMessage = driver.findElement(By.className(string)).getText();
 //            判断提示信息的内容是否为保存成功

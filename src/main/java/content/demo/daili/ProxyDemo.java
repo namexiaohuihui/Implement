@@ -1,6 +1,8 @@
 package content.demo.daili;
 
 /**
+ *
+ * 通过一个类来代理另外一个类进行工作
  * Created by ${XiaoHuiHui} on 2017/7/27 on 17:25.
  * XiaoHiiHui [704866169@qq.com]
  */
