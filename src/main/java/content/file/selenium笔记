@@ -3,6 +3,51 @@ driver.navigate().forward();// 前进
 driver.navigate().back();// 后退
 driver.navigate().refresh();// 刷新
 
+# selenium架包下载地址
+http://docs.seleniumhq.org/download/
+
+# 获取当前浏览器所有的窗口
+handles = browser.window_handles
+# handles为一个数组：handles = [窗口1，窗口2，...]
+# 窗口切换，切换为新打开的窗口
+browser.switch_to_window(handles[-1])
+# 切换回最初打开的窗口
+browser.switch_to_window(handles[0])
+# 新增一个窗口打开url
+newwindow='window.open("https://www.baidu.com");'
+browser.execute_script(newwindow)
+# 关闭当前窗口
+browser.close()
+# 关闭所有窗口
+browser.quit()
+
+//        确定离开
+driver.switchTo().alert().accept();
+//        取消离开
+driver.switchTo().alert().dismiss();
+
+//移动到元素element对象的“顶端”与当前窗口的“顶部”对齐
+((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
+((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+
+//移动到元素element对象的“底端”与当前窗口的“底部”对齐
+((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(false);", element);
+
+//移动到页面最底部
+((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
+
+//移动到指定的坐标(相对当前的坐标移动)
+((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 700)");
+Thread.sleep(3000);
+//结合上面的scrollBy语句，相当于移动到700+800=1600像素位置
+((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 800)");
+
+//移动到窗口绝对位置坐标，如下移动到纵坐标1600像素位置
+((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 1600)");
+Thread.sleep(3000);
+//结合上面的scrollTo语句，仍然移动到纵坐标1200像素位置
+((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 1200)");
+
 元素聚焦：利用js将页面跳到元素的位置
 target = driver.find_element_by_xxxx()
 driver.execute_script("arguments[0].scrollIntoView();",target)

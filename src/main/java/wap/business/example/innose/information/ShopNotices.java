@@ -74,7 +74,7 @@ public class ShopNotices {
      */
     private void getData(String string) {
 //        判断是否存在
-        if (new ElementExistence().elementCssSelector(string)) {
+        if (new ElementExistence().accordingToCssSelector(string)) {
 //            读取提示信息的内容
             String successMessage = driver.findElement(By.className(string)).getText();
 //            判断提示信息的内容是否为保存成功

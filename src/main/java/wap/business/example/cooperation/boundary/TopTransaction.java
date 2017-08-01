@@ -94,7 +94,7 @@ public class TopTransaction {
 
             //判断密码输入框是否存在。存在就点击取消按钮
             By by = By.cssSelector("td.class.aui_main>div.aui_content]");//提示语对象
-            boolean b = new ElementExistence().doesWebElementExist(driver, by);
+            boolean b = new ElementExistence().doesWebElementExist(by);
             if (b) {
                 String text = driver.findElement(by).getText();
                 SystemOut.getStringOut("输入密码之后提示框的内容", text);

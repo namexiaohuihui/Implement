@@ -23,7 +23,8 @@ public class Possessor {
     private WapUrl wapurl = new WapUrl();
     private Parameter parameter = new Parameter();
     private ElementInput elementInput = new ElementInput();
-    public void getUrl() throws InterruptedException {
+
+    public void registerPossessor() throws InterruptedException {
 
         name = parameter.getAccountFamily();
         passWord = parameter.getPassWordFamily();

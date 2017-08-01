@@ -41,7 +41,7 @@ public class MarketingCampaign {
     }
 
     private void getElsenium(String listBar){
-        if (new ElementExistence().elementLinkText(listBar)){
+        if (new ElementExistence().accordingToLinkText(listBar)){
             System.out.println(listBar + "元素存在。。");
         }else {
             System.out.println(listBar + "元素不存在。。");

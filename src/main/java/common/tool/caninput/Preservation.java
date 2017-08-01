@@ -14,14 +14,14 @@ import static java.lang.Thread.sleep;
  * 负责点击某个元素对象
  * Created by Administrator on 2016/11/15.
  */
-public class Preservation {
+public class Preservation extends  ElementExistence{
 
     private WebDriver driver = FoxDriver.getWebDrivaer();
 
     //    点击保存按钮
     public void breservation(String id) throws InterruptedException {
         //判断元素是否存在
-        boolean bl = new ElementExistence().elementId(id);
+        boolean bl = super.accordingToId(id);
         if (bl) {
             driver.findElement(By.id(id)).click();
             sleep(1000);
@@ -35,7 +35,7 @@ public class Preservation {
      */
     public void buttonClassName(String className) throws InterruptedException {
         //判断元素是否存在
-        boolean bl = new ElementExistence().elementClassName(className);
+        boolean bl = super.accordingToCssName(className);
         if (bl) {
             driver.findElement(By.className(className)).click();
             sleep(1000);
@@ -49,7 +49,7 @@ public class Preservation {
      */
     public void buttonXpath(String xPath) throws InterruptedException {
         //判断元素是否存在
-        boolean bl = new ElementExistence().elementXPath(xPath);
+        boolean bl = super.accordingToXpath(xPath);
         if (bl) {
             driver.findElement(By.xpath(xPath)).click();
             sleep(1000);
@@ -64,7 +64,7 @@ public class Preservation {
      */
     public void buttonLinkText(String linkText) throws InterruptedException {
         //判断元素是否存在
-        boolean bl = new ElementExistence().elementLinkText(linkText);
+        boolean bl = super.accordingToLinkText(linkText);
         if (bl) {
             driver.findElement(By.linkText(linkText)).click();
             sleep(1000);
@@ -78,7 +78,7 @@ public class Preservation {
      */
     public void buttonName(String Name) throws InterruptedException {
         //判断元素是否存在
-        boolean bl = new ElementExistence().elementName(Name);
+        boolean bl = super.accordingToName(Name);
         if (bl) {
             driver.findElement(By.name(Name)).click();
             sleep(1000);
@@ -91,7 +91,7 @@ public class Preservation {
      * @param presevation
      */
     public void buttonCssSelector(String cssSelector) throws InterruptedException {
-        boolean bl = new ElementExistence().elementCssSelector(cssSelector);
+        boolean bl = super.accordingToCssSelector(cssSelector);
         if (bl) {
             driver.findElement(By.cssSelector(cssSelector)).click();
             sleep(1000);

@@ -39,7 +39,7 @@ public class SecurityDefence {
         System.out.println("账户安全页面打开了");
     }
     private void getElsenium(String listBar){
-        if (new ElementExistence().elementLinkText(listBar)){
+        if (new ElementExistence().accordingToLinkText(listBar)){
             System.out.println(listBar + "元素存在。。");
         }else {
             System.out.println(listBar + "元素不存在。。");
