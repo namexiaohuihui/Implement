@@ -25,7 +25,7 @@ public class Signin {
 
     private WebDriver driver = FoxDriver.getFoxDriver();
 
-    public void getRegister() throws InterruptedException, SQLException {
+    public void landSingin() throws InterruptedException, SQLException {
 
         Parameter parameter = new Parameter();
 
@@ -43,9 +43,9 @@ public class Signin {
         By by =  By.cssSelector("div.errormsg");
         boolean b = new ElementExistence().waitForElement(by);
         if (b){
-            statusVerification();
-        }else {
             webElementError(driver.findElement(by));
+        }else {
+            statusVerification();
         }
     }
 

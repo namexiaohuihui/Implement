@@ -6,12 +6,14 @@ import common.tool.caninput.ElementExistence;
 import common.tool.caninput.InfoFrame;
 import common.tool.caninput.InfoSelect;
 import common.tool.caninput.Preservation;
+import common.tool.mysqls.MysqlInquire;
 import common.tool.upload.PictureImage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import wap.business.example.innose.Information;
 
 import java.sql.SQLException;
 import java.util.concurrent.TimeUnit;
@@ -22,34 +24,34 @@ import static org.junit.Assert.assertEquals;
  * 信息
  * Created by Administrator on 2016/11/1.
  */
-public class StoreInformation {
+public class StoreInformation extends Information {
 
     //    记录店铺执照上传的对象，方便循环执行
-    String photo[] ;
+    String photo[];
     String license[];
-    private WebDriver driver = FoxDriver.getFoxDriver();
+    WebDriver driver = super.driver;
+
     //    实拍和执照的上传按钮class名
     private String button = "uploadify-button ";
-    //    店铺介绍的位置
-    private int weizhi = 17;
 
-    public void getInformation(String url) throws InterruptedException, SQLException {
+    public void informationStore() throws InterruptedException, SQLException {
 //        通過網址進行驗證店鋪信息頁面是否打開。
-        assertEquals("店鋪信息頁面沒打開", url, driver.getCurrentUrl());
-        /*
-        if ((MysqlInquire.getDataLength(mysql, 3)).equals("")) {
+        assertEquals("頁面沒打開:" + super.mainHome, super.url[0], driver.getCurrentUrl());
+
+        MysqlInquire mi = new MysqlInquire();
+        String sql = "";
+        String s = mi.dataMysqlRow(sql, 1);
+        if (s.equals("")||s ==null){
             System.out.println("该店铺没有设置过数据");
             getInformation();//名称、省份、地址、经纬设置
             setInformation();//其他设置
-        } else {
+        }else{
             System.out.println("该店铺已设置过数据");
-            weizhi = 18;
-            setInformation();//其他设置
         }
-        */
+        setInformation();//其他设置
+
 //        店铺信息局部数据调整
         //setLocal();
-        setInformation();
     }
 
     private void setLocal() throws InterruptedException {
@@ -118,7 +120,7 @@ public class StoreInformation {
         int licenseNumber = 0;
         int photoNumber = 0;
 //        判断执照第一张是否存在
-        if (new ElementExistence().elementXPath(".//ul[@id='J_piczz-box']/li")) {
+        if (new ElementExistence().accordingToXpath(".//ul[@id='J_piczz-box']/li")) {
 //            如果第一张存在那么判断上传按钮状态是否为可点击状态
             if (real.equals(button)) {
 //                如果是可点击状态那么就上传一张图片
@@ -181,9 +183,9 @@ public class StoreInformation {
             By province = By.cssSelector("select[id=province][name=province]");
             By city = By.cssSelector("select[id=city][name=city]");
             By county = By.cssSelector("select[id=county][name=county]");
-            infoSelect.categoryIndex(province,position);
-            infoSelect.categoryValue(city,value);
-            infoSelect.categoryText(county,options);
+            infoSelect.categoryIndex(province, position);
+            infoSelect.categoryValue(city, value);
+            infoSelect.categoryText(county, options);
         }
     }
 
@@ -204,8 +206,7 @@ public class StoreInformation {
 
     //        设置店铺介绍
     private void getIntroduce() throws InterruptedException {
-        weizhi = 18;
-        String load = "//*[@id=\"shopissueform\"]/table/tbody/tr[" + weizhi + "]/td/div/div[2]/iframe";
+        String load = "//*[@id=\"shopissueform\"]/table/tbody/tr[17]/td/div/div[2]/iframe";
         new InfoFrame().editInfoFrame(load, "ShopIntroduction");
     }
 

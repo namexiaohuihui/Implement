@@ -165,7 +165,7 @@ public class ElementExistence implements InheritInput {
     }
 
     //判断一个元素是否出现
-    public boolean doesWebElementExist(WebDriver driver, By selector) {
+    public boolean doesWebElementExist(By selector) {
         try {
             driver.findElement(selector);
             return true;
@@ -173,12 +173,4 @@ public class ElementExistence implements InheritInput {
             return false;
         }
     }
-
-    public String operation(WebElement cfmpassword, String content) throws InterruptedException {
-
-        SystemOut.getStringOut("元素开始使用");
-
-        return content;
-    }
-
 }

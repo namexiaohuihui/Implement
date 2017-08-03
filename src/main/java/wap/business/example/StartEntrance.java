@@ -26,7 +26,7 @@ public class StartEntrance {
     @Test
     public void testXiao() throws Exception {
         Signin signin = new Signin();
-        signin.getRegister();
+        signin.landSingin();
         ManagementHomepage managementHomepage = new ManagementHomepage();
     }
 

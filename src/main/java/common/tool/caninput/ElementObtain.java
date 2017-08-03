@@ -12,9 +12,9 @@ import static java.lang.Thread.sleep;
  * 通过元素标签来获取元素的内容
  * Created by 70486 on 2017/7/19 on 23:20.
  */
-public class ElementObtain extends ElementExistence{
+public class ElementObtain extends ElementExistence {
 
-    private WebDriver driver =super.driver;
+    private WebDriver driver = super.driver;
 
 
     //    获取元素对象的标签属性值
@@ -22,7 +22,7 @@ public class ElementObtain extends ElementExistence{
         boolean bl = super.accordingToId(id);
         if (bl) {
             WebElement cfmpassword = driver.findElement(By.id(id));
-            content =  operation(cfmpassword, content);
+            content = operation(cfmpassword, content);
         }
 
         return content;
@@ -33,7 +33,7 @@ public class ElementObtain extends ElementExistence{
         boolean bl = super.accordingToName(name);
         if (bl) {
             WebElement cfmpassword = driver.findElement(By.name(name));
-            content =  operation(cfmpassword, content);
+            content = operation(cfmpassword, content);
         }
 
         return content;
@@ -45,7 +45,7 @@ public class ElementObtain extends ElementExistence{
         boolean bl = super.accordingToCssSelector(css);
         if (bl) {
             WebElement cfmpassword = driver.findElement(By.cssSelector(css));
-            content =  operation(cfmpassword, content);
+            content = operation(cfmpassword, content);
         }
 
         return content;
@@ -57,7 +57,7 @@ public class ElementObtain extends ElementExistence{
         boolean bl = super.accordingToXpath(xpath);
         if (bl) {
             WebElement cfmpassword = driver.findElement(By.xpath(xpath));
-            content =  operation(cfmpassword, content);
+            content = operation(cfmpassword, content);
         }
 
         return content;
@@ -69,7 +69,7 @@ public class ElementObtain extends ElementExistence{
         boolean bl = super.accordingToLinkText(linkText);
         if (bl) {
             WebElement cfmpassword = driver.findElement(By.linkText(linkText));
-            content =  operation(cfmpassword, content);
+            content = operation(cfmpassword, content);
         }
 
         return content;

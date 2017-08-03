@@ -113,7 +113,7 @@ public class Modify {
      */
     void editNameSorting(String lo, String edit) throws InterruptedException {
         ElementInput el = new ElementInput();
-        el.accordingToCss(lo,edit);
+        el.accordingToCssSelector(lo,edit);
     }
 
 

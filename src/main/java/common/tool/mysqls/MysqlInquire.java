@@ -22,7 +22,6 @@ public class MysqlInquire {
      */
     public List<List> dataMysqlAll(String sql) {
         db1 = new DBHelper(sql);//创建DBHelper对象
-        int length = 0;
         List<List> ll = new ArrayList<>();
         List<String> list = null;
         try {
@@ -39,7 +38,6 @@ public class MysqlInquire {
             }
 //           获取ResultSet数据的长度。先将游标移动到最后面，之后最后长度。在将游标还原。
             ret.last(); // 游标移到最后, 获得rs长度
-            length = ret.getRow();
             // ret.first(); // 还原游标到rs开头
 //            最后不要忘记关闭了。
             ret.close();
@@ -51,7 +49,7 @@ public class MysqlInquire {
     }
 
     /**
-     * 查询结果中，获取指定行数的内容
+     * 查询结果中，获取首行指定列的内容
      *
      * @param sql
      * @param i

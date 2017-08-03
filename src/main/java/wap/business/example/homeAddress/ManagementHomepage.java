@@ -16,9 +16,11 @@ import static org.junit.Assert.assertEquals;
 public class ManagementHomepage {
 
     public ManagementHomepage() throws InterruptedException {
-        WebDriver driver = FoxDriver.getFoxDriver();
+        WebDriver driver = FoxDriver.getWebDrivaer();
         sleep(1000);
+        //获取界面上一级菜单的名字
         WebElement tr = driver.findElement(By.cssSelector("li.hsub.active> a > span"));
+        //获取程序上一级菜单名字
         String one = new Parameter().getOneLevel()[0];
 
         assertEquals("家门口验证失败", "---", tr.getText());

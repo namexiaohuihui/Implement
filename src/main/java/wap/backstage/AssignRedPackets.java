@@ -40,9 +40,9 @@ public class AssignRedPackets {
 
         //调用方法，实行元素的输入
         ElementInput elementInput = new ElementInput();
-        elementInput.accordingToCss("input[name=username][class=form-control]",
+        elementInput.accordingToCssSelector("input[name=username][class=form-control]",
                 parameter.getAccountTop());
-        elementInput.accordingToCss("input[name=password][class=form-control]",
+        elementInput.accordingToCssSelector("input[name=password][class=form-control]",
                 parameter.getPassWordTop());
 
         driver.findElement(By.cssSelector("button[id=loginBtn][type=submint]")).click();
