@@ -2,59 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a41ba70-32a3-43a6-aa3c-a0189bf6bfbd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/app/StartSystem.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/ElementText.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/Existence$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/Existence$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/Existence.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/app/app.class" afterPath="$PROJECT_DIR$/target/classes/app/app.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/ConfirmByEle.class" afterPath="$PROJECT_DIR$/target/classes/common/tool/caninput/ConfirmByEle.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/ElementInput.class" afterPath="$PROJECT_DIR$/target/classes/common/tool/caninput/ElementInput.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/Preservation.class" afterPath="$PROJECT_DIR$/target/classes/common/tool/caninput/Preservation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/common/tool/excelfile/ComparatorExample.class" afterPath="$PROJECT_DIR$/target/classes/common/tool/excelfile/ComparatorExample.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/common/tool/excelfile/ReadFile.class" afterPath="$PROJECT_DIR$/target/classes/common/tool/excelfile/ReadFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/common/tool/excelfile/WriteFile.class" afterPath="$PROJECT_DIR$/target/classes/common/tool/excelfile/WriteFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/content/demo/baoma/AgentFactor.class" afterPath="$PROJECT_DIR$/target/classes/content/demo/baoma/AgentFactor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/content/demo/baoma/BMWFactory.class" afterPath="$PROJECT_DIR$/target/classes/content/demo/baoma/BMWFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/content/demo/baoma/CarTest.class" afterPath="$PROJECT_DIR$/target/classes/content/demo/baoma/CarTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/content/demo/daili/Proxy.class" afterPath="$PROJECT_DIR$/target/classes/content/demo/daili/Proxy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/content/demo/daili/ProxyDemo.class" afterPath="$PROJECT_DIR$/target/classes/content/demo/daili/ProxyDemo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/content/demo/daili/Real.class" afterPath="$PROJECT_DIR$/target/classes/content/demo/daili/Real.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/content/demo/gongchang/Factory.class" afterPath="$PROJECT_DIR$/target/classes/content/demo/gongchang/Factory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/content/demo/guanchazhe/House.class" afterPath="$PROJECT_DIR$/target/classes/content/demo/guanchazhe/House.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wap/backstage/AssignRedPackets.class" afterPath="$PROJECT_DIR$/target/classes/wap/backstage/AssignRedPackets.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wap/business/example/Possessor.class" afterPath="$PROJECT_DIR$/target/classes/wap/business/example/Possessor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wap/business/example/Signin.class" afterPath="$PROJECT_DIR$/target/classes/wap/business/example/Signin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wap/business/example/StartEntrance.class" afterPath="$PROJECT_DIR$/target/classes/wap/business/example/StartEntrance.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wap/business/example/cooperation/boundary/TopTransaction.class" afterPath="$PROJECT_DIR$/target/classes/wap/business/example/cooperation/boundary/TopTransaction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wap/business/example/homeAddress/ManagementHomepage.class" afterPath="$PROJECT_DIR$/target/classes/wap/business/example/homeAddress/ManagementHomepage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wap/business/example/innose/information/ShopNotices.class" afterPath="$PROJECT_DIR$/target/classes/wap/business/example/innose/information/ShopNotices.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wap/business/example/innose/information/StoreInformation.class" afterPath="$PROJECT_DIR$/target/classes/wap/business/example/innose/information/StoreInformation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wap/business/example/ligrco/Exhibition/Grouping/modify/Modify.class" afterPath="$PROJECT_DIR$/target/classes/wap/business/example/ligrco/Exhibition/Grouping/modify/Modify.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wap/business/example/security/SecurityDefence.class" afterPath="$PROJECT_DIR$/target/classes/wap/business/example/security/SecurityDefence.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wap/business/example/special/MarketingCampaign.class" afterPath="$PROJECT_DIR$/target/classes/wap/business/example/special/MarketingCampaign.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wap/business/example/statistics/Statistics.class" afterPath="$PROJECT_DIR$/target/classes/wap/business/example/statistics/Statistics.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/app/app.java" afterPath="$PROJECT_DIR$/src/main/java/app/app.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/common/tool/Interface/InheritInput.java" afterPath="$PROJECT_DIR$/src/main/java/common/tool/Interface/InheritInput.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/common/tool/caninput/ConfirmByEle.java" afterPath="$PROJECT_DIR$/src/main/java/common/tool/caninput/ConfirmByEle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementExistence.java" afterPath="$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementExistence.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementInput.java" afterPath="$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementInput.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementObtain.java" afterPath="$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementObtain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/common/tool/caninput/Preservation.java" afterPath="$PROJECT_DIR$/src/main/java/common/tool/caninput/Preservation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/content/file/selenium笔记" afterPath="$PROJECT_DIR$/src/main/java/content/file/selenium笔记" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wap/backstage/AssignRedPackets.java" afterPath="$PROJECT_DIR$/src/main/java/wap/backstage/AssignRedPackets.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wap/business/example/Possessor.java" afterPath="$PROJECT_DIR$/src/main/java/wap/business/example/Possessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wap/business/example/Signin.java" afterPath="$PROJECT_DIR$/src/main/java/wap/business/example/Signin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wap/business/example/StartEntrance.java" afterPath="$PROJECT_DIR$/src/main/java/wap/business/example/StartEntrance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wap/business/example/cooperation/boundary/TopTransaction.java" afterPath="$PROJECT_DIR$/src/main/java/wap/business/example/cooperation/boundary/TopTransaction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wap/business/example/homeAddress/ManagementHomepage.java" afterPath="$PROJECT_DIR$/src/main/java/wap/business/example/homeAddress/ManagementHomepage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/ShopNotices.java" afterPath="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/ShopNotices.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/common/tool/mysqls/MysqlInquire.java" afterPath="$PROJECT_DIR$/src/main/java/common/tool/mysqls/MysqlInquire.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wap/business/example/innose/Information.java" afterPath="$PROJECT_DIR$/src/main/java/wap/business/example/innose/Information.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/StoreInformation.java" afterPath="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/StoreInformation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wap/business/example/ligrco/Exhibition/Grouping/modify/Modify.java" afterPath="$PROJECT_DIR$/src/main/java/wap/business/example/ligrco/Exhibition/Grouping/modify/Modify.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wap/business/example/security/SecurityDefence.java" afterPath="$PROJECT_DIR$/src/main/java/wap/business/example/security/SecurityDefence.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wap/business/example/special/MarketingCampaign.java" afterPath="$PROJECT_DIR$/src/main/java/wap/business/example/special/MarketingCampaign.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wap/business/example/statistics/Statistics.java" afterPath="$PROJECT_DIR$/src/main/java/wap/business/example/statistics/Statistics.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -71,24 +21,62 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/app.java">
+      <file leaf-file-name="Signin.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/Signin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="34" column="22" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+            <state relative-caret-position="-18">
+              <caret line="67" column="27" lean-forward="false" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StartSystem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/StartSystem.java">
+      <file leaf-file-name="StartEntrance.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/StartEntrance.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
-              <caret line="16" column="70" lean-forward="false" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="366">
+              <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Information.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/Information.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="800">
+              <caret line="54" column="60" lean-forward="false" selection-start-line="54" selection-start-column="60" selection-end-line="54" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StoreInformation.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/StoreInformation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="38" column="86" lean-forward="true" selection-start-line="38" selection-start-column="86" selection-end-line="38" selection-end-column="86" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MysqlInquire.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/mysqls/MysqlInquire.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="502">
+              <caret line="64" column="22" lean-forward="false" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DBHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/mysqls/DBHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="682">
+              <caret line="38" column="10" lean-forward="false" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -175,8 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/common/tool/mysqls/DBHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/content/demo/ioLiu/UtilityExample.java" />
         <option value="$PROJECT_DIR$/src/main/java/content/demo/ioLiu/InputExample.java" />
         <option value="$PROJECT_DIR$/src/main/java/content/demo/ioLiu/org.apache.commons.io的使用" />
         <option value="$PROJECT_DIR$/src/main/java/content/demo/ioLiu/OutputExample.java" />
@@ -217,7 +203,6 @@
         <option value="$PROJECT_DIR$/src/main/java/wap/business/example/security/SecurityDefence.java" />
         <option value="$PROJECT_DIR$/src/main/java/wap/business/example/cooperation/boundary/TopTransaction.java" />
         <option value="$PROJECT_DIR$/src/main/java/common/tool/caninput/Preservation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/StoreInformation.java" />
         <option value="$PROJECT_DIR$/src/main/java/wap/business/example/statistics/Statistics.java" />
         <option value="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/ShopNotices.java" />
         <option value="$PROJECT_DIR$/src/main/java/wap/backstage/AssignRedPackets.java" />
@@ -226,6 +211,9 @@
         <option value="$PROJECT_DIR$/src/main/java/wap/business/example/StartEntrance.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/StartSystem.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/app.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wap/business/example/innose/Information.java" />
+        <option value="$PROJECT_DIR$/src/main/java/common/tool/mysqls/MysqlInquire.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/StoreInformation.java" />
       </list>
     </option>
   </component>
@@ -289,7 +277,135 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="wap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="innose" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mysqls" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Implement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="caninput" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -775,29 +891,29 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3272933" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26480448" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3110368" sideWeight="0.51348436" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26815644" sideWeight="0.48651564" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20647322" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26815644" sideWeight="0.48651564" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280255" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2249467" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22707888" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37485844" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37485844" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26480448" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="73" y="366" width="1287" height="847" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4892916" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -858,17 +974,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/content/demo/ioLiu/FiltersExample.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/content/demo/ioLiu/InputExample.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/content/demo/ioLiu/OutputExample.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/content/demo/ioLiu/UtilityExample.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/excelfile/FileMonitorExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/excelfile/ComparatorExample.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -1067,30 +1172,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="22" column="11" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-          <folding>
-            <element signature="e#773#774#0" expanded="false" />
-            <element signature="e#809#810#0" expanded="false" />
-            <element signature="e#850#851#0" expanded="false" />
-            <element signature="e#887#888#0" expanded="false" />
-            <element signature="e#934#935#0" expanded="false" />
-            <element signature="e#977#978#0" expanded="false" />
-            <element signature="e#1009#1010#0" expanded="false" />
-            <element signature="e#1040#1041#0" expanded="false" />
-            <element signature="e#1077#1078#0" expanded="false" />
-            <element signature="e#1110#1111#0" expanded="false" />
-            <element signature="e#1148#1149#0" expanded="false" />
-            <element signature="e#1182#1183#0" expanded="false" />
-            <element signature="e#1221#1222#0" expanded="false" />
-            <element signature="e#1256#1257#0" expanded="false" />
-            <element signature="e#1296#1297#0" expanded="false" />
-            <element signature="e#1332#1333#0" expanded="false" />
-            <element signature="e#1372#1373#0" expanded="false" />
-            <element signature="e#1406#1407#0" expanded="false" />
-            <element signature="e#1448#1449#0" expanded="false" />
-            <element signature="e#1484#1485#0" expanded="false" />
-            <element signature="e#1521#1522#0" expanded="false" />
-            <element signature="e#1552#1553#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1098,9 +1179,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2650">
           <caret line="118" column="19" lean-forward="false" selection-start-line="118" selection-start-column="19" selection-end-line="118" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1111,21 +1189,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/homeAddress/ManagementHomepage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="22" column="15" lean-forward="false" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/Possessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="26" column="33" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1133,7 +1200,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="41" column="55" lean-forward="false" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1141,23 +1207,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
           <caret line="96" column="67" lean-forward="false" selection-start-line="96" selection-start-column="67" selection-end-line="96" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/caninput/Preservation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="93" column="26" lean-forward="false" selection-start-line="93" selection-start-column="26" selection-end-line="93" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/StoreInformation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="120" column="52" lean-forward="false" selection-start-line="120" selection-start-column="52" selection-end-line="120" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1165,7 +1214,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="34" column="55" lean-forward="false" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1173,7 +1221,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
           <caret line="76" column="58" lean-forward="false" selection-start-line="76" selection-start-column="58" selection-end-line="76" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1181,7 +1228,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="55" column="16" lean-forward="false" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1189,7 +1235,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="44" column="20" lean-forward="false" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1197,7 +1242,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="43" column="55" lean-forward="false" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1205,40 +1249,103 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="434">
           <caret line="115" column="33" lean-forward="false" selection-start-line="115" selection-start-column="33" selection-end-line="115" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/Signin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/StartEntrance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="28" column="25" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/StartSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="16" column="70" lean-forward="false" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
+        <state relative-caret-position="400">
+          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/app.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="34" column="22" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+        <state relative-caret-position="357">
+          <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wap/wap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/homeAddress/ManagementHomepage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/caninput/Preservation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/caninput/InfoSelect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-400">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/StartEntrance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/Signin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18">
+          <caret line="67" column="27" lean-forward="false" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/Information.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="54" column="60" lean-forward="false" selection-start-line="54" selection-start-column="60" selection-end-line="54" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/mysqls/DBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="38" column="10" lean-forward="false" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/mysqls/MysqlInquire.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="64" column="22" lean-forward="false" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/StoreInformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="38" column="86" lean-forward="true" selection-start-line="38" selection-start-column="86" selection-end-line="38" selection-end-column="86" />
           <folding />
         </state>
       </provider>
