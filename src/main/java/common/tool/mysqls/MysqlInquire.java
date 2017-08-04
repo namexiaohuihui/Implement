@@ -1,10 +1,14 @@
 package common.tool.mysqls;
 
+import org.apache.commons.collections.map.MultiKeyMap;
+
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Administrator on 2016/11/3.
@@ -61,10 +65,11 @@ public class MysqlInquire {
         String column = "";
         try {
             ret = db1.pst.executeQuery();//执行语句，得到结果集
-            while (ret.next()) {//循环读取每一行的数据
-                column = ret.getString(i);
-                System.out.println("该表的字段的内容为：" + ret.getString(i));
-            }//显示数据
+            //跳到第一行
+            ret.next();
+            //获取该行指定列的内容
+            column = ret.getString(i);
+            System.out.println("该表的字段的内容为：" + ret.getString(i));
 //            最后不要忘记关闭了。
             ret.close();
             db1.close();//关闭连接
@@ -72,6 +77,26 @@ public class MysqlInquire {
             e.printStackTrace();
         }
         return column;
+    }
+
+    public Map<Integer,String> dataMysqlColumnRow(String sql, int i) throws SQLException {
+        db1 = new DBHelper(sql);//创建DBHelper对象
+        Map<Integer,String> aMap = new HashMap<>();
+        try {
+            ret = db1.pst.executeQuery();//执行语句，得到结果集
+            while (ret.next()) {//循环读取每一行的数据
+                //将当前行数以及读取该行中指定列的内容保存到map中。
+                int row = ret.getRow();
+                aMap.put(row,ret.getString(i));
+                System.out.println("该表的字段的内容为：" + ret.getString(i));
+            }//显示数据
+            //   关闭了。
+            ret.close();
+            db1.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return aMap;
     }
 
 

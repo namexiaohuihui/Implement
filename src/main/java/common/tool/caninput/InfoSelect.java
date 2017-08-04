@@ -2,15 +2,18 @@ package common.tool.caninput;
 
 import common.FoxDriver;
 import common.tool.SystemOut;
+import common.tool.mysqls.MysqlInquire;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import static java.lang.Thread.sleep;
 
@@ -19,14 +22,6 @@ import static java.lang.Thread.sleep;
  * Created by Administrator on 2016/12/5.
  */
 public class InfoSelect {
-
-    private WebDriver driver;
-
-    private void wedDriver() {
-        if (driver == null || driver.equals("")) {
-            driver = FoxDriver.getWebDrivaer();
-        }
-    }
 
     /**
      * 根据text进行设置,选择之后回到顶部
@@ -37,7 +32,7 @@ public class InfoSelect {
      * @throws InterruptedException
      */
     public void categoryText(By by, String content) {
-        wedDriver();
+        WebDriver  driver = FoxDriver.getWebDrivaer();
         //select对象的确认
         Select select = new Select(driver.findElement(by));
         List<WebElement> options = select.getOptions();
@@ -60,17 +55,33 @@ public class InfoSelect {
 
     /**
      * 根据VALUE进行选择
-     *
-     * @param driver     对象
-     * @param first_cid  第一个select对象
-     * @param second_cid 第二个select对象
-     * @throws InterruptedException
+     * 1.通过数据库（my）找到符合要求的value，并存到map中（my）
+     * 2.循环判断需要设置的value是否符合要求
+     * @param by select对象
+     * @param content value值
+     * @param sql sql语句
      */
-    public void categoryValue(By by, String content) {
-        wedDriver();
-        new Select(driver.findElement(by)).selectByValue(content);
-        //        窗口移动。选择类目之后窗口会往下移，此时分组元素在窗口之外。所以要滑动窗口。
-        movesWindow();
+    public void categoryValue(By by, String content,String sql) {
+        WebDriver  driver = FoxDriver.getWebDrivaer();
+        MysqlInquire my = new MysqlInquire();
+        boolean bl = false;
+        try {
+            Map<Integer, String> aMap = my.dataMysqlColumnRow(sql, 0);
+            int sizeRow = aMap.size();
+            for (int i = 1;i<=sizeRow;i++){
+                if (aMap.get(i).equals(content)){
+                    new Select(driver.findElement(by)).selectByValue(content);
+                    //        窗口移动。选择类目之后窗口会往下移，此时分组元素在窗口之外。所以要滑动窗口。
+                    movesWindow();
+                    bl = true;
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        if (!bl){
+            SystemOut.getStringOut("content=" + content, "没有设置成功，原因是没有找到这个value");
+        }
     }
 
     /**
@@ -82,10 +93,16 @@ public class InfoSelect {
      * @throws InterruptedException
      */
     public void categoryIndex(By by, int position) {
-        wedDriver();
-        new Select(driver.findElement(by)).selectByIndex(position);
-        //        窗口移动。选择类目之后窗口会往下移，此时分组元素在窗口之外。所以要滑动窗口。
-        movesWindow();
+        WebDriver  driver = FoxDriver.getWebDrivaer();
+        Select select = new Select(driver.findElement(by));
+        Integer integer = propertyLength(select);
+        if (position>integer){
+            select.selectByIndex(position);
+            //        窗口移动。选择类目之后窗口会往下移，此时分组元素在窗口之外。所以要滑动窗口。
+            movesWindow();
+        }else{
+            SystemOut.getStringOut("select下标设置长度大于了现有的长度");
+        }
     }
 
     /**
@@ -96,7 +113,7 @@ public class InfoSelect {
      * @return
      */
     public List<String> propertyValueContent(By by, String statusSelect) {
-        wedDriver();
+        WebDriver  driver = FoxDriver.getWebDrivaer();
         //select对象的确认
         Select select = new Select(driver.findElement(by));
         List<WebElement> options = select.getOptions();
@@ -116,20 +133,24 @@ public class InfoSelect {
      * @return
      */
     public Integer propertyValueSize(By by, String statusSelect) {
-        wedDriver();
+        WebDriver  driver = FoxDriver.getWebDrivaer();
         //select对象的确认
         Select select = new Select(driver.findElement(by));
         List<WebElement> options = select.getOptions();
-        return options.size();
+        return propertyLength(select);
     }
 
+    public Integer propertyLength( Select select){
+        List<WebElement> options = select.getOptions();
+        return options.size();
+    }
 
     /*
     通过select对数据筛选之后，窗口会自动执行下移命令。
     通过js代码将其上移回来
      */
     private void movesWindow() {
-        wedDriver();
+        WebDriver  driver = FoxDriver.getWebDrivaer();
         try {
             ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0)");
             sleep(500);
