@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 import wap.business.example.innose.Information;
 
 import java.sql.SQLException;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertEquals;
@@ -31,6 +32,23 @@ public class StoreInformation extends Information {
     //    实拍和执照的上传按钮class名
     private String button = "uploadify-button ";
 
+    //name的位置
+    String names = "name";
+    //地址所在
+    String provinceSele = "select[id=province][name=province]";
+    String citySele = "select[id=city][name=city]";
+    String countySele = "select[id=county][name=county]";
+    String detailed = "address";
+    //经纬度
+    String longitude = "lng";
+    String latitude = "lat";
+    //类型
+    String types= "category";
+
+    //执照
+    String piczzFile = "ul[id=J_piczz-box][class=]uploadPict>li";
+    String picFile = "ul[id=J_pic-box][class=]uploadPict>li";
+
     public void informationStore() throws InterruptedException, SQLException {
 //        通過網址進行驗證店鋪信息頁面是否打開。
         assertEquals("頁面沒打開:" + super.mainHome, super.url[0], driver.getCurrentUrl());
@@ -41,22 +59,26 @@ public class StoreInformation extends Information {
         if ( storeName.getAttribute("value").length()>3){
             System.out.println("该店铺已设置过数据");
             InformationJudgment iju = new InformationJudgment();
-            setLocal();//调试
         }else{
             System.out.println("该店铺没有设置过数据");
+            InformationSet isu = new InformationSet();
         }
-    }
 
-    private void setLocal() throws InterruptedException {
-        JavascriptExecutor jse = (JavascriptExecutor) driver;
-        WebElement element = driver.findElement(By.xpath("//*[@class='referBtn']/input"));
-        jse.executeScript("arguments[0].click();", element);
     }
 
     //根据cssSelector来进行元素输入
-    public void storeName(String cssSelector, String content){
+    public void storeInput(String cssSelector, String content){
         ElementInput eInput = new ElementInput();
         eInput.accordingToCssSelector(cssSelector,content);
     }
 
+    public void licensePhoto(String load,String id,String address) {
+
+        List<WebElement> el1 = driver.findElements(By.cssSelector(load));
+        int i1 = 2 - el1.size();
+        System.out.println("上传" + i1);
+        for (int i = 0; i < i1; i++) {
+            PictureImage.getLogo(driver, id, address);
+        }
+    }
 }
