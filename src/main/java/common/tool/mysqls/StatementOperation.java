@@ -2,6 +2,7 @@ package common.tool.mysqls;
 
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 查询语句的起始点
@@ -37,9 +38,10 @@ public class StatementOperation {
         return sql;
     }
 
-    public List<List> dataMysql(String content, String structure, String condition, String sorting) throws InterruptedException {
+    public Map<Integer, List> dataMysql(String content, String structure, String condition, String sorting) throws InterruptedException {
         MysqlInquire inquire = new MysqlInquire();//创建数据库对象
         String sql = statementInquire(content, structure, condition, sorting);//创建查询语句
-        return inquire.dataMysqlAll(sql);//返回查询结果
+        Map<Integer, List> integerListMap = inquire.dataMysqlAll(sql);
+        return integerListMap;//返回查询结果
     }
 }

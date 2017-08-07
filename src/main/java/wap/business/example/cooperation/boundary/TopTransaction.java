@@ -43,7 +43,7 @@ public class TopTransaction {
     //订货的数量。按钮的点击。密码的输入。页面的跳转
     public void setSupplyNumber(String operation) {
         WebElement value = driver.findElement(By.cssSelector("td>input[id=text_box]"));
-        new CharacterString().contentOperation(operation,"—");
+      //  new CharacterString().contentOperation(operation,"—");
         //判断是否要输入
         if (button) {
             //如果输入的内容小于默认最小值

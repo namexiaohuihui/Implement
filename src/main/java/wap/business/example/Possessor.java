@@ -26,8 +26,8 @@ public class Possessor {
 
     public void registerPossessor() throws InterruptedException {
 
-        name = parameter.getAccountFamily();
-        passWord = parameter.getPassWordFamily();
+       // name = parameter.getAccountFamily();
+        //passWord = parameter.getPassWordFamily();
 
         //        在忘记密码界面点击找回密码
         driver.findElement(By.linkText("找回密码")).click();

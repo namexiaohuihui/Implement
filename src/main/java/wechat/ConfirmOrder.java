@@ -136,7 +136,7 @@ public class ConfirmOrder {
 
         for (int i = 0; i < prices.size(); i++) {
             String price = prices.get(i).getText();
-            double nums = chaStr.cuttingCharacter(price, 1,null);
+            double nums = chaStr.digitalExtract(price);
             String sum = sums.get(i).getText().split("x ")[1];
             double sumnumber = Double.parseDouble(sum);
             Map<String, Double> map = new HashMap<>();
@@ -160,7 +160,7 @@ public class ConfirmOrder {
         try {
             //满减
             String prv = driver.findElement(By.id("J_prv")).getText();
-            generallist.setFullCut(chaStr.cuttingCharacter(prv, 2, "."));
+            generallist.setFullCut(chaStr.priceExtraction(prv));
             fullCut = generallist.getFullCut();
             SystemOut.getStringOut("满减的金额" + fullCut);
         } catch (Exception e) {
@@ -169,25 +169,25 @@ public class ConfirmOrder {
         //红包
         String spans = "div.J_result.order-result>a>p span:nth-child(2)";
         String span = driver.findElement(By.cssSelector(spans)).getText();
-        generallist.setRed(chaStr.cuttingCharacter(span, 2, ">"));
+        generallist.setRed(chaStr.priceExtraction(span));
         red = generallist.getRed();
         SystemOut.getStringOut("红包" + red);
 
         //数量
         String cn2 = driver.findElement(By.cssSelector("span.c-b2")).getText();
-        generallist.setNumber(chaStr.cuttingCharacter(cn2, 0, "件"));
+        generallist.setNumber(chaStr.priceExtraction(cn2));
         number = generallist.getNumber();
         SystemOut.getStringOut("数量" + number);
 
         //配送
         String cb2 = driver.findElement(By.cssSelector("span.J_freight.c-b2")).getText();
-        generallist.setDistribution(chaStr.cuttingCharacter(cb2, 1, "."));
+        generallist.setDistribution(chaStr.priceExtraction(cb2));
         distribution = generallist.getDistribution();
         SystemOut.getStringOut("配送" + distribution);
 
         //合计
         String cff = driver.findElement(By.cssSelector("span.J_total.c-ff")).getText();
-        generallist.setTotal(chaStr.cuttingCharacter(cff, 1, "."));
+        generallist.setTotal(chaStr.priceExtraction(cff));
         total = generallist.getTotal();
         SystemOut.getStringOut("合计" + total);
 

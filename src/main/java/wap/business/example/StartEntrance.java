@@ -1,10 +1,12 @@
 package wap.business.example;
 
 import common.FoxDriver;
+import common.parameter.Parameter;
 import common.parameter.WapUrl;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
+import wap.business.StartData;
 import wap.business.example.homeAddress.ManagementHomepage;
 
 
@@ -16,6 +18,7 @@ public class StartEntrance {
     private WebDriver driver;
     private String webHttp ;
 
+
     @Before
     public void setUp() throws Exception {
         webHttp = new WapUrl().getUrlFamily();
@@ -25,6 +28,9 @@ public class StartEntrance {
 
     @Test
     public void testXiao() throws Exception {
+        String sLoad = StartData.readExcleData();//从计划里面读取用例所在位置
+        StartData.load = sLoad;//重新赋值
+        sLoad = StartData.readExcleData();//从用例里面读取执行文件所在位置
         Signin signin = new Signin();
         signin.landSingin();
         ManagementHomepage managementHomepage = new ManagementHomepage();

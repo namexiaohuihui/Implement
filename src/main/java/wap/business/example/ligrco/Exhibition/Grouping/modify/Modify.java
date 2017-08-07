@@ -12,6 +12,7 @@ import wap.business.instantiation.PacketSorting;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /** 分组修改类
@@ -146,8 +147,7 @@ public class Modify {
 
         StatementOperation statementOperation = new StatementOperation();
         String lnsm_group = statementOperation.statementInquire(content, structure, condition, sorting);
-        List<List> dataMysql = inquire.dataMysqlAll(lnsm_group);
-        SystemOut.getStringOut(dataMysql);
+        Map<Integer, List> integerListMap = inquire.dataMysqlAll(lnsm_group);
     }
 
 }

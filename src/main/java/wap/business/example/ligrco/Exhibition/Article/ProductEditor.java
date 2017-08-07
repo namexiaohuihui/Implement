@@ -48,7 +48,7 @@ public class ProductEditor {
             System.out.println("主类需要改" + comm.getFirstCid());
             //商品主类目的设定
             By by = By.cssSelector("first_cid");
-            infoSelect.categoryValue(by, comm.getFirstCid());
+            infoSelect.categoryValue(by, comm.getFirstCid(),"");
         } else {
             System.out.println("主类不需要改" + comm.getFirstCid());
         }
@@ -58,7 +58,7 @@ public class ProductEditor {
             System.out.println("子类需要改" + comm.getSecondCid());
             //商品子类目的设定
             By by = By.cssSelector("second_cid");
-            infoSelect.categoryValue(by, comm.getSecondCid());
+            infoSelect.categoryValue(by, comm.getSecondCid(),"");
         } else {
             System.out.println("子类不需要改" + comm.getSecondCid());
         }
@@ -147,8 +147,8 @@ public class ProductEditor {
         if (Content) {
             System.out.println("详情需要改" + comm.getContent());
             //商品编辑的入口
-            String load = "iframe[class=ke-edit-iframe]";
-            new InfoFrame().editInfoFrame(load, comm.getContent());
+            By by = By.cssSelector("iframe[class=ke-edit-iframe]");
+            new InfoFrame().editFrameInfo(by, comm.getContent());
             contents = comm.getContent();
         } else {
             System.out.println("详情不需要改" + comm.getContent());

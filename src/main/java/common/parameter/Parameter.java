@@ -5,11 +5,12 @@ package common.parameter;
  * Created by Administrator on 2016/12/26.
  */
 public class Parameter {
-    //家的门号、口令以及于暗号
-    private String accountFamily = "23";
-    private String passWordFamily = "12";
+
     private String supplyPassWordFamily = "33";
     private int groupSun;//桌子的数量
+
+    //文档存放位置
+    private  String load = "E:\\drivers\\CasePlan\\测试计划.xlsx";
 
     //头头的门号以及口令
     private String accountTop = "--";
@@ -26,14 +27,6 @@ public class Parameter {
     String photoFamily[] = new String[]{"photo1.exe", "photo2.exe", "photo3.exe", "photo4.exe", "photo5.exe"};
     String licenseFamily[] = new String[]{"license1.exe", "license2.exe"};
 
-
-    public String getAccountFamily() {
-        return accountFamily;
-    }
-
-    public String getPassWordFamily() {
-        return passWordFamily;
-    }
 
     public String getSupplyPassWordFamily() {
         return supplyPassWordFamily;
@@ -69,5 +62,9 @@ public class Parameter {
 
     public String[] getOneLevel() {
         return oneLevel;
+    }
+
+    public String getLoad() {
+        return load;
     }
 }

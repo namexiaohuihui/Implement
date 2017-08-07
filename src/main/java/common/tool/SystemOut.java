@@ -1,8 +1,8 @@
 package common.tool;
 
+import java.util.Iterator;
 import java.util.List;
-
-import static java.lang.Thread.sleep;
+import java.util.Map;
 
 /**
  * Created by Animation on 2017/4/12 on 21:29.
@@ -31,6 +31,16 @@ public class SystemOut {
         getStringOut("打印list开始" + li.size());
         for (int i = 0; i < li.size(); i++) {
             SystemOut.getStringOut(li.get(i).toString());
+        }
+    }
+
+
+    public static void getStringOut(Map<String, String> aMap) throws InterruptedException {
+        getStringOut("打印list开始" + aMap.size());
+        Iterator<Map.Entry<String, String>> iterator = aMap.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<String, String> next = iterator.next();
+            System.out.println("Key = " + next.getKey() + ", Value = " + next.getValue());
         }
     }
 }

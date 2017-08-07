@@ -17,7 +17,7 @@ public class InformationJudgment {
         String sql = "";
         Map<Integer, List> integerListMap = mi.dataMysqlAll(sql);
         try {
-            BeanToMapUtil.mapToObject2(integerListMap,Class.forName("11"));
+           // BeanToMapUtil.mapToObject2(integerListMap,Class.forName("11"));
         } catch (Exception e) {
             e.printStackTrace();
         }

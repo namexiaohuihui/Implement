@@ -11,6 +11,10 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * 数据库的操作类：---用法
+ * 1.获取数据库链接Connection
+ * 2.准备执行语句PreparedStatement
+ * 3.执行语句，得到结果集ResultSet
  * Created by Administrator on 2016/11/3.
  */
 

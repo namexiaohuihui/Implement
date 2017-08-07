@@ -15,6 +15,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.sql.SQLException;
+import java.util.Map;
 
 /**
  * 实现登录
@@ -32,10 +33,10 @@ public class Signin {
         ElementInput ele = new ElementInput();
 
         //        获取账号输入框并输入内容
-        ele.accordingToId("phone", parameter.getAccountFamily());
+      //  ele.accordingToId("phone", parameter.getAccountFamily());
 
         //        获取密码输入框并输入内容
-        ele.accordingToId("password", parameter.getPassWordFamily());
+      //  ele.accordingToId("password", parameter.getPassWordFamily());
 
         //        点击登录
         new Preservation().buttonClassName("loginwater");
@@ -52,14 +53,14 @@ public class Signin {
 
     private void statusVerification() throws InterruptedException, SQLException {
         ElementObtain elementObtain = new ElementObtain();
-        //找到id和手机
+        //找到账户id和手机
         String id = elementObtain.accordingToCss("dl.shopFigure dd:nth-child(3)", null);
         String phone = elementObtain.accordingToCss("dl.shopFigure dd:nth-child(2)", null);
 
         //数据切割所在类
         CharacterString characterString = new CharacterString();
         //通过内部方法，将数据进行有效的切割
-        int v = (int) characterString.cuttingCharacter(id, ":", ")");
+        int v = characterString.digitalExtract(id);
 
         //通过id来判断是否登录成功
         idIdentify(v,phone);
@@ -77,11 +78,9 @@ public class Signin {
 
         //创建数据库对象
         MysqlInquire inquire = new MysqlInquire();
-        String column = inquire.dataMysqlRow(userId,1);
+        Map<Integer, String> integerStringMap = inquire.dataMysqlColumnRow(userId, 1);
 
-        SystemOut.getStringOut("查询之后返回的数据",column);
-
-        assert phone.equals(column):"Phone number recognition is wrong";
+        assert phone.equals(""):"Phone number recognition is wrong";
     }
 
 

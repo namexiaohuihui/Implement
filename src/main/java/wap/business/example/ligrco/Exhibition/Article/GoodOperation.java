@@ -17,6 +17,7 @@ import wap.business.instantiation.CommodityOperation;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import static java.lang.Thread.sleep;
@@ -256,13 +257,13 @@ public class GoodOperation {
         return bl;
     }
 
-
+/*
     //读取商品表之后的数据进行类封装。。
     private CommodityIntroduction setProductRead() throws IOException {
 
-        ReadExcel lnsmExcel = new ReadExcel();//创建excel读取的对象
+        ReadExcel readExcel = new ReadExcel();//创建excel读取的对象
 
-        List<String> read = lnsmExcel.getSingleReadXlsx(".//src//main//java//商品.xlsx", row);//读取指定行的内容
+        Map<String, String> singleReadXlsx = readExcel.getSingleReadXlsx(".//src//main//java//商品.xlsx", 1, row);//读取指定行的内容
 
         CommodityIntroduction comm = null;
         //减少循环时，集合长度的获取
@@ -275,7 +276,7 @@ public class GoodOperation {
         return comm;
 
     }
-
+*/
 
     private void temperament() throws InterruptedException {
         List<WebElement> elements = driver.findElements(By.cssSelector("span[class=showcode]"));

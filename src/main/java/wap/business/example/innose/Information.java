@@ -36,8 +36,8 @@ public class Information {
 //      此处实现的是触发link1(触发一级目录)
 
         try {
-            management();
             preservation.buttonLinkText(mainHome);
+            management();
         } catch (SQLException e) {
             e.printStackTrace();
         }catch (InterruptedException e){

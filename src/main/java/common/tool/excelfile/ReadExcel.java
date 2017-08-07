@@ -1,10 +1,12 @@
 package common.tool.excelfile;
 
-import com.csvreader.CsvReader;
+import common.tool.enumTool.ChineseToEnglish;
+import common.tool.enumTool.EmployEnum;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -14,9 +16,10 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.charset.Charset;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 读取excle文档中格式为xlsx的文件
@@ -26,33 +29,12 @@ import java.util.List;
 public class ReadExcel {
 
     /**
-     * 利用CsvReader读取xlsx格式的excel,整张表中的数据都读取
-     * @param csvFilePath
-     * @throws IOException
-     */
-    public void readCSV(String csvFilePath) throws IOException {
-        ArrayList<String[]> csvList = new ArrayList<String[]>();
-        CsvReader reader = new CsvReader(csvFilePath, ',', Charset.forName("UTF-8"));    //一般用这编码读就可以了
-        reader.readHeaders(); // 跳过表头   如果需要表头的话，不要写这句。
-        while (reader.readRecord()) { //逐行读入除表头的数据
-            csvList.add(reader.getValues());
-        }
-        reader.close();
-        for (int row = 0; row < csvList.size(); row++) {//获取行
-            for (int col = 0; col < csvList.get(row).length; col++) {//获取列
-                String cell = csvList.get(row)[col]; //取得第row行第col列的数据
-                System.out.println(cell + "\t");
-            }
-            System.out.println("\n");
-        }
-    }
-    /**
      * 利用HSSFRow读取xls的数据---整个表的数据
      *
      * @throws IOException
      */
-    public List<List> getReadXls() throws IOException {
-        File file = new File("E:\\大哥.xls");
+    public List<List> getReadXls(String load) throws IOException {
+        File file = new File(load);
         InputStream is = new FileInputStream(file);
         HSSFWorkbook hssfWorkbook = new HSSFWorkbook(is);
         List<List> listRow = new ArrayList();
@@ -91,6 +73,7 @@ public class ReadExcel {
 
     /**
      * 利用XSSFRow读取xlsx格式的excle数据.整张表中的数据都读取
+     *
      * @param load
      * @return
      * @throws IOException
@@ -120,7 +103,6 @@ public class ReadExcel {
                         listCol.add(xssfRowValue(xssfRow.getCell(col)));
                     }
                 }
-
                 listRow.add(listCol);
             }
         }
@@ -129,40 +111,48 @@ public class ReadExcel {
 
 
     /**
-     * 读取xlsx格式的excle数据.读取指定行的数据
+     * 读取指定工作薄里的指定行的内容
+     * load文档所在地
+     * numSheet当前文档中所读写的工作薄
+     * rowNum当前工作薄中的第几个数据
+     *
      * @param load
+     * @param numSheet
      * @param rowNum
      * @return
      * @throws IOException
      */
-    public List<String> getSingleReadXlsx(String load, int rowNum) throws IOException {
+    public Map<String, String> singleReadXlsx(String load, int numSheet, int rowNum) throws IOException {
         File file = new File(load);
         InputStream is = new FileInputStream(file);
         XSSFWorkbook xssfWorkbook = new XSSFWorkbook(is);
-        List<String> listRow = new ArrayList();
+        Map<String, String> aMap = new HashMap<>();
+        EmployEnum employEnum = new EmployEnum();
         // 获取每一个工作薄
-        for (int numSheet = 0; numSheet < xssfWorkbook.getNumberOfSheets(); numSheet++) {
-            XSSFSheet xssfSheet = xssfWorkbook.getSheetAt(numSheet);
-            if (xssfSheet == null) {
-                continue;
-            }
+        XSSFSheet xssfSheet = xssfWorkbook.getSheetAt(numSheet);
+        if (xssfSheet != null) {
             // 获取当前工作薄的每一行,从第rowNum行开始读取数据
             XSSFRow xssfRow = xssfSheet.getRow(rowNum);//获取该行的全部数据
 
-            int firstCellNum = (int) xssfRow.getFirstCellNum();// 首列
-            int lastCellNum = (int) xssfRow.getLastCellNum();// 最后一列
-
             if (xssfRow != null) {
+
+                int firstCellNum = (int) xssfRow.getFirstCellNum();// 首列
+                int lastCellNum = (int) xssfRow.getLastCellNum();// 最后一列
+
                 for (int col = firstCellNum; col < lastCellNum; col++) {
-                    listRow.add(xssfRowValue(xssfRow.getCell(col)));
+                    String sEnum = employEnum.employChineseToEnglish(col);
+                    String sNalue = xssfRowValue(xssfRow.getCell(col));
+                    aMap.put(sEnum, sNalue);
                 }
             }
         }
-        return listRow;
+        return aMap;
     }
+
 
     /**
      * 返回表中数据的长度
+     *
      * @param load
      * @return
      * @throws IOException
@@ -178,7 +168,7 @@ public class ReadExcel {
             if (xssfSheet == null) {
                 continue;
             }
-            row =  xssfSheet.getLastRowNum();
+            row = xssfSheet.getLastRowNum();
         }
         return row;
 
@@ -187,6 +177,7 @@ public class ReadExcel {
 
     /**
      * 利用XSSFCell读取xlsx的数据，将其转换成string
+     *
      * @param xssfRow
      * @return
      */
@@ -204,6 +195,7 @@ public class ReadExcel {
 
     /**
      * 利用HSSFCell读取xlsx的数据，转换数据格式
+     *
      * @param hssfCell
      * @return
      */
@@ -215,5 +207,41 @@ public class ReadExcel {
         } else {
             return String.valueOf(hssfCell.getStringCellValue());
         }
+    }
+
+    public static String getCellValue(Cell cell) {
+        String cellValue = "";
+        if (cell == null) {
+            return cellValue;
+        }
+        //把数字当成String来读，避免出现1读成1.0的情况
+        if (cell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
+            cell.setCellType(Cell.CELL_TYPE_STRING);
+        }
+        //判断数据的类型
+        switch (cell.getCellType()) {
+            case Cell.CELL_TYPE_NUMERIC: //数字
+                cellValue = String.valueOf(cell.getNumericCellValue());
+                break;
+            case Cell.CELL_TYPE_STRING: //字符串
+                cellValue = String.valueOf(cell.getStringCellValue());
+                break;
+            case Cell.CELL_TYPE_BOOLEAN: //Boolean
+                cellValue = String.valueOf(cell.getBooleanCellValue());
+                break;
+            case Cell.CELL_TYPE_FORMULA: //公式
+                cellValue = String.valueOf(cell.getCellFormula());
+                break;
+            case Cell.CELL_TYPE_BLANK: //空值
+                cellValue = "";
+                break;
+            case Cell.CELL_TYPE_ERROR: //故障
+                cellValue = "非法字符";
+                break;
+            default:
+                cellValue = "未知类型";
+                break;
+        }
+        return cellValue;
     }
 }

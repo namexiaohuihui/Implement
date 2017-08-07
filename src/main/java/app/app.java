@@ -22,7 +22,7 @@ public class app {
     protected AndroidDriver driver;
     protected WebDriverWait wait;
 
-    //before Test Annotation makes a java function to run every time before a TestNG test case
+    //before test Annotation makes a java function to run every time before a TestNG test case
     @BeforeTest
     protected void createAppiumDriver() throws MalformedURLException, InterruptedException {
         StartSystem.start(driver,wait);
@@ -37,7 +37,7 @@ public class app {
             e.printStackTrace();
         }
     }
-    //After Test Annotation makes a java function to run every time after a TestNG test case
+    //After test Annotation makes a java function to run every time after a TestNG test case
     /*
     @AfterTest
     public void afterTest(){

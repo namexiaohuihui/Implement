@@ -19,9 +19,9 @@ public class Interactivve {
     public void getOrder(){
         driver.findElement(By.linkText("订单管理")).click();
 
-//        订单
+
         getOrdinary(str[0],list[0]);
-//        订单
+
         getWater(str[1],list[1]);
     }
 

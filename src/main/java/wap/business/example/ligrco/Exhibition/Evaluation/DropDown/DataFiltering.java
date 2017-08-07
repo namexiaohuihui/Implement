@@ -32,7 +32,7 @@ public class DataFiltering {
     public void gradeSelcect(String grade){
 
         By by = By.cssSelector(gradeload);
-        infoSelect.categoryValue(by,gradeload);
+        //infoSelect.categoryValue(by,gradeload);
 
     }
 
@@ -42,15 +42,15 @@ public class DataFiltering {
      */
     public void replySelcect(String reply){
         By by = By.cssSelector(replyload);
-        infoSelect.categoryValue(by,reply);
+        infoSelect.categoryValue(by,reply,"");
     }
 
     public void selectFreed(String grade,String reply){
 
         By bygrade = By.cssSelector(replyload);
         By byreply = By.cssSelector(replyload);
-        infoSelect.categoryValue(bygrade,reply);
-        infoSelect.categoryValue(byreply,reply);
+        infoSelect.categoryValue(bygrade,reply,"");
+        infoSelect.categoryValue(byreply,reply,"");
     }
 
     //按钮
