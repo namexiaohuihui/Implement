@@ -7,7 +7,7 @@ package common.tool.enumTool;
  */
 public class EmployEnum {
 
-    public String employChineseToEnglish(int number) {
+    public static  String employChineseToEnglish(int number) {
         String enumName = "";
         //遍历所有的枚举
         for (ChineseToEnglish cte : ChineseToEnglish.values()) {

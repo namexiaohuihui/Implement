@@ -1,5 +1,6 @@
 package common.tool.excelfile;
 
+import common.tool.SystemOut;
 import common.tool.enumTool.ChineseToEnglish;
 import common.tool.enumTool.EmployEnum;
 import org.apache.poi.hssf.usermodel.HSSFCell;
@@ -129,11 +130,12 @@ public class ReadExcel {
         Map<String, String> aMap = new HashMap<>();
         EmployEnum employEnum = new EmployEnum();
         // 获取每一个工作薄
+        SystemOut.getStringOut(  xssfWorkbook.getNumberOfSheets() + "页面");
         XSSFSheet xssfSheet = xssfWorkbook.getSheetAt(numSheet);
         if (xssfSheet != null) {
             // 获取当前工作薄的每一行,从第rowNum行开始读取数据
             XSSFRow xssfRow = xssfSheet.getRow(rowNum);//获取该行的全部数据
-
+            SystemOut.getStringOut( xssfSheet.getLastRowNum() + "长度");
             if (xssfRow != null) {
 
                 int firstCellNum = (int) xssfRow.getFirstCellNum();// 首列
@@ -144,6 +146,8 @@ public class ReadExcel {
                     String sNalue = xssfRowValue(xssfRow.getCell(col));
                     aMap.put(sEnum, sNalue);
                 }
+            }else{
+                SystemOut.getStringOut( "xssfRow为空");
             }
         }
         return aMap;

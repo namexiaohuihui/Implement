@@ -31,7 +31,7 @@ public class StartEntrance {
         String sLoad = StartData.readExcleData();//从计划里面读取用例所在位置
         StartData.load = sLoad;//重新赋值
         sLoad = StartData.readExcleData();//从用例里面读取执行文件所在位置
-        Signin signin = new Signin();
+        Signin signin = new Signin(sLoad);
         signin.landSingin();
         ManagementHomepage managementHomepage = new ManagementHomepage();
     }

@@ -1,5 +1,6 @@
 package common.tool.mysqls;
 
+import common.tool.enumTool.EmployEnum;
 import org.apache.commons.collections.map.MultiKeyMap;
 
 import java.sql.ResultSet;
@@ -60,14 +61,14 @@ public class MysqlInquire {
      * @return
      * @throws SQLException
      */
-    public Map<Integer,String> dataMysqlColumnRow(String sql, int i) throws SQLException {
+    public Map<String,String> dataMysqlColumnRow(String sql, int i) throws SQLException {
         db1 = new DBHelper(sql);//创建DBHelper对象
-        Map<Integer,String> aMap = new HashMap<>();
+        Map<String,String> aMap = new HashMap<>();
         try {
             ret = db1.pst.executeQuery();//执行语句，得到结果集
             while (ret.next()) {//循环读取每一行的数据
                 //将当前行数以及读取该行中指定列的内容保存到map中。
-                aMap.put(ret.getRow(),ret.getString(i));
+                aMap.put(EmployEnum.employChineseToEnglish(ret.getRow()),ret.getString(i));
                 System.out.println("该表的字段的内容为：" + ret.getString(i));
             }//显示数据
             //   关闭。

@@ -66,7 +66,7 @@ public class InfoSelect {
         MysqlInquire my = new MysqlInquire();
         boolean bl = false;
         try {
-            Map<Integer, String> aMap = my.dataMysqlColumnRow(sql, 0);
+            Map<String, String> aMap = my.dataMysqlColumnRow(sql, 0);
             int sizeRow = aMap.size();
             for (int i = 1;i<=sizeRow;i++){
                 if (aMap.get(i).equals(content)){

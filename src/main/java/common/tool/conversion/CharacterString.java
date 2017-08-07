@@ -25,6 +25,19 @@ public class CharacterString {
     }
 
     /**
+     * 获取用例中赋值的内容，根据等号来进行
+     * @param str
+     * @param conn
+     * @return
+     */
+    public String[] stringsToString(String str,String conn){
+      String[] strings = str.split(",");
+     for (int i =0;i<strings.length;i++){
+         strings[i] = strings[i].substring(strings[i].indexOf(conn)+1,strings[i].length());
+     }
+     return strings;
+    }
+    /**
      * 提取数字
      * @param phoneString
      * @return

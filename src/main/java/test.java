@@ -74,13 +74,14 @@ public class test<T> {
 
     @Test
     public  void readExcle() throws Exception {
-        String load = "E:\\drivers\\CasePlan\\CasrScene\\BusinessInformation\\商家信息管理场景.xlsx";
+      //  String load = "E:\\drivers\\CasePlan\\CasrScene\\BusinessInformation\\商家信息管理场景.xlsx";
+        String load = "C:\\Users\\70486\\Desktop\\商家信息管理场景.xlsx";
         ReadExcel readExcel = new ReadExcel();
         Map<String, String> stringStringMap = readExcel.singleReadXlsx(load, 1, 1);
         try {
             SystemOut.getStringOut(stringStringMap);
             EnumProgramBean o = (EnumProgramBean)new MutuaMapBean().reflectmapToObject(stringStringMap, new EnumProgramBean().getClass());
-           SystemOut.getStringOut(o.toString());
+            SystemOut.getStringOut(o.toString());
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
