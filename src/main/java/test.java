@@ -2,11 +2,14 @@ import common.tool.SystemOut;
 import common.tool.conversion.MutuaMapBean;
 import common.tool.conversion.MutualJsonBean;
 import common.tool.excelfile.ReadExcel;
+import common.tool.excelfile.WriteExcel;
+import common.tool.informationException.ErrorException;
 import org.junit.Test;
 import wap.business.StartData;
 import wap.business.example.bean.EnumProgramBean;
 import wap.business.example.bean.GoodsBean;
 
+import java.io.IOException;
 import java.sql.*;
 import java.util.List;
 import java.util.Map;
@@ -38,7 +41,6 @@ public class test<T> {
     }
 
 
-    @Test
     public void execute() {
         System.out.println("运行");
         try {
@@ -63,27 +65,30 @@ public class test<T> {
     }
 
     @Test
-    public void extest() throws Exception {
-        String sLoad = StartData.readExcleData();//从计划里面读取用例所在位置
-        SystemOut.getStringOut(sLoad);
-        StartData.load = sLoad;//重新赋值
-        SystemOut.getStringOut(StartData.load);
-        sLoad = StartData.readExcleData();//从用例里面读取执行文件所在位置
-        SystemOut.getStringOut(sLoad);
+    public void extest() throws ErrorException, IOException {
+        String FILE_NAME = "E:/MyFirstExcel.xlsx";
+        String FILE_NAME2 = "E:/muban.xls";
+        try {
+            new ReadExcel().apachePOIExcelRead(FILE_NAME2);
+          //  SystemOut.getStringOut(lists);
+          //  new WriteExcel().apachePOIExcelWrite(FILE_NAME);
+        } catch (Exception e) {
+            throw new ErrorException("cuowu", e, false, false);
+        }
     }
 
-    @Test
-    public  void readExcle() throws Exception {
-      //  String load = "E:\\drivers\\CasePlan\\CasrScene\\BusinessInformation\\商家信息管理场景.xlsx";
+    public void readExcle() throws Exception {
+        //  String load = "E:\\drivers\\CasePlan\\CasrScene\\BusinessInformation\\商家信息管理场景.xlsx";
         String load = "C:\\Users\\70486\\Desktop\\商家信息管理场景.xlsx";
         ReadExcel readExcel = new ReadExcel();
         Map<String, String> stringStringMap = readExcel.singleReadXlsx(load, 1, 1);
         try {
             SystemOut.getStringOut(stringStringMap);
-            EnumProgramBean o = (EnumProgramBean)new MutuaMapBean().reflectmapToObject(stringStringMap, new EnumProgramBean().getClass());
+            EnumProgramBean o = (EnumProgramBean) new MutuaMapBean().reflectmapToObject(stringStringMap, new EnumProgramBean().getClass());
             SystemOut.getStringOut(o.toString());
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
+
 }

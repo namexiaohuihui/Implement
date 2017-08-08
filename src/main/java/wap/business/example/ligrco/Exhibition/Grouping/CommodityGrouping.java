@@ -7,6 +7,7 @@ import common.tool.caninput.Preservation;
 import common.tool.caninput.ReadList;
 import common.tool.conversion.DateConversionTime;
 import common.tool.excelfile.ReadExcel;
+import common.tool.informationException.ErrorException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import wap.business.example.ligrco.Exhibition.Grouping.modify.Modify;
@@ -65,10 +66,12 @@ public class CommodityGrouping {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        } catch (ErrorException e) {
+            e.printStackTrace();
         }
     }
 
-    public void PacketListContent() throws InterruptedException, IOException {
+    public void PacketListContent() throws InterruptedException, IOException, ErrorException {
 
         //列表数据准备
         //  PacketContent  pack = setPacketNumber();
@@ -294,7 +297,7 @@ public class CommodityGrouping {
      * @return
      * @throws IOException
      */
-    private List<PacketSorting> setPacketOplog() throws IOException {
+    private List<PacketSorting> setPacketOplog() throws IOException, ErrorException {
         ReadExcel readExcel = new ReadExcel();
         //读取数据
         List<List> wholeReadXlsx = readExcel.wholeReadXlsx(".//src//main//java//商品分组排序.xlsx");

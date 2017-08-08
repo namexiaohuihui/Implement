@@ -4,6 +4,7 @@ import common.parameter.Parameter;
 import common.tool.SystemOut;
 import common.tool.conversion.MutuaMapBean;
 import common.tool.excelfile.ReadExcel;
+import common.tool.informationException.ErrorException;
 import wap.business.example.bean.EnumProgramBean;
 
 import java.io.IOException;
@@ -23,7 +24,7 @@ public class StartData {
      * @return
      * @throws IOException
      */
-    public static String readExcleData() throws IOException {
+    public static String readExcleData() throws IOException, ErrorException {
         String loads = "";
         ReadExcel readExcel = new ReadExcel();
         Map<String, String> stringStringMap = readExcel.singleReadXlsx(load, 1, 1);

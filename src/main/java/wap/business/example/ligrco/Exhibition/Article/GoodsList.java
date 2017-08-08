@@ -6,6 +6,7 @@ import common.tool.caninput.FlipOther;
 import common.tool.caninput.InfoSelect;
 import common.tool.caninput.ReadList;
 import common.tool.excelfile.ReadExcel;
+import common.tool.informationException.ErrorException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import wap.business.instantiation.CommoditiesList;
@@ -82,7 +83,7 @@ public class GoodsList {
         readList = new ReadList(driver);
         readExcel = new ReadExcel();
 
-        int singleXlsx = readExcel.singleXlsx(".//src//main//java//商品编辑.xlsx");//读取商品编辑表中的长度
+        int singleXlsx = readExcel.singleXlsx(".//src//main//java//商品编辑.xlsx",1);//读取商品编辑表中的长度
 
         int single = 1;//编辑表中的第N行
 
@@ -127,7 +128,7 @@ public class GoodsList {
      * @return
      * @throws IOException
      */
-    private List<CommodityOperation> setGoodsOplog() throws IOException {
+    private List<CommodityOperation> setGoodsOplog() throws IOException, ErrorException {
         //读取数据
         List<List> wholeReadXlsx = readExcel.wholeReadXlsx(".//src//main//java//商品操作统计表.xlsx");
 
