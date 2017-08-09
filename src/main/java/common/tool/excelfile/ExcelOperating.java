@@ -20,17 +20,17 @@ import java.util.Properties;
  * Created by ${XiaoHuiHui} on 2017/8/8 on 11:57.
  * XiaoHiiHui [704866169@qq.com]
  */
-public class ExcelOperating {
+public class ExcelOperating  {
 
     private final String XLS_VERSION = "xls";
     private final String XLSX_VERSION = "xlsx";
 
     public Workbook distinguishWorkbook(String fileName) throws ErrorException {
         Workbook workbook = null;
-
+        InputStream is = null ;
         try {
-
-            InputStream is = new FileInputStream(new File(fileName));
+            File file = new File(fileName);
+            is = new FileInputStream(file);
 
             if (IOCase.SENSITIVE.checkEndsWith(fileName, XLS_VERSION)) {
 
@@ -45,61 +45,27 @@ public class ExcelOperating {
             }
         } catch (IOException e) {
             throw new ErrorException(System.getProperties().getProperty("java.class.path"),e,true,false);
+        } finally {
+           if (is != null) {
+                try {
+                    is.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
         return workbook;
     }
 
-    /**
-     * 利用XSSFCell读取xlsx的数据，将其转换成string
-     *
-     * @param xssfRow
-     * @return
-     */
-    public String xssfRowValue(XSSFCell xssfRow) {
 
-        if (xssfRow.getCellType() == xssfRow.CELL_TYPE_BOOLEAN) {
-            return String.valueOf(xssfRow.getBooleanCellValue());
-        } else if (xssfRow.getCellType() == xssfRow.CELL_TYPE_NUMERIC) {
-            return String.valueOf(xssfRow.getNumericCellValue());
-        } else {
-            return String.valueOf(xssfRow.getStringCellValue());
-        }
-    }
-
-    /**
-     * 利用Cell读取xlsx的数据，将其转换成string
-     * @param xssfRow
-     * @return
-     */
-    public String xssfRowValue(Cell xssfRow) {
-
-        if (xssfRow.getCellType() == xssfRow.CELL_TYPE_BOOLEAN) {
-            return String.valueOf(xssfRow.getBooleanCellValue());
-        } else if (xssfRow.getCellType() == xssfRow.CELL_TYPE_NUMERIC) {
-            return String.valueOf(xssfRow.getNumericCellValue());
-        } else {
-            return String.valueOf(xssfRow.getStringCellValue());
-        }
-    }
 
 
     /**
-     * 利用HSSFCell读取xlsx的数据，转换数据格式
-     *
-     * @param hssfCell
+     * 判断获取当前内容的格式，然后进行返回内容
+     * @param cell
      * @return
      */
-    public String hssfCellValue(HSSFCell hssfCell) {
-        if (hssfCell.getCellType() == hssfCell.CELL_TYPE_BOOLEAN) {
-            return String.valueOf(hssfCell.getBooleanCellValue());
-        } else if (hssfCell.getCellType() == hssfCell.CELL_TYPE_NUMERIC) {
-            return String.valueOf(hssfCell.getNumericCellValue());
-        } else {
-            return String.valueOf(hssfCell.getStringCellValue());
-        }
-    }
-
-    public static String getCellValue(Cell cell) {
+    public static String cellValue(Cell cell) {
         String cellValue = "";
         if (cell == null) {
             return cellValue;

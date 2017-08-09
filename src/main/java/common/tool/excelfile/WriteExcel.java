@@ -16,81 +16,114 @@ import java.io.*;
  * Created by 70486 on 2017/8/7 on 22:46.
  */
 public class WriteExcel extends ExcelOperating {
+    //当前文件已经存在
+    private String excelPath = "E:/MyFirstExcel.xlsx";
+    //从第几行插入进去
+    private int insertStartPointer;
+    //在当前工作薄的那个工作表单中插入这行数据
+    private String sheetName;
+    private int sheetInsert = 0;
 
-    public void excelWriteExp(String fileName) throws ErrorException {
-        File file = new File(fileName);
-        Workbook workbook = null;
-        OutputStream out = null;
-        if (file.isFile() && file.exists()) {// 判断文件是否存在
-            try {
-                workbook = distinguishWorkbook(fileName);
-                Sheet sheet = workbook.createSheet("步骤");//创建工作薄的名字
-                sheet.setColumnWidth(0, 18 * 256);
-
-                SystemOut.getStringOut(sheet.getLastRowNum() + "");
-                Row row = sheet.createRow(sheet.getLastRowNum());//新建一行
-                row.createCell(0).setCellValue("ip1");
-                row.createCell(1).setCellValue("comm1");
-                row.createCell(2).setCellValue("resu1");
-                out = new FileOutputStream(file);
-                workbook.write(out);
-            } catch (FileNotFoundException e) {
-                throw new ErrorException("out文件不存在", e, true, false);
-            } catch (IOException e) {
-                throw new ErrorException("workbook关闭有误", e, true, false);
-            }
-        } else {
-            SystemOut.getStringOut("文件不存在:" + fileName);
-        }
-        if (out != null && out.equals("")) {
-            try {
-                out.close();
-            } catch (IOException e) {
-                throw new ErrorException("out关闭有误", e, true, false);
-            }
-        }
+    public WriteExcel(String excelPath, int insertStartPointer, String sheetName, int sheetInsert) {
+        this.excelPath = excelPath;
+        this.insertStartPointer = insertStartPointer;
+        this.sheetName = sheetName;
+        this.sheetInsert = sheetInsert;
     }
 
-    public void apachePOIExcelWrite(String FILE_NAME) {
-        XSSFWorkbook workbook = new XSSFWorkbook();
-        XSSFSheet sheet = workbook.createSheet("Datatypes in Java");
-        Object[][] datatypes = {
-                {"Datatype", "Type", "Size(in bytes)"},
-                {"int", "Primitive", 2},
-                {"float", "Primitive", 4},
-                {"double", "Primitive", 8},
-                {"char", "Primitive", 1},
-                {"String", "Non-Primitive", "No fixed size"}
-        };
+    public WriteExcel() {
+    }
 
-        int rowNum = 0;
-        System.out.println("Creating excel");
+    /**
+     * 总的入口方法
+     */
+    public static void main(String[] args) throws IOException, ErrorException {
+        WriteExcel crt = new WriteExcel();
+        int i = new ReadExcel().singleXlsx(crt.excelPath, 0);
+        crt.insertStartPointer = i + 1;
+        crt.insertRows();
+    }
 
-        for (Object[] datatype : datatypes) {
-            Row row = sheet.createRow(rowNum++);
-            int colNum = 0;
-            for (Object field : datatype) {
-                Cell cell = row.createCell(colNum++);
-                if (field instanceof String) {
-                    cell.setCellValue((String) field);
-                } else if (field instanceof Integer) {
-                    cell.setCellValue((Integer) field);
-                }
-            }
-        }
+    /**
+     * 在已有的Excel文件中插入一行新的数据的入口方法
+     */
+    public void insertRows() {
+        Workbook wb = returnWorkBookGivenFileHandle();
+        // XSSFSheet sheet1 = wb.getSheet(sheetName);
+        sheetName = wb.getSheetName(sheetInsert);
+        Sheet sheet = wb.getSheet(sheetName);
+        Row row = createRow(sheet, insertStartPointer);
+        createCell(row);
+        saveExcel(wb);
 
+    }
+
+    /**
+     * 保存工作薄
+     *
+     * @param wb
+     */
+    private void saveExcel(Workbook wb) {
+        FileOutputStream fileOut;
         try {
-            FileOutputStream outputStream = new FileOutputStream(FILE_NAME);
-            workbook.write(outputStream);
-            outputStream.close();
+            fileOut = new FileOutputStream(excelPath);
+            wb.write(fileOut);
+            fileOut.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        System.out.println("Done");
     }
 
+    /**
+     * 创建要出入的行中单元格
+     *
+     * @param row
+     * @return
+     */
+    private Cell createCell(Row row) {
+        Cell cell = row.createCell((short) 0);
+        cell.setCellValue(999999);
+        row.createCell(1).setCellValue(1.2);
+        row.createCell(2).setCellValue("This is a string cell");
+        return cell;
+    }
+
+    /**
+     * 得到一个已有的工作薄的POI对象
+     *
+     * @return
+     */
+    private Workbook returnWorkBookGivenFileHandle() {
+        Workbook wb = null;
+        File f = new File(excelPath);
+        try {
+            if (f != null) {
+                wb = distinguishWorkbook(excelPath);
+            }
+        } catch (Exception e) {
+            return null;
+        }
+        return wb;
+    }
+
+    /**
+     * 找到需要插入的行数，并新建一个POI的row对象
+     *
+     * @param sheet
+     * @param rowIndex
+     * @return
+     */
+    private Row createRow(Sheet sheet, Integer rowIndex) {
+        Row row = null;
+        if (sheet.getRow(rowIndex) != null) {
+            int lastRowNo = sheet.getLastRowNum();
+            sheet.shiftRows(rowIndex, lastRowNo, 1);
+        }
+        row = sheet.createRow(rowIndex);
+        return row;
+    }
 
 }

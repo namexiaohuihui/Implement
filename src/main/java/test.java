@@ -2,14 +2,17 @@ import common.tool.SystemOut;
 import common.tool.conversion.MutuaMapBean;
 import common.tool.conversion.MutualJsonBean;
 import common.tool.excelfile.ReadExcel;
-import common.tool.excelfile.WriteExcel;
 import common.tool.informationException.ErrorException;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Test;
-import wap.business.StartData;
 import wap.business.example.bean.EnumProgramBean;
 import wap.business.example.bean.GoodsBean;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.*;
 import java.util.List;
 import java.util.Map;
@@ -68,13 +71,11 @@ public class test<T> {
     public void extest() throws ErrorException, IOException {
         String FILE_NAME = "E:/MyFirstExcel.xlsx";
         String FILE_NAME2 = "E:/muban.xls";
-        try {
-            new ReadExcel().apachePOIExcelRead(FILE_NAME2);
-          //  SystemOut.getStringOut(lists);
-          //  new WriteExcel().apachePOIExcelWrite(FILE_NAME);
-        } catch (Exception e) {
-            throw new ErrorException("cuowu", e, false, false);
-        }
+        File file = new File(FILE_NAME);
+        InputStream is =  new FileInputStream(file);
+        Workbook workbook = new XSSFWorkbook(is);
+        String sheetName = workbook.getSheetName(workbook.getNumberOfSheets()-1);
+        SystemOut.getStringOut(sheetName);
     }
 
     public void readExcle() throws Exception {

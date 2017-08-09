@@ -51,7 +51,7 @@ public class ReadExcel extends ExcelOperating {
 
                 if (xssfRow != null) {
                     for (int col = firstCellNum; col < lastCellNum; col++) {
-                        listCol.add(xssfRow.getCell(col));
+                        listCol.add(cellValue(xssfRow.getCell(col)));
                     }
                 }
                 listRow.add(listCol);
@@ -89,7 +89,7 @@ public class ReadExcel extends ExcelOperating {
 
                 for (int col = firstCellNum; col < lastCellNum; col++) {
                     String sEnum = employEnum.employChineseToEnglish(col);
-                    aMap.put(sEnum, xssfRowValue(xssfRow.getCell(col)));
+                    aMap.put(sEnum, cellValue(xssfRow.getCell(col)));
                 }
             } else {
                 SystemOut.getStringOut("xssfRow为空");
