@@ -1,14 +1,11 @@
 package app;
 
+
 import io.appium.java_client.android.AndroidDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import java.io.File;
-import java.net.URL;
 import java.net.MalformedURLException;
 
 import static java.lang.Thread.sleep;
@@ -25,14 +22,17 @@ public class app {
     //before test Annotation makes a java function to run every time before a TestNG test case
     @BeforeTest
     protected void createAppiumDriver() throws MalformedURLException, InterruptedException {
-        StartSystem.start(driver,wait);
+        driver =  StartSystem.start(driver,wait);
     }
 
     @Test
-    public void setUp(){
+    public void setUp() throws MalformedURLException {
+      //  driver =  StartSystem.start();
         System.out.println("开始");
         try {
-            sleep(5000);
+            sleep(3000);
+            login();
+            sleep(6000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -46,4 +46,11 @@ public class app {
         driver.quit();
     }
     */
+
+
+    private void login(){
+       driver.findElementById("com.lianni.delivery.develop:id/edt_account").click();
+       driver.findElementById("com.lianni.delivery.develop:id/edt_account").clear();
+       driver.findElementById("com.lianni.delivery.develop:id/edt_account").sendKeys("11111");
+    }
 }
