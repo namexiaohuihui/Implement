@@ -1,0 +1,38 @@
+连接数据库：  mysql -u root -p
+
+开启数据库:  net start xiaodingdong
+
+关闭数据库： net stop xiaodingdong 
+
+选择相应表： use 表名
+
+显示全部表： show DATABASES
+
+显示指定库的表： 先use选择库然后 show tables
+
+创建库:
+create database <数据库名>;
+
+插入:INSERT INTO tbl_name (col1,col2) VALUES(15,col1*2);
+
+创建表:
+CREATE TABLE IF NOT EXISTS `ph_shop`(
+   `id` INT UNSIGNED AUTO_INCREMENT comment 'id',
+   `name` VARCHAR(40) NOT NULL comment '名字',
+   `exclusive` int(4) NOT NULL default 0  comment '隶属',
+   `type` VARCHAR(40) NOT null  comment '类型',
+   `logo` VARCHAR(100) null  comment 'logo',
+   `license` int(4) NULL default 0  comment '执照' ,
+   `real_shot` int(4) NULL default 0  comment '实拍',
+   `iphone` VARCHAR(100) NULL  comment '电话' ,
+   `province` VARCHAR(100) NULL  comment '省' ,
+   `city` VARCHAR(100) NULL  comment '市' ,
+   `county` VARCHAR(100) NULL  comment '县' ,
+   `lon` VARCHAR(100) NULL  comment '经度' ,
+   `lat` VARCHAR(100) NULL  comment '纬度' ,
+   `detailed` VARCHAR(100) NULL  comment '介绍' ,
+   `date` DATE  comment '创建时间',
+   PRIMARY KEY ( `id` )
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1000 comment='店铺表';
+
+

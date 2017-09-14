@@ -71,7 +71,7 @@ public class InfoSelect {
             for (int i = 1;i<=sizeRow;i++){
                 if (aMap.get(i).equals(content)){
                     new Select(driver.findElement(by)).selectByValue(content);
-                    //        窗口移动。选择类目之后窗口会往下移，此时分组元素在窗口之外。所以要滑动窗口。
+                    // 窗口移动。选择类目之后窗口会往下移，此时分组元素在窗口之外。所以要滑动窗口。
                     movesWindow();
                     bl = true;
                 }

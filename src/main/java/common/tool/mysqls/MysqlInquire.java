@@ -1,5 +1,6 @@
 package common.tool.mysqls;
 
+import common.tool.SystemOut;
 import common.tool.enumTool.EmployEnum;
 import org.apache.commons.collections.map.MultiKeyMap;
 
@@ -30,24 +31,20 @@ public class MysqlInquire {
      * @return
      */
     public Map<Integer,List> dataMysqlAll(String sql) {
-        db1 = new DBHelper(sql);//创建DBHelper对象
+        dbhelperCreate(sql);
         List<String> list = null;
         Map<Integer,List> aMap = new HashMap<>();
         try {
-            ret = db1.pst.executeQuery();//执行语句，得到结果集
             ResultSetMetaData data = ret.getMetaData();
-
             while (ret.next()) {//循环读取每一行的数据
                 list = new ArrayList<>();
                 //每行中有多少列，将每列的数据存入
                 for (int i = 1; i <= data.getColumnCount(); i++) {
-                    list.add(ret.getString(i));
+                    list.add(ret.getString(i));//获取该行中指定列的内容
                 }
                 aMap.put(ret.getRow(),list);
             }
-//            最后不要忘记关闭了。
-            ret.close();
-            db1.close();//关闭连接
+            dbhelperClose();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -57,23 +54,47 @@ public class MysqlInquire {
     /**
      * 读取每行中指定的内容
      * @param sql
-     * @param i
+     * @param i 默认读取第一行的内容
      * @return
      * @throws SQLException
      */
     public Map<String,String> dataMysqlColumnRow(String sql, int i) throws SQLException {
-        db1 = new DBHelper(sql);//创建DBHelper对象
+        dbhelperCreate(sql);
         Map<String,String> aMap = new HashMap<>();
         try {
-            ret = db1.pst.executeQuery();//执行语句，得到结果集
             while (ret.next()) {//循环读取每一行的数据
                 //将当前行数以及读取该行中指定列的内容保存到map中。
                 aMap.put(EmployEnum.employChineseToEnglish(ret.getRow()),ret.getString(i));
                 System.out.println("该表的字段的内容为：" + ret.getString(i));
             }//显示数据
-            //   关闭。
-            ret.close();
-            db1.close();
+            dbhelperClose();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return aMap;
+    }
+
+
+    /**
+     * 读取一行中列的内容值
+     * @param sql
+     * @return
+     * @throws SQLException
+     */
+    public Map<String,String> dataMysqlColumnAllRow(String sql) throws SQLException {
+        dbhelperCreate(sql);
+        Map<String,String> aMap = new HashMap<>();
+        try {
+            while (ret.next()) {//循环读取每一行的数据
+
+                ResultSetMetaData re = ret.getMetaData();
+                //通过列名和列内容组成键值对的关系，然后存map中
+                for (int i = 1; i <= re.getColumnCount(); i++) {
+                    aMap.put(re.getColumnName(i),ret.getString(i));
+                }
+            }
+            //关闭连接
+            dbhelperClose();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -87,21 +108,38 @@ public class MysqlInquire {
      * @return
      */
     public int dataLength(String sql) {
-        db1 = new DBHelper(sql);//创建DBHelper对象
+        dbhelperCreate(sql);
         int length = 0;
         try {
-            ret = db1.pst.executeQuery();//执行语句，得到结果集
 //           获取ResultSet数据的长度。先将游标移动到最后面，之后最后长度。在将游标还原。
             ret.last(); // 游标移到最后, 获得rs长度
             length = ret.getRow();
             // ret.first(); // 还原游标到rs开头
             System.out.println("该表的长度为：" + length);
-//            最后不要忘记关闭了。
+            dbhelperClose();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return length;
+    }
+
+    private void dbhelperCreate(String sql){
+        db1 = new DBHelper();//创建DBHelper对象
+        db1.dbhelperMerge(sql);
+        try {
+            ret = db1.pst.executeQuery();//执行语句，得到结果集
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void dbhelperClose(){
+        // 最后不要忘记关闭了。
+        try {
             ret.close();
             db1.close();//关闭连接
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return length;
     }
 }
