@@ -3,6 +3,8 @@ package common.tool.mysqls;
 import common.tool.SystemOut;
 import common.tool.enumTool.EmployEnum;
 import org.apache.commons.collections.map.MultiKeyMap;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
@@ -52,7 +54,7 @@ public class MysqlInquire {
     }
 
     /**
-     * 读取每行中指定的内容
+     * 读取每行中指定列的内容
      * @param sql
      * @param i 默认读取第一行的内容
      * @return
@@ -76,29 +78,14 @@ public class MysqlInquire {
 
 
     /**
-     * 读取一行中列的内容值
+     * 读取一行中全部列的内容
      * @param sql
      * @return
      * @throws SQLException
      */
-    public Map<String,String> dataMysqlColumnAllRow(String sql) throws SQLException {
+    public JSONArray dataMysqlColumnAllRow(String sql) throws SQLException {
         dbhelperCreate(sql);
-        Map<String,String> aMap = new HashMap<>();
-        try {
-            while (ret.next()) {//循环读取每一行的数据
-
-                ResultSetMetaData re = ret.getMetaData();
-                //通过列名和列内容组成键值对的关系，然后存map中
-                for (int i = 1; i <= re.getColumnCount(); i++) {
-                    aMap.put(re.getColumnName(i),ret.getString(i));
-                }
-            }
-            //关闭连接
-            dbhelperClose();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return aMap;
+        return resultSetToJson(ret.getMetaData());
     }
 
     /**
@@ -123,6 +110,31 @@ public class MysqlInquire {
         return length;
     }
 
+    //将数据库的内容转换成json
+    private JSONArray resultSetToJson(ResultSetMetaData re){
+
+        JSONArray jsonArray = new JSONArray();
+        try {
+            int numBer = re.getColumnCount();
+            while (ret.next()) {//循环读取每一行的数据
+
+                JSONObject jsonObject = new JSONObject();
+
+                //通过列名和列内容组成键值对的关系，然后存map中
+                for (int i = 1; i <= numBer ; i++) {
+                    jsonObject.put(re.getColumnName(i),ret.getString(i));
+                }
+                jsonArray.put(jsonObject);
+            }
+            //关闭连接
+            dbhelperClose();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return jsonArray;
+    }
+
+    //创建数据库连接
     private void dbhelperCreate(String sql){
         db1 = new DBHelper();//创建DBHelper对象
         db1.dbhelperMerge(sql);

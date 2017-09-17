@@ -24,6 +24,7 @@ public class DBHelper {
             Class.forName(name);//指定连接类型
             conn = DriverManager.getConnection(url, user, password);//获取连接
             pst = conn.prepareStatement(sql);//准备执行语句
+
         } catch (Exception e) {
             e.printStackTrace();
         }
