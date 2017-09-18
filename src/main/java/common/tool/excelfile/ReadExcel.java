@@ -77,23 +77,27 @@ public class ReadExcel extends ExcelOperating {
         Workbook xssfWorkbook = distinguishWorkbook(load);
         Map<String, String> aMap = new HashMap<>();
         EmployEnum employEnum = new EmployEnum();
-        // 获取指定工作薄
-        Sheet xssfSheet = xssfWorkbook.getSheetAt(numSheet);
-        if (xssfSheet != null) {
-            // 获取指定行
-            Row xssfRow = xssfSheet.getRow(rowNum);//获取该行的全部数据
-            if (xssfRow != null) {
+        if (numSheet <= xssfWorkbook.getNumberOfSheets()){
+            // 获取指定工作薄
+            Sheet xssfSheet = xssfWorkbook.getSheetAt(numSheet);
+            if (xssfSheet != null) {
+                // 获取指定行
+                Row xssfRow = xssfSheet.getRow(rowNum);//获取该行的全部数据
+                if (xssfRow != null) {
 
-                int firstCellNum = (int) xssfRow.getFirstCellNum();// 首列
-                int lastCellNum = (int) xssfRow.getLastCellNum();// 最后一列
+                    int firstCellNum = (int) xssfRow.getFirstCellNum();// 首列
+                    int lastCellNum = (int) xssfRow.getLastCellNum();// 最后一列
 
-                for (int col = firstCellNum; col < lastCellNum; col++) {
-                    String sEnum = employEnum.employChineseToEnglish(col);
-                    aMap.put(sEnum, cellValue(xssfRow.getCell(col)));
+                    for (int col = firstCellNum; col < lastCellNum; col++) {
+                        String sEnum = employEnum.employChineseToEnglish(col);
+                        aMap.put(sEnum, cellValue(xssfRow.getCell(col)));
+                    }
+                } else {
+                    SystemOut.getStringOut("xssfRow为空");
                 }
-            } else {
-                SystemOut.getStringOut("xssfRow为空");
             }
+        }else {
+            SystemOut.getStringOut("想获取的表格簿位置大于了当前表格的最大值。");
         }
         return aMap;
     }

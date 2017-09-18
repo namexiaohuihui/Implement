@@ -8,12 +8,14 @@ package common.parameter;
 public class WapUrl {
 
     //前缀
-    private String urlFamily = "http://66/";
+    private String urlFamily = "http://******/";
+
     private String urlTop = "http://----/";
+
     private String urlStrat = "http://++++";
 
     //家
-    private String homePageFamily = urlFamily + "http://****";
+    private String homePageFamily = urlFamily + "***";
 
     //打开的网址
     private String webHttpFamily = urlFamily + "user/login/";

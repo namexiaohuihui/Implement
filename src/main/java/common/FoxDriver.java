@@ -42,7 +42,7 @@ public class FoxDriver {
 
     private static WebDriver driver;
 
-    private static String loadRoute = "E:\\drivers\\";
+    private static String loadRoute = "E:\\drivers\\Drivers\\";
 
     private static int recording = 1;//统计网页打开错误次数
 
@@ -98,7 +98,7 @@ public class FoxDriver {
     public static WebDriver getChromeDriver() {
         if (driver == null) {
             SystemOut.getStringOut("创建时提示：浏览器对象为空");
-            System.setProperty("webdriver.chrome.driver", loadRoute + "chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", loadRoute + "chromedriver59-61.exe");
             driver = new ChromeDriver();
         }
         return driver;

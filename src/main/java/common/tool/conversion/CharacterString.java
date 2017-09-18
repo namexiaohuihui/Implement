@@ -1,5 +1,7 @@
 package common.tool.conversion;
 
+import common.tool.SystemOut;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -26,35 +28,40 @@ public class CharacterString {
 
     /**
      * 获取用例中赋值的内容，根据等号来进行
+     *
      * @param str
      * @param conn
      * @return
      */
-    public String[] stringsToString(String str,String conn){
-      String[] strings = str.split(",");
-     for (int i =0;i<strings.length;i++){
-         strings[i] = strings[i].substring(strings[i].indexOf(conn)+1,strings[i].length());
-     }
-     return strings;
+    public String[] stringsToString(String str, String conn) {
+        String[] strings = str.split(",");
+        for (int i = 0; i < strings.length; i++) {
+            //strings[i] = strings[i].substring(strings[i].indexOf(conn)+1,strings[i].length());
+            strings[i] = strings[i].split(conn)[1];
+        }
+        return strings;
     }
+
     /**
      * 提取数字
+     *
      * @param phoneString
      * @return
      */
-    public int digitalExtract(String phoneString){
+    public int digitalExtract(String phoneString) {
         Pattern pattern = Pattern.compile("[^0-9]");
         Matcher matcher = pattern.matcher(phoneString);
         String all = matcher.replaceAll("");
-       return stringToInt(all);
+        return stringToInt(all);
     }
 
     /**
      * 提取价格
+     *
      * @param phoneString
      * @return
      */
-    public Double priceExtraction(String phoneString){
+    public Double priceExtraction(String phoneString) {
         Pattern pattern = Pattern.compile("[^0-9]");
         Matcher matcher = pattern.matcher(phoneString);
         String all = matcher.replaceAll("");
@@ -63,15 +70,15 @@ public class CharacterString {
 
     /**
      * 提取汉字
+     *
      * @param phoneString
      * @return
      */
-    public String charactersExtraction(String phoneString){
+    public String charactersExtraction(String phoneString) {
         Pattern pattern = Pattern.compile("[\\d]");
         Matcher matcher = pattern.matcher(phoneString);
         return matcher.replaceAll("").trim();
     }
-
 
 
 }

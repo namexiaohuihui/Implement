@@ -29,7 +29,9 @@ public class StartData {
         ReadExcel readExcel = new ReadExcel();
         Map<String, String> stringStringMap = readExcel.singleReadXlsx(load, 1, 1);
         try {
-            EnumProgramBean epb = (EnumProgramBean) new MutuaMapBean().reflectmapToObject(stringStringMap, new EnumProgramBean().getClass());
+            EnumProgramBean epb = (EnumProgramBean) new MutuaMapBean()
+                    .reflectmapToObject(stringStringMap,
+                    new EnumProgramBean().getClass());
             loads = epb.getOne() + epb.getTwo() + epb.getThree();
         } catch (InterruptedException e) {
             e.printStackTrace();
