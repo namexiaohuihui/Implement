@@ -1,14 +1,12 @@
 package wap.business.example;
 
-import common.parameter.WapUrl;
 import common.tool.SystemOut;
 import common.tool.conversion.CharacterString;
 import common.tool.informationException.ErrorException;
 import wap.business.StartData;
-import wap.business.example.homeAddress.ManagementHomepage;
+import wap.business.example.bean.EnumProgramBean;
 
 import java.io.IOException;
-import java.sql.SQLException;
 
 /**
  * 用来区分所要执行的用例
@@ -19,14 +17,12 @@ public class StartDistinguish {
 
 
     public static void startDistinguish() {
-        String sUrl = null;
         CharacterString cString = new CharacterString();
         String sString = cString.stringsToString(StartData.load);
         try {
             switch (sString) {
                 case "商家信息管理场景":
-                    sUrl = StartData.readExcleData();//从用例里面读取执行文件所在位置
-                    WapUrl.urlTop = sUrl;
+                    EnumProgramBean epb = StartData.readExcleData();//从用例里面读取执行文件所在位置
                     startDistinguish();
                     break;
 

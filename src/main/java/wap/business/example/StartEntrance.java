@@ -2,12 +2,11 @@ package wap.business.example;
 
 import common.FoxDriver;
 import common.parameter.WapUrl;
-import common.tool.SystemOut;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import wap.business.StartData;
-import wap.business.example.homeAddress.ManagementHomepage;
+import wap.business.example.bean.EnumProgramBean;
 
 
 /**
@@ -16,28 +15,21 @@ import wap.business.example.homeAddress.ManagementHomepage;
  */
 public class StartEntrance {
     private WebDriver driver;
-    private String webHttp ;
     private WapUrl sWapUrl;
 
 
     @Before
     public void setUp() throws Exception {
-
-        //        创建浏览器对象
-        driver = FoxDriver.getChromeDriver();
-        //        是浏览器的大小
-        driver.manage().window().maximize();
-
-        sWapUrl = WapUrl.getsWapUrl();
-        StartData.readExcleData();//从计划里面读取用例所在位置
-        StartDistinguish.startDistinguish();//判断执行用例的位置
+        sWapUrl = WapUrl.getsWapUrl();//创建网址对象
+        EnumProgramBean epb = StartData.readExcleData();//从计划里面读取用例所在位置
+        WapUrl.urlTop = epb.getFour();//定义网址内容
+        FoxDriver.openBrowser(WapUrl.urlTop);//运行
     }
 
 
     @Test
     public void testXiao() throws Exception {
-        webHttp = WapUrl.urlTop;//定义网址
-        FoxDriver.openBrowser(webHttp);//运行
+        StartDistinguish.startDistinguish();//判断执行用例的位置
     }
 
 /*

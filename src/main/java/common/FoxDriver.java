@@ -105,6 +105,10 @@ public class FoxDriver {
     }
 
     public static WebDriver openBrowser(String webHttp) {
+        //        创建浏览器对象
+        driver = FoxDriver.getChromeDriver();
+        //        是浏览器的大小
+        driver.manage().window().maximize();
         //        设置测试的网页
         driver.get(webHttp);
         //        设置网页超时的时间

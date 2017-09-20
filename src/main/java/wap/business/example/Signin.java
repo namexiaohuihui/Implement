@@ -1,12 +1,9 @@
 package wap.business.example;
 
 import common.FoxDriver;
-import common.parameter.Parameter;
-import common.parameter.QueryStatement;
 import common.tool.SystemOut;
 import common.tool.caninput.ElementInput;
 import common.tool.caninput.ElementObtain;
-import common.tool.caninput.ElementExistence;
 import common.tool.caninput.Preservation;
 import common.tool.conversion.CharacterString;
 import common.tool.conversion.MutuaMapBean;
@@ -21,6 +18,7 @@ import wap.business.example.bean.EnumProgramBean;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Map;
+import java.util.NoSuchElementException;
 
 /**
  * 实现登录
@@ -48,7 +46,6 @@ public class Signin {
     private boolean bLean = false;//用于判断程序是否执行成功
 
     public Signin(String load) {
-        SystemOut.getStringOut("开始程序的用例" + load);
         this.load = load;
         try {
             rowAllNum = new ReadExcel().singleXlsx(load, 2);
@@ -81,7 +78,7 @@ public class Signin {
             new Preservation().buttonClassName(loginwater);
 
             //登录失败的提示语句。。提示语句长度小于3的时候说明登录成功
-         //   webElementError(driver.findElement(By.cssSelector(divErrormsg)));
+            webElementError(driver.findElement(By.cssSelector(divErrormsg)));
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -95,15 +92,21 @@ public class Signin {
 
     //    打印输出登录失败的原因
     private void webElementError(WebElement element) throws SQLException, InterruptedException {
-        if (element.getText().length() > 3) {
-            SystemOut.getStringOut("第" + rowNum + "次登录失败，原因是:" + element.getText());
+
+        try {
+            if (element.getText() != null && epb.getFive() != null && epb.getFive().equals(element.getText())) {
+                SystemOut.getStringOut(rowNum + "次登录失败，提示语句为:" + epb.getFive());
+            } else {
+                SystemOut.getStringOut(rowNum + "次登录失败，提示错误为:" + epb.getFive());
+            }
             if (rowNum == rowAllNum) {
                 FoxDriver.shotSelenium();
             } else {
                 rowNum++;
                 landSingin();
             }
-        } else {
+        } catch (NoSuchElementException e) {
+            //读取首页的内容并打印数据提示登录成功
             statusVerification();
         }
     }
@@ -120,7 +123,8 @@ public class Signin {
         int v = characterString.digitalExtract(id);
 
         //通过id来判断是否登录成功
-        idIdentify(v, phone);
+        //idIdentify(v, phone);
+        SystemOut.getStringOut("登录成功");
     }
 
     private void idIdentify(int v, String phone) throws SQLException {
@@ -146,10 +150,9 @@ public class Signin {
         //通过路径来找到相应薄的数据，并转换成map
         Map<String, String> ssMap = readExcel.singleReadXlsx(load, 2, rowNum);
         //将map里面的数据转换成bean进行保存
-
         epb = (EnumProgramBean) new MutuaMapBean().reflectmapToObject(ssMap, new EnumProgramBean().getClass());
 
-        SystemOut.getStringOut("表格中读取的数据" + epb.toString());
+        //SystemOut.getStringOut("表格中读取的数据" + epb.toString());
 
         return new CharacterString().stringsToString(epb.getFour(), ":");
 
