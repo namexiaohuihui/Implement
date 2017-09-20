@@ -31,7 +31,7 @@ public class AssignRedPackets {
     public void openBrowser() {
         parameter = new Parameter();
         wapUrl = new WapUrl();
-        driver = FoxDriver.openBrowser(wapUrl.getHopTop());
+        driver = FoxDriver.openBrowser(null);
     }
 
 

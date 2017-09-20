@@ -112,7 +112,6 @@ public class MysqlInquire {
 
     //将数据库的内容转换成json
     private JSONArray resultSetToJson(ResultSetMetaData re){
-
         JSONArray jsonArray = new JSONArray();
         try {
             int numBer = re.getColumnCount();

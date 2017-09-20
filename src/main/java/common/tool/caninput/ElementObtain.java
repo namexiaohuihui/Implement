@@ -75,7 +75,7 @@ public class ElementObtain extends ElementExistence {
         return content;
     }
 
-    //  直接通过对象然后输入内容
+    //  通过content来判断获取值的类型
     public String operation(WebElement cfmpassword, String content) throws InterruptedException {
 
         if (content == null || content.equals("")) {

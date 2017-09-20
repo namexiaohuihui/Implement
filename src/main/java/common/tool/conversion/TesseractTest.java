@@ -26,7 +26,7 @@ public class TesseractTest {
 
         WebDriver driver = FoxDriver.getFoxDriver();
         WapUrl wapUrl = new WapUrl();
-        driver.get(wapUrl.getUrlFamily());
+        driver.get(null);
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         WebElement element = driver.findElement(By.id("loginBtn"));
 

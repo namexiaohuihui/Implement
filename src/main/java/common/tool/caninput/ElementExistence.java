@@ -20,7 +20,7 @@ import static java.lang.Thread.sleep;
  */
 public class ElementExistence implements InheritInput {
 
-    public WebDriver driver = FoxDriver.getFoxDriver();
+    public WebDriver driver = FoxDriver.getWebDrivaer();
 
     @Override
     public boolean accordingToId(String id) {

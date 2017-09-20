@@ -15,7 +15,7 @@ public class Cooperation {
 
     private WebDriver driver = FoxDriver.getFoxDriver();
 
-    private String supplySystem[] = new WapUrl().getSupplySystemFamily();
+    private String supplySystem[] = null;
 
     private String directory[] ;
 

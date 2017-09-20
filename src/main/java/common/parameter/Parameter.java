@@ -7,16 +7,16 @@ package common.parameter;
 public class Parameter {
 
     private String supplyPassWordFamily = "33";
-    private int groupSun;//桌子的数量
+    private int groupSun;//分组的数量
 
     //文档存放位置
     private  String load = "E:\\drivers\\CasePlan\\测试计划.xlsx";
 
-    //头头的门号以及口令
+    //大佬的入口
     private String accountTop = "--";
     private String passWordTop = "//";
 
-    //开始的门号以及口令
+    //老板的入口
     private String accountStart = "---";
     private String passWordStrat = "//";
 

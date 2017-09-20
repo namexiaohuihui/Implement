@@ -19,7 +19,7 @@ import static common.FoxDriver.*;
 public class ExhibitionShow {
     private WebDriver driver = getFoxDriver();
 
-    private String url[] = new WapUrl().getShopManagementFamily();
+    private String url[] = null;
 
     private String storeName[];
 
