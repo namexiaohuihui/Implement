@@ -26,7 +26,7 @@ public class Statistics {
     private void getCode(String bar) {
         getElsenium(bar);
         driver.findElement(By.linkText(bar)).click();
-        assertEquals("二维码数据页面没有打开了",new WapUrl().getCodeFamily(),
+        assertEquals("二维码数据页面没有打开了",null,
                 driver.getCurrentUrl());
         System.out.println("二维码数据页面打开了");
     }

@@ -63,7 +63,7 @@ public class FoxDriver {
      */
     public static WebDriver getFoxDriver() {
         if (driver == null) {
-            SystemOut.getStringOut("创建时提示：浏览器对象为空");
+            SystemOut.getStringOut("创建时---火狐：浏览器对象为空");
             System.setProperty("webdriver.firefox.bin", "E:\\Program Files\\Mozilla Firefox\\firefox.exe");
            // System.setProperty("webdriver.firefox.driver", loadRoute + "geckodriver.exe");
             driver = new FirefoxDriver();
@@ -84,7 +84,7 @@ public class FoxDriver {
      */
     public static WebDriver getIEDriver() {
         if (driver == null) {
-            SystemOut.getStringOut("创建时提示：浏览器对象为空");
+            SystemOut.getStringOut("创建时---IE：浏览器对象为空");
             System.setProperty("webdriver.ie.driver",
                     loadRoute + "IEDriverServer.exe");
             DesiredCapabilities ieCapabilities = DesiredCapabilities.internetExplorer();
@@ -97,7 +97,7 @@ public class FoxDriver {
     //   获取对象：谷歌
     public static WebDriver getChromeDriver() {
         if (driver == null) {
-            SystemOut.getStringOut("创建时提示：浏览器对象为空");
+            SystemOut.getStringOut("创建时---谷歌：浏览器对象为空");
             System.setProperty("webdriver.chrome.driver", loadRoute + "chromedriver59-61.exe");
             driver = new ChromeDriver();
         }
@@ -105,10 +105,6 @@ public class FoxDriver {
     }
 
     public static WebDriver openBrowser(String webHttp) {
-        //        创建浏览器对象
-        driver = FoxDriver.getChromeDriver();
-        //        是浏览器的大小
-        driver.manage().window().maximize();
         //        设置测试的网页
         driver.get(webHttp);
         //        设置网页超时的时间

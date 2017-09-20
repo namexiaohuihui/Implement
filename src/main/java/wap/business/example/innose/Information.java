@@ -25,7 +25,7 @@ public class Information {
     //子菜单
     public String listBar[] ;
     //子菜单链接
-    public String url[] = new WapUrl().getShopManagementFamily();
+    public String url[] = null;
     //浏览器对象
     public WebDriver driver = FoxDriver.getFoxDriver();
     //按钮点击对象

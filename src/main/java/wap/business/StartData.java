@@ -25,19 +25,20 @@ public class StartData {
      * @throws IOException
      */
     public static String readExcleData() throws IOException, ErrorException {
-        String loads = "";
         ReadExcel readExcel = new ReadExcel();
+        String sUrl = null;
         Map<String, String> stringStringMap = readExcel.singleReadXlsx(load, 1, 1);
         try {
             EnumProgramBean epb = (EnumProgramBean) new MutuaMapBean()
                     .reflectmapToObject(stringStringMap,
                     new EnumProgramBean().getClass());
-            loads = epb.getOne() + epb.getTwo() + epb.getThree();
+            load = epb.getOne() + epb.getTwo() + epb.getThree();//获取用例路径
+            sUrl = epb.getFive();//获取网址
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return loads;
+        return sUrl;
     }
 }

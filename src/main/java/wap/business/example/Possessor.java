@@ -33,13 +33,13 @@ public class Possessor {
         driver.findElement(By.linkText("找回密码")).click();
         sleep(1000);
 //        在找回密码界面设立检查点，如果为真就点击进入注册页面
-        String url = wapurl.getPasswordRetrievalFamily();
+        String url = wapurl.passwordRetrievalFamily;
         assertEquals("找回密码页面",driver.getCurrentUrl(),url);
         driver.findElement(By.xpath("//*[@title = '注册']")).click();
         System.out.println("忘记密码页面检查通过");
 
 //        在注册页面设立检查点，如果为真就开始在输入框输入内容
-        String registrteredUrl =wapurl.getRegisterFamily();
+        String registrteredUrl =wapurl.registerFamily;
         assertEquals("找回密码页面",driver.getCurrentUrl(),registrteredUrl);
         System.out.println("注册页面检查通过");
 

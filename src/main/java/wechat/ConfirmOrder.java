@@ -42,7 +42,7 @@ public class ConfirmOrder {
         WapUrl wapurl = new WapUrl();
 
         //统一网址打开的模板
-        driver =FoxDriver.openBrowser(wapurl.getHopTop());
+        driver =FoxDriver.openBrowser(null);
     }
 
     @Test

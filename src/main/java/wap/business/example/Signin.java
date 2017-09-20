@@ -29,7 +29,7 @@ import java.util.Map;
  */
 public class Signin {
 
-    private WebDriver driver = FoxDriver.getFoxDriver();//浏览器对象
+    private WebDriver driver = FoxDriver.getWebDrivaer();//浏览器对象
     private String load;//路径
     private String phone = "phone";//账号
     private String password = "password";//密码
@@ -48,6 +48,7 @@ public class Signin {
     private boolean bLean = false;//用于判断程序是否执行成功
 
     public Signin(String load) {
+        SystemOut.getStringOut("开始程序的用例" + load);
         this.load = load;
         try {
             rowAllNum = new ReadExcel().singleXlsx(load, 2);
@@ -80,7 +81,7 @@ public class Signin {
             new Preservation().buttonClassName(loginwater);
 
             //登录失败的提示语句。。提示语句长度小于3的时候说明登录成功
-            webElementError(driver.findElement(By.cssSelector(divErrormsg)));
+         //   webElementError(driver.findElement(By.cssSelector(divErrormsg)));
 
         } catch (SQLException e) {
             e.printStackTrace();

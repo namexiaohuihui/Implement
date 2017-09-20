@@ -27,7 +27,7 @@ public class TopTransaction {
 
     private String number;//订货商品的数量
 
-    private String url = new WapUrl().getUrlTop();//订货商品的下单页面
+    private String url = new WapUrl().urlTop;//订货商品的下单页面
 
     private boolean button = false;//通过输入内容来判断是否需要点击提交按钮，双层保护相对安全。
 
@@ -107,7 +107,7 @@ public class TopTransaction {
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);//延迟
 
         String currentUrl = driver.getCurrentUrl();
-        String suppluOrder = new WapUrl().getSuppluFamily();
+        String suppluOrder = null;
 
         SystemOut.getStringOut("与头头交易页面获取的url", currentUrl);
         SystemOut.getStringOut("与头头交易页面的url", suppluOrder);

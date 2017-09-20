@@ -77,19 +77,15 @@ public class test<T> {
         String sheetName = workbook.getSheetName(workbook.getNumberOfSheets()-1);
         SystemOut.getStringOut(sheetName);
     }
-
+    @Test
     public void readExcle() throws Exception {
         //  String load = "E:\\drivers\\CasePlan\\CasrScene\\BusinessInformation\\商家信息管理场景.xlsx";
         String load = "C:\\Users\\70486\\Desktop\\商家信息管理场景.xlsx";
-        ReadExcel readExcel = new ReadExcel();
-        Map<String, String> stringStringMap = readExcel.singleReadXlsx(load, 1, 1);
-        try {
-            SystemOut.getStringOut(stringStringMap);
-            EnumProgramBean o = (EnumProgramBean) new MutuaMapBean().reflectmapToObject(stringStringMap, new EnumProgramBean().getClass());
-            SystemOut.getStringOut(o.toString());
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        int i = load.lastIndexOf("\\");
+        int i1 = load.lastIndexOf(".");
+        SystemOut.getStringOut(i + ":" + i1);
+        String le = load.substring(load.lastIndexOf("\\") + 1,load.lastIndexOf("."));
+        SystemOut.getStringOut(le);
     }
 
 }

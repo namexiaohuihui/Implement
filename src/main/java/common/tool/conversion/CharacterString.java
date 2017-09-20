@@ -81,4 +81,18 @@ public class CharacterString {
     }
 
 
+    /**
+     * 通过内容来找到路径
+     * @param load
+     * @return
+     */
+    public  String stringsToString(String load){
+
+        int i = load.lastIndexOf("\\");
+        int i1 = load.lastIndexOf(".");
+        String sLoad = load.substring(load.lastIndexOf("\\") + 1,load.lastIndexOf("."));
+
+        return sLoad;
+    }
+
 }
