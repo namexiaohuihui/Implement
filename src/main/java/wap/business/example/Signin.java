@@ -2,6 +2,7 @@ package wap.business.example;
 
 import common.FoxDriver;
 import common.tool.SystemOut;
+import common.tool.caninput.ElementExistence;
 import common.tool.caninput.ElementInput;
 import common.tool.caninput.ElementObtain;
 import common.tool.caninput.Preservation;
@@ -78,7 +79,7 @@ public class Signin {
             new Preservation().buttonClassName(loginwater);
 
             //登录失败的提示语句。。提示语句长度小于3的时候说明登录成功
-            webElementError(driver.findElement(By.cssSelector(divErrormsg)));
+            webElementError();
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -91,22 +92,29 @@ public class Signin {
     }
 
     //    打印输出登录失败的原因
-    private void webElementError(WebElement element) throws SQLException, InterruptedException {
-
-        try {
+    private void webElementError() throws SQLException, InterruptedException {
+        //调用判断的类
+        ElementExistence ele = new ElementExistence();
+        //判断该元素是否存在，存在返回真
+        Boolean existence = ele.accordingToCssSelector(divErrormsg);
+        if (existence){
+            //获取数据并读取失败的原因
+            WebElement element = driver.findElement(By.cssSelector(divErrormsg));
             if (element.getText() != null && epb.getFive() != null && epb.getFive().equals(element.getText())) {
                 SystemOut.getStringOut(rowNum + "次登录失败，提示语句为:" + epb.getFive());
             } else {
                 SystemOut.getStringOut(rowNum + "次登录失败，提示错误为:" + epb.getFive());
             }
+            //比较记录的次数，最大失败次数为用例最大时则退出浏览器
             if (rowNum == rowAllNum) {
                 FoxDriver.shotSelenium();
             } else {
                 rowNum++;
                 landSingin();
             }
-        } catch (NoSuchElementException e) {
+        }else {
             //读取首页的内容并打印数据提示登录成功
+            SystemOut.getStringOut(rowNum + "次登录成功");
             statusVerification();
         }
     }
@@ -124,7 +132,6 @@ public class Signin {
 
         //通过id来判断是否登录成功
         //idIdentify(v, phone);
-        SystemOut.getStringOut("登录成功");
     }
 
     private void idIdentify(int v, String phone) throws SQLException {

@@ -148,17 +148,17 @@ public class ElementExistence implements InheritInput {
      * @param string
      * @return
      */
-    private Boolean existence(final String string) {
-        Boolean information = (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+    public Boolean existence(final String string) {
+        Boolean information = (new WebDriverWait(driver, 4)).until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver d) {
                 try {
                     sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                d.findElement(By.linkText(string)).click();
+                d.findElement(By.cssSelector(string)).click();
                 //此处是判断是否存在id为dropdown1的元素，存在返回true
-                return d.findElement(By.linkText(string)).isDisplayed();
+                return d.findElement(By.cssSelector(string)).isDisplayed();
             }
         });
         return information;
