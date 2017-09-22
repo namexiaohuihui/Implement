@@ -11,7 +11,6 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import wap.business.example.StartEntrance;
 
 import java.util.concurrent.TimeUnit;
 
@@ -24,14 +23,12 @@ import static java.lang.Thread.sleep;
  */
 public class AssignRedPackets {
     private WebDriver driver;
-    private Parameter parameter;
     private WapUrl wapUrl;
 
     @Before
     public void openBrowser() {
-        parameter = new Parameter();
         wapUrl = new WapUrl();
-        driver = FoxDriver.openBrowser(null);
+        driver = FoxDriver.openBrowser();
     }
 
 
@@ -41,9 +38,9 @@ public class AssignRedPackets {
         //调用方法，实行元素的输入
         ElementInput elementInput = new ElementInput();
         elementInput.accordingToCssSelector("input[name=username][class=form-control]",
-                parameter.getAccountTop());
+                Parameter.accountTop);
         elementInput.accordingToCssSelector("input[name=password][class=form-control]",
-                parameter.getPassWordTop());
+                Parameter.passWordTop);
 
         driver.findElement(By.cssSelector("button[id=loginBtn][type=submint]")).click();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);

@@ -11,7 +11,7 @@ import java.sql.*;
  */
 
 public class DBHelper {
-    public String url;
+    public String url ;
     public String name;
     public String user;
     public String password;
@@ -42,7 +42,7 @@ public class DBHelper {
         name = start[1];
         user = start[2];
         password = start[3];
-        SystemOut.getStringOut("打印数据" + url + name + user + password);
+        //SystemOut.getStringOut("url:" + url +"     name:"+ name + "    user:"+user + "     password:"+password);
     }
 
     public void close() {

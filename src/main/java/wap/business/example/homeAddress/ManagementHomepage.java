@@ -1,110 +1,77 @@
 package wap.business.example.homeAddress;
 
-import com.google.common.reflect.TypeToken;
-import com.google.gson.Gson;
-import com.google.gson.stream.JsonReader;
-import common.FoxDriver;
 import common.parameter.Parameter;
+import common.tool.SystemOut;
 import common.tool.caninput.ElementObtain;
-import common.tool.conversion.RegularExpression;
+import common.tool.conversion.CharacterString;
 import common.tool.mysqls.MysqlInquire;
-import org.json.JSONArray;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import wap.business.example.bean.UserBean;
+import wap.business.StartData;
+import wap.business.example.ShopScene;
+import wap.business.example.bean.EnumProgramBean;
 
-import java.io.StringReader;
 import java.sql.SQLException;
-import java.util.List;
+import java.util.Map;
 
-import static java.lang.Thread.sleep;
 import static org.junit.Assert.assertEquals;
 
 /**
  * 家门口址的驗證
  * Created by Administrator on 2016/10/31.
  */
-public class ManagementHomepage {
+public class ManagementHomepage extends ShopScene {
 
-    String sql ;
-    public ManagementHomepage() throws InterruptedException, SQLException {
-        WebDriver driver = FoxDriver.getWebDrivaer();
-        sleep(1000);
-        //获取界面上一级菜单的名字
-        WebElement tr = driver.findElement(By.cssSelector("li.hsub.active> a > span"));
-        //获取程序上一级菜单名字
-        String one = new Parameter().getOneLevel()[0];
+    private String load;
+    private EnumProgramBean epb;
 
-        assertEquals("家门口验证失败", "---", tr.getText());
+    public ManagementHomepage(String load) throws InterruptedException, SQLException {
+        this.load = load;
+        stringConversion();
+        statusVerification();
+    }
 
-        //数据库类创建
-        MysqlInquire inquire = new MysqlInquire();
+    private void statusVerification() throws InterruptedException, SQLException {
+        ElementObtain elementObtain = new ElementObtain();
+        //找到账户id和手机
+        String sPhone = elementObtain.accordingToCss("dl.shopFigure dd:nth-child(2)", null);
 
-        //数据库连接及查询
-        JSONArray jsonArray = inquire.dataMysqlColumnAllRow(sql);
+        //利用断言来判断登陆账号跟显示的账号是否一致
+        assert sPhone.equals(Parameter.accountTop) : "The store ID information does not match";
 
-        //gson数据定义
-        Gson gson = new Gson();
-        JsonReader reader = new JsonReader(new StringReader(jsonArray.toString()));
-        reader.setLenient(true);
+        //读取id值然后
+        String rId = elementObtain.accordingToCss("dl.shopFigure dd:nth-child(3)", null);
 
-        //将json数据转换成bean
-       List<HomepageParameter> pageHome = gson.fromJson(jsonArray.toString(),
-               new TypeToken<List<HomepageParameter>>(){}.getType());
+        String pId = elementObtain.accordingToCss("dl.shophome>dt", null);
 
-       //bean对象提取
-        HomepageParameter page = pageHome.get(0);
+        //数据切割所在类
+        CharacterString characterString = new CharacterString();
+        //通过内部方法，将数据进行有效的切割.只读取出数字
+        int seId = characterString.digitalExtract(rId);
+        String shId = characterString.digitalExtractToString(pId);
 
-        //获取页面数据
-        ElementObtain obtain = new ElementObtain();
-        String grade = obtain.accordingToCss("div[class=evaluate]>p[1]", "");
-        String deliveryMmin = obtain.accordingToCss("div[class=evaluate]>p[2]", "");
-
-        //数据进行正则操作
-        grade = RegularExpression.regularExpression(grade,"\\d{0,9}\\.\\d{0,9}");
-        deliveryMmin = RegularExpression.regularExpression(deliveryMmin,"\\d{0,9}\\.\\d{0,9}");
-
-        if (page.getGrade() == grade){
-            System.out.println("首页的评分正确");
-        }else {
-            System.out.println("首页的评分失败");
-        }
-
-        if (page.getDeliveryMin() == deliveryMmin){
-            System.out.println("首页的时间对上了");
-        }else {
-            System.out.println("首页的时间没有对上");
-        }
+        //通过id来判断首页是否进入成功
+        idIdentify(seId, shId);
     }
 
 
-    public class HomepageParameter{
-        String grade ;
-        String delivery_min ;
+    private void idIdentify(int seId, String shId) throws SQLException {
 
-        public String getGrade() {
-            return grade;
-        }
+        //拼接查询语句
+        String sql = epb.getSix() + seId;
+        SystemOut.getStringOut("sql执行语句" + sql);
 
-        public void setGrade(String grade) {
-            this.grade = grade;
-        }
+        //创建数据库对象
+        MysqlInquire inquire = new MysqlInquire();
+        Map<String, String> iMap = inquire.dataMysqlColumnRow(sql, 1);
+        SystemOut.getStringOut(iMap.get("one") + "年轻人的最后一次");
+        assertEquals("The store ID information does not match",shId,iMap.get("one"));
 
-        public String getDeliveryMin() {
-            return delivery_min;
-        }
+        SystemOut.getStringOut(epb.getZero() + "用例执行成功");
+    }
 
-        public void setDeliveryMin(String delivery_min) {
-            this.delivery_min = delivery_min;
-        }
+    private void stringConversion() {
 
-        @Override
-        public String toString() {
-            return "HomepageParameter{" +
-                    "grade='" + grade + '\'' +
-                    ", delivery_min='" + delivery_min + '\'' +
-                    '}';
-        }
+        //调用公共类来做处理。。。
+        epb = StartData.readLoad(load, 1, 1);
+
     }
 }

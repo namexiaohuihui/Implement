@@ -33,10 +33,6 @@ public class WapUrl {
     public static String homeStrat = urlStrat + "password?f=/goods/hot-goods";
 
 
-    public WapUrl() {
-
-    }
-
     public static WapUrl getsWapUrl() {
         if (sWapUrl == null) {
             sWapUrl = new WapUrl();

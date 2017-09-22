@@ -14,7 +14,7 @@ import static java.lang.Thread.sleep;
  * 负责点击某个元素对象
  * Created by Administrator on 2016/11/15.
  */
-public class Preservation extends  ElementExistence{
+public class Preservation extends ElementExistence {
 
     private WebDriver driver = FoxDriver.getWebDrivaer();
 

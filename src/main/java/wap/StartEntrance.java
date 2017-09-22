@@ -1,6 +1,7 @@
-package wap.business.example;
+package wap;
 
 import common.FoxDriver;
+import common.parameter.Parameter;
 import common.parameter.WapUrl;
 import org.junit.Before;
 import org.junit.Test;
@@ -20,16 +21,20 @@ public class StartEntrance {
 
     @Before
     public void setUp() throws Exception {
-        sWapUrl = WapUrl.getsWapUrl();//创建网址对象
-        EnumProgramBean epb = StartData.readExcleData();//从计划里面读取用例所在位置
+        EnumProgramBean epb = StartData.readExcleData(1,1);//从计划里面读取用例所在位置
         WapUrl.urlTop = epb.getFour();//定义网址内容
-        FoxDriver.openBrowser(WapUrl.urlTop);//运行
+        FoxDriver.openBrowser();//运行
     }
 
 
     @Test
     public void testXiao() throws Exception {
         StartDistinguish.startDistinguish();//判断执行用例的位置
+    }
+
+    private void startParameter(){
+        WapUrl sWapUrl = WapUrl.getsWapUrl();//创建网址对象
+        Parameter parameter = Parameter.getParameter();//创建网址对象
     }
 
 /*

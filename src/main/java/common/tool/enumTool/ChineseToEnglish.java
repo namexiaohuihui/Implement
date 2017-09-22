@@ -32,4 +32,12 @@ public enum ChineseToEnglish {
         this.index = index;
     }
 
+
+    @Override
+    public String toString() {
+        return "ChineseToEnglish{" +
+                "name='" + name + '\'' +
+                ", index=" + index +
+                '}';
+    }
 }

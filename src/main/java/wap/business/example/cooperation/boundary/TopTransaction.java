@@ -81,7 +81,7 @@ public class TopTransaction {
         if (button) {
             //输入密码
             WebElement element = driver.findElement(By.cssSelector("input[id=password][name=password]"));//密码对象
-            element.sendKeys(new Parameter().getSupplyPassWordFamily());//输入密码
+            element.sendKeys("---");//输入密码
 
             //点击支付
            new Preservation().buttonCssSelector("button[class^=aui_state][type=button]");

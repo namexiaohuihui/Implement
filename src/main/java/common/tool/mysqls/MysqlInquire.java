@@ -14,6 +14,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static java.lang.Thread.sleep;
+
 /**
  * 数据库的操作类：---用法
  * 1.获取数据库链接Connection
@@ -23,19 +25,20 @@ import java.util.Map;
  */
 
 public class MysqlInquire {
-    static DBHelper db1 = null;
-    static ResultSet ret = null;
+    DBHelper db1 = null;
+    ResultSet ret = null;
 
     /**
      * 通过sql返回查询的内容
      * 返回的内容很多
+     *
      * @param sql
      * @return
      */
-    public Map<Integer,List> dataMysqlAll(String sql) {
+    public Map<Integer, List> dataMysqlAll(String sql) {
         dbhelperCreate(sql);
         List<String> list = null;
-        Map<Integer,List> aMap = new HashMap<>();
+        Map<Integer, List> aMap = new HashMap<>();
         try {
             ResultSetMetaData data = ret.getMetaData();
             while (ret.next()) {//循环读取每一行的数据
@@ -44,7 +47,7 @@ public class MysqlInquire {
                 for (int i = 1; i <= data.getColumnCount(); i++) {
                     list.add(ret.getString(i));//获取该行中指定列的内容
                 }
-                aMap.put(ret.getRow(),list);
+                aMap.put(ret.getRow(), list);
             }
             dbhelperClose();
         } catch (SQLException e) {
@@ -55,19 +58,24 @@ public class MysqlInquire {
 
     /**
      * 读取每行中指定列的内容
+     *
      * @param sql
-     * @param i 默认读取第一行的内容
+     * @param i   默认读取第一行的内容
      * @return
      * @throws SQLException
      */
-    public Map<String,String> dataMysqlColumnRow(String sql, int i) throws SQLException {
+    public Map<String, String> dataMysqlColumnRow(String sql, int i) throws SQLException {
         dbhelperCreate(sql);
-        Map<String,String> aMap = new HashMap<>();
+        Map<String, String> aMap = new HashMap<>();
         try {
             while (ret.next()) {//循环读取每一行的数据
                 //将当前行数以及读取该行中指定列的内容保存到map中。
-                aMap.put(EmployEnum.employChineseToEnglish(ret.getRow()),ret.getString(i));
-                System.out.println("该表的字段的内容为：" + ret.getString(i));
+                aMap.put(EmployEnum.employChineseToEnglish(ret.getRow()), ret.getString(i));
+                try {
+                    sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }//显示数据
             dbhelperClose();
         } catch (SQLException e) {
@@ -79,6 +87,7 @@ public class MysqlInquire {
 
     /**
      * 读取一行中全部列的内容
+     *
      * @param sql
      * @return
      * @throws SQLException
@@ -111,7 +120,7 @@ public class MysqlInquire {
     }
 
     //将数据库的内容转换成json
-    private JSONArray resultSetToJson(ResultSetMetaData re){
+    private JSONArray resultSetToJson(ResultSetMetaData re) {
         JSONArray jsonArray = new JSONArray();
         try {
             int numBer = re.getColumnCount();
@@ -120,8 +129,8 @@ public class MysqlInquire {
                 JSONObject jsonObject = new JSONObject();
 
                 //通过列名和列内容组成键值对的关系，然后存map中
-                for (int i = 1; i <= numBer ; i++) {
-                    jsonObject.put(re.getColumnName(i),ret.getString(i));
+                for (int i = 1; i <= numBer; i++) {
+                    jsonObject.put(re.getColumnName(i), ret.getString(i));
                 }
                 jsonArray.put(jsonObject);
             }
@@ -134,7 +143,7 @@ public class MysqlInquire {
     }
 
     //创建数据库连接
-    private void dbhelperCreate(String sql){
+    private void dbhelperCreate(String sql) {
         db1 = new DBHelper();//创建DBHelper对象
         db1.dbhelperMerge(sql);
         try {
@@ -144,7 +153,7 @@ public class MysqlInquire {
         }
     }
 
-    private void dbhelperClose(){
+    private void dbhelperClose() {
         // 最后不要忘记关闭了。
         try {
             ret.close();

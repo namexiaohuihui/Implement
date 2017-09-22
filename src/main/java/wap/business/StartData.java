@@ -4,6 +4,7 @@ import common.parameter.Parameter;
 import common.tool.conversion.MutuaMapBean;
 import common.tool.excelfile.ReadExcel;
 import common.tool.informationException.ErrorException;
+import wap.business.example.ShopScene;
 import wap.business.example.bean.EnumProgramBean;
 
 import java.io.IOException;
@@ -15,22 +16,66 @@ import java.util.Map;
  * Created by ${XiaoHuiHui} on 2017/8/7 on 18:05.
  * XiaoHiiHui [704866169@qq.com]
  */
-public class StartData {
-    public static String load = new Parameter().getLoad();
+public class StartData{
+    public static String load = Parameter.load;
 
     /**
-     * 把读取的用例所在位置返回。
+     * 指定读取页面和行数将数据返回并转换成类对象进行处理。
+     *
+     * @param numSheet 页面
+     * @param rowNum   行数
      * @return
      * @throws IOException
+     * @throws ErrorException
      */
-    public static EnumProgramBean readExcleData() throws IOException, ErrorException {
+    /*大傻逼
+     * 指定读取页面和行数将数据返回并转换成类对象进行处理。
+     * @param numSheet  页面
+     * @param rowNum   行数
+     */
+    public static EnumProgramBean readExcleData(int numSheet, int rowNum) throws IOException, ErrorException {
+        EnumProgramBean epb = readLoad(numSheet, rowNum);
+        load = epb.getOne() + epb.getTwo() + epb.getThree();//获取用例路径
+        return epb;
+    }
+
+    public static EnumProgramBean readExcleLoad(int numSheet, int rowNum) throws IOException, ErrorException {
+        EnumProgramBean epb = readLoad(numSheet, rowNum);
+        return epb;
+    }
+
+    public static EnumProgramBean readLoad(int numSheet, int rowNum) {
         ReadExcel readExcel = new ReadExcel();
         EnumProgramBean epb = null;
-        Map<String, String> stringStringMap = readExcel.singleReadXlsx(load, 1, 1);
         try {
+            Map<String, String> stringStringMap = readExcel.singleReadXlsx(load, numSheet, rowNum);
             epb = (EnumProgramBean) new MutuaMapBean().reflectmapToObject(stringStringMap,
                     new EnumProgramBean().getClass());
-            load = epb.getOne() + epb.getTwo() + epb.getThree();//获取用例路径
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return epb;
+    }
+
+
+    /**
+     * 根据指定路径和页面来获取excle表格的数据.
+     * @param load   路径
+     * @param numSheet 页面薄
+     * @param rowNum 行数
+     * @return
+     */
+    public static EnumProgramBean readLoad(String load, int numSheet, int rowNum) {
+        ReadExcel readExcel = new ReadExcel(); //读取excle的类对象
+        EnumProgramBean epb = null; //定义一个存储读取出数据的类对象
+        try {
+            //将读取之后的数据转换成map集合
+            Map<String, String> stringStringMap = readExcel.singleReadXlsx(load, numSheet, rowNum);
+            //map转换成类对象
+            epb = (EnumProgramBean) new MutuaMapBean().reflectmapToObject(stringStringMap,
+                    new EnumProgramBean().getClass());
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (Exception e) {

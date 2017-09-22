@@ -1,5 +1,6 @@
 package common;
 
+import common.parameter.WapUrl;
 import common.tool.SystemOut;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -100,17 +101,18 @@ public class FoxDriver {
             SystemOut.getStringOut("创建时---谷歌：浏览器对象为空");
             System.setProperty("webdriver.chrome.driver", loadRoute + "chromedriver59-61.exe");
             driver = new ChromeDriver();
+
         }
         return driver;
     }
 
-    public static WebDriver openBrowser(String webHttp) {
+    public static WebDriver openBrowser() {
         //        创建浏览器对象
         driver = FoxDriver.getChromeDriver();
         //        是浏览器的大小
         driver.manage().window().maximize();
         //        设置测试的网页
-        driver.get(webHttp);
+        driver.get(WapUrl.urlTop);
         //        设置网页超时的时间
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
@@ -118,10 +120,10 @@ public class FoxDriver {
         System.out.println("打开页面的标题" + title);
 
         if (title.equals("页面载入出错")) {
-            recordingStatistics(webHttp);//重新加载网页
-            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+            recordingStatistics(WapUrl.urlTop);//重新加载网页
+            driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         } else if (title.equals("连接超时")) {
-            recordingStatistics(webHttp);//重新加载网页
+            recordingStatistics(WapUrl.urlTop);//重新加载网页
             driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         }
         recording = 1;//网址能打开之后就情况统计次数

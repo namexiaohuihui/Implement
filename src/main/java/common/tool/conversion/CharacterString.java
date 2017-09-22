@@ -55,6 +55,13 @@ public class CharacterString {
         return stringToInt(all);
     }
 
+    public String digitalExtractToString(String phoneString) {
+        Pattern pattern = Pattern.compile("[^0-9]");
+        Matcher matcher = pattern.matcher(phoneString);
+        String all = matcher.replaceAll("");
+        return all;
+    }
+
     /**
      * 提取价格
      *

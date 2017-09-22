@@ -13,7 +13,6 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import wap.business.example.StartEntrance;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -30,7 +29,6 @@ import static java.lang.Thread.sleep;
 public class ConfirmOrder {
 
     //对象的创建
-    Parameter parameter = new Parameter();
     Preservation preservation = new Preservation();
     CharacterString chaStr = new CharacterString();
     //浏览器对象
@@ -42,7 +40,7 @@ public class ConfirmOrder {
         WapUrl wapurl = new WapUrl();
 
         //统一网址打开的模板
-        driver =FoxDriver.openBrowser(null);
+        driver =FoxDriver.openBrowser();
     }
 
     @Test
@@ -68,8 +66,8 @@ public class ConfirmOrder {
         ElementInput elementInput = new ElementInput();
 
         //参数
-        String zhanghao = parameter.getAccountStart();
-        String mima = parameter.getPassWordStrat();
+        String zhanghao = Parameter.accountStart;
+        String mima = Parameter.passWordStrat;
 
         //输入
         elementInput.accordingToId("J_tel", zhanghao);
