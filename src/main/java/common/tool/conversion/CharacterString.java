@@ -1,6 +1,6 @@
 package common.tool.conversion;
 
-import common.tool.SystemOut;
+import common.parameter.Parameter;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -29,19 +29,22 @@ public class CharacterString {
     /**
      * 获取用例中赋值的内容，根据等号来进行
      *
-     * @param str
-     * @param conn
+     * @param str  需要切割的数据
+     * @param conn  如果为空时就只根据逗号进行切割
      * @return
      */
     public String[] stringsToString(String str, String conn) {
         String[] strings = str.split(",");
         for (int i = 0; i < strings.length; i++) {
             //strings[i] = strings[i].substring(strings[i].indexOf(conn)+1,strings[i].length());
-            strings[i] = strings[i].split(conn)[1];
+            if (conn == null || conn.equals("")) {
+                Parameter.Scene_Menu.add(strings[i]);
+            } else {
+                strings[i] = strings[i].split(conn)[1];
+            }
         }
         return strings;
     }
-
     /**
      * 提取数字
      *

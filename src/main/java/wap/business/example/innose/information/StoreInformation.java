@@ -70,11 +70,7 @@ public class StoreInformation extends Information {
 
     private void mysqlInquire(String sql){
         //数据库连接及查询
-        try {
             JSONArray jsonArray = new MysqlInquire().dataMysqlColumnAllRow(sql);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
     }
 
     //根据cssSelector来进行元素输入

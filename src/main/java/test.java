@@ -1,12 +1,9 @@
 import common.tool.SystemOut;
-import common.tool.conversion.MutuaMapBean;
 import common.tool.conversion.MutualJsonBean;
-import common.tool.excelfile.ReadExcel;
 import common.tool.informationException.ErrorException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Test;
-import wap.business.example.bean.EnumProgramBean;
 import wap.business.example.bean.GoodsBean;
 
 import java.io.File;
@@ -15,7 +12,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by ${XiaoHuiHui} on 2017/7/17 on 14:36.
@@ -25,7 +21,7 @@ public class test<T> {
 
     public Connection connectionSql() {
         String name = "com.mysql.jdbc.Driver";
-        String url = "jdbc:mysql://192.168.10.204/lnlife_1?autoReconnect=true&useSSL=false";
+        String url = "jdbc:mysql://3231/---?autoReconnect=true&useSSL=false";
         String user = "root";
         String password = "123456";
         Connection conn = null;
@@ -78,14 +74,12 @@ public class test<T> {
         SystemOut.getStringOut(sheetName);
     }
     @Test
-    public void readExcle() throws Exception {
-        //  String load = "E:\\drivers\\CasePlan\\CasrScene\\BusinessInformation\\商家信息管理场景.xlsx";
-        String load = "C:\\Users\\70486\\Desktop\\商家信息管理场景.xlsx";
-        int i = load.lastIndexOf("\\");
-        int i1 = load.lastIndexOf(".");
-        SystemOut.getStringOut(i + ":" + i1);
-        String le = load.substring(load.lastIndexOf("\\") + 1,load.lastIndexOf("."));
-        SystemOut.getStringOut(le);
+    public void readExcle() {
+        String load = "商家信息管理场景.xlsx";
+        String[] split = load.split("\\.");
+        for (int i = 0; i < split.length; i++) {
+            SystemOut.getStringOut(split[i]);
+        }
     }
 
 }

@@ -3,18 +3,15 @@ package common.tool.excelfile;
 import common.tool.SystemOut;
 import common.tool.informationException.ErrorException;
 import org.apache.commons.io.IOCase;
-import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Properties;
 
 /**
  * Created by ${XiaoHuiHui} on 2017/8/8 on 11:57.
@@ -25,7 +22,7 @@ public class ExcelOperating  {
     private final String XLS_VERSION = "xls";
     private final String XLSX_VERSION = "xlsx";
 
-    public Workbook distinguishWorkbook(String fileName) throws ErrorException {
+    public Workbook distinguishWorkbook(String fileName) {
         Workbook workbook = null;
         InputStream is = null ;
         try {
@@ -44,7 +41,11 @@ public class ExcelOperating  {
                 SystemOut.getStringOut("该文件不是excle表格:" + fileName);
             }
         } catch (IOException e) {
-            throw new ErrorException(System.getProperties().getProperty("java.class.path"),e,true,false);
+
+            String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
+            String method = Thread.currentThread().getStackTrace()[1].getMethodName();
+            new ErrorException(clazz, method, e);
+
         } finally {
            if (is != null) {
                 try {

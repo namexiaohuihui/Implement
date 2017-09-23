@@ -1,6 +1,7 @@
 package common.tool.caninput;
 
 import common.FoxDriver;
+import common.tool.informationException.ErrorException;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -19,12 +20,16 @@ public class Preservation extends ElementExistence {
     private WebDriver driver = FoxDriver.getWebDrivaer();
 
     //    点击保存按钮
-    public void breservation(String id) throws InterruptedException {
+    public void breservation(String id) {
         //判断元素是否存在
-        boolean bl = super.accordingToId(id);
-        if (bl) {
-            driver.findElement(By.id(id)).click();
-            sleep(1000);
+        try {
+            boolean bl = super.accordingToId(id);
+            if (bl) {
+                driver.findElement(By.id(id)).click();
+                sleep(1000);
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
@@ -33,12 +38,16 @@ public class Preservation extends ElementExistence {
      *
      * @param presevation
      */
-    public void buttonClassName(String className) throws InterruptedException {
+    public void buttonClassName(String className) {
         //判断元素是否存在
-        boolean bl = super.accordingToCssName(className);
-        if (bl) {
-            driver.findElement(By.className(className)).click();
-            sleep(1000);
+        try {
+            boolean bl = super.accordingToCssName(className);
+            if (bl) {
+                driver.findElement(By.className(className)).click();
+                sleep(1000);
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
@@ -47,12 +56,16 @@ public class Preservation extends ElementExistence {
      *
      * @param presevation
      */
-    public void buttonXpath(String xPath) throws InterruptedException {
+    public void buttonXpath(String xPath) {
         //判断元素是否存在
-        boolean bl = super.accordingToXpath(xPath);
-        if (bl) {
-            driver.findElement(By.xpath(xPath)).click();
-            sleep(1000);
+        try {
+            boolean bl = super.accordingToXpath(xPath);
+            if (bl) {
+                driver.findElement(By.xpath(xPath)).click();
+                sleep(1000);
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
@@ -62,12 +75,16 @@ public class Preservation extends ElementExistence {
      *
      * @param presevation
      */
-    public void buttonLinkText(String linkText) throws InterruptedException {
+    public void buttonLinkText(String linkText) {
         //判断元素是否存在
-        boolean bl = super.accordingToLinkText(linkText);
-        if (bl) {
-            driver.findElement(By.linkText(linkText)).click();
-            sleep(1000);
+        try {
+            boolean bl = super.accordingToLinkText(linkText);
+            if (bl) {
+                driver.findElement(By.linkText(linkText)).click();
+                sleep(1000);
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
@@ -78,10 +95,14 @@ public class Preservation extends ElementExistence {
      */
     public void buttonName(String Name) throws InterruptedException {
         //判断元素是否存在
-        boolean bl = super.accordingToName(Name);
-        if (bl) {
-            driver.findElement(By.name(Name)).click();
-            sleep(1000);
+        try {
+            boolean bl = super.accordingToName(Name);
+            if (bl) {
+                driver.findElement(By.name(Name)).click();
+                sleep(1000);
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
@@ -90,11 +111,15 @@ public class Preservation extends ElementExistence {
      *
      * @param presevation
      */
-    public void buttonCssSelector(String cssSelector) throws InterruptedException {
-        boolean bl = super.accordingToCssSelector(cssSelector);
-        if (bl) {
-            driver.findElement(By.cssSelector(cssSelector)).click();
-            sleep(1000);
+    public void buttonCssSelector(String cssSelector) {
+        try {
+            boolean bl = super.accordingToCssSelector(cssSelector);
+            if (bl) {
+                driver.findElement(By.cssSelector(cssSelector)).click();
+                sleep(1000);
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
@@ -108,7 +133,11 @@ public class Preservation extends ElementExistence {
             webElement.click();
             sleep(1000);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+
+            String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
+            String method = Thread.currentThread().getStackTrace()[1].getMethodName();
+            new ErrorException(clazz, method, e);
+
         }
     }
 

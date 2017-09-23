@@ -1,8 +1,7 @@
 package common.tool.mysqls;
 
-import common.tool.SystemOut;
 import common.tool.enumTool.EmployEnum;
-import org.apache.commons.collections.map.MultiKeyMap;
+import common.tool.informationException.ErrorException;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -51,7 +50,11 @@ public class MysqlInquire {
             }
             dbhelperClose();
         } catch (SQLException e) {
-            e.printStackTrace();
+
+            String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
+            String method = Thread.currentThread().getStackTrace()[1].getMethodName();
+            new ErrorException(clazz, method, e);
+
         }
         return aMap;
     }
@@ -64,22 +67,28 @@ public class MysqlInquire {
      * @return
      * @throws SQLException
      */
-    public Map<String, String> dataMysqlColumnRow(String sql, int i) throws SQLException {
+    public Map<String, String> dataMysqlColumnRow(String sql, int i) {
         dbhelperCreate(sql);
         Map<String, String> aMap = new HashMap<>();
         try {
             while (ret.next()) {//循环读取每一行的数据
                 //将当前行数以及读取该行中指定列的内容保存到map中。
                 aMap.put(EmployEnum.employChineseToEnglish(ret.getRow()), ret.getString(i));
-                try {
-                    sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                sleep(1000);
             }//显示数据
             dbhelperClose();
         } catch (SQLException e) {
-            e.printStackTrace();
+
+            String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
+            String method = Thread.currentThread().getStackTrace()[1].getMethodName();
+            new ErrorException(clazz, method, e);
+
+        } catch (InterruptedException e) {
+
+            String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
+            String method = Thread.currentThread().getStackTrace()[1].getMethodName();
+            new ErrorException(clazz, method, e);
+
         }
         return aMap;
     }
@@ -92,9 +101,19 @@ public class MysqlInquire {
      * @return
      * @throws SQLException
      */
-    public JSONArray dataMysqlColumnAllRow(String sql) throws SQLException {
-        dbhelperCreate(sql);
-        return resultSetToJson(ret.getMetaData());
+    public JSONArray dataMysqlColumnAllRow(String sql) {
+        ResultSetMetaData rsmd = null;
+        try {
+            dbhelperCreate(sql);
+            rsmd = ret.getMetaData();
+        } catch (SQLException e) {
+
+            String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
+            String method = Thread.currentThread().getStackTrace()[1].getMethodName();
+            new ErrorException(clazz, method, e);
+
+        }
+        return resultSetToJson(rsmd);
     }
 
     /**
@@ -114,7 +133,11 @@ public class MysqlInquire {
             System.out.println("该表的长度为：" + length);
             dbhelperClose();
         } catch (SQLException e) {
-            e.printStackTrace();
+
+            String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
+            String method = Thread.currentThread().getStackTrace()[1].getMethodName();
+            new ErrorException(clazz, method, e);
+
         }
         return length;
     }
@@ -137,7 +160,11 @@ public class MysqlInquire {
             //关闭连接
             dbhelperClose();
         } catch (SQLException e) {
-            e.printStackTrace();
+
+            String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
+            String method = Thread.currentThread().getStackTrace()[1].getMethodName();
+            new ErrorException(clazz, method, e);
+
         }
         return jsonArray;
     }
@@ -149,7 +176,11 @@ public class MysqlInquire {
         try {
             ret = db1.pst.executeQuery();//执行语句，得到结果集
         } catch (SQLException e) {
-            e.printStackTrace();
+
+            String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
+            String method = Thread.currentThread().getStackTrace()[1].getMethodName();
+            new ErrorException(clazz, method, e);
+
         }
     }
 
@@ -159,7 +190,11 @@ public class MysqlInquire {
             ret.close();
             db1.close();//关闭连接
         } catch (SQLException e) {
-            e.printStackTrace();
+
+            String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
+            String method = Thread.currentThread().getStackTrace()[1].getMethodName();
+            new ErrorException(clazz, method, e);
+
         }
     }
 }

@@ -1,12 +1,8 @@
 package common.tool.caninput;
 
-import common.FoxDriver;
-import common.tool.Interface.InheritInput;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import static java.lang.Thread.sleep;
 
 /**
  * 通过元素标签来获取元素的内容
@@ -18,7 +14,7 @@ public class ElementObtain extends ElementExistence {
 
 
     //    获取元素对象的标签属性值
-    public String accordingToId(String id, String content) throws InterruptedException {
+    public String accordingToId(String id, String content) {
         boolean bl = super.accordingToId(id);
         if (bl) {
             WebElement cfmpassword = driver.findElement(By.id(id));
@@ -29,7 +25,7 @@ public class ElementObtain extends ElementExistence {
     }
 
     //    获取元素对象的标签属性值
-    public String accordingToName(String name, String content) throws InterruptedException {
+    public String accordingToName(String name, String content) {
         boolean bl = super.accordingToName(name);
         if (bl) {
             WebElement cfmpassword = driver.findElement(By.name(name));
@@ -40,7 +36,7 @@ public class ElementObtain extends ElementExistence {
     }
 
     //    获取元素对象的标签属性值
-    public String accordingToCss(String css, String content) throws InterruptedException {
+    public String accordingToCss(String css, String content) {
 
         boolean bl = super.accordingToCssSelector(css);
         if (bl) {
@@ -52,7 +48,7 @@ public class ElementObtain extends ElementExistence {
     }
 
     //    获取元素对象的标签属性值
-    public String accordingToXpath(String xpath, String content) throws InterruptedException {
+    public String accordingToXpath(String xpath, String content) {
 
         boolean bl = super.accordingToXpath(xpath);
         if (bl) {
@@ -64,7 +60,7 @@ public class ElementObtain extends ElementExistence {
     }
 
     //    获取元素对象的标签属性值
-    public String accordingToLinkText(String linkText, String content) throws InterruptedException {
+    public String accordingToLinkText(String linkText, String content) {
 
         boolean bl = super.accordingToLinkText(linkText);
         if (bl) {
@@ -76,7 +72,7 @@ public class ElementObtain extends ElementExistence {
     }
 
     //  通过content来判断获取值的类型
-    public String operation(WebElement cfmpassword, String content) throws InterruptedException {
+    public String operation(WebElement cfmpassword, String content) {
 
         if (content == null || content.equals("")) {
             content = cfmpassword.getText();

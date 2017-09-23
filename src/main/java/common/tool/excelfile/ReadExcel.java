@@ -2,19 +2,15 @@ package common.tool.excelfile;
 
 import common.tool.SystemOut;
 import common.tool.enumTool.EmployEnum;
-import common.tool.informationException.ErrorException;
-import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import java.io.*;
-import java.util.*;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -31,7 +27,7 @@ public class ReadExcel extends ExcelOperating {
      * @return
      * @throws IOException
      */
-    public List<List> wholeReadXlsx(String load) throws IOException, ErrorException {
+    public List<List> wholeReadXlsx(String load) {
         Workbook xssfWorkbook = distinguishWorkbook(load);
         List<List> listRow = new ArrayList();
         List listCol = null;
@@ -73,7 +69,7 @@ public class ReadExcel extends ExcelOperating {
      * @return
      * @throws IOException
      */
-    public Map<String, String> singleReadXlsx(String load, int numSheet, int rowNum) throws IOException, ErrorException {
+    public Map<String, String> singleReadXlsx(String load, int numSheet, int rowNum) {
         Workbook xssfWorkbook = distinguishWorkbook(load);
         Map<String, String> aMap = new HashMap<>();
         EmployEnum employEnum = new EmployEnum();
@@ -110,7 +106,7 @@ public class ReadExcel extends ExcelOperating {
      * @return
      * @throws IOException
      */
-    public int singleXlsx(String load, int numSheet) throws IOException, ErrorException {
+    public int singleXlsx(String load, int numSheet) {
         int row = 0;
         // 获取每一个工作薄
         Sheet sheetAt = distinguishWorkbook(load).getSheetAt(numSheet);

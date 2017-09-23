@@ -2,6 +2,7 @@ package wap.business.example.homeAddress;
 
 import common.parameter.Parameter;
 import common.tool.SystemOut;
+import common.tool.caninput.ElementExistence;
 import common.tool.caninput.ElementObtain;
 import common.tool.conversion.CharacterString;
 import common.tool.mysqls.MysqlInquire;
@@ -9,7 +10,6 @@ import wap.business.StartData;
 import wap.business.example.ShopScene;
 import wap.business.example.bean.EnumProgramBean;
 
-import java.sql.SQLException;
 import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
@@ -23,13 +23,14 @@ public class ManagementHomepage extends ShopScene {
     private String load;
     private EnumProgramBean epb;
 
-    public ManagementHomepage(String load) throws InterruptedException, SQLException {
+    public ManagementHomepage(String load) {
         this.load = load;
-        stringConversion();
+        String loadName = new CharacterString().stringsToString(load);
+        stringConversion(loadName);
         statusVerification();
     }
 
-    private void statusVerification() throws InterruptedException, SQLException {
+    private void statusVerification() {
         ElementObtain elementObtain = new ElementObtain();
         //找到账户id和手机
         String sPhone = elementObtain.accordingToCss("dl.shopFigure dd:nth-child(2)", null);
@@ -49,11 +50,11 @@ public class ManagementHomepage extends ShopScene {
         String shId = characterString.digitalExtractToString(pId);
 
         //通过id来判断首页是否进入成功
-        idIdentify(seId, shId);
+        //idIdentify(seId, shId);
     }
 
 
-    private void idIdentify(int seId, String shId) throws SQLException {
+    private void idIdentify(int seId, String shId) {
 
         //拼接查询语句
         String sql = epb.getSix() + seId;
@@ -68,10 +69,15 @@ public class ManagementHomepage extends ShopScene {
         SystemOut.getStringOut(epb.getZero() + "用例执行成功");
     }
 
-    private void stringConversion() {
-
-        //调用公共类来做处理。。。
-        epb = StartData.readLoad(load, 1, 1);
-
+    private void stringConversion(String loadName) {
+        ElementExistence existence = new ElementExistence();
+        boolean b = existence.accordingToLinkText(loadName);
+        if (b) {
+            //调用公共类来做处理。。。
+            epb = StartData.readLoad(load, 1, 1);
+        } else {
+            SystemOut.getStringOut(loadName + "菜单不存在，用例错了吧。。");
+        }
     }
+
 }

@@ -15,9 +15,7 @@ import org.openqa.selenium.WebElement;
 import wap.business.StartData;
 import wap.business.example.bean.EnumProgramBean;
 
-import java.io.IOException;
-import java.sql.SQLException;
-import java.util.concurrent.TimeUnit;
+import static java.lang.Thread.sleep;
 
 /**
  * 实现登录
@@ -46,14 +44,7 @@ public class Signin extends ShopScene {
 
     public Signin(String load) {
         this.load = load;
-        try {
-            rowAllNum = new ReadExcel().singleXlsx(load, 2);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ErrorException e) {
-            e.printStackTrace();
-        }
-
+        rowAllNum = new ReadExcel().singleXlsx(load, 2);
     }
 
     public Signin() {
@@ -76,23 +67,21 @@ public class Signin extends ShopScene {
             //        点击登录
             new Preservation().buttonClassName(loginwater);
 
-            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+            //点击之后会卡，所以要先睡三秒
+            sleep(3000);
 
             //登录失败的提示语句。。提示语句长度小于3的时候说明登录成功
             webElementError();
 
-        } catch (SQLException e) {
-            e.printStackTrace();
         } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
+            String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
+            String method = Thread.currentThread().getStackTrace()[1].getMethodName();
+            new ErrorException(clazz, method, e);
         }
-
     }
 
     //    打印输出登录失败的原因
-    private void webElementError() throws SQLException, InterruptedException {
+    private void webElementError() {
         //调用判断的类
         ElementExistence ele = new ElementExistence();
         //判断该元素是否存在，存在返回真
@@ -115,17 +104,20 @@ public class Signin extends ShopScene {
         } else {
             //读取首页的内容并打印数据提示登录成功
             SystemOut.getStringOut(rowNum + "次登录成功");
+            Parameter.LOGIN_STATUS = true;
         }
     }
 
 
-    private void stringConversion() throws Exception {
+    private void stringConversion() {
 
         //调用公共类来做处理。。。
         epb = StartData.readLoad(load, 2, rowNum);
         //SystemOut.getStringOut("表格中读取的数据" + epb.toString());
+
         String[] strings = new CharacterString().stringsToString(epb.getFour(), ":");
         Parameter.accountTop = strings[0];
         Parameter.passWordTop = strings[1];
+
     }
 }

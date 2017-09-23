@@ -4,7 +4,6 @@ import common.parameter.Parameter;
 import common.tool.conversion.MutuaMapBean;
 import common.tool.excelfile.ReadExcel;
 import common.tool.informationException.ErrorException;
-import wap.business.example.ShopScene;
 import wap.business.example.bean.EnumProgramBean;
 
 import java.io.IOException;
@@ -33,28 +32,44 @@ public class StartData{
      * @param numSheet  页面
      * @param rowNum   行数
      */
-    public static EnumProgramBean readExcleData(int numSheet, int rowNum) throws IOException, ErrorException {
+    public static EnumProgramBean readExcleData(int numSheet, int rowNum) {
+
         EnumProgramBean epb = readLoad(numSheet, rowNum);
         load = epb.getOne() + epb.getTwo() + epb.getThree();//获取用例路径
+
         return epb;
     }
 
-    public static EnumProgramBean readExcleLoad(int numSheet, int rowNum) throws IOException, ErrorException {
+    public static EnumProgramBean readExcleLoad(int numSheet, int rowNum) {
+
         EnumProgramBean epb = readLoad(numSheet, rowNum);
+
         return epb;
     }
 
     public static EnumProgramBean readLoad(int numSheet, int rowNum) {
+
         ReadExcel readExcel = new ReadExcel();
         EnumProgramBean epb = null;
+
         try {
+
             Map<String, String> stringStringMap = readExcel.singleReadXlsx(load, numSheet, rowNum);
             epb = (EnumProgramBean) new MutuaMapBean().reflectmapToObject(stringStringMap,
                     new EnumProgramBean().getClass());
+
         } catch (InterruptedException e) {
-            e.printStackTrace();
+
+            String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
+            String method = Thread.currentThread().getStackTrace()[1].getMethodName();
+            new ErrorException(clazz, method, e);
+
         } catch (Exception e) {
-            e.printStackTrace();
+
+            String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
+            String method = Thread.currentThread().getStackTrace()[1].getMethodName();
+            new ErrorException(clazz, method, e);
+
         }
         return epb;
     }
@@ -68,18 +83,30 @@ public class StartData{
      * @return
      */
     public static EnumProgramBean readLoad(String load, int numSheet, int rowNum) {
+
         ReadExcel readExcel = new ReadExcel(); //读取excle的类对象
         EnumProgramBean epb = null; //定义一个存储读取出数据的类对象
+
         try {
+
             //将读取之后的数据转换成map集合
             Map<String, String> stringStringMap = readExcel.singleReadXlsx(load, numSheet, rowNum);
             //map转换成类对象
             epb = (EnumProgramBean) new MutuaMapBean().reflectmapToObject(stringStringMap,
                     new EnumProgramBean().getClass());
+
         } catch (InterruptedException e) {
-            e.printStackTrace();
+
+            String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
+            String method = Thread.currentThread().getStackTrace()[1].getMethodName();
+            new ErrorException(clazz, method, e);
+
         } catch (Exception e) {
-            e.printStackTrace();
+
+            String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
+            String method = Thread.currentThread().getStackTrace()[1].getMethodName();
+            new ErrorException(clazz, method, e);
+
         }
         return epb;
     }

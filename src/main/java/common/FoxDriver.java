@@ -114,7 +114,7 @@ public class FoxDriver {
         //        设置测试的网页
         driver.get(WapUrl.urlTop);
         //        设置网页超时的时间
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
         String title = driver.getTitle();
         System.out.println("打开页面的标题" + title);
@@ -144,6 +144,7 @@ public class FoxDriver {
         driver.get(webHttp);
     }
 
+    //退出程序
     public static void shotSelenium() {
         System.exit(-1);
     }

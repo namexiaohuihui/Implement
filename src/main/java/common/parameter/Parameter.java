@@ -1,5 +1,8 @@
 package common.parameter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 程序运行所需要的参数.
  * Created by Administrator on 2016/12/26.
@@ -8,6 +11,7 @@ public class Parameter {
 
     public static String supplyPassWordFamily = "33";
     public static int groupSun;//分组的数量
+    public static boolean LOGIN_STATUS = false;//分组的数量
 
     //文档存放位置
     public static  String load = "E:\\drivers\\CasePlan\\测试计划.xlsx";
@@ -21,6 +25,8 @@ public class Parameter {
     public static String passWordStrat = "//";
 
     public static Parameter parameter ;
+
+    public static List<String> Scene_Menu = new ArrayList<>();
 
     //家的照片
     public static String photoFamily[] = new String[]{"photo1.exe", "photo2.exe", "photo3.exe", "photo4.exe", "photo5.exe"};

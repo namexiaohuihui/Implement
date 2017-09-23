@@ -9,9 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -65,7 +63,6 @@ public class InfoSelect {
         WebDriver  driver = FoxDriver.getWebDrivaer();
         MysqlInquire my = new MysqlInquire();
         boolean bl = false;
-        try {
             Map<String, String> aMap = my.dataMysqlColumnRow(sql, 0);
             int sizeRow = aMap.size();
             for (int i = 1;i<=sizeRow;i++){
@@ -76,9 +73,6 @@ public class InfoSelect {
                     bl = true;
                 }
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
         if (!bl){
             SystemOut.getStringOut("content=" + content, "没有设置成功，原因是没有找到这个value");
         }
