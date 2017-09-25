@@ -10,10 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import wap.business.example.innose.Information;
 
-import java.sql.SQLException;
 import java.util.List;
-
-import static org.junit.Assert.assertEquals;
 
 /**
  * 信息
@@ -51,9 +48,16 @@ public class StoreInformation extends Information {
     //实拍和执照的上传按钮class名
     private String button = "uploadify-button";
 
-    public void informationStore() throws InterruptedException, SQLException {
-//        通過網址進行驗證店鋪信息頁面是否打開。
-        assertEquals("頁面沒打開:" + super.mainHome, super.url[0], driver.getCurrentUrl());
+    private String load;
+
+    public StoreInformation(String load) {
+        this.load = load;
+    }
+
+    public StoreInformation() {
+    }
+
+    public void informationStore() {
 
         //判断店名是否有内容、有就说明设置过内容然后就调用判断的方法
         // 没有内容就对其进行设置

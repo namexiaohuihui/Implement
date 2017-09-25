@@ -1,17 +1,16 @@
 package wap.business.example.innose;
 
 import common.FoxDriver;
-import common.parameter.WapUrl;
+import common.tool.SystemOut;
+import common.tool.caninput.ElementExistence;
 import common.tool.caninput.Preservation;
-import org.openqa.selenium.By;
+import common.tool.conversion.CharacterString;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import wap.business.StartData;
+import wap.business.example.bean.EnumProgramBean;
 import wap.business.example.innose.information.ShopNotices;
 import wap.business.example.innose.information.StoreInformation;
 import wap.business.example.innose.information.StoreSettings;
-
-import java.sql.SQLException;
 
 import static java.lang.Thread.sleep;
 
@@ -20,52 +19,67 @@ import static java.lang.Thread.sleep;
  * Created by Administrator on 2016/9/22.
  */
 public class Information {
-    //主菜单:
-    public String mainHome = "家庭管理";
+
     //子菜单
-    public String listBar[] ;
-    //子菜单链接
-    public String url[] = null;
+    public String[] listBar;
     //浏览器对象
-    public WebDriver driver = FoxDriver.getFoxDriver();
+    public WebDriver driver = FoxDriver.getWebDrivaer();
     //按钮点击对象
-    public Preservation preservation = new Preservation();
+    public Preservation preservation;
+    public EnumProgramBean epb;
+    //路径
+    private String load;
 
-    public void store() throws InterruptedException {
-
-//      此处实现的是触发link1(触发一级目录)
-
-        try {
-            preservation.buttonLinkText(mainHome);
+    public Information(String load) {
+        this.load = load;
+        epb = StartData.readLoad(load, 2, 1);
+        String describe = epb.getFive();
+        ElementExistence ex = new ElementExistence();
+        boolean b = ex.accordingToLinkText(describe);
+        if (b) {
+            preservation = new Preservation();
+            //      此处实现的是触发link1(触发一级目录)
+            preservation.buttonLinkText(describe);
+            captureMenu();
             management();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }catch (InterruptedException e){
-            e.printStackTrace();
+        } else {
+            SystemOut.getStringOut(describe + "该菜单没有找到。。");
         }
+    }
 
+    public Information() {
+    }
+
+    private void captureMenu() {
+        String six = epb.getSix();
+        listBar = new CharacterString().stringsToString(six, "");
     }
 
     //    负责下的子目录切换。
-    private void management() throws InterruptedException, SQLException {
+    private void management() {
+        String sLoad = epb.getOne() + epb.getTwo() + epb.getThree();
         for (int i = 0; i <listBar.length; i++) {
-            switch (i) {
-                case 0:
-                    preservation.buttonLinkText(listBar[i]);
-                    new StoreInformation().informationStore();
-                    break;
-                case 1:
-                    preservation.buttonLinkText(listBar[i]);
-                    new ShopNotices().getAnnouncement(url[i]);
-                    break;
-                case 2:
-                    preservation.buttonLinkText(listBar[i]);
-                    new StoreSettings().getSetting(url[i]);
-                    break;
-                default:
-                    System.out.println("要点击的不存在");
+            try {
+                switch (i) {
+                    case 0:
+                        preservation.buttonLinkText(listBar[i]);
+                        new StoreInformation(sLoad).informationStore();
+                        break;
+                    case 1:
+                        preservation.buttonLinkText(listBar[i]);
+                        new ShopNotices(sLoad).getAnnouncement();
+                        break;
+                    case 2:
+                        preservation.buttonLinkText(listBar[i]);
+                        new StoreSettings(sLoad).getSetting();
+                        break;
+                    default:
+                        System.out.println("要点击的不存在");
+                }
+                sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
-            sleep(5000);
         }
     }
 

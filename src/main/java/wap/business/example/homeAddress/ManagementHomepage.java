@@ -4,6 +4,7 @@ import common.parameter.Parameter;
 import common.tool.SystemOut;
 import common.tool.caninput.ElementExistence;
 import common.tool.caninput.ElementObtain;
+import common.tool.caninput.Preservation;
 import common.tool.conversion.CharacterString;
 import common.tool.mysqls.MysqlInquire;
 import wap.business.StartData;
@@ -25,9 +26,7 @@ public class ManagementHomepage extends ShopScene {
 
     public ManagementHomepage(String load) {
         this.load = load;
-        String loadName = new CharacterString().stringsToString(load);
-        stringConversion(loadName);
-        statusVerification();
+        stringConversion();
     }
 
     private void statusVerification() {
@@ -69,10 +68,16 @@ public class ManagementHomepage extends ShopScene {
         SystemOut.getStringOut(epb.getZero() + "用例执行成功");
     }
 
-    private void stringConversion(String loadName) {
+    private void stringConversion() {
+        String loadName = new CharacterString().stringsToString(load);
         ElementExistence existence = new ElementExistence();
         boolean b = existence.accordingToLinkText(loadName);
         if (b) {
+            //按钮点击对象
+            Preservation preservation = new Preservation();
+            preservation.buttonLinkText(loadName);
+
+            statusVerification();
             //调用公共类来做处理。。。
             epb = StartData.readLoad(load, 1, 1);
         } else {

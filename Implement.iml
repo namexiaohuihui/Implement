@@ -11,10 +11,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="poi-3.8-20120326" level="project" />
-    <orderEntry type="library" name="poi-ooxml-3.8-20120326" level="project" />
     <orderEntry type="library" name="activation" level="project" />
-    <orderEntry type="library" name="javacsv" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-java:3.4.0" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-api:3.4.0" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-chrome-driver:3.4.0" level="project" />

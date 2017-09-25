@@ -7,18 +7,17 @@ import common.tool.excelfile.ReadFile;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import wap.business.example.innose.Information;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-import static org.junit.Assert.assertEquals;
 
 /**
  * 介绍
  * 点击年份元素对象之后快速选择年份需求暂时放弃。
  * Created by Administrator on 2016/11/1.
  */
-public class ShopNotices {
+public class ShopNotices extends Information {
 
     //    设置截止时间，根据格式进行设置
     String time = "2018-09-08 21:56:32";
@@ -29,9 +28,16 @@ public class ShopNotices {
     //    获取driver对象
     WebDriver driver = FoxDriver.getFoxDriver();
 
-    public void getAnnouncement(String url) throws InterruptedException {
-        //    当点击店铺公告时，我们判断该页面是否打开。打开之后就能通过断点，没打开就出错。
-        assertEquals("页面断点", url, driver.getCurrentUrl());
+    private String load;
+
+    public ShopNotices(String load) {
+        this.load = load;
+    }
+
+    public ShopNotices() {
+    }
+
+    public void getAnnouncement() {
 
         //    获取系统的当前时间，用于设置店铺公告的起止时间
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");

@@ -4,22 +4,24 @@ import common.tool.caninput.Preservation;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
+import wap.business.example.innose.Information;
 
-import static  common.FoxDriver.getFoxDriver;
+import static common.FoxDriver.getWebDrivaer;
 import static java.lang.Thread.sleep;
-import static org.junit.Assert.assertEquals;
 
 /**
  * 管理
  * Created by Administrator on 2016/11/1.
  */
-public class StoreSettings {
+public class StoreSettings extends Information {
 
     //    通过静态类FoxDriver来获取driver对象
-    WebDriver driver = getFoxDriver();
+    WebDriver driver = getWebDrivaer();
     //点击对象创建
     Preservation preservation = new Preservation();
 
+    //存储用例的地方
+    private String load;
     //    定义一个数值，用于识别营业状态和是否接受预定
     int state = 2;
 /*
@@ -32,9 +34,14 @@ public class StoreSettings {
     int entTime = 16;
     int entBranth = 25;
 
-    public void getSetting(String url) throws InterruptedException {
-//        判断设置网址是否进入正确
-        assertEquals("设置进入错误", url, driver.getCurrentUrl());
+    public StoreSettings(String load) {
+        this.load = load;
+    }
+
+    public StoreSettings() {
+    }
+
+    public void getSetting() {
 //      读取营业时间的设置值，然后来判断营业状态和是否接受预定
         getState();
 //        通过点击编辑按钮，来设置营业时间
@@ -45,7 +52,7 @@ public class StoreSettings {
     通过点击编辑按钮来触发该方法，该方法主要是对营业时间的设置
     当我们点击编辑时，弹出一个设置界面。我们通过该界面来设置时间段
      */
-    private void getEdit() throws InterruptedException {
+    private void getEdit() {
         if (state <= 2) {
             driver.findElement(By.xpath(".//*[@class = 'referdata']/tbody/tr[3]/td/span[2]")).click();
             getSelect();
@@ -59,19 +66,23 @@ public class StoreSettings {
     当点击编辑营业时间之后，我们需要对下拉框select进行有效的设置.
     对营业的时和分进行设置。让得到更好的营业.
      */
-    private void getSelect() throws InterruptedException {
+    private void getSelect() {
+        try {
         new Select(driver.findElement(By.id("beginhour"))).selectByIndex(startTime);
         new Select(driver.findElement(By.id("beginminute"))).selectByIndex(startBranch);
         new Select(driver.findElement(By.id("endhour"))).selectByIndex(entTime);
         new Select(driver.findElement(By.id("endminute"))).selectByIndex(entBranth);
         preservation.buttonXpath(".//*[@class= 'aui_buttons']/button[1]");
-        sleep(1000);
-        preservation.breservation("shopsetbtn");
+            sleep(1000);
+            preservation.breservation("shopsetbtn");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 
     //    读取营业时间的设置值，然后来判断营业状态和是否接受预定
-    private void getState() throws InterruptedException {
+    private void getState() {
 //        判断设置营业时间的参数
         switch (state) {
             case 1:

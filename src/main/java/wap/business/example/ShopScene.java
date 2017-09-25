@@ -6,6 +6,7 @@ import common.tool.excelfile.ReadExcel;
 import wap.business.StartData;
 import wap.business.example.bean.EnumProgramBean;
 import wap.business.example.homeAddress.ManagementHomepage;
+import wap.business.example.innose.Information;
 
 /**
  * Created by ${XiaoHuiHui} on 2017/9/21 on 16:15.
@@ -19,23 +20,22 @@ public class ShopScene {
 
 
     public void getManagementScene() {
-            //将场景的路径保存下来
-            sLoad = StartData.load;
-            ReadExcel readExcel = new ReadExcel();
-            rowNum = readExcel.singleXlsx(sLoad, numSheet);
+        //将场景的路径保存下来
+        sLoad = StartData.load;
+        ReadExcel readExcel = new ReadExcel();
+        rowNum = readExcel.singleXlsx(sLoad, numSheet);
 
-            for (int i = 1; i < rowNum; i++) {
-                //从用例里面读取执行文件所在位置
-                EnumProgramBean epb = StartData.readExcleLoad(numSheet, i);
-                startDistinguish(epb);
-            }
+        for (int i = 1; i < rowNum; i++) {
+            //从用例里面读取执行文件所在位置
+            EnumProgramBean epb = StartData.readExcleLoad(numSheet, i);
+            startDistinguish(epb);
+        }
     }
 
     public void startDistinguish(EnumProgramBean epb) {
-
-        String load = epb.getOne() + epb.getTwo() + epb.getThree();//获取用例路径
+        //获取用例路径，该路径存储的是用例路径以及公共数据
+        String load = epb.getOne() + epb.getTwo() + epb.getThree();
         String sString = epb.getFour();//切割路径得到自己想要的东西
-
         //登录
         if (sString.equals(Parameter.Scene_Menu.get(0))) {
             SystemOut.getStringOut(Parameter.Scene_Menu.get(0) + "进来了。");
@@ -52,6 +52,7 @@ public class ShopScene {
             //第二个菜单执行
             else if (sString.equals(Parameter.Scene_Menu.get(2))) {
                 SystemOut.getStringOut(Parameter.Scene_Menu.get(2) + "进来了。");
+                Information information = new Information(load);
             } else {
                 SystemOut.getStringOut(epb.getFour() + "------没有相应的用例?、、、、、、、");
             }
