@@ -4,9 +4,9 @@ import common.tool.caninput.Preservation;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
+import wap.business.example.bean.EnumProgramBean;
 import wap.business.example.innose.Information;
 
-import static common.FoxDriver.getWebDrivaer;
 import static java.lang.Thread.sleep;
 
 /**
@@ -16,9 +16,9 @@ import static java.lang.Thread.sleep;
 public class StoreSettings extends Information {
 
     //    通过静态类FoxDriver来获取driver对象
-    WebDriver driver = getWebDrivaer();
+    WebDriver driver;
     //点击对象创建
-    Preservation preservation = new Preservation();
+    Preservation preservation;
 
     //存储用例的地方
     private String load;
@@ -34,8 +34,11 @@ public class StoreSettings extends Information {
     int entTime = 16;
     int entBranth = 25;
 
-    public StoreSettings(String load) {
-        this.load = load;
+    public StoreSettings(EnumProgramBean epb) {
+        driver = super.driver;
+        preservation = new Preservation();
+        this.load = epb.getOne() + epb.getTwo() + epb.getThree();
+        ;
     }
 
     public StoreSettings() {

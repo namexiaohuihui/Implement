@@ -15,8 +15,6 @@ import org.openqa.selenium.WebElement;
 import wap.business.StartData;
 import wap.business.example.bean.EnumProgramBean;
 
-import static java.lang.Thread.sleep;
-
 /**
  * 实现登录
  * Created by Administrator on 2016/9/26.
@@ -42,8 +40,9 @@ public class Signin extends ShopScene {
 
     private boolean bLean = false;//用于判断程序是否执行成功
 
-    public Signin(String load) {
-        this.load = load;
+    public Signin(EnumProgramBean epb) {
+        //获取用例路径，该路径存储的是用例路径以及公共数据
+        this.load = epb.getOne() + epb.getTwo() + epb.getThree();
         rowAllNum = new ReadExcel().singleXlsx(load, 2);
     }
 
@@ -68,12 +67,12 @@ public class Signin extends ShopScene {
             new Preservation().buttonClassName(loginwater);
 
             //点击之后会卡，所以要先睡三秒
-            sleep(3000);
+            //sleep(3000);
 
             //登录失败的提示语句。。提示语句长度小于3的时候说明登录成功
             webElementError();
 
-        } catch (InterruptedException e) {
+        } catch (Exception e) {
             String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
             String method = Thread.currentThread().getStackTrace()[1].getMethodName();
             new ErrorException(clazz, method, e);

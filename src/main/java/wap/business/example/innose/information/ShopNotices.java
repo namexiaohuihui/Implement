@@ -7,6 +7,7 @@ import common.tool.excelfile.ReadFile;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import wap.business.example.bean.EnumProgramBean;
 import wap.business.example.innose.Information;
 
 import java.text.SimpleDateFormat;
@@ -30,8 +31,9 @@ public class ShopNotices extends Information {
 
     private String load;
 
-    public ShopNotices(String load) {
-        this.load = load;
+    public ShopNotices(EnumProgramBean epb) {
+        this.load = epb.getOne() + epb.getTwo() + epb.getThree();
+        ;
     }
 
     public ShopNotices() {

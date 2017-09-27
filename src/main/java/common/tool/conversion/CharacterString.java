@@ -1,7 +1,5 @@
 package common.tool.conversion;
 
-import common.parameter.Parameter;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -38,7 +36,7 @@ public class CharacterString {
         for (int i = 0; i < strings.length; i++) {
             //strings[i] = strings[i].substring(strings[i].indexOf(conn)+1,strings[i].length());
             if (conn == null || conn.equals("")) {
-                Parameter.Scene_Menu.add(strings[i]);
+                break;
             } else {
                 strings[i] = strings[i].split(conn)[1];
             }

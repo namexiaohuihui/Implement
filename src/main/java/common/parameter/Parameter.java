@@ -1,8 +1,5 @@
 package common.parameter;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * 程序运行所需要的参数.
  * Created by Administrator on 2016/12/26.
@@ -25,8 +22,6 @@ public class Parameter {
     public static String passWordStrat = "//";
 
     public static Parameter parameter ;
-
-    public static List<String> Scene_Menu = new ArrayList<>();
 
     //家的照片
     public static String photoFamily[] = new String[]{"photo1.exe", "photo2.exe", "photo3.exe", "photo4.exe", "photo5.exe"};

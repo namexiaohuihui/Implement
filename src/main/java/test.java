@@ -1,9 +1,12 @@
 import common.tool.SystemOut;
 import common.tool.conversion.MutualJsonBean;
+import common.tool.excelfile.ReadExcel;
 import common.tool.informationException.ErrorException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Test;
+import wap.business.StartData;
+import wap.business.example.bean.EnumProgramBean;
 import wap.business.example.bean.GoodsBean;
 
 import java.io.File;
@@ -75,11 +78,43 @@ public class test<T> {
     }
     @Test
     public void readExcle() {
-        String load = "商家信息管理场景.xlsx";
-        String[] split = load.split("\\.");
-        for (int i = 0; i < split.length; i++) {
-            SystemOut.getStringOut(split[i]);
+        try {
+            String load = "E:\\drivers\\CasePlan\\CasrScene\\BusinessInformation\\商家信息管理场景.xlsx";
+            ReadExcel readExcel = new ReadExcel();
+            int rownum = readExcel.singleXlsx(load, 1);
+            SystemOut.getStringOut("大佬的数量： " + rownum);
+            for (int i = 1; i <= rownum; i++) {
+                EnumProgramBean bean = StartData.readLoad(load, 1, i);
+                SystemOut.getStringOut(bean.toString());
+                String loads = bean.getOne() + bean.getTwo() + bean.getThree();
+                readExcle(loads);
+                System.out.println();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+    }
+
+    public void readExcle(String sload) {
+        try {
+            ReadExcel readExcel = new ReadExcel();
+            int rownum = readExcel.singleXlsx(sload, 1);
+            SystemOut.getStringOut("路径： " + sload + "数量哟：" + rownum);
+            for (int i = 1; i <= rownum; i++) {
+                EnumProgramBean bean = StartData.readLoad(sload, 1, i);
+                SystemOut.getStringOut(bean.toString());
+                String loads = bean.getOne() + bean.getTwo() + bean.getThree();
+                if (bean.getOne().substring(0, 1).equals("E")) {
+                    readExcle(loads);
+                } else {
+                    SystemOut.getStringOut("路径： " + sload + "提过呢：数量不对");
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println();
     }
 
 }

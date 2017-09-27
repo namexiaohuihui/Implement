@@ -7,7 +7,6 @@ import common.tool.caninput.ElementObtain;
 import common.tool.caninput.Preservation;
 import common.tool.conversion.CharacterString;
 import common.tool.mysqls.MysqlInquire;
-import wap.business.StartData;
 import wap.business.example.ShopScene;
 import wap.business.example.bean.EnumProgramBean;
 
@@ -24,8 +23,8 @@ public class ManagementHomepage extends ShopScene {
     private String load;
     private EnumProgramBean epb;
 
-    public ManagementHomepage(String load) {
-        this.load = load;
+    public ManagementHomepage(EnumProgramBean epb) {
+        this.load = epb.getOne() + epb.getTwo() + epb.getThree();
         stringConversion();
     }
 
@@ -68,6 +67,7 @@ public class ManagementHomepage extends ShopScene {
         SystemOut.getStringOut(epb.getZero() + "用例执行成功");
     }
 
+    //点击菜单
     private void stringConversion() {
         String loadName = new CharacterString().stringsToString(load);
         ElementExistence existence = new ElementExistence();
@@ -78,8 +78,6 @@ public class ManagementHomepage extends ShopScene {
             preservation.buttonLinkText(loadName);
 
             statusVerification();
-            //调用公共类来做处理。。。
-            epb = StartData.readLoad(load, 1, 1);
         } else {
             SystemOut.getStringOut(loadName + "菜单不存在，用例错了吧。。");
         }

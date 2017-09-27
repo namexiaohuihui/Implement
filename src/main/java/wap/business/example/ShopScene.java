@@ -2,13 +2,14 @@ package wap.business.example;
 
 import common.parameter.Parameter;
 import common.tool.SystemOut;
+import common.tool.conversion.CharacterString;
 import common.tool.excelfile.ReadExcel;
 import wap.business.StartData;
 import wap.business.example.bean.EnumProgramBean;
-import wap.business.example.homeAddress.ManagementHomepage;
 import wap.business.example.innose.Information;
 
 /**
+ * business的入口
  * Created by ${XiaoHuiHui} on 2017/9/21 on 16:15.
  * XiaoHiiHui [704866169@qq.com]
  */
@@ -18,13 +19,23 @@ public class ShopScene {
     private int numSheet = 1;
     private int rowNum = 1;
 
+    //二级菜单存储地
+    private String[] listBar;
+
+    public ShopScene(EnumProgramBean epb) {
+        //设置菜单的内容
+        listBar = new CharacterString().stringsToString(epb.getSeven(), "");
+    }
+
+    public ShopScene() {
+    }
 
     public void getManagementScene() {
         //将场景的路径保存下来
         sLoad = StartData.load;
         ReadExcel readExcel = new ReadExcel();
         rowNum = readExcel.singleXlsx(sLoad, numSheet);
-
+        SystemOut.getStringOut("daboss的行数" + rowNum);
         for (int i = 1; i < rowNum; i++) {
             //从用例里面读取执行文件所在位置
             EnumProgramBean epb = StartData.readExcleLoad(numSheet, i);
@@ -33,31 +44,37 @@ public class ShopScene {
     }
 
     public void startDistinguish(EnumProgramBean epb) {
-        //获取用例路径，该路径存储的是用例路径以及公共数据
-        String load = epb.getOne() + epb.getTwo() + epb.getThree();
-        String sString = epb.getFour();//切割路径得到自己想要的东西
-        //登录
-        if (sString.equals(Parameter.Scene_Menu.get(0))) {
-            SystemOut.getStringOut(Parameter.Scene_Menu.get(0) + "进来了。");
-            Signin signin = new Signin(load);
-            signin.landSingin();
 
-            //判断是否登录了
-        } else if (Parameter.LOGIN_STATUS) {
-            //第一个菜单执行
-            if (sString.equals(Parameter.Scene_Menu.get(1))) {
-                SystemOut.getStringOut(Parameter.Scene_Menu.get(1) + "进来了。");
-                ManagementHomepage managementHomepage = new ManagementHomepage(load);
+        //登录:元素等于某个值，并且不能为空或者等于空格
+        if (epb.getFour() != null & !epb.getFour().equals("") & epb.getFour().equals(listBar[0])) {
+            SystemOut.getStringOut(epb.getFour() + "进来了。" + listBar[0]);//打印数据
+            Signin signin = new Signin(epb);//创建对象
+            signin.landSingin();
+            SystemOut.getStringOut(epb.getFour() + "跑完。");
+        }
+
+        //判断是否登录了
+        else if (Parameter.LOGIN_STATUS) {
+            //登陆成功之后来时菜单的游走
+            if (epb.getFour() != null & !epb.getFour().equals("") & epb.getFour().equals(listBar[1])) {
+                //ManagementHomepage managementHomepage = new ManagementHomepage(epb);
+                SystemOut.getStringOut(epb.getFour() + "跑完。");
             }
-            //第二个菜单执行
-            else if (sString.equals(Parameter.Scene_Menu.get(2))) {
-                SystemOut.getStringOut(Parameter.Scene_Menu.get(2) + "进来了。");
-                Information information = new Information(load);
-            } else {
+
+            //登陆成功之后来时菜单的游走
+            else if (epb.getFour() != null & !epb.getFour().equals("") & epb.getFour().equals(listBar[2])) {
+                Information information = new Information(epb);
+                SystemOut.getStringOut(epb.getFour() + "跑完。");
+            }
+
+            //游走中没有找到相应的菜单
+            else {
                 SystemOut.getStringOut(epb.getFour() + "------没有相应的用例?、、、、、、、");
             }
+
         }
-        //找不到想要的菜单
+
+        //没有登陆成功的输出
         else {
             SystemOut.getStringOut("账号未登录不能进行菜单的操作。。");
         }

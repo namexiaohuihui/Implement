@@ -1,7 +1,6 @@
 package wap;
 
 import common.tool.SystemOut;
-import common.tool.conversion.CharacterString;
 import common.tool.informationException.ErrorException;
 import wap.business.example.ShopScene;
 import wap.business.example.bean.EnumProgramBean;
@@ -19,9 +18,7 @@ public class StartDistinguish {
             switch (epb.getFour()) {
 
                 case "Business":
-                    //设置菜单的内容
-                    new CharacterString().stringsToString(epb.getSeven(), "");
-                    new ShopScene().getManagementScene();
+                    new ShopScene(epb).getManagementScene();
                     break;
 
                 default:
