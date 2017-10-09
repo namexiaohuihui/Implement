@@ -1,3 +1,5 @@
+import common.FoxDriver;
+import common.parameter.WapUrl;
 import common.tool.SystemOut;
 import common.tool.conversion.MutualJsonBean;
 import common.tool.excelfile.ReadExcel;
@@ -5,9 +7,11 @@ import common.tool.informationException.ErrorException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Test;
+import org.openqa.selenium.WebDriver;
 import wap.business.StartData;
 import wap.business.example.bean.EnumProgramBean;
 import wap.business.example.bean.GoodsBean;
+import wap.business.example.innose.information.StoreInformation;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -15,6 +19,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by ${XiaoHuiHui} on 2017/7/17 on 14:36.
@@ -66,7 +71,6 @@ public class test<T> {
         }
     }
 
-    @Test
     public void extest() throws ErrorException, IOException {
         String FILE_NAME = "E:/MyFirstExcel.xlsx";
         String FILE_NAME2 = "E:/muban.xls";
@@ -76,45 +80,23 @@ public class test<T> {
         String sheetName = workbook.getSheetName(workbook.getNumberOfSheets()-1);
         SystemOut.getStringOut(sheetName);
     }
+
     @Test
     public void readExcle() {
-        try {
-            String load = "E:\\drivers\\CasePlan\\CasrScene\\BusinessInformation\\商家信息管理场景.xlsx";
-            ReadExcel readExcel = new ReadExcel();
-            int rownum = readExcel.singleXlsx(load, 1);
-            SystemOut.getStringOut("大佬的数量： " + rownum);
-            for (int i = 1; i <= rownum; i++) {
-                EnumProgramBean bean = StartData.readLoad(load, 1, i);
-                SystemOut.getStringOut(bean.toString());
-                String loads = bean.getOne() + bean.getTwo() + bean.getThree();
-                readExcle(loads);
-                System.out.println();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+        WebDriver driver = FoxDriver.getChromeDriver();
+        //        是浏览器的大小
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        //        设置测试的网页
+        driver.get("C:\\Users\\70486\\Desktop\\连你·生活商家管理中心 -信息_ lianni.com.html");
 
-    public void readExcle(String sload) {
-        try {
-            ReadExcel readExcel = new ReadExcel();
-            int rownum = readExcel.singleXlsx(sload, 1);
-            SystemOut.getStringOut("路径： " + sload + "数量哟：" + rownum);
-            for (int i = 1; i <= rownum; i++) {
-                EnumProgramBean bean = StartData.readLoad(sload, 1, i);
-                SystemOut.getStringOut(bean.toString());
-                String loads = bean.getOne() + bean.getTwo() + bean.getThree();
-                if (bean.getOne().substring(0, 1).equals("E")) {
-                    readExcle(loads);
-                } else {
-                    SystemOut.getStringOut("路径： " + sload + "提过呢：数量不对");
-                    break;
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        System.out.println();
+        String load = "E:\\drivers\\CasePlan\\CasrScene\\BusinessInformation\\StoreManagement\\店铺管理.xlsx";
+        EnumProgramBean bean = StartData.readLoad(load, 1, 1);
+        SystemOut.getStringOut(bean.toString());
+
+        StoreInformation information = new StoreInformation(bean);
+        information.informationStore();
+
     }
 
 }

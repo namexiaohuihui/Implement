@@ -1,12 +1,9 @@
 package wap.business.example.innose.information;
 
-import common.tool.mysqls.MysqlInquire;
-import org.json.JSONArray;
+import common.tool.SystemOut;
+import wap.business.example.bean.EnumProgramBean;
 
 import java.sql.SQLException;
-import java.util.Map;
-
-import static common.tool.BeanToMapUtil.mapToObject2;
 
 /**
  * 设置过店铺信息的类判断...
@@ -14,7 +11,50 @@ import static common.tool.BeanToMapUtil.mapToObject2;
  */
 public class InformationJudgment {
 
-    private void judgmentInformation() throws SQLException {
+    EnumProgramBean epb;
 
+    public InformationJudgment(EnumProgramBean epb) {
+        this.epb = epb;
+    }
+
+    protected void judgmentInformation(){
+        switch (epb.getFour()) {
+            case "名字":
+                break;
+
+            case "中心":
+                break;
+
+            case "品类":
+                break;
+
+            case "LOGO":
+                break;
+
+            case "执照":
+                break;
+
+            case "实拍":
+                break;
+
+            case "联系":
+                break;
+
+            case "地址":
+                break;
+
+            case "位置":
+                break;
+
+            case "经纬度":
+                break;
+
+            case "介绍":
+                break;
+
+            default:
+                SystemOut.getStringOut("没有这个内容数据" + epb.getFour());
+                break;
+        }
     }
 }

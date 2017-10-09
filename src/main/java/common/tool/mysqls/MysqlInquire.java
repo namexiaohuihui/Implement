@@ -101,7 +101,7 @@ public class MysqlInquire {
      * @return
      * @throws SQLException
      */
-    public JSONArray dataMysqlColumnAllRow(String sql) {
+    public JSONObject dataMysqlColumnAllRow(String sql) {
         ResultSetMetaData rsmd = null;
         try {
             dbhelperCreate(sql);
@@ -113,8 +113,91 @@ public class MysqlInquire {
             new ErrorException(clazz, method, e);
 
         }
-        return resultSetToJson(rsmd);
+        return resultSetTojsonObject(rsmd);
     }
+
+    /**
+     * 读取全部行中的数据
+     *
+     * @param sql
+     * @return
+     * @throws SQLException
+     */
+    public JSONArray dataMysqlColumnAll(String sql) {
+        ResultSetMetaData rsmd = null;
+        try {
+            dbhelperCreate(sql);
+            rsmd = ret.getMetaData();
+        } catch (SQLException e) {
+
+            String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
+            String method = Thread.currentThread().getStackTrace()[1].getMethodName();
+            new ErrorException(clazz, method, e);
+
+        }
+        return resultSetToJSONArray(rsmd);
+    }
+
+
+    //将数据库的内容转换成json
+    private JSONArray resultSetToJSONArray(ResultSetMetaData re) {
+        JSONArray jsonArray = new JSONArray();
+        try {
+            int numBer = re.getColumnCount();
+            while (ret.next()) {//循环读取每一行的数据
+
+                JSONObject jsonObject = new JSONObject();
+
+                //通过列名和列内容组成键值对的关系，然后存map中
+                for (int i = 1; i <= numBer; i++) {
+                    jsonObject.put(re.getColumnName(i), ret.getString(i));
+                }
+                jsonArray.put(jsonObject);
+            }
+            //关闭连接
+            dbhelperClose();
+        } catch (SQLException e) {
+
+            String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
+            String method = Thread.currentThread().getStackTrace()[1].getMethodName();
+            new ErrorException(clazz, method, e);
+
+        }
+        return jsonArray;
+    }
+
+    /**
+     * 将数据库的内容转换成jsonObject
+     * @param re
+     * @return
+     */
+    private JSONObject resultSetTojsonObject(ResultSetMetaData re) {
+
+        JSONObject jsonObject = new JSONObject();
+
+        try {
+            //读取列的数量
+            int numBer = re.getColumnCount();
+            while (ret.next()) {//循环读取每一行的数据
+
+                //通过列名和列内容组成键值对的关系，然后存map中
+                for (int i = 1; i <= numBer; i++) {
+                    jsonObject.put(re.getColumnName(i), ret.getString(i));
+                }
+            }
+            //关闭连接
+            dbhelperClose();
+        } catch (SQLException e) {
+
+            String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
+            String method = Thread.currentThread().getStackTrace()[1].getMethodName();
+            new ErrorException(clazz, method, e);
+
+        }
+        return jsonObject;
+    }
+
+
 
     /**
      * 返回该查询语句查询之后的内容长度。。
@@ -142,32 +225,7 @@ public class MysqlInquire {
         return length;
     }
 
-    //将数据库的内容转换成json
-    private JSONArray resultSetToJson(ResultSetMetaData re) {
-        JSONArray jsonArray = new JSONArray();
-        try {
-            int numBer = re.getColumnCount();
-            while (ret.next()) {//循环读取每一行的数据
 
-                JSONObject jsonObject = new JSONObject();
-
-                //通过列名和列内容组成键值对的关系，然后存map中
-                for (int i = 1; i <= numBer; i++) {
-                    jsonObject.put(re.getColumnName(i), ret.getString(i));
-                }
-                jsonArray.put(jsonObject);
-            }
-            //关闭连接
-            dbhelperClose();
-        } catch (SQLException e) {
-
-            String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
-            String method = Thread.currentThread().getStackTrace()[1].getMethodName();
-            new ErrorException(clazz, method, e);
-
-        }
-        return jsonArray;
-    }
 
     //创建数据库连接
     private void dbhelperCreate(String sql) {
@@ -184,8 +242,8 @@ public class MysqlInquire {
         }
     }
 
+    // 最后不要忘记关闭了。
     private void dbhelperClose() {
-        // 最后不要忘记关闭了。
         try {
             ret.close();
             db1.close();//关闭连接

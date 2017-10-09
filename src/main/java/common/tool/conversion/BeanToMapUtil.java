@@ -1,4 +1,4 @@
-package common.tool;
+package common.tool.conversion;
 
 import java.beans.BeanInfo;
 import java.beans.IntrospectionException;
