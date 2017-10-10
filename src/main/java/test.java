@@ -1,22 +1,22 @@
+import com.google.common.reflect.TypeToken;
+import com.google.gson.Gson;
 import common.FoxDriver;
-import common.parameter.WapUrl;
 import common.tool.SystemOut;
 import common.tool.conversion.MutualJsonBean;
-import common.tool.excelfile.ReadExcel;
 import common.tool.informationException.ErrorException;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import common.tool.mysqls.MysqlInquire;
+import org.json.JSONObject;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import wap.business.StartData;
 import wap.business.example.bean.EnumProgramBean;
 import wap.business.example.bean.GoodsBean;
+import wap.business.example.bean.StoreInformationBean;
+import wap.business.example.bean.UserBean;
 import wap.business.example.innose.information.StoreInformation;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
+import java.lang.reflect.Type;
 import java.sql.*;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -71,24 +71,27 @@ public class test<T> {
         }
     }
 
+    @Test
     public void extest() throws ErrorException, IOException {
-        String FILE_NAME = "E:/MyFirstExcel.xlsx";
-        String FILE_NAME2 = "E:/muban.xls";
-        File file = new File(FILE_NAME);
-        InputStream is =  new FileInputStream(file);
-        Workbook workbook = new XSSFWorkbook(is);
-        String sheetName = workbook.getSheetName(workbook.getNumberOfSheets()-1);
-        SystemOut.getStringOut(sheetName);
+        String sql = "";
+        MysqlInquire mysqlInquire = new MysqlInquire();
+        JSONObject jsonObject = mysqlInquire.dataMysqlColumnAllRow(sql);
+
+        Gson gson = new Gson();
+        StoreInformationBean bran = new StoreInformationBean();
+        bran = gson.fromJson(jsonObject.toString(), (Type) bran.getClass());
+        //bran = gson.fromJson(jsonObject.toString(), new TypeToken<StoreInformationBean>() {}.getType());
+
+        SystemOut.getStringOut(bran.toString());
     }
 
-    @Test
     public void readExcle() {
         WebDriver driver = FoxDriver.getChromeDriver();
         //        是浏览器的大小
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         //        设置测试的网页
-        driver.get("C:\\Users\\70486\\Desktop\\连你·生活商家管理中心 -信息_ lianni.com.html");
+        driver.get("C:\\Users\\Administrator\\Desktop\\连你·生活商家管理中心-信息 _ lianni.com.html");
 
         String load = "E:\\drivers\\CasePlan\\CasrScene\\BusinessInformation\\StoreManagement\\店铺管理.xlsx";
         EnumProgramBean bean = StartData.readLoad(load, 1, 1);

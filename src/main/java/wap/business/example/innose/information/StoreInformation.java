@@ -1,7 +1,6 @@
 package wap.business.example.innose.information;
 
 
-import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import common.FoxDriver;
 import common.tool.SystemOut;
@@ -9,16 +8,13 @@ import common.tool.caninput.ElementInput;
 import common.tool.excelfile.ReadExcel;
 import common.tool.mysqls.MysqlInquire;
 import common.tool.upload.PictureImage;
-import org.apache.poi.ss.formula.functions.T;
-import org.json.JSONArray;
 import org.json.JSONObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import wap.business.StartData;
-import wap.business.example.bean.DianpuBean;
+import wap.business.example.bean.StoreInformationBean;
 import wap.business.example.bean.EnumProgramBean;
-import wap.business.example.bean.UserBean;
 import wap.business.example.innose.Information;
 
 import java.lang.reflect.Type;
@@ -111,11 +107,11 @@ public class StoreInformation extends Information {
     }
 
     private void mysqlInquire(String sql){
-        DianpuBean dianpuBean = new DianpuBean();
+        StoreInformationBean storeInformationBean = new StoreInformationBean();
         //数据库连接及查询
         JSONObject jsonObject = new MysqlInquire().dataMysqlColumnAllRow(sql);
         Gson gson = new Gson();
-        dianpuBean = gson.fromJson(jsonObject.toString(), (Type) dianpuBean.getClass());
+        storeInformationBean = gson.fromJson(jsonObject.toString(), (Type) storeInformationBean.getClass());
     }
 
     //根据cssSelector来进行元素输入

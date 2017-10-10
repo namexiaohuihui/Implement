@@ -7,11 +7,13 @@ package common.parameter;
  */
 public class QueryStatement {
 
-    //mysql
-    private String[] mysqlData = new String[]{"jdbc:mysql://url/mysql?autoReconnect=true&useSSL=false", "com.mysql.jdbc.Driver", "name", "mima"};
 
 
     public String[] getMysqlData() {
+        //mysql"jdbc:mysql://192.168.10.204/lnlife_2?autoReconnect=true&useSSL=false&characterEncoding=utf8",
+        //"com.mysql.jdbc.Driver", "root", "123456"
+       String[] mysqlData = {"jdbc:mysql://192.168.10.204/lnlife_2?characterEncoding=utf8&autoReconnect=true&useSSL=false",
+                "com.mysql.jdbc.Driver", "root", "123456"};
         return mysqlData;
     }
 }

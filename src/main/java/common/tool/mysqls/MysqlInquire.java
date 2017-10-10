@@ -1,5 +1,6 @@
 package common.tool.mysqls;
 
+import common.tool.SystemOut;
 import common.tool.enumTool.EmployEnum;
 import common.tool.informationException.ErrorException;
 import org.json.JSONArray;
@@ -104,7 +105,9 @@ public class MysqlInquire {
     public JSONObject dataMysqlColumnAllRow(String sql) {
         ResultSetMetaData rsmd = null;
         try {
+            sleep(1000);
             dbhelperCreate(sql);
+            sleep(1000);
             rsmd = ret.getMetaData();
         } catch (SQLException e) {
 
@@ -112,6 +115,8 @@ public class MysqlInquire {
             String method = Thread.currentThread().getStackTrace()[1].getMethodName();
             new ErrorException(clazz, method, e);
 
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
         return resultSetTojsonObject(rsmd);
     }
@@ -126,7 +131,9 @@ public class MysqlInquire {
     public JSONArray dataMysqlColumnAll(String sql) {
         ResultSetMetaData rsmd = null;
         try {
+            sleep(1000);
             dbhelperCreate(sql);
+            sleep(1000);
             rsmd = ret.getMetaData();
         } catch (SQLException e) {
 
@@ -134,6 +141,8 @@ public class MysqlInquire {
             String method = Thread.currentThread().getStackTrace()[1].getMethodName();
             new ErrorException(clazz, method, e);
 
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
         return resultSetToJSONArray(rsmd);
     }
@@ -178,11 +187,19 @@ public class MysqlInquire {
         try {
             //读取列的数量
             int numBer = re.getColumnCount();
+            //SystemOut.getStringOut("数据库中列的长度为" + numBer);
             while (ret.next()) {//循环读取每一行的数据
 
                 //通过列名和列内容组成键值对的关系，然后存map中
+                //re.getColumnLabel(i) 获取默认标题：为sql中as后面定义的名字
+                //re.re.getColumnName(i) 获取标题：为sql中该字段在表的名字
                 for (int i = 1; i <= numBer; i++) {
-                    jsonObject.put(re.getColumnName(i), ret.getString(i));
+
+                    String col = re.getColumnLabel(i);
+                    String str = ret.getString(i);
+                    jsonObject.put(col,str);
+                   // SystemOut.getStringOut(i + "行的数据为" + col + "          " + str);
+                   // jsonObject.put(re.getColumnName(i), ret.getString(i));
                 }
             }
             //关闭连接

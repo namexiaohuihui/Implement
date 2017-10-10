@@ -23,7 +23,7 @@ import java.util.regex.Pattern;
  */
 public class tiaoshidaima {
 
-    private String sql = "SELECT grade,delivery_min AS 'deliveryMin' FROM lnsm_shop WHERE id = 10175";
+    private String sql = "SELECT grade,delivery_min AS 'deliveryMin' FROM ** WHERE id = 555";
 
     List<UserBean> list;
     @Test
@@ -31,7 +31,7 @@ public class tiaoshidaima {
         DBHelper dbHelper = new DBHelper();
 
         String[] mysqlData = new String[]{
-                "jdbc:mysql://192.168.10.204/lnlife_4?autoReconnect=true&useSSL=false",
+                "jdbc:mysql://192.168/l4?autoReconnect=true&useSSL=false",
                 "com.mysql.jdbc.Driver", "root", "123456"};
         dbHelper.url = mysqlData[0];
         dbHelper.name = mysqlData[1];
@@ -73,7 +73,6 @@ public class tiaoshidaima {
         }
     }
 
-    @Test
     public void qiegeshujndgfs() {
         String str = "<span style=\"color:#E56600;\">自</span>提<span style=\"color:#E53333;\">颜</span>色，" +
                 "<span style=\"color:#EE33EE;\">这都</span>过<span style=\"color:#FFE500;\">长了</span>？？" +

@@ -33,6 +33,7 @@ public class DBHelper {
     public void dbhelperMerge(String sql){
         startData();
         dbhelperStart(sql);
+        //SystemOut.getStringOut("sql语句:" + sql);
     }
 
     public void startData() {
