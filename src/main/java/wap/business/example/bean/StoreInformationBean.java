@@ -16,8 +16,8 @@ public class StoreInformationBean {
     private String county;
     private String address;
     private String lng;
-    private String info;
     private String lat;
+    private String info;
 
     @Override
     public String toString() {

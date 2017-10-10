@@ -7,6 +7,7 @@ import common.tool.informationException.ErrorException;
 import common.tool.mysqls.MysqlInquire;
 import org.json.JSONObject;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import wap.business.StartData;
 import wap.business.example.bean.EnumProgramBean;
@@ -20,6 +21,7 @@ import java.lang.reflect.Type;
 import java.sql.*;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
 
 /**
  * Created by ${XiaoHuiHui} on 2017/7/17 on 14:36.
@@ -73,7 +75,7 @@ public class test<T> {
 
     @Test
     public void extest() throws ErrorException, IOException {
-        String sql = "";
+        String sql = "select * from ph_exclusive.ph_dianpu;";
         MysqlInquire mysqlInquire = new MysqlInquire();
         JSONObject jsonObject = mysqlInquire.dataMysqlColumnAllRow(sql);
 
@@ -85,20 +87,23 @@ public class test<T> {
         SystemOut.getStringOut(bran.toString());
     }
 
+    @Test
     public void readExcle() {
         WebDriver driver = FoxDriver.getChromeDriver();
         //        是浏览器的大小
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         //        设置测试的网页
-        driver.get("C:\\Users\\Administrator\\Desktop\\连你·生活商家管理中心-信息 _ lianni.com.html");
-
+        driver.get("http://www.baidu.com");
+        driver.findElement(By.cssSelector("input[id='kw'][name='wd']")).sendKeys("111");
+      //  driver.get("C:\\Users\\Administrator\\Desktop\\连你·生活商家管理中心-信息 _ lianni.com.html");
+/*
         String load = "E:\\drivers\\CasePlan\\CasrScene\\BusinessInformation\\StoreManagement\\店铺管理.xlsx";
         EnumProgramBean bean = StartData.readLoad(load, 1, 1);
         SystemOut.getStringOut(bean.toString());
 
         StoreInformation information = new StoreInformation(bean);
-        information.informationStore();
+        information.informationStore();*/
 
     }
 

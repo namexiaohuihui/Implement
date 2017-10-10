@@ -18,7 +18,10 @@ import wap.business.example.bean.EnumProgramBean;
 import wap.business.example.innose.Information;
 
 import java.lang.reflect.Type;
+import java.util.Date;
 import java.util.List;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * 信息
@@ -33,35 +36,36 @@ public class StoreInformation extends Information {
     WebDriver driver = FoxDriver.getWebDrivaer();
     //WebDriver driver = super.driver;
 
-    //name的位置
-    String names = "name";
-
     //地址所在：省/区、市、县/区、详细地址
-    String provinceSele = "select[id=province][name=province]";
-    String citySele = "select[id=city][name=city]";
-    String countySele = "select[id=county][name=county]";
-    String detailed = "address";
+    String provinceSele = "select[id='province'][name='province']";
+    String citySele = "select[id='city'][name='city']";
+    String countySele = "select[id='county'][name='county']";
+    String detailed = "input[id='address'][name='address']";
 
     //经纬度
-    String longitude = "lng";
-    String latitude = "lat";
-
-    //类型
-    String types = "category";
+    String longitude = "input[id='lng'][name='lng']";
+    String latitude = "input[id='lat'][name='lat']";
 
     //执照对应图片的数量
-    String piczzFile = "ul[id=J_piczz-box][class=uploadPict]>li";
+    String piczzFile = "ul[id='J_piczz-box'][class='uploadPict']>li";
     //实拍对应图片的数量
-    String picFile = "ul[id=J_pic-box][class=uploadPict]>li";
+    String picFile = "ul[id='J_pic-box'][class='uploadPict']>li";
 
     //实拍和执照的上传按钮class名
     private String button = "uploadify-button";
 
+    //mysql语句所查询到的内容
+    protected StoreInformationBean bean ;
+
+    //路径
     private String load;
+
+    //sql
+    private String sql;
 
     public StoreInformation(EnumProgramBean epb) {
         this.load = epb.getOne() + epb.getTwo() + epb.getThree();
-        ;
+        this.sql = epb.getSeven();
     }
 
     public StoreInformation() {
@@ -71,8 +75,10 @@ public class StoreInformation extends Information {
 
         ReadExcel readExcel = new ReadExcel();
         int row = readExcel.singleXlsx(load, 1);
+        mysqlInquire();
         for (int i = 1;i<=row;i++){
             System.out.println("第的内容:" + i);
+            //用例执行表的内容
             EnumProgramBean epb = StartData.readLoad(load, 1, i);
             System.out.println(epb.toString());
 
@@ -106,12 +112,14 @@ public class StoreInformation extends Information {
 */
     }
 
-    private void mysqlInquire(String sql){
-        StoreInformationBean storeInformationBean = new StoreInformationBean();
+    //返回查询语句的内容。
+    private void mysqlInquire(){
+        sql = "select * from ph_exclusive.ph_dianpu;";
+        bean = new StoreInformationBean();
         //数据库连接及查询
         JSONObject jsonObject = new MysqlInquire().dataMysqlColumnAllRow(sql);
         Gson gson = new Gson();
-        storeInformationBean = gson.fromJson(jsonObject.toString(), (Type) storeInformationBean.getClass());
+        bean = gson.fromJson(jsonObject.toString(), (Type) bean.getClass());
     }
 
     //根据cssSelector来进行元素输入
@@ -128,6 +136,28 @@ public class StoreInformation extends Information {
         for (int i = 0; i < i1; i++) {
             PictureImage.getLogo(driver, id, address);
         }
+    }
+
+    /**
+     * 父类定义断言给子类用
+     * @param message
+     * @param expected
+     * @param actual
+     */
+    protected void assertEqualsMessage(String message, Object expected, Object actual ){
+        assertEquals(message,expected,actual);
+    }
+
+
+    /**
+     * 父类定义输入对象，让子类进行调用
+     * @param parameter
+     * @param message
+     */
+    protected void elementInput(WebElement parameter,String message){
+        ElementInput eleInput = new ElementInput();
+
+        eleInput.operation(parameter,message);
     }
 
 }
