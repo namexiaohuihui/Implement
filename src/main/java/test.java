@@ -1,7 +1,7 @@
-import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import common.FoxDriver;
 import common.tool.SystemOut;
+import common.tool.caninput.Preservation;
 import common.tool.conversion.MutualJsonBean;
 import common.tool.informationException.ErrorException;
 import common.tool.mysqls.MysqlInquire;
@@ -9,18 +9,16 @@ import org.json.JSONObject;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import wap.business.StartData;
-import wap.business.example.bean.EnumProgramBean;
 import wap.business.example.bean.GoodsBean;
 import wap.business.example.bean.StoreInformationBean;
-import wap.business.example.bean.UserBean;
-import wap.business.example.innose.information.StoreInformation;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.sql.*;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
+import static java.lang.Thread.sleep;
 
 
 /**
@@ -89,15 +87,20 @@ public class test<T> {
 
     @Test
     public void readExcle() {
+
+        String ss = "qwe";
+        int g = ss.indexOf(",");
+        SystemOut.getStringOut(g+ "");
+
         WebDriver driver = FoxDriver.getChromeDriver();
         //        是浏览器的大小
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         //        设置测试的网页
-        driver.get("http://www.baidu.com");
-        driver.findElement(By.cssSelector("input[id='kw'][name='wd']")).sendKeys("111");
-      //  driver.get("C:\\Users\\Administrator\\Desktop\\连你·生活商家管理中心-信息 _ lianni.com.html");
-/*
+        driver.get("C:\\Users\\Administrator\\Desktop\\连你·生活商家管理中心-信息 _ lianni.com.html");
+
+
+        /*
         String load = "E:\\drivers\\CasePlan\\CasrScene\\BusinessInformation\\StoreManagement\\店铺管理.xlsx";
         EnumProgramBean bean = StartData.readLoad(load, 1, 1);
         SystemOut.getStringOut(bean.toString());

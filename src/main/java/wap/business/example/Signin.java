@@ -12,8 +12,12 @@ import common.tool.informationException.ErrorException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import wap.business.StartData;
 import wap.business.example.bean.EnumProgramBean;
+
+import java.util.Date;
 
 /**
  * 实现登录
@@ -61,7 +65,7 @@ public class Signin extends ShopScene {
             ele.accordingToId(phone, Parameter.accountTop);
 
             //        获取密码输入框并输入内容
-            ele.accordingToId(password,Parameter.passWordTop);
+            ele.accordingToId(password, Parameter.passWordTop);
 
             //        点击登录
             new Preservation().buttonClassName(loginwater);
@@ -83,8 +87,11 @@ public class Signin extends ShopScene {
     private void webElementError() {
         //调用判断的类
         ElementExistence ele = new ElementExistence();
+        SystemOut.getStringOut("登陆失败提示获取时间" + new Date());
         //判断该元素是否存在，存在返回真
         Boolean existence = ele.accordingToCssSelector(divErrormsg);
+
+        SystemOut.getStringOut("登陆失败提示完成时间" + new Date());
         if (existence) {
             //获取数据并读取失败的原因
             WebElement element = driver.findElement(By.cssSelector(divErrormsg));
@@ -105,6 +112,7 @@ public class Signin extends ShopScene {
             SystemOut.getStringOut(rowNum + "次登录成功");
             Parameter.LOGIN_STATUS = true;
         }
+
     }
 
 

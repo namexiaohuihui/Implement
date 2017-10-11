@@ -6,19 +6,20 @@ import common.FoxDriver;
 import common.tool.SystemOut;
 import common.tool.caninput.ElementInput;
 import common.tool.excelfile.ReadExcel;
+import common.tool.informationException.ErrorException;
 import common.tool.mysqls.MysqlInquire;
 import common.tool.upload.PictureImage;
 import org.json.JSONObject;
 import org.openqa.selenium.By;
+import org.openqa.selenium.InvalidElementStateException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import wap.business.StartData;
-import wap.business.example.bean.StoreInformationBean;
 import wap.business.example.bean.EnumProgramBean;
+import wap.business.example.bean.StoreInformationBean;
 import wap.business.example.innose.Information;
 
 import java.lang.reflect.Type;
-import java.util.Date;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
@@ -51,9 +52,6 @@ public class StoreInformation extends Information {
     //实拍对应图片的数量
     String picFile = "ul[id='J_pic-box'][class='uploadPict']>li";
 
-    //实拍和执照的上传按钮class名
-    private String button = "uploadify-button";
-
     //mysql语句所查询到的内容
     protected StoreInformationBean bean ;
 
@@ -66,6 +64,7 @@ public class StoreInformation extends Information {
     public StoreInformation(EnumProgramBean epb) {
         this.load = epb.getOne() + epb.getTwo() + epb.getThree();
         this.sql = epb.getSeven();
+
     }
 
     public StoreInformation() {
@@ -97,19 +96,6 @@ public class StoreInformation extends Information {
                     break;
             }
         }
-/*
-        //判断店名是否有内容、有就说明设置过内容然后就调用判断的方法
-        // 没有内容就对其进行设置
-        WebElement storeName = driver.findElement(By.id("name"));
-        String value = storeName.getAttribute("value");
-        if (value.length() > 3) {
-            System.out.println("该店铺已设置过数据" + value);
-           // InformationJudgment iju = new InformationJudgment();
-        } else {
-            System.out.println("该店铺没有设置过数据" + value);
-            InformationModify isu = new InformationModify();
-        }
-*/
     }
 
     //返回查询语句的内容。
@@ -122,20 +108,18 @@ public class StoreInformation extends Information {
         bean = gson.fromJson(jsonObject.toString(), (Type) bean.getClass());
     }
 
-    //根据cssSelector来进行元素输入
-    public void storeInput(String cssSelector, String content) {
-        ElementInput eInput = new ElementInput();
-        eInput.accordingToCssSelector(cssSelector, content);
-    }
-
     public void licensePhoto(String load, String id, String address) {
 
         List<WebElement> el1 = driver.findElements(By.cssSelector(load));
         int i1 = 2 - el1.size();
         System.out.println("上传" + i1);
         for (int i = 0; i < i1; i++) {
-            PictureImage.getLogo(driver, id, address);
+            PictureImage.setLogoId(driver, id, address);
         }
+    }
+
+    protected void bedGoToPicture(String cssSelector, String route,String massage ){
+        PictureImage.setLogoCssSelector(driver,cssSelector,route,massage);
     }
 
     /**
@@ -151,6 +135,25 @@ public class StoreInformation extends Information {
 
     /**
      * 父类定义输入对象，让子类进行调用
+     * 根据cssSelector来进行元素输入
+     * @param cssSelector
+     * @param content
+     */
+    public void elementInput(String cssSelector, String message,String useCase,String parameter) {
+        try {
+            //元素输入内容
+            ElementInput eleInput = new ElementInput();
+            eleInput.accordingToCssSelector(cssSelector, message);
+        } catch (InvalidElementStateException e) {
+            String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
+            String method = Thread.currentThread().getStackTrace()[1].getMethodName();
+            SystemOut.caseStringInput(useCase,parameter);
+            SystemOut.getStringOut(clazz,method);
+        }
+    }
+
+    /**
+     * 父类定义输入对象，让子类进行调用
      * @param parameter
      * @param message
      */
@@ -160,4 +163,16 @@ public class StoreInformation extends Information {
         eleInput.operation(parameter,message);
     }
 
+    /**
+     * 目前真针对于内部输入框的输入..
+     * @param iframe iframe对象的css
+     * @param body body对象的css
+     * @param message 内容的输入
+     */
+    protected  void elementInput(String iframe,String body,String message){
+
+        ElementInput eleInput = new ElementInput();
+        eleInput.operationIframe(iframe,body,message);
+
+    }
 }

@@ -1,5 +1,6 @@
 package common.tool.caninput;
 
+import common.tool.SystemOut;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -81,5 +82,24 @@ public class ElementObtain extends ElementExistence {
         }
 
         return content;
+    }
+
+    public String operation(String iframeLoad, String bodyLoad) {
+
+        //找到ifram对象
+        WebElement ele = driver.findElement(By.cssSelector(iframeLoad));
+
+        //进入新的布局
+        driver.switchTo().frame(ele);
+
+        //布局里面的元素操作
+        WebElement element = driver.findElement(By.cssSelector(bodyLoad));
+
+        String textInfo = element.getText();
+
+        //退出iframe布局
+        driver.switchTo().defaultContent();
+
+        return textInfo;
     }
 }

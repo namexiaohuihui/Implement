@@ -137,7 +137,7 @@ public class ProductEditor {
             SystemOut.getStringOut("编辑时的图片需要上传的数量 ", number + "");
             for (int i = 0; i < number && i < logoStr.length; i++) {//上传的图片数量应当小于可上传的空余数量以及文档中给出的数据
                new Preservation().buttonCssSelector("object[id=SWFUpload_0][class=swfupload]");
-                new PictureImage().getLogo(driver, "SWFUpload_0", logoStr[i]);
+                new PictureImage().setLogoId(driver, "SWFUpload_0", logoStr[i]);
             }
         } else {
             SystemOut.getStringOut("编辑时的图片不需要进行上传");

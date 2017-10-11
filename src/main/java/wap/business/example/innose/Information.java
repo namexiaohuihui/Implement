@@ -10,6 +10,7 @@ import common.tool.informationException.ErrorException;
 import org.openqa.selenium.WebDriver;
 import wap.business.StartData;
 import wap.business.example.bean.EnumProgramBean;
+import wap.business.example.innose.information.StoreInformation;
 
 import static java.lang.Thread.sleep;
 
@@ -39,7 +40,7 @@ public class Information {
     public Information(EnumProgramBean epb) {
         //设置参数
         captureMenu(epb);
-        for (int i = 1; i <= rowNum; i++) {
+        for (int i = 1; i <= 1; i++) {
             //读取管理中的例子
             EnumProgramBean bean = StartData.readLoad(LOAD_CASE, numSheet, i);
             //目录切换
@@ -80,20 +81,21 @@ public class Information {
             //判断子菜单然后进行点击并进行数据操作
             if (bean.getFour().equals(listBar[0]) && bean.getFour() != null && !listBar[0].equals("")) {
                 System.out.println(listBar[0] + "点击了0" + bean.getFour());
-                //preservation.buttonLinkText(listBar[i]);
+                preservation.buttonLinkText(listBar[0]);
+                new StoreInformation(bean);
                 //new StoreInformation(bean).informationStore();
             }
 
             //判断子菜单然后进行点击并进行数据操作
             else if (bean.getFour().equals(listBar[1]) && bean.getFour() != null && !listBar[1].equals("")) {
-                System.out.println(listBar[1] + "点击了1" + bean.getFour());
-                preservation.buttonLinkText(listBar[1]);
+                //System.out.println(listBar[1] + "点击了1" + bean.getFour());
+                //preservation.buttonLinkText(listBar[1]);
                 //new ShopNotices(bean).getAnnouncement();
             }
 
             //判断子菜单然后进行点击并进行数据操作
             else if (bean.getFour().equals(listBar[2]) && bean.getFour() != null && !listBar[2].equals("")) {
-                System.out.println(listBar[2] + "点击了2" + bean.getFour());
+                //System.out.println(listBar[2] + "点击了2" + bean.getFour());
                 //preservation.buttonLinkText(listBar[i]);
                 //new StoreSettings(bean).getSetting();
             }

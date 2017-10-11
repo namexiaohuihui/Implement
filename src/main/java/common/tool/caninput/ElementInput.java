@@ -1,8 +1,7 @@
 package common.tool.caninput;
 
-import common.FoxDriver;
-import common.tool.Interface.InheritInput;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -110,5 +109,31 @@ public class ElementInput extends ElementExistence {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+
+    /**
+     * 通过iframe来输入内容
+     * @param iframe iframe对象的css
+     * @param body body对象的css
+     * @param message 内容的输入
+     */
+    public void operationIframe(String iframe,String body,String message) {
+
+        //找到ifram对象
+        WebElement ele = driver.findElement(By.cssSelector(iframe));
+
+        //进入新的布局
+        driver.switchTo().frame(ele);
+
+        //布局里面的元素操作
+        WebElement element = driver.findElement(By.cssSelector(body));
+        element.click();
+        element.sendKeys(Keys.CONTROL,"a");
+        element.sendKeys(Keys.BACK_SPACE);
+        element.sendKeys(message);
+
+        //退出iframe布局
+        driver.switchTo().defaultContent();
     }
 }

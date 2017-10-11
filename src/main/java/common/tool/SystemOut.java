@@ -24,6 +24,18 @@ public class SystemOut {
         System.out.println(text);
     }
 
+    public static void caseStringInput(String massage,String parameter) {
+        System.out.println(massage + "用例需要进行编辑，编辑内容为：" + parameter);
+    }
+
+    public static void caseStringInput(String massage) {
+        System.out.println(massage + "用例执行失败。。。。" );
+    }
+
+    public static void caseStringOut(String massage,String parameter) {
+        System.out.println(massage + "用例不需要进行编辑。"  + parameter);
+    }
+
     /**
      * @param li
      */

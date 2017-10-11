@@ -4,6 +4,7 @@ import common.parameter.Parameter;
 import common.tool.SystemOut;
 import common.tool.conversion.CharacterString;
 import common.tool.excelfile.ReadExcel;
+import common.tool.informationException.ErrorException;
 import wap.business.StartData;
 import wap.business.example.bean.EnumProgramBean;
 import wap.business.example.innose.Information;
@@ -35,8 +36,8 @@ public class ShopScene {
         sLoad = StartData.load;
         ReadExcel readExcel = new ReadExcel();
         rowNum = readExcel.singleXlsx(sLoad, numSheet);
-        SystemOut.getStringOut("daboss的行数" + rowNum);
-        for (int i = 1; i < rowNum; i++) {
+        //SystemOut.getStringOut("daboss的行数" + rowNum);
+        for (int i = 1; i <= rowNum; i++) {
             //从用例里面读取执行文件所在位置
             EnumProgramBean epb = StartData.readExcleLoad(numSheet, i);
             startDistinguish(epb);
@@ -44,39 +45,47 @@ public class ShopScene {
     }
 
     public void startDistinguish(EnumProgramBean epb) {
-
-        //登录:元素等于某个值，并且不能为空或者等于空格
-        if (epb.getFour() != null & !epb.getFour().equals("") & epb.getFour().equals(listBar[0])) {
-            SystemOut.getStringOut(epb.getFour() + "进来了。" + listBar[0]);//打印数据
-            Signin signin = new Signin(epb);//创建对象
-            signin.landSingin();
-            SystemOut.getStringOut(epb.getFour() + "跑完。");
-        }
-
-        //判断是否登录了
-        else if (Parameter.LOGIN_STATUS) {
-            //登陆成功之后来时菜单的游走
-            if (epb.getFour() != null & !epb.getFour().equals("") & epb.getFour().equals(listBar[1])) {
-                //ManagementHomepage managementHomepage = new ManagementHomepage(epb);
+        try {
+            //登录:元素等于某个值，并且不能为空或者等于空格
+            if (epb.getFour() != null & !epb.getFour().equals("") & epb.getFour().equals(listBar[0])) {
+                SystemOut.getStringOut(epb.getFour() + "进来了。" + listBar[0]);//打印数据
+                Signin signin = new Signin(epb);//创建对象
+                signin.landSingin();
                 SystemOut.getStringOut(epb.getFour() + "跑完。");
             }
 
-            //登陆成功之后来时菜单的游走
-            else if (epb.getFour() != null & !epb.getFour().equals("") & epb.getFour().equals(listBar[2])) {
-                Information information = new Information(epb);
-                SystemOut.getStringOut(epb.getFour() + "跑完。");
+            //判断是否登录了
+            else if (Parameter.LOGIN_STATUS) {
+                //登陆成功之后来时菜单的游走
+                if (epb.getFour() != null & !epb.getFour().equals("") & epb.getFour().equals(listBar[1])) {
+                    //ManagementHomepage managementHomepage = new ManagementHomepage(epb);
+                    SystemOut.getStringOut(epb.getFour() + "跑完。");
+                }
+
+                //登陆成功之后来时菜单的游走
+                else if (epb.getFour() != null & !epb.getFour().equals("") & epb.getFour().equals(listBar[2])) {
+                    Information information = new Information(epb);
+                    SystemOut.getStringOut(epb.getFour() + "跑完。");
+                }
+
+                //游走中没有找到相应的菜单
+                else {
+                    SystemOut.getStringOut(epb.getFour() + "------没有相应的用例?、、、、、、、");
+                }
+
             }
 
-            //游走中没有找到相应的菜单
+            //没有登陆成功的输出
             else {
-                SystemOut.getStringOut(epb.getFour() + "------没有相应的用例?、、、、、、、");
+                SystemOut.getStringOut("账号未登录不能进行菜单的操作。。");
             }
 
-        }
+        } catch (Exception e) {
 
-        //没有登陆成功的输出
-        else {
-            SystemOut.getStringOut("账号未登录不能进行菜单的操作。。");
+            String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
+            String method = Thread.currentThread().getStackTrace()[1].getMethodName();
+            new ErrorException(clazz, method, e);
+
         }
     }
 }
