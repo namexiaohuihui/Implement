@@ -89,7 +89,7 @@ public class StoreInformation extends Information {
                     break;
 
                 case "修改":
-                    new InformationModify(epb);
+                    new InformationModify(epb).modifyInformation();
                     super.preservation.buttonCssSelector(".btn.btn-primary");
                     break;
 
