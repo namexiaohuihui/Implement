@@ -58,12 +58,6 @@ public class StartData{
             epb = (EnumProgramBean) new MutuaMapBean().reflectmapToObject(stringStringMap,
                     new EnumProgramBean().getClass());
 
-        } catch (InterruptedException e) {
-
-            String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
-            String method = Thread.currentThread().getStackTrace()[1].getMethodName();
-            new ErrorException(clazz, method, e);
-
         } catch (Exception e) {
 
             String clazz = Thread.currentThread().getStackTrace()[1].getClassName();

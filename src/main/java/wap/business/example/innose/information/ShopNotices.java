@@ -2,15 +2,16 @@ package wap.business.example.innose.information;
 
 import common.FoxDriver;
 import common.tool.caninput.ElementExistence;
-import common.tool.caninput.Preservation;
+import common.tool.conversion.TimeConversionDate;
+import common.tool.excelfile.ReadExcel;
 import common.tool.excelfile.ReadFile;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import wap.business.StartData;
 import wap.business.example.bean.EnumProgramBean;
 import wap.business.example.innose.Information;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -29,31 +30,55 @@ public class ShopNotices extends Information {
     //    获取driver对象
     WebDriver driver = FoxDriver.getFoxDriver();
 
-    private String load;
+    private String LOAD_CASE;
 
-    public ShopNotices(EnumProgramBean epb) {
-        this.load = epb.getOne() + epb.getTwo() + epb.getThree();
-        ;
-    }
+    private EnumProgramBean caseBean;
+
+    //用例的数量
+    private int rowNum;
+
+    //读取用例的薄位置
+    private int numSheet = 1;
 
     public ShopNotices() {
     }
 
-    public void getAnnouncement() {
 
-        //    获取系统的当前时间，用于设置店铺公告的起止时间
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        //    设置店铺公告
-        grtNotice();
+    public void getAnnouncement(EnumProgramBean epb) {
 
-        //    设置公告的有效日期  getEffectiveDate(driver);(日历选择器0
-        //    传入起始时间的对象以及需要设置的起始时间
-        getStartStopTime("start_time", format.format(new Date()));
-        //    传入截止时间的对象以及需要设置的截止时间
-        getStartStopTime("end_time", time);
+        captureMenu(epb);
 
+        for (int i = 1; i <= rowNum; i++) {
+            caseBean = StartData.readLoad(LOAD_CASE, numSheet, i);
+            switch (caseBean.getFour()) {
+                case "公告":
+                    //    设置店铺公告
+                    grtNotice();
+                    preservaTion();
+                    break;
+                case "时间":
+                    String time = new Date() + "";
+                    String stampDate = TimeConversionDate.timeStampDate(time, "");
+                    //    设置公告的有效日期  getEffectiveDate(driver);(日历选择器0
+                    //    传入起始时间的对象以及需要设置的起始时间
+                    getStartStopTime("start_time", stampDate);
+                    //    传入截止时间的对象以及需要设置的截止时间
+                    time = caseBean.getFive();
+                    getStartStopTime("end_time", time);
+
+                    preservaTion();
+                    break;
+                default:
+                    System.out.println(caseBean.getFour() + "要设置的元素不存在..");
+                    break;
+            }
+
+        }
+    }
+
+    private void preservaTion() {
         //    点击保存按钮
-        new Preservation().breservation("noticesave");
+        preservation.breservation("noticesave");
 
         //    判断点击保存之后，提示信息是否出现，如果出现了提示信息是什么
         getData("successMessage");
@@ -109,5 +134,15 @@ public class ShopNotices extends Information {
         text.sendKeys(new ReadFile().noticesFile("ShopNotices"));
     }
 
+    private void captureMenu(EnumProgramBean epb) {
+        //设置用例路径
+        this.LOAD_CASE = epb.getOne() + epb.getTwo() + epb.getThree();
 
+        //用例对象
+        ReadExcel readExcel = new ReadExcel();
+
+        //读取指定路径中用例的行数
+        rowNum = readExcel.singleXlsx(LOAD_CASE, numSheet);
+
+    }
 }

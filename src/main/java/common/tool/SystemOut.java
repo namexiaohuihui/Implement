@@ -24,16 +24,57 @@ public class SystemOut {
         System.out.println(text);
     }
 
-    public static void caseStringInput(String massage,String parameter) {
-        System.out.println(massage + "用例需要进行编辑，编辑内容为：" + parameter);
+    /**
+     * 用例成功,并且编辑成功
+     *
+     * @param massage   用例编号
+     * @param parameter 用例输入的内容
+     */
+    public static void caseSuccess(String massage, String parameter) {
+        System.out.println(massage + "用例执行成功，编辑内容为：" + parameter);
     }
 
-    public static void caseStringInput(String massage) {
-        System.out.println(massage + "用例执行失败。。。。" );
+    /**
+     * 编辑判断成功
+     *
+     * @param massage 执行编号
+     */
+    public static void caseEditSuccess(String massage) {
+        System.out.println(massage + "用例中的元素对象不需要编辑,程序判断成功。。");
     }
 
-    public static void caseStringOut(String massage,String parameter) {
-        System.out.println(massage + "用例不需要进行编辑。"  + parameter);
+    /**
+     * 用例执行成功
+     *
+     * @param massage 执行编号
+     */
+    public static void caseSuccess(String massage) {
+        System.out.println(massage + "用例执行成功");
+    }
+
+
+    /**
+     * 用例执行失败，并且打印出输入信息
+     *
+     * @param massage
+     * @param parameter
+     */
+    public static void caseFail(String massage) {
+        System.out.println(massage + "用例执行失败。。。。");
+    }
+
+    /**
+     * 不需要进行编辑时发生失败
+     *
+     * @param massage   用例编号
+     * @param parameter 用例输入的内容
+     */
+    public static void caseEditFail(String massage) {
+        System.out.println(massage + "用例中的元素对象不需要编辑，程序判断失败。");
+    }
+
+    public static void caseFail(String massage, String parameter) {
+        System.out.println(massage + "用例执行失败，编辑内容为：" + parameter);
     }
 
     /**

@@ -1,13 +1,11 @@
 package wap.business.example.innose;
 
-import common.FoxDriver;
 import common.tool.SystemOut;
 import common.tool.caninput.ElementExistence;
 import common.tool.caninput.Preservation;
 import common.tool.conversion.CharacterString;
 import common.tool.excelfile.ReadExcel;
 import common.tool.informationException.ErrorException;
-import org.openqa.selenium.WebDriver;
 import wap.business.StartData;
 import wap.business.example.bean.EnumProgramBean;
 import wap.business.example.innose.information.StoreInformation;
@@ -26,7 +24,6 @@ public class Information {
     //按钮点击对象
     public Preservation preservation;
 
-    protected WebDriver driver;
     //路径
     private String LOAD_CASE;
 
@@ -56,8 +53,6 @@ public class Information {
         //设置用例路径
         this.LOAD_CASE = epb.getOne() + epb.getTwo() + epb.getThree();
 
-        //浏览器对象
-        driver = FoxDriver.getWebDrivaer();
 
         //按钮点击对象
         preservation = new Preservation();
@@ -82,8 +77,8 @@ public class Information {
             if (bean.getFour().equals(listBar[0]) && bean.getFour() != null && !listBar[0].equals("")) {
                 System.out.println(listBar[0] + "点击了0" + bean.getFour());
                 preservation.buttonLinkText(listBar[0]);
-                new StoreInformation(bean);
-                //new StoreInformation(bean).informationStore();
+                //new StoreInformation(bean);
+                new StoreInformation(bean).informationStore();
             }
 
             //判断子菜单然后进行点击并进行数据操作

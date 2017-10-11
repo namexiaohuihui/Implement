@@ -14,14 +14,14 @@ public class TimeConversionDate {
     /**
      * 时间戳转换成日期格式字符串
      * @param seconds 精确到秒的字符串
-     * @param formatStr
+     * @param format  转换成日期的格式
      * @return
      */
     public static String timeStampDate(String seconds,String format) {
         if(seconds == null || seconds.isEmpty() || seconds.equals("null")){
             return "";
         }
-        if(format == null || format.isEmpty()){
+        if (format == null || format.isEmpty()) {//默认格式
             format = "yyyy-MM-dd HH:mm:ss";
         }
         SimpleDateFormat sdf = new SimpleDateFormat(format);

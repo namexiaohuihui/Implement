@@ -1,6 +1,7 @@
 package common.tool.upload;
 
 import common.tool.SystemOut;
+import common.tool.caninput.Preservation;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -50,25 +51,18 @@ public class PictureImage {
      * @param route 图片封装exe的路径
      * @param massage 打印执行失败的用例编号
      */
-    public static void setLogoCssSelector(WebDriver driver, String cssSelector, String route,String massage) {
-        try {
+    public static void setLogoCssSelector(WebDriver driver, String cssSelector,
+                                          String route, String massage) throws InterruptedException, IOException {
+
             route = "E:\\drivers\\AutoPicture\\" + route;
             sleep(1000);
-            WebElement swfUpload_0 = driver.findElement(By.cssSelector(cssSelector));
-            swfUpload_0.click();
+        new Preservation().buttonCssSelector(cssSelector);
             sleep(3000);
-            try {
                 Runtime.getRuntime().exec(route);
                 //   Runtime.getRuntime().exec("E:/picture/" + route);
                 SystemOut.getStringOut("图片上传的路径", route);
                 sleep(6000);
-            } catch (IOException e) {
-                SystemOut.caseStringInput(massage);
-                sleep(10000);
-            }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
     }
 
 }

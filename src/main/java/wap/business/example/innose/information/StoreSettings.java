@@ -1,5 +1,6 @@
 package wap.business.example.innose.information;
 
+import common.FoxDriver;
 import common.tool.caninput.Preservation;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -35,7 +36,7 @@ public class StoreSettings extends Information {
     int entBranth = 25;
 
     public StoreSettings(EnumProgramBean epb) {
-        driver = super.driver;
+        driver = FoxDriver.getWebDrivaer();
         preservation = new Preservation();
         this.load = epb.getOne() + epb.getTwo() + epb.getThree();
         ;

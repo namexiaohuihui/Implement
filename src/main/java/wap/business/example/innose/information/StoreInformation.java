@@ -11,7 +11,6 @@ import common.tool.mysqls.MysqlInquire;
 import common.tool.upload.PictureImage;
 import org.json.JSONObject;
 import org.openqa.selenium.By;
-import org.openqa.selenium.InvalidElementStateException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import wap.business.StartData;
@@ -19,6 +18,7 @@ import wap.business.example.bean.EnumProgramBean;
 import wap.business.example.bean.StoreInformationBean;
 import wap.business.example.innose.Information;
 
+import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.List;
 
@@ -85,10 +85,12 @@ public class StoreInformation extends Information {
 
                 case "验证":
                     new InformationJudgment(epb).judgmentInformation();
+                    super.preservation.buttonCssSelector(".btn.btn-primary");
                     break;
 
                 case "修改":
                     new InformationModify(epb);
+                    super.preservation.buttonCssSelector(".btn.btn-primary");
                     break;
 
                 default:
@@ -100,7 +102,7 @@ public class StoreInformation extends Information {
 
     //返回查询语句的内容。
     private void mysqlInquire(){
-        sql = "select * from ph_exclusive.ph_dianpu;";
+        //sql = "select * from ph_exclusive.ph_dianpu;";
         bean = new StoreInformationBean();
         //数据库连接及查询
         JSONObject jsonObject = new MysqlInquire().dataMysqlColumnAllRow(sql);
@@ -118,7 +120,7 @@ public class StoreInformation extends Information {
         }
     }
 
-    protected void bedGoToPicture(String cssSelector, String route,String massage ){
+    protected void bedGoToPicture(String cssSelector, String route, String massage) throws IOException, InterruptedException {
         PictureImage.setLogoCssSelector(driver,cssSelector,route,massage);
     }
 
@@ -136,32 +138,20 @@ public class StoreInformation extends Information {
     /**
      * 父类定义输入对象，让子类进行调用
      * 根据cssSelector来进行元素输入
-     * @param cssSelector
-     * @param content
+     * @param cssSelector 路径
+     * @param message 输入的信息
+     * @param useCase 用例编号
      */
-    public void elementInput(String cssSelector, String message,String useCase,String parameter) {
-        try {
+    public void elementInput(String cssSelector, String message, String useCase) {
+
             //元素输入内容
             ElementInput eleInput = new ElementInput();
             eleInput.accordingToCssSelector(cssSelector, message);
-        } catch (InvalidElementStateException e) {
-            String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
-            String method = Thread.currentThread().getStackTrace()[1].getMethodName();
-            SystemOut.caseStringInput(useCase,parameter);
-            SystemOut.getStringOut(clazz,method);
-        }
+
+        //打印数据
+        SystemOut.caseSuccess(useCase, message);
     }
 
-    /**
-     * 父类定义输入对象，让子类进行调用
-     * @param parameter
-     * @param message
-     */
-    protected void elementInput(WebElement parameter,String message){
-        ElementInput eleInput = new ElementInput();
-
-        eleInput.operation(parameter,message);
-    }
 
     /**
      * 目前真针对于内部输入框的输入..
@@ -169,10 +159,30 @@ public class StoreInformation extends Information {
      * @param body body对象的css
      * @param message 内容的输入
      */
-    protected  void elementInput(String iframe,String body,String message){
+    protected void iframeInput(String iframe, String body, String message) {
 
         ElementInput eleInput = new ElementInput();
         eleInput.operationIframe(iframe,body,message);
 
+    }
+
+
+    /**
+     * @param clazz     类名
+     * @param method    方法名
+     * @param cause     错误信息
+     * @param parameter 用例编号
+     */
+    protected void caseOutInformation(String clazz, String method, Throwable cause, String parameter) {
+        //输出发生错误的地方
+        new ErrorException(clazz, method, cause);
+
+        //输出用例信息
+        SystemOut.caseEditFail(parameter);
+    }
+
+    protected void caseOutInformation(String parameter) {
+        //输出用例信息
+        SystemOut.caseEditSuccess(parameter);
     }
 }
