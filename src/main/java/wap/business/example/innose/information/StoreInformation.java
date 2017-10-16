@@ -37,26 +37,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class StoreInformation extends Information {
 
-    // 记录店铺执照上传的对象，方便循环执行
-    String photo[];//可删除，执照统一上传一张
-    String license[];//可删除，实拍统一上传一张
     WebDriver driver = FoxDriver.getWebDrivaer();
-    //WebDriver driver = super.driver;
-
-    //地址所在：省/区、市、县/区、详细地址
-    String provinceSele = "select[id='province'][name='province']";
-    String citySele = "select[id='city'][name='city']";
-    String countySele = "select[id='county'][name='county']";
-    String detailed = "input[id='address'][name='address']";
-
-    //经纬度
-    String longitude = "input[id='lng'][name='lng']";
-    String latitude = "input[id='lat'][name='lat']";
-
-    //执照对应图片的数量
-    String piczzFile = "ul[id='J_piczz-box'][class='uploadPict']>li";
-    //实拍对应图片的数量
-    String picFile = "ul[id='J_pic-box'][class='uploadPict']>li";
 
     //路径
     private String load;
@@ -150,18 +131,23 @@ public class StoreInformation extends Information {
      * 父类定义输入对象，让子类进行调用
      * 根据cssSelector来进行元素输入
      *
+     * @param parameter   数据库中读取到数据信息
      * @param cssSelector 路径
      * @param message     输入的信息
      * @param useCase     用例编号
      */
-    public void elementInput(String cssSelector, String message, String useCase) {
+    public void elementInput(String parameter,String cssSelector, String message, String useCase) {
 
-        //元素输入内容
-        ElementInput eleInput = new ElementInput();
-        eleInput.accordingToCssSelector(cssSelector, message);
+        if (parameter == "" | parameter.equals(null) | parameter.equals("")) {
+            //元素输入内容
+            ElementInput eleInput = new ElementInput();
+            eleInput.accordingToCssSelector(cssSelector, message);
 
-        //打印数据
-        SystemOut.caseSuccess(useCase, message);
+            //打印数据
+            SystemOut.caseSuccess(useCase, message);
+        } else {
+            SystemOut.caseEditSuccess(useCase);
+        }
     }
 
 
@@ -194,6 +180,7 @@ public class StoreInformation extends Information {
         SystemOut.caseEditFail(parameter);
     }
 
+    //打印数据而已
     protected void caseOutInformation(String parameter) {
         //输出用例信息
         SystemOut.caseEditSuccess(parameter);
@@ -220,11 +207,33 @@ public class StoreInformation extends Information {
         }
     }
 
+    /**
+     * 页面移动，移动到指定的元素位置。该元素位于屏幕中间
+     * @param cssLoad  元素路径
+     */
+    protected void StoreMovesWindow(String  cssLoad) {
+        try {
+            sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        WebElement element = By.cssSelector(cssLoad).findElement(driver);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoViewIfNeeded(true);",
+                element);
+    }
 
+
+    /**
+     * 返回某个元素在另一个元素中的位置
+     * @param message
+     * @param parameter
+     * @return
+     */
     protected int getLastIndexOf(String message,String parameter){
         int index = message.lastIndexOf(parameter);
         return index;
     }
+
 
     //内部类用于保存局部信息
     static class StoreStatic {

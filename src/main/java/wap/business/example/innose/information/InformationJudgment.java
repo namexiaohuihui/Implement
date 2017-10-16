@@ -6,6 +6,7 @@ import common.tool.conversion.RegularExpression;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import wap.business.example.bean.EnumProgramBean;
+import wap.business.example.bean.elementBean.InformationBean;
 
 import java.sql.SQLException;
 import java.util.Date;
@@ -35,7 +36,7 @@ public class InformationJudgment extends StoreInformation {
                     String shopName = StoreStatic.bean.getShop_name();
 
                     //元素对象的css路径
-                    String shopLoad = "input#name";
+                    String shopLoad = InformationBean.needNmae();
 
                     //需要打印的日志
                     String shopMessage = epb.getFour() + "进行验证";
@@ -51,7 +52,7 @@ public class InformationJudgment extends StoreInformation {
                     String warehouse = StoreStatic.bean.getWarehouse_name();
 
                     //元素对象的css路径
-                    String wpCss = " .referdata > tbody > tr:nth-child(3) > td";
+                    String wpCss = InformationBean.needWarehouse();
 
                     //需要打印的日志
                     String wM = epb.getFour() + "进行验证";
@@ -67,7 +68,7 @@ public class InformationJudgment extends StoreInformation {
                     String category = StoreStatic.bean.getCategory_name();
 
                     //元素对象的css路径
-                    String cpCss = " .referdata > tbody > tr:nth-child(4) > td";
+                    String cpCss = InformationBean.needCategory();
 
                     //需要打印的日志
                     String categoryMessage = epb.getFour() + "进行验证";
@@ -123,7 +124,7 @@ public class InformationJudgment extends StoreInformation {
                     String phone = StoreStatic.bean.getShop_phone();
 
                     //元素对象的css路径
-                    String phoneLoad = "input[id ='contact'][name='contact']";
+                    String phoneLoad = InformationBean.needPhoneLoad();;
 
                     //需要打印的日志
                     String pM = epb.getFour() + "进行验证";
@@ -134,8 +135,8 @@ public class InformationJudgment extends StoreInformation {
                     break;
 
                 case "省区":
-                    StoreMovesWindow(900);
-                    StoreMovesWindow(900);
+                    //获取元素对象
+                    String provinceSele = InformationBean.needProvinceSele();
                     //读取数据内容
                     String province = StoreStatic.bean.getProvince();
 
@@ -146,13 +147,15 @@ public class InformationJudgment extends StoreInformation {
                     String provinceMessage = epb.getFour() + "进行验证";
 
                     //传入参数判断数据内容跟界面显示的是否一致
-                    judgmentParameterText(province, super.provinceSele, provinceMessage);
+                    judgmentParameterText(province,provinceSele, provinceMessage);
 
                     break;
 
                 case "城市":
 
-                    StoreMovesWindow(900);
+                    //获取元素对象
+                    String citySele = InformationBean.needCitySele();
+
                     //读取数据内容
                     String city = StoreStatic.bean.getCity();
 
@@ -163,13 +166,14 @@ public class InformationJudgment extends StoreInformation {
                     String cityMessage = epb.getFour() + "进行验证";
 
                     //传入参数判断数据内容跟界面显示的是否一致
-                    judgmentParameterText(city, super.citySele, cityMessage);
+                    judgmentParameterText(city, citySele, cityMessage);
 
                     break;
 
                 case "区县":
 
-                    StoreMovesWindow(900);
+                    //获取元素对象
+                    String countySele = InformationBean.needCountySele();
 
                     //读取数据内容
                     String county = StoreStatic.bean.getCounty();
@@ -181,13 +185,14 @@ public class InformationJudgment extends StoreInformation {
                     String countyMessage = epb.getFour() + "进行验证";
 
                     //传入参数判断数据内容跟界面显示的是否一致
-                    judgmentParameterText(county, super.countySele, countyMessage);
+                    judgmentParameterText(county, countySele, countyMessage);
 
                     break;
 
                 case "位置":
 
-                    StoreMovesWindow(900);
+                    //获取元素对象
+                    String detailed = InformationBean.needDetailed();
 
                     //读取数据内容
                     String address = StoreStatic.bean.getAddress();
@@ -199,13 +204,14 @@ public class InformationJudgment extends StoreInformation {
                     String addressMessage = epb.getFour() + "进行验证";
 
                     //传入参数判断数据内容跟界面显示的是否一致
-                    judgmentParameterAttribute(address, super.detailed, "value", addressMessage);
+                    judgmentParameterAttribute(address, detailed, "value", addressMessage);
 
                     break;
 
                 case "经度":
 
-                    StoreMovesWindow(900);
+                    //获取元素对象
+                    String longitude = InformationBean.needLongitude();
 
                     //读取数据内容
                     String lng = StoreStatic.bean.getLng();
@@ -214,13 +220,14 @@ public class InformationJudgment extends StoreInformation {
                     String lngMessage = epb.getFour() + "进行验证";
 
                     //传入参数判断数据内容跟界面显示的是否一致
-                    judgmentParameterAttribute(lng, super.longitude, "value", lngMessage);
+                    judgmentParameterAttribute(lng, longitude, "value", lngMessage);
 
                     break;
 
                 case "纬度":
 
-                    StoreMovesWindow(900);
+                    //获取元素对象
+                    String latitude = InformationBean.needLatitude();
 
                     //读取数据内容
                     String lat = StoreStatic.bean.getLat();
@@ -229,7 +236,7 @@ public class InformationJudgment extends StoreInformation {
                     String latMessage = epb.getFour() + "进行验证";
 
                     //传入参数判断数据内容跟界面显示的是否一致
-                    judgmentParameterAttribute(lat, super.latitude, "value", latMessage);
+                    judgmentParameterAttribute(lat, latitude, "value", latMessage);
                     break;
 
                 case "介绍":
@@ -246,8 +253,8 @@ public class InformationJudgment extends StoreInformation {
                     SystemOut.getStringOut("数据库中的介绍" + strInfo);
 
                     //定义css路径
-                    String iframeLoad = ".ke-edit-iframe";
-                    String bodyLoad = ".ke-content";
+                    String iframeLoad = InformationBean.needIframeLoad();
+                    String bodyLoad = InformationBean.needBodyLoad();
 
                     //获取数据
                     ElementObtain obtain = new ElementObtain();
@@ -280,8 +287,13 @@ public class InformationJudgment extends StoreInformation {
      * @param message   打印的数据
      */
     private void judgmentParameterText(String argument, String parameter, String message) {
+        //移动页面
+        StoreMovesWindow(parameter);
+        //创建对象
         WebElement eleName = driver.findElement(By.cssSelector(parameter));
-        String eleText = eleName.getText();
+        //获取对象信息并去除空格
+        String eleText = eleName.getText().trim();
+        //数据判断
         super.assertEqualsMessage(message, argument, eleText);
     }
 
@@ -294,6 +306,7 @@ public class InformationJudgment extends StoreInformation {
      * @param message   打印的信息
      */
     private void judgmentParameterAttribute(String argument, String parameter, String value, String message) {
+        StoreMovesWindow(parameter);
         WebElement eleName = driver.findElement(By.cssSelector(parameter));
         String eleText = eleName.getAttribute(value);
         int indexOf = getLastIndexOf(argument, eleText);

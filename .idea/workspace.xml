@@ -2,24 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a41ba70-32a3-43a6-aa3c-a0189bf6bfbd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/test2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/common/parameter/QueryStatement.class" afterPath="$PROJECT_DIR$/target/classes/common/parameter/QueryStatement.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/common/tool/SystemOut.class" afterPath="$PROJECT_DIR$/target/classes/common/tool/SystemOut.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/common/tool/upload/PictureImage.class" afterPath="$PROJECT_DIR$/target/classes/common/tool/upload/PictureImage.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/wap/business/example/bean/elementBean/InformationBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/ElementInput.class" afterPath="$PROJECT_DIR$/target/classes/common/tool/caninput/ElementInput.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/ElementObtain.class" afterPath="$PROJECT_DIR$/target/classes/common/tool/caninput/ElementObtain.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test.class" afterPath="$PROJECT_DIR$/target/classes/test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wap/business/StartData.class" afterPath="$PROJECT_DIR$/target/classes/wap/business/StartData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wap/business/example/Signin.class" afterPath="$PROJECT_DIR$/target/classes/wap/business/example/Signin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wap/business/example/innose/Information.class" afterPath="$PROJECT_DIR$/target/classes/wap/business/example/innose/Information.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wap/business/example/innose/information/InformationJudgment.class" afterPath="$PROJECT_DIR$/target/classes/wap/business/example/innose/information/InformationJudgment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wap/business/example/innose/information/ShopNotices.class" afterPath="$PROJECT_DIR$/target/classes/wap/business/example/innose/information/ShopNotices.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wap/business/example/innose/information/StoreInformation.class" afterPath="$PROJECT_DIR$/target/classes/wap/business/example/innose/information/StoreInformation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wap/business/example/innose/information/StoreSettings.class" afterPath="$PROJECT_DIR$/target/classes/wap/business/example/innose/information/StoreSettings.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/common/parameter/QueryStatement.java" afterPath="$PROJECT_DIR$/src/main/java/common/parameter/QueryStatement.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementInput.java" afterPath="$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementInput.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementObtain.java" afterPath="$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementObtain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/content/file/Javascript" afterPath="$PROJECT_DIR$/src/main/java/content/file/Javascript" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/test.java" afterPath="$PROJECT_DIR$/src/main/java/test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wap/business/example/Signin.java" afterPath="$PROJECT_DIR$/src/main/java/wap/business/example/Signin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wap/business/example/innose/Information.java" afterPath="$PROJECT_DIR$/src/main/java/wap/business/example/innose/Information.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/InformationJudgment.java" afterPath="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/InformationJudgment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/InformationModify.java" afterPath="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/InformationModify.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/StoreInformation.java" afterPath="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/StoreInformation.java" />
@@ -33,7 +25,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="Implement" />
   </component>
@@ -42,35 +33,39 @@
       <file leaf-file-name="StoreInformation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/StoreInformation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="207" column="13" lean-forward="false" selection-start-line="207" selection-start-column="13" selection-end-line="207" selection-end-column="13" />
+            <state relative-caret-position="305">
+              <caret line="143" column="43" lean-forward="false" selection-start-line="143" selection-start-column="21" selection-end-line="143" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InformationModify.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InformationModify.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/InformationModify.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1730">
-              <caret line="244" column="30" lean-forward="false" selection-start-line="244" selection-start-column="23" selection-end-line="244" selection-end-column="30" />
-              <folding>
-                <element signature="e#553#554#0" expanded="true" />
-                <element signature="e#583#584#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="180">
+              <caret line="206" column="17" lean-forward="false" selection-start-line="206" selection-start-column="17" selection-end-line="206" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InformationJudgment.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="InformationJudgment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/InformationJudgment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-233">
-              <caret line="237" column="0" lean-forward="false" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
-              <folding>
-                <element signature="e#623#624#0" expanded="true" />
-                <element signature="e#653#654#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="355">
+              <caret line="295" column="14" lean-forward="false" selection-start-line="295" selection-start-column="14" selection-end-line="295" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InformationBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/bean/elementBean/InformationBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="367">
+              <caret line="87" column="31" lean-forward="false" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -80,7 +75,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="350">
               <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="36" />
-              <folding />
+              <folding>
+                <marker date="1508154508879" expanded="true" signature="3786:3792" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -98,14 +95,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>获取元素对象并点击输入内容</find>
-      <find>, String content</find>
       <find>new ElementExistence()</find>
       <find>wedDriver();</find>
       <find>Node</find>
       <find>static</find>
       <find>{ get; set; }</find>
-      <find>public</find>
       <find>private</find>
       <find>LOGIN_STATUS</find>
       <find>账号未登录不能进行菜单的操作</find>
@@ -128,10 +122,11 @@
       <find>elementInput</find>
       <find>登陆失败提示获取时间</find>
       <find>super.bean</find>
+      <find>cfmpassword</find>
+      <find>protected</find>
+      <find>public</find>
     </findStrings>
     <replaceStrings>
-      <replace>WebUrl</replace>
-      <replace>WapUrl</replace>
       <replace>Parameter</replace>
       <replace>preservation</replace>
       <replace>wapUrl</replace>
@@ -152,7 +147,6 @@
       <replace>GoodsBean</replace>
       <replace>;</replace>
       <replace>private</replace>
-      <replace>public</replace>
       <replace>public status</replace>
       <replace>public static</replace>
       <replace />
@@ -160,6 +154,9 @@
       <replace>re</replace>
       <replace>进行验证</replace>
       <replace>StoreStatic.bean</replace>
+      <replace>element</replace>
+      <replace>public</replace>
+      <replace>public static</replace>
     </replaceStrings>
     <dirStrings>
       <dir>E:\Implement\src\main\java\common\tool\upload</dir>
@@ -180,7 +177,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/wap/business/example/StartEntrance.java" />
         <option value="$PROJECT_DIR$/src/main/java/wap/business/example/StartDistinguish.java" />
         <option value="$PROJECT_DIR$/src/main/java/common/parameter/WapUrl.java" />
         <option value="$PROJECT_DIR$/src/main/java/wechat/ConfirmOrder.java" />
@@ -194,7 +190,6 @@
         <option value="$PROJECT_DIR$/src/main/java/common/tool/excelfile/ExcelOperating.java" />
         <option value="$PROJECT_DIR$/src/main/java/common/tool/excelfile/ReadExcel.java" />
         <option value="$PROJECT_DIR$/src/main/java/wap/StartEntrance.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/tool/caninput/InfoSelect.java" />
         <option value="$PROJECT_DIR$/src/main/java/wap/business/example/Exitsysos.java" />
         <option value="$PROJECT_DIR$/src/main/java/common/parameter/Parameter.java" />
         <option value="$PROJECT_DIR$/src/main/java/common/tool/conversion/CharacterString.java" />
@@ -212,7 +207,6 @@
         <option value="$PROJECT_DIR$/src/main/java/common/tool/conversion/RegularExpression.java" />
         <option value="$PROJECT_DIR$/src/main/java/wap/business/example/ShopScene.java" />
         <option value="$PROJECT_DIR$/src/main/java/common/FoxDriver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementObtain.java" />
         <option value="$PROJECT_DIR$/src/main/java/wap/business/example/ligrco/Exhibition/Article/ProductEditor.java" />
         <option value="$PROJECT_DIR$/src/main/java/common/tool/SystemOut.java" />
         <option value="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/StoreSettings.java" />
@@ -225,20 +219,22 @@
         <option value="$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/Assert.java" />
         <option value="$PROJECT_DIR$/src/main/java/test2.java" />
         <option value="$PROJECT_DIR$/src/main/java/wap/business/example/Signin.java" />
-        <option value="$PROJECT_DIR$/src/main/java/test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementInput.java" />
         <option value="$PROJECT_DIR$/src/main/java/content/file/Javascript" />
+        <option value="$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementInput.java" />
+        <option value="$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementObtain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/common/tool/caninput/InfoSelect.java" />
         <option value="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/StoreInformation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wap/business/example/bean/elementBean/InformationBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/InformationModify.java" />
         <option value="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/InformationJudgment.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="244" />
-    <option name="y" value="37" />
-    <option name="width" value="1499" />
-    <option name="height" value="1037" />
+    <option name="x" value="-6" />
+    <option name="width" value="1386" />
+    <option name="height" value="729" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -258,242 +254,102 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="example" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="example" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="innose" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="example" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="innose" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="information" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="file" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conversion" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Implement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="caninput" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="Implement" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Implement" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="Implement" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Implement" type="616d4139:PackageViewModuleNode" />
+              <item name="common" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="Implement" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Implement" type="616d4139:PackageViewModuleNode" />
+              <item name="common" type="1f31426a:PackageElementNode" />
+              <item name="tool" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="Implement" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Implement" type="616d4139:PackageViewModuleNode" />
+              <item name="common" type="1f31426a:PackageElementNode" />
+              <item name="tool" type="1f31426a:PackageElementNode" />
+              <item name="caninput" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="Implement" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Implement" type="616d4139:PackageViewModuleNode" />
+              <item name="content" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="Implement" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Implement" type="616d4139:PackageViewModuleNode" />
+              <item name="content" type="1f31426a:PackageElementNode" />
+              <item name="file" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="Implement" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Implement" type="616d4139:PackageViewModuleNode" />
+              <item name="wap" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="Implement" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Implement" type="616d4139:PackageViewModuleNode" />
+              <item name="wap" type="1f31426a:PackageElementNode" />
+              <item name="business" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="Implement" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Implement" type="616d4139:PackageViewModuleNode" />
+              <item name="wap" type="1f31426a:PackageElementNode" />
+              <item name="business" type="1f31426a:PackageElementNode" />
+              <item name="example" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="Implement" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Implement" type="616d4139:PackageViewModuleNode" />
+              <item name="wap" type="1f31426a:PackageElementNode" />
+              <item name="business" type="1f31426a:PackageElementNode" />
+              <item name="example" type="1f31426a:PackageElementNode" />
+              <item name="bean" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="Implement" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Implement" type="616d4139:PackageViewModuleNode" />
+              <item name="wap" type="1f31426a:PackageElementNode" />
+              <item name="business" type="1f31426a:PackageElementNode" />
+              <item name="example" type="1f31426a:PackageElementNode" />
+              <item name="bean" type="1f31426a:PackageElementNode" />
+              <item name="elementBean" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="Implement" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Implement" type="616d4139:PackageViewModuleNode" />
+              <item name="wap" type="1f31426a:PackageElementNode" />
+              <item name="business" type="1f31426a:PackageElementNode" />
+              <item name="example" type="1f31426a:PackageElementNode" />
+              <item name="innose" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="Implement" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Implement" type="616d4139:PackageViewModuleNode" />
+              <item name="wap" type="1f31426a:PackageElementNode" />
+              <item name="business" type="1f31426a:PackageElementNode" />
+              <item name="example" type="1f31426a:PackageElementNode" />
+              <item name="innose" type="1f31426a:PackageElementNode" />
+              <item name="information" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -531,55 +387,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.StartEntrance">
-    <configuration default="false" name="test.readExcle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="Implement" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="test" />
-      <option name="METHOD_NAME" value="readExcle" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="StartEntrance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="wap.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Implement" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="wap" />
-      <option name="MAIN_CLASS_NAME" value="wap.StartEntrance" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="ShopScene.getManagementScene" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.test.readExcle">
+    <configuration name="ShopScene.getManagementScene" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="wap.business.example.*" />
@@ -603,15 +412,19 @@
       </option>
       <envs />
       <patterns />
-      <method />
     </configuration>
-    <configuration default="false" name="test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration name="StartEntrance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="wap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <module name="Implement" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="test" />
+      <option name="PACKAGE_NAME" value="wap" />
+      <option name="MAIN_CLASS_NAME" value="wap.StartEntrance" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
@@ -624,35 +437,67 @@
       </option>
       <envs />
       <patterns />
-      <method />
     </configuration>
-    <configuration default="false" name="test.extest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="Implement" />
+      <option name="MAIN_CLASS_NAME" value="app.app" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="test" />
-      <option name="METHOD_NAME" value="extest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
+      <module name="" />
       <envs />
-      <patterns />
-      <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
-      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="" />
@@ -707,29 +552,6 @@
         <option name="SUPPORT_LIB_ENABLED" value="true" />
         <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="app.app" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
@@ -815,41 +637,65 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
+    <configuration name="test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
+      <module name="Implement" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="test" />
       <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
+      <option name="WORKING_DIRECTORY" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
       <envs />
-      <properties />
-      <listeners />
-      <method />
+      <patterns />
+    </configuration>
+    <configuration name="test.extest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Implement" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="test" />
+      <option name="METHOD_NAME" value="extest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="test.readExcle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Implement" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="test" />
+      <option name="METHOD_NAME" value="readExcle" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.test.readExcle" />
@@ -860,8 +706,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.StartEntrance" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.test.readExcle" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.test.readExcle" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.StartEntrance" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.test.extest" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.test" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.ShopScene.getManagementScene" />
@@ -942,34 +788,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="StartEntrance - 2017.10.16 at 16h 00m 17s.xml">
-      <configuration name="StartEntrance" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test_readExcle - 2017.10.16 at 15h 42m 12s.xml">
+    <history-entry file="test_readExcle - 2017.10.16 at 21h 30m 48s.xml">
       <configuration name="test.readExcle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_readExcle - 2017.10.16 at 15h 44m 04s.xml">
+    <history-entry file="test_readExcle - 2017.10.16 at 21h 32m 33s.xml">
       <configuration name="test.readExcle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_readExcle - 2017.10.16 at 15h 45m 06s.xml">
+    <history-entry file="test_readExcle - 2017.10.16 at 21h 34m 04s.xml">
       <configuration name="test.readExcle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_readExcle - 2017.10.16 at 15h 46m 05s.xml">
+    <history-entry file="test_readExcle - 2017.10.16 at 21h 35m 35s.xml">
       <configuration name="test.readExcle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_readExcle - 2017.10.16 at 15h 46m 45s.xml">
+    <history-entry file="test_readExcle - 2017.10.16 at 21h 42m 17s.xml">
       <configuration name="test.readExcle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_readExcle - 2017.10.16 at 15h 48m 04s.xml">
+    <history-entry file="test_readExcle - 2017.10.16 at 21h 48m 16s.xml">
       <configuration name="test.readExcle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_readExcle - 2017.10.16 at 15h 50m 07s.xml">
+    <history-entry file="test_readExcle - 2017.10.16 at 21h 49m 01s.xml">
       <configuration name="test.readExcle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_readExcle - 2017.10.16 at 15h 50m 45s.xml">
+    <history-entry file="test_readExcle - 2017.10.16 at 21h 51m 05s.xml">
       <configuration name="test.readExcle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_readExcle - 2017.10.16 at 15h 51m 01s.xml">
+    <history-entry file="test_readExcle - 2017.10.16 at 21h 53m 07s.xml">
+      <configuration name="test.readExcle" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_readExcle - 2017.10.16 at 22h 00m 46s.xml">
       <configuration name="test.readExcle" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -983,11 +829,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="244" y="37" width="1499" height="1037" extended-state="0" />
+    <frame x="-6" y="0" width="1386" height="729" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3262295" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2625571" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -995,12 +840,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30948418" sideWeight="0.51348436" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20491803" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33789954" sideWeight="0.48651564" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33781514" sideWeight="0.48651564" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20222376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20512821" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1008,8 +852,10 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40525115" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="449" y="283" width="467" height="161" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1092,12 +938,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/StoreInformation.java</url>
-          <line>84</line>
+          <line>66</line>
           <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="15" />
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1106,20 +952,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/content/tiaoshidaima.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="83" column="8" lean-forward="false" selection-start-line="83" selection-start-column="8" selection-end-line="92" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/conversion/RegularExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/Override.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/Interface/InheritInput.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1143,13 +975,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="210" column="18" lean-forward="true" selection-start-line="210" selection-start-column="18" selection-end-line="210" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementObtain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="98" column="0" lean-forward="true" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1193,13 +1018,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3150">
           <caret line="139" column="47" lean-forward="false" selection-start-line="139" selection-start-column="47" selection-end-line="139" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/3.4.0/selenium-api-3.4.0-sources.jar!/org/openqa/selenium/By.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="142" column="48" lean-forward="false" selection-start-line="142" selection-start-column="48" selection-end-line="142" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -1274,21 +1092,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/caninput/InfoSelect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="145" column="0" lean-forward="false" selection-start-line="145" selection-start-column="0" selection-end-line="153" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/Information.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/content/file/mysql.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-28">
@@ -1311,38 +1114,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="2001" column="24" lean-forward="false" selection-start-line="2001" selection-start-column="24" selection-end-line="2001" selection-end-column="24" />
-          <folding>
-            <element signature="e#78240#78241#0" expanded="false" />
-            <element signature="e#78299#78300#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/conversion/CharacterString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/String.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/upload/PictureImage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="61" column="27" lean-forward="true" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/SystemOut.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding>
-            <element signature="e#946#947#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1360,7 +1136,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="40" column="16" lean-forward="false" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1368,7 +1143,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="17" column="10" lean-forward="false" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1376,7 +1150,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-975">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1384,7 +1157,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1392,7 +1164,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1400,61 +1171,126 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="88" column="18" lean-forward="false" selection-start-line="88" selection-start-column="18" selection-end-line="88" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/Information.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="36" />
+          <folding>
+            <marker date="1508154508879" expanded="true" signature="3786:3792" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/content/file/Javascript">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/3.4.0/selenium-api-3.4.0-sources.jar!/org/openqa/selenium/By.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="45" column="22" lean-forward="false" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="95" column="79" lean-forward="true" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="79" />
+        <state relative-caret-position="16">
+          <caret line="93" column="25" lean-forward="true" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/content/file/Javascript">
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementObtain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="96" />
+        <state relative-caret-position="63">
+          <caret line="103" column="7" lean-forward="true" selection-start-line="103" selection-start-column="7" selection-end-line="104" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/SystemOut.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="41" column="23" lean-forward="false" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+          <folding>
+            <element signature="e#946#947#0" expanded="true" />
+            <element signature="e#1016#1017#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementInput.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="54" column="39" lean-forward="false" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
+        <state relative-caret-position="263">
+          <caret line="61" column="38" lean-forward="false" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/bean/StoreInformationBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1600">
+          <caret line="98" column="18" lean-forward="false" selection-start-line="98" selection-start-column="18" selection-end-line="98" selection-end-column="18" />
+          <folding>
+            <element signature="e#2629#2630#0" expanded="true" />
+            <element signature="e#2660#2661#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/caninput/InfoSelect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="31" column="31" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/conversion/CharacterString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="33" column="20" lean-forward="false" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/bean/elementBean/InformationBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="87" column="31" lean-forward="false" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/StoreInformation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="207" column="13" lean-forward="false" selection-start-line="207" selection-start-column="13" selection-end-line="207" selection-end-column="13" />
+        <state relative-caret-position="305">
+          <caret line="143" column="43" lean-forward="false" selection-start-line="143" selection-start-column="21" selection-end-line="143" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/InformationModify.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="206" column="17" lean-forward="false" selection-start-line="206" selection-start-column="17" selection-end-line="206" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/InformationJudgment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-233">
-          <caret line="237" column="0" lean-forward="false" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
-          <folding>
-            <element signature="e#623#624#0" expanded="true" />
-            <element signature="e#653#654#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/InformationModify.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1730">
-          <caret line="244" column="30" lean-forward="false" selection-start-line="244" selection-start-column="23" selection-end-line="244" selection-end-column="30" />
-          <folding>
-            <element signature="e#553#554#0" expanded="true" />
-            <element signature="e#583#584#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="355">
+          <caret line="295" column="14" lean-forward="false" selection-start-line="295" selection-start-column="14" selection-end-line="295" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>

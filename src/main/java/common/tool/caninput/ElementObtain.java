@@ -2,6 +2,7 @@ package common.tool.caninput;
 
 import common.tool.SystemOut;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -18,8 +19,10 @@ public class ElementObtain extends ElementExistence {
     public String accordingToId(String id, String content) {
         boolean bl = super.accordingToId(id);
         if (bl) {
-            WebElement cfmpassword = driver.findElement(By.id(id));
-            content = operation(cfmpassword, content);
+            WebElement element = driver.findElement(By.id(id));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoViewIfNeeded(true);",
+                    element);
+            content = operation(element, content);
         }
 
         return content;
@@ -29,8 +32,10 @@ public class ElementObtain extends ElementExistence {
     public String accordingToName(String name, String content) {
         boolean bl = super.accordingToName(name);
         if (bl) {
-            WebElement cfmpassword = driver.findElement(By.name(name));
-            content = operation(cfmpassword, content);
+            WebElement element = driver.findElement(By.name(name));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoViewIfNeeded(true);",
+                    element);
+            content = operation(element, content);
         }
 
         return content;
@@ -41,8 +46,10 @@ public class ElementObtain extends ElementExistence {
 
         boolean bl = super.accordingToCssSelector(css);
         if (bl) {
-            WebElement cfmpassword = driver.findElement(By.cssSelector(css));
-            content = operation(cfmpassword, content);
+            WebElement element = driver.findElement(By.cssSelector(css));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoViewIfNeeded(true);",
+                    element);
+            content = operation(element, content);
         }
 
         return content;
@@ -53,8 +60,10 @@ public class ElementObtain extends ElementExistence {
 
         boolean bl = super.accordingToXpath(xpath);
         if (bl) {
-            WebElement cfmpassword = driver.findElement(By.xpath(xpath));
-            content = operation(cfmpassword, content);
+            WebElement element = driver.findElement(By.xpath(xpath));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoViewIfNeeded(true);",
+                    element);
+            content = operation(element, content);
         }
 
         return content;
@@ -65,20 +74,23 @@ public class ElementObtain extends ElementExistence {
 
         boolean bl = super.accordingToLinkText(linkText);
         if (bl) {
-            WebElement cfmpassword = driver.findElement(By.linkText(linkText));
-            content = operation(cfmpassword, content);
+            WebElement element = driver.findElement(By.linkText(linkText));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoViewIfNeeded(true);",
+                    element);
+            content = operation(element, content);
         }
 
         return content;
     }
 
     //  通过content来判断获取值的类型
-    public String operation(WebElement cfmpassword, String content) {
-
+    public String operation(WebElement element, String content) {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoViewIfNeeded(true);",
+                element);
         if (content == null || content.equals("")) {
-            content = cfmpassword.getText();
+            content = element.getText();
         } else {
-            content = cfmpassword.getAttribute(content);
+            content = element.getAttribute(content);
         }
 
         return content;
@@ -87,15 +99,18 @@ public class ElementObtain extends ElementExistence {
     public String operation(String iframeLoad, String bodyLoad) {
 
         //找到ifram对象
-        WebElement ele = driver.findElement(By.cssSelector(iframeLoad));
+        WebElement eleIfram = driver.findElement(By.cssSelector(iframeLoad));
+
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoViewIfNeeded(true);",
+                eleIfram);
 
         //进入新的布局
-        driver.switchTo().frame(ele);
+        driver.switchTo().frame(eleIfram);
 
         //布局里面的元素操作
-        WebElement element = driver.findElement(By.cssSelector(bodyLoad));
+        WebElement eleBody = driver.findElement(By.cssSelector(bodyLoad));
 
-        String textInfo = element.getText();
+        String textInfo = eleBody.getText();
 
         //退出iframe布局
         driver.switchTo().defaultContent();

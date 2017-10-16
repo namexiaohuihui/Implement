@@ -14,6 +14,8 @@ import java.sql.*;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import static java.lang.Thread.sleep;
+
 
 /**
  * Created by ${XiaoHuiHui} on 2017/7/17 on 14:36.
@@ -77,24 +79,34 @@ public class test<T> {
 
     @Test
     public void readExcle() {
-
-        String ss = "qwe";
-        int g = ss.indexOf(",");
-        SystemOut.getStringOut(g+ "");
-
         WebDriver driver = FoxDriver.getChromeDriver();
         //        是浏览器的大小
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         //        设置测试的网页
-        driver.get("C:\\Users\\Administrator\\Desktop\\连你·生活商家管理中心-信息 _ lianni.com.html");
-
+        //driver.get("C:\\Users\\70486\\Desktop\\连你·生活商家管理中心-信息 _ lianni.com.html");
+        driver.get("C:\\Users\\70486\\Desktop\\连你·生活商家管理中心 -信息_ lianni.com.html");
         String phoneLoad = "#contact";
-        WebElement element = driver.findElement(By.cssSelector(phoneLoad));
-       /* ((JavascriptExecutor) driver).executeScript(
-                "arguments[0].scrollIntoView(true);", element);*/
-        ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 900)");
-        SystemOut.getStringOut(element.getText());
+      //  ((JavascriptExecutor) driver).executeScript(
+      //          "arguments[0].scrollIntoView();", driver.findElement(By.cssSelector(phoneLoad)));
+        WebElement element = By.cssSelector(phoneLoad).findElement(driver);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoViewIfNeeded(true);",
+                element);
+
+        //document.readyState
+        try {
+            sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+       // ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 900)");
+        SystemOut.getStringOut("内容呢"+element.getAttribute("value"));
+        try {
+            sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         element.click();
         element.clear();

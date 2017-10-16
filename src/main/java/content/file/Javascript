@@ -3,6 +3,8 @@ javascript点击:
     WebElement element = driver.findElement(By.xpath("//*[@class='referBtn']/input"));
     jse.executeScript("arguments[0].click();", element);
 
+js学习地方
+http://www.cnblogs.com/tobecrazy/p/4817946.html
 javascript定位元素:
     元素聚焦：利用js将页面跳到元素的位置
     target = driver.find_element_by_xxxx()
@@ -20,6 +22,8 @@ javascript页面滑动:
     //移动到元素element对象的“底端”与当前窗口的“底部”对齐
     ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(false);", element);
 
+    //移动到元素element对象的指定的位置
+    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoViewIfNeeded(true);",element);
     //移动到页面最底部
     ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
 

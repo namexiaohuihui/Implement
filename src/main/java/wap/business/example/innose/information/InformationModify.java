@@ -6,6 +6,7 @@ import common.tool.conversion.CharacterString;
 import org.openqa.selenium.By;
 import org.openqa.selenium.InvalidElementStateException;
 import wap.business.example.bean.EnumProgramBean;
+import wap.business.example.bean.elementBean.InformationBean;
 
 import java.io.IOException;
 import java.util.Date;
@@ -23,61 +24,34 @@ public class InformationModify extends StoreInformation {
     }
 
     protected void modifyInformation() {
+        try{
         //SystemOut.getStringOut("2开始执行的数据？" + epb.toString());
         switch (epb.getFour()) {
             case "名字":
                 //读取数据内容
                 String shopName = StoreStatic.bean.getShop_name();
 
-                //判断是否要编辑
-                if (shopName.equals("") | shopName == null) {
-                    SystemOut.caseSuccess(epb.getZero(), epb.getFive());
-                    String shopLoad = "input#name";
-                    //如果元素报错说明不需要进行输入。此时就是程序问题
-                    try {
-                        super.elementInput(shopLoad, epb.getFive(), epb.getZero());
-                    } //编辑失败的打印
-                    catch (InvalidElementStateException e) {
+                //元素路径
+                String shopLoad = InformationBean.needNmae();
 
-                        //获取类名
-                        String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
+                //如果元素报错说明不需要进行输入。此时就是程序问题
+                super.elementInput(shopName,shopLoad, epb.getFive(), epb.getZero());
 
-                        //获取方法名
-                        String method = Thread.currentThread().getStackTrace()[1].getMethodName();
-
-                        super.caseOutInformation(clazz, method, e, epb.getZero());
-                    }
-
-                } //需要编辑
-                else {
-                    super.caseOutInformation(epb.getZero());
-                }
                 break;
 
             case "LOGO"://logo直接上传
-                try {
                     //打印说明
-                    SystemOut.caseSuccess(epb.getZero(), epb.getFive());
+                    //SystemOut.caseSuccess(epb.getZero(), epb.getFive());
                     //对象路径
                     //String logoLoad = "#SWFUpload_0";
                     //实现上传
                     //bedGoToPicture(logoLoad, epb.getFive(), epb.getZero());
-                } catch (Exception e) {
-                    //获取类名
-                    String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
-
-                    //获取方法名
-                    String method = Thread.currentThread().getStackTrace()[1].getMethodName();
-
-                    super.caseOutInformation(clazz, method, e, epb.getZero());
-                }
 
                 break;
 
             case "执照":
-                try {
                     //读取数据库中的图片数量
-                    String license = StoreStatic.bean.getLicense_number();
+                    //String license = StoreStatic.bean.getLicense_number();
 /*
                     //找到上传按钮
                     String licenseLoad = "#SWFUpload_1";
@@ -93,17 +67,11 @@ public class InformationModify extends StoreInformation {
                     }
 */
                     //打印错误信息
-                } catch (Exception e) {//整体异常集合
-                    String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
-                    String method = Thread.currentThread().getStackTrace()[1].getMethodName();
-                    super.caseOutInformation(clazz, method, e, epb.getZero());
-                }
                 break;
 
             case "实拍":
-                try {
                     //读取数据库中的图片数量
-                    String photo = StoreStatic.bean.getPhoto_number();
+                   // String photo = StoreStatic.bean.getPhoto_number();
 /*
                     //找到上传按钮
                     String photoLoad = "#SWFUpload_2";
@@ -119,209 +87,93 @@ public class InformationModify extends StoreInformation {
                     }
 */
                     //打印错误信息
-                } catch (Exception e) {//整体异常集合
-                    String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
-                    String method = Thread.currentThread().getStackTrace()[1].getMethodName();
-                    super.caseOutInformation(clazz, method, e, epb.getZero());
-                }
                 break;
 
             case "联系":
-                StoreMovesWindow(900);
                 //读取数据内容
-                //String phone = StoreStatic.bean.getShop_phone();
+                String phone = StoreStatic.bean.getShop_phone();
 
                 //元素对象的css路径
-                String phoneLoad = "input[id ='contact'][name='contact']";
+                String phoneLoad = InformationBean.needPhoneLoad();
 
                 //如果元素报错说明不需要进行输入。此时就是程序问题
-                try {
-                    elementInput(phoneLoad, epb.getFive(), epb.getZero());
-                } catch (InvalidElementStateException e) {
-
-                    //获取类名
-                    String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
-
-                    //获取方法名
-                    String method = Thread.currentThread().getStackTrace()[1].getMethodName();
-
-                    //输出发生错误的地方
-                    super.caseOutInformation(clazz, method, e, epb.getZero());
-
-                }
+                elementInput(phone,phoneLoad, epb.getFive(), epb.getZero());
                 break;
 
             case "省区":
-
-                StoreMovesWindow(900);
+                //获取元素对象
+                String provinceSele = InformationBean.needProvinceSele();
 
                 //读取数据内容
                 String province = StoreStatic.bean.getProvince();
 
-                //元素对象的css路径
-                //String provinceLoad = "#J_sel select:nth-child(1) > option";
-                try {
-                    if (province == "" | province.equals(null) | province.equals("")) {
-                        dropDownScreen(super.provinceSele);
-                    } else {
-                        SystemOut.caseEditSuccess(epb.getZero());
-                    }
-                } catch (Exception e) {
-                    //获取类名
-                    String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
-
-                    //获取方法名
-                    String method = Thread.currentThread().getStackTrace()[1].getMethodName();
-
-                    //输出发生错误的地方
-                    super.caseOutInformation(clazz, method, e, epb.getZero());
-                }
+                //传入数据内容以及对象位置。让其判断是否符合
+                dropDownScreen(province,provinceSele);
 
                 break;
 
             case "城市":
-
-                StoreMovesWindow(900);
+                //获取元素对象
+                String citySele = InformationBean.needCitySele();
 
                 //读取数据内容
                 String city = StoreStatic.bean.getCity();
 
-                //元素对象的css路径
-                //String cityLoad = "#J_sel select:nth-child(2) > option";
-
-                try {
-                    if (city == "" | city.equals(null) | city.equals("")) {
-                        dropDownScreen(super.citySele);
-                    } else {
-                        SystemOut.caseEditSuccess(epb.getZero());
-                    }
-                } catch (Exception e) {
-                    //获取类名
-                    String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
-
-                    //获取方法名
-                    String method = Thread.currentThread().getStackTrace()[1].getMethodName();
-
-                    //输出发生错误的地方
-                    super.caseOutInformation(clazz, method, e, epb.getZero());
-                }
-
+                //传入数据内容以及对象位置。让其判断是否符合
+                dropDownScreen(city,citySele);
                 break;
 
             case "区县":
-
-                StoreMovesWindow(900);
+                //获取元素对象
+                String countySele = InformationBean.needCountySele();
 
                 //读取数据内容
                 String county = StoreStatic.bean.getCounty();
 
-                //元素对象的css路径
-                //String countyLoad = "#J_sel select:nth-child(1) > option";
-
-                try {
-                    if (county == "" | county.equals(null) | county.equals("")) {
-                        dropDownScreen(super.countySele);
-                    } else {
-                        SystemOut.caseEditSuccess(epb.getZero());
-                    }
-                } catch (Exception e) {
-                    //获取类名
-                    String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
-
-                    //获取方法名
-                    String method = Thread.currentThread().getStackTrace()[1].getMethodName();
-
-                    //输出发生错误的地方
-                    super.caseOutInformation(clazz, method, e, epb.getZero());
-                }
+                //传入数据内容以及对象位置。让其判断是否符合
+                dropDownScreen(county,countySele);
 
                 break;
 
             case "位置":
-
-                StoreMovesWindow(900);
+                //获取元素对象
+                String detailed = InformationBean.needDetailed();
 
                 //读取数据内容
                 String address = StoreStatic.bean.getAddress();
 
-                //元素对象的css路径
-                //String countyLoad = "#J_sel select:nth-child(1) > option";
+                //需要输入的内容
+                String messega = epb.getFive() + new Date();
 
-                try {
-                    if (address == "" | address.equals(null) | address.equals("")) {
-                        super.elementInput(super.detailed, epb.getFive() + new Date(), epb.getZero());
-                    } else {
-                        SystemOut.caseEditSuccess(epb.getZero());
-                    }
-                } catch (InvalidElementStateException e) {
+                super.elementInput(address,detailed, messega, epb.getZero());
 
-                    //获取类名
-                    String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
-
-                    //获取方法名
-                    String method = Thread.currentThread().getStackTrace()[1].getMethodName();
-
-                    //输出发生错误的地方
-                    super.caseOutInformation(clazz, method, e, epb.getZero());
-
-                }
                 break;
 
             case "经度":
-                StoreMovesWindow(900);
+                //获取元素对象
+                String longitude = InformationBean.needLongitude();
+
                 //读取数据内容
                 String lng = StoreStatic.bean.getLng();
 
-                try {
-                    if (lng == "" | lng.equals(null) | lng.equals("")) {
-                        super.elementInput(super.longitude, epb.getFive(), epb.getZero());
-                    } else {
-                        SystemOut.caseEditSuccess(epb.getZero());
-                    }
-                } catch (InvalidElementStateException e) {
-
-                    //获取类名
-                    String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
-
-                    //获取方法名
-                    String method = Thread.currentThread().getStackTrace()[1].getMethodName();
-
-                    //输出发生错误的地方
-                    super.caseOutInformation(clazz, method, e, epb.getZero());
-
-                }
+                super.elementInput(lng,longitude, epb.getFive(), epb.getZero());
 
                 break;
 
             case "纬度":
-                StoreMovesWindow(900);
+                //获取元素对象
+                String latitude = InformationBean.needLatitude();
+
                 //读取数据内容
                 String lat = StoreStatic.bean.getLat();
 
-                try {
-                    if (lat == "" | lat.equals(null) | lat.equals("")) {
-                        super.elementInput(super.longitude, epb.getFive(), epb.getZero());
-                    } else {
-                        SystemOut.caseEditSuccess(epb.getZero());
-                    }
-                } catch (InvalidElementStateException e) {
-
-                    //获取类名
-                    String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
-
-                    //获取方法名
-                    String method = Thread.currentThread().getStackTrace()[1].getMethodName();
-
-                    //输出发生错误的地方
-                    super.caseOutInformation(clazz, method, e, epb.getZero());
-
-                }
+                super.elementInput(lat,latitude, epb.getFive(), epb.getZero());
                 break;
 
             case "介绍":
                 StoreMovesWindow(900);
-                String iframeLoad = ".ke-edit-iframe";
-                String bodyLoad = ".ke-content";
+                String iframeLoad = InformationBean.needIframeLoad();
+                String bodyLoad = InformationBean.needBodyLoad();
                 iframeInput(iframeLoad, bodyLoad, epb.getFive() + new Date());
                 break;
 
@@ -329,24 +181,46 @@ public class InformationModify extends StoreInformation {
                 SystemOut.getStringOut("没有这个内容数据" + epb.getFour());
                 break;
         }
+        }
+        //编辑失败的打印
+        catch (InvalidElementStateException e) {
+
+            //获取类名
+            String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
+
+            //获取方法名
+            String method = Thread.currentThread().getStackTrace()[1].getMethodName();
+
+            super.caseOutInformation(clazz, method, e, epb.getZero());
+        }
     }
 
 
-    private void dropDownScreen(String cssLoad) {
-        //需要打印的日志
-        String provinceMessage = epb.getFive();
-        if (provinceMessage.indexOf(",") == -1) {
-            capitalProvincialText(cssLoad, provinceMessage);
+    /**
+     * 通过下拉设置参数
+     * 判断表格中需要输入的参数类型
+     * 如果有逗号的说明是通过value值上传，此时需要sql语句一起
+     * 没有逗号的返回-1，说明只是对文字进行上传而已，。
+     * @param parameter 数据库中读取到数据信息
+     * @param cssLoad 元素的路径
+     */
+    private void dropDownScreen(String parameter,String cssLoad) {
+        if (parameter == "" | parameter.equals(null) | parameter.equals("")) {
+            //需要打印的日志
+            String provinceMessage = epb.getFive();
+            if (provinceMessage.indexOf(",") == -1) {
+                capitalProvincialText(cssLoad, provinceMessage);
 
-            SystemOut.caseSuccess(epb.getZero(), provinceMessage);
+                SystemOut.caseSuccess(epb.getZero(), provinceMessage);
+            } else {
+                //切割输入参数
+                CharacterString cha = new CharacterString();
+                String[] strings = cha.stringsToString(provinceMessage, "");
+                capitalProvincialValue(cssLoad, strings[0], strings[1]);
+
+            }
         } else {
-
-            //切割输入参数
-            CharacterString cha = new CharacterString();
-            String[] strings = cha.stringsToString(provinceMessage, "");
-
-            capitalProvincialValue(cssLoad, strings[0], strings[1]);
-
+            SystemOut.caseEditSuccess(epb.getZero());
         }
     }
 
@@ -387,6 +261,7 @@ public class InformationModify extends StoreInformation {
      * @param sql     查询的sql
      */
     private void capitalProvincialValue(String cssLoad, String content, String sql) {
+        StoreMovesWindow(cssLoad);
         InfoSelect infoSelect = new InfoSelect();
         infoSelect.categoryValue(By.cssSelector(cssLoad), content, sql);
     }
@@ -398,6 +273,7 @@ public class InformationModify extends StoreInformation {
      * @param content 设置的参数
      */
     private void capitalProvincialText(String cssLoad,String content) {
+        StoreMovesWindow(cssLoad);
         InfoSelect infoSelect = new InfoSelect();
         infoSelect.categoryText(By.cssSelector(cssLoad), content);
     }
