@@ -19,6 +19,8 @@ import wap.business.example.bean.EnumProgramBean;
 
 import java.util.Date;
 
+import static java.lang.Thread.sleep;
+
 /**
  * 实现登录
  * Created by Administrator on 2016/9/26.
@@ -70,9 +72,6 @@ public class Signin extends ShopScene {
             //        点击登录
             new Preservation().buttonClassName(loginwater);
 
-            //点击之后会卡，所以要先睡三秒
-            //sleep(3000);
-
             //登录失败的提示语句。。提示语句长度小于3的时候说明登录成功
             webElementError();
 
@@ -84,7 +83,11 @@ public class Signin extends ShopScene {
     }
 
     //    打印输出登录失败的原因
-    private void webElementError() {
+    private void webElementError() throws InterruptedException {
+
+        //点击之后会卡，所以要先睡三秒
+        sleep(1500);
+
         //调用判断的类
         ElementExistence ele = new ElementExistence();
         SystemOut.getStringOut("登陆失败提示获取时间" + new Date());

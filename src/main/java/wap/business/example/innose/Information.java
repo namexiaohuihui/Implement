@@ -54,8 +54,8 @@ public class Information {
         this.LOAD_CASE = epb.getOne() + epb.getTwo() + epb.getThree();
 
 
-        //按钮点击对象
-        preservation = new Preservation();
+        //按钮点击对象.
+        getPreservation();
 
         //用例对象
         ReadExcel readExcel = new ReadExcel();
@@ -117,5 +117,10 @@ public class Information {
         } else {
             SystemOut.getStringOut(describe + "菜单不存在，用例错了吧。。");
         }
+    }
+
+    protected Preservation getPreservation(){
+        preservation = new Preservation();
+        return preservation;
     }
 }

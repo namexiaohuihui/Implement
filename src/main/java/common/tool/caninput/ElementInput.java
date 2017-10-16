@@ -1,9 +1,6 @@
 package common.tool.caninput;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 
 import static java.lang.Thread.sleep;
 
@@ -53,7 +50,6 @@ public class ElementInput extends ElementExistence {
      * @param content 输入的内容
      */
     public void accordingToCssSelector(String css, String content) {
-
         boolean bl = super.accordingToCssSelector(css);
         if (bl) {
             WebElement cfmpassword = driver.findElement(By.cssSelector(css));
@@ -114,11 +110,12 @@ public class ElementInput extends ElementExistence {
 
     /**
      * 通过iframe来输入内容
-     * @param iframe iframe对象的css
-     * @param body body对象的css
+     *
+     * @param iframe  iframe对象的css
+     * @param body    body对象的css
      * @param message 内容的输入
      */
-    public void operationIframe(String iframe,String body,String message) {
+    public void operationIframe(String iframe, String body, String message) {
 
         //找到ifram对象
         WebElement ele = driver.findElement(By.cssSelector(iframe));
@@ -129,7 +126,7 @@ public class ElementInput extends ElementExistence {
         //布局里面的元素操作
         WebElement element = driver.findElement(By.cssSelector(body));
         element.click();
-        element.sendKeys(Keys.CONTROL,"a");
+        element.sendKeys(Keys.CONTROL, "a");
         element.sendKeys(Keys.BACK_SPACE);
         element.sendKeys(message);
 

@@ -26,226 +26,249 @@ public class InformationJudgment extends StoreInformation {
     }
 
     protected void judgmentInformation() {
-        switch (epb.getFour()) {
-            case "名字":
-                //读取数据内容
-                String shopName = super.bean.getShop_name();
+        try {
 
-                //元素对象的css路径
-                String shopLoad = "input#name";
+            //SystemOut.getStringOut("开始执行的数据？" + epb.toString());
+            switch (epb.getFour()) {
+                case "名字":
+                    //读取数据内容
+                    String shopName = StoreStatic.bean.getShop_name();
 
-                //需要打印的日志
-                String shopMessage = epb.getFour() + "进行验证";
+                    //元素对象的css路径
+                    String shopLoad = "input#name";
 
-                //传入参数判断数据内容跟界面显示的是否一致
-                judgmentParameterAttribute(shopName, shopLoad, "value", shopMessage);
+                    //需要打印的日志
+                    String shopMessage = epb.getFour() + "进行验证";
 
-                break;
+                    //传入参数判断数据内容跟界面显示的是否一致
+                    judgmentParameterAttribute(shopName, shopLoad, "value", shopMessage);
 
-            case "中心":
+                    break;
 
-                //读取数据内容
-                String warehouse = super.bean.getWarehouse_name();
+                case "中心":
 
-                //元素对象的css路径
-                String wpCss = " .referdata > tbody > tr:nth-child(3) > td";
+                    //读取数据内容
+                    String warehouse = StoreStatic.bean.getWarehouse_name();
 
-                //需要打印的日志
-                String wM = epb.getFour() + "进行验证";
+                    //元素对象的css路径
+                    String wpCss = " .referdata > tbody > tr:nth-child(3) > td";
 
-                //传入参数判断数据内容跟界面显示的是否一致
-                judgmentParameterText(warehouse, wpCss, wM);
+                    //需要打印的日志
+                    String wM = epb.getFour() + "进行验证";
 
-                break;
+                    //传入参数判断数据内容跟界面显示的是否一致
+                    judgmentParameterText(warehouse, wpCss, wM);
 
-            case "品类":
+                    break;
 
-                //读取数据内容
-                String category = super.bean.getCategory_name();
+                case "品类":
 
-                //元素对象的css路径
-                String cpCss = " .referdata > tbody > tr:nth-child(4) > td";
+                    //读取数据内容
+                    String category = StoreStatic.bean.getCategory_name();
 
-                //需要打印的日志
-                String categoryMessage = epb.getFour() + "进行验证";
+                    //元素对象的css路径
+                    String cpCss = " .referdata > tbody > tr:nth-child(4) > td";
 
-                //传入参数判断数据内容跟界面显示的是否一致
-                judgmentParameterText(category, cpCss, categoryMessage);
+                    //需要打印的日志
+                    String categoryMessage = epb.getFour() + "进行验证";
 
-                break;
+                    //传入参数判断数据内容跟界面显示的是否一致
+                    judgmentParameterText(category, cpCss, categoryMessage);
 
-            case "LOGO":
-                //读取数据内容
-                String logo = super.bean.getShop_logo();
+                    break;
 
-                //元素对象的css路径
-                String logoLoad = "div#shop-logo > img";
+                case "LOGO":
+                    //读取数据内容
+              /*      String logo = StoreStatic.bean.getShop_logo();
 
-                //需要打印的日志
-                String logoMessage = epb.getFour() + "进行验证";
+                    //元素对象的css路径
+                    String logoLoad = "div#shop-logo > img";
 
-                //传入参数判断数据内容跟界面显示的是否一致
-                judgmentParameterAttribute(logo, logoLoad, "src", logoMessage);
+                    //需要打印的日志
+                    String logoMessage = epb.getFour() + "进行验证";
+                    //传入参数判断数据内容跟界面显示的是否一致
+                    judgmentParameterAttribute(logo, logoLoad, "src", logoMessage);
+*/
+                    break;
 
-                break;
+                case "执照":
+/*
+                    //读取数据内容
+                    String license = StoreStatic.bean.getLicense_number();
 
-            case "执照":
+                    //需要打印的日志
+                    String licenseMessage = epb.getFour() + "进行验证";
 
-                //读取数据内容
-                String license = super.bean.getLicense_number();
+                    //传入参数判断数据内容跟界面显示的是否一致
+                    judgmentParameterNumber(license, super.piczzFile, epb.getFour() + "进行验证");
+*/
+                    break;
 
-                //需要打印的日志
-                String licenseMessage = epb.getFour() + "进行验证";
+                case "实拍":
+/*
+                    //读取数据内容
+                    String photo = StoreStatic.bean.getPhoto_number();
 
-                //传入参数判断数据内容跟界面显示的是否一致
-                judgmentParameterNumber(license, super.piczzFile, epb.getFour() + "进行验证");
+                    //需要打印的日志
+                    String photoMessage = epb.getFour() + "进行验证";
 
-                break;
+                    //传入参数判断数据内容跟界面显示的是否一致
+                    judgmentParameterNumber(photo, super.picFile, photoMessage);
+*/
+                    break;
 
-            case "实拍":
+                case "联系":
+                    StoreMovesWindow(900);
+                    //读取数据内容
+                    String phone = StoreStatic.bean.getShop_phone();
 
-                //读取数据内容
-                String photo = super.bean.getPhoto_number();
+                    //元素对象的css路径
+                    String phoneLoad = "input[id ='contact'][name='contact']";
 
-                //需要打印的日志
-                String photoMessage = epb.getFour() + "进行验证";
+                    //需要打印的日志
+                    String pM = epb.getFour() + "进行验证";
 
-                //传入参数判断数据内容跟界面显示的是否一致
-                judgmentParameterNumber(photo, super.picFile, photoMessage);
+                    //传入参数判断数据内容跟界面显示的是否一致
+                    judgmentParameterAttribute(phone, phoneLoad, "value", pM);
 
-                break;
+                    break;
 
-            case "联系":
+                case "省区":
+                    StoreMovesWindow(900);
+                    StoreMovesWindow(900);
+                    //读取数据内容
+                    String province = StoreStatic.bean.getProvince();
 
-                //读取数据内容
-                String phone = super.bean.getShop_phone();
+                    //元素对象的css路径
+                    //String provinceLoad = "#J_sel select:nth-child(1) > option";
 
-                //元素对象的css路径
-                String phoneLoad = "input[id ='contact'][name='contact']";
+                    //需要打印的日志
+                    String provinceMessage = epb.getFour() + "进行验证";
 
-                //需要打印的日志
-                String pM = epb.getFour() + "进行验证";
+                    //传入参数判断数据内容跟界面显示的是否一致
+                    judgmentParameterText(province, super.provinceSele, provinceMessage);
 
-                //传入参数判断数据内容跟界面显示的是否一致
-                judgmentParameterAttribute(phone, phoneLoad, "value", pM);
+                    break;
 
-                break;
+                case "城市":
 
-            case "省区":
+                    StoreMovesWindow(900);
+                    //读取数据内容
+                    String city = StoreStatic.bean.getCity();
 
-                //读取数据内容
-                String province = super.bean.getProvince();
+                    //元素对象的css路径
+                    //String cityLoad = "#J_sel select:nth-child(2) > option";
 
-                //元素对象的css路径
-                //String provinceLoad = "#J_sel select:nth-child(1) > option";
+                    //需要打印的日志
+                    String cityMessage = epb.getFour() + "进行验证";
 
-                //需要打印的日志
-                String provinceMessage = epb.getFour() + "进行验证";
+                    //传入参数判断数据内容跟界面显示的是否一致
+                    judgmentParameterText(city, super.citySele, cityMessage);
 
-                //传入参数判断数据内容跟界面显示的是否一致
-                judgmentParameterText(province, super.provinceSele, provinceMessage);
+                    break;
 
-                break;
+                case "区县":
 
-            case "城市":
+                    StoreMovesWindow(900);
 
+                    //读取数据内容
+                    String county = StoreStatic.bean.getCounty();
 
-                //读取数据内容
-                String city = super.bean.getCity();
+                    //元素对象的css路径
+                    //String countyLoad = "#J_sel select:nth-child(1) > option";
 
-                //元素对象的css路径
-                //String cityLoad = "#J_sel select:nth-child(2) > option";
+                    //需要打印的日志
+                    String countyMessage = epb.getFour() + "进行验证";
 
-                //需要打印的日志
-                String cityMessage = epb.getFour() + "进行验证";
+                    //传入参数判断数据内容跟界面显示的是否一致
+                    judgmentParameterText(county, super.countySele, countyMessage);
 
-                //传入参数判断数据内容跟界面显示的是否一致
-                judgmentParameterText(city, super.citySele, cityMessage);
+                    break;
 
-                break;
+                case "位置":
 
-            case "区县":
+                    StoreMovesWindow(900);
 
-                //读取数据内容
-                String county = super.bean.getCounty();
+                    //读取数据内容
+                    String address = StoreStatic.bean.getAddress();
 
-                //元素对象的css路径
-                //String countyLoad = "#J_sel select:nth-child(1) > option";
+                    //元素对象的css路径
+                    //String countyLoad = "#J_sel select:nth-child(1) > option";
 
-                //需要打印的日志
-                String countyMessage = epb.getFour() + "进行验证";
+                    //需要打印的日志
+                    String addressMessage = epb.getFour() + "进行验证";
 
-                //传入参数判断数据内容跟界面显示的是否一致
-                judgmentParameterText(county, super.countySele, countyMessage);
+                    //传入参数判断数据内容跟界面显示的是否一致
+                    judgmentParameterAttribute(address, super.detailed, "value", addressMessage);
 
-                break;
+                    break;
 
-            case "位置":
+                case "经度":
 
-                //读取数据内容
-                String address = super.bean.getAddress();
+                    StoreMovesWindow(900);
 
-                //元素对象的css路径
-                //String countyLoad = "#J_sel select:nth-child(1) > option";
+                    //读取数据内容
+                    String lng = StoreStatic.bean.getLng();
 
-                //需要打印的日志
-                String addressMessage = epb.getFour() + "进行验证";
+                    //需要打印的日志
+                    String lngMessage = epb.getFour() + "进行验证";
 
-                //传入参数判断数据内容跟界面显示的是否一致
-                judgmentParameterAttribute(address, super.detailed, "value", addressMessage);
+                    //传入参数判断数据内容跟界面显示的是否一致
+                    judgmentParameterAttribute(lng, super.longitude, "value", lngMessage);
 
-                break;
+                    break;
 
-            case "经度":
+                case "纬度":
 
-                //读取数据内容
-                String lng = super.bean.getLng();
+                    StoreMovesWindow(900);
 
-                //需要打印的日志
-                String lngMessage = epb.getFour() + "进行验证";
+                    //读取数据内容
+                    String lat = StoreStatic.bean.getLat();
 
-                //传入参数判断数据内容跟界面显示的是否一致
-                judgmentParameterAttribute(lng, super.longitude, "value", lngMessage);
+                    //需要打印的日志
+                    String latMessage = epb.getFour() + "进行验证";
 
-                break;
+                    //传入参数判断数据内容跟界面显示的是否一致
+                    judgmentParameterAttribute(lat, super.latitude, "value", latMessage);
+                    break;
 
-            case "纬度":
+                case "介绍":
 
-                //读取数据内容
-                String lat = super.bean.getLat();
+                    StoreMovesWindow(900);
 
-                //需要打印的日志
-                String latMessage = epb.getFour() + "进行验证";
+                    //读取数据内容
+                    String info = StoreStatic.bean.getInfo();
 
-                //传入参数判断数据内容跟界面显示的是否一致
-                judgmentParameterAttribute(lat, super.latitude, "value", latMessage);
-                break;
+                    //通过正则筛选出自己想要的内容
+                    String strInfo = RegularExpression.regularExpression(info);
 
-            case "介绍":
+                    //打印数据
+                    SystemOut.getStringOut("数据库中的介绍" + strInfo);
 
-                //读取数据内容
-                String info = super.bean.getInfo();
+                    //定义css路径
+                    String iframeLoad = ".ke-edit-iframe";
+                    String bodyLoad = ".ke-content";
 
-                //通过正则筛选出自己想要的内容
-                String strInfo = RegularExpression.regularExpression(info);
+                    //获取数据
+                    ElementObtain obtain = new ElementObtain();
+                    String textInfo = obtain.operation(iframeLoad, bodyLoad);
+                    SystemOut.getStringOut("页面的介绍" + textInfo);
 
-                //打印数据
-                SystemOut.getStringOut("数据库中的介绍" + strInfo);
+                    break;
 
-                //定义css路径
-                String iframeLoad = ".ke-edit-iframe";
-                String bodyLoad = ".ke-content";
+                default:
+                    SystemOut.getStringOut("没有这个内容数据" + epb.getFour());
+                    break;
+            }
+        } catch (Exception e) {
+            //获取类名
+            String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
 
-                //获取数据
-                ElementObtain obtain = new ElementObtain();
-                String textInfo = obtain.operation(iframeLoad, bodyLoad);
-                SystemOut.getStringOut("页面的介绍" + textInfo);
+            //获取方法名
+            String method = Thread.currentThread().getStackTrace()[1].getMethodName();
 
-                break;
-
-            default:
-                SystemOut.getStringOut("没有这个内容数据" + epb.getFour());
-                break;
+            //输出发生错误的地方
+            super.caseOutInformation(clazz, method, e, epb.getZero());
         }
     }
 
@@ -273,7 +296,13 @@ public class InformationJudgment extends StoreInformation {
     private void judgmentParameterAttribute(String argument, String parameter, String value, String message) {
         WebElement eleName = driver.findElement(By.cssSelector(parameter));
         String eleText = eleName.getAttribute(value);
-        super.assertEqualsMessage(message, argument, eleText);
+        int indexOf = getLastIndexOf(argument, eleText);
+        if (indexOf!=-1){
+            eleText = eleText.substring(indexOf, argument.length());
+            super.assertEqualsMessage(message, argument, eleText);
+        }else {
+            SystemOut.getStringOut("图片验证错误。。。。。。。。。。坑呀");
+        }
     }
 
     /**

@@ -23,10 +23,11 @@ public class InformationModify extends StoreInformation {
     }
 
     protected void modifyInformation() {
+        //SystemOut.getStringOut("2开始执行的数据？" + epb.toString());
         switch (epb.getFour()) {
             case "名字":
                 //读取数据内容
-                String shopName = super.bean.getShop_name();
+                String shopName = StoreStatic.bean.getShop_name();
 
                 //判断是否要编辑
                 if (shopName.equals("") | shopName == null) {
@@ -58,9 +59,9 @@ public class InformationModify extends StoreInformation {
                     //打印说明
                     SystemOut.caseSuccess(epb.getZero(), epb.getFive());
                     //对象路径
-                    String logoLoad = "#SWFUpload_0";
+                    //String logoLoad = "#SWFUpload_0";
                     //实现上传
-                    bedGoToPicture(logoLoad, epb.getFive(), epb.getZero());
+                    //bedGoToPicture(logoLoad, epb.getFive(), epb.getZero());
                 } catch (Exception e) {
                     //获取类名
                     String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
@@ -76,8 +77,8 @@ public class InformationModify extends StoreInformation {
             case "执照":
                 try {
                     //读取数据库中的图片数量
-                    String license = super.bean.getLicense_number();
-
+                    String license = StoreStatic.bean.getLicense_number();
+/*
                     //找到上传按钮
                     String licenseLoad = "#SWFUpload_1";
 
@@ -90,7 +91,7 @@ public class InformationModify extends StoreInformation {
                         //图片上传
                         imgGoToPicture(licenseLoad, imgNumber);
                     }
-
+*/
                     //打印错误信息
                 } catch (Exception e) {//整体异常集合
                     String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
@@ -102,8 +103,8 @@ public class InformationModify extends StoreInformation {
             case "实拍":
                 try {
                     //读取数据库中的图片数量
-                    String photo = super.bean.getPhoto_number();
-
+                    String photo = StoreStatic.bean.getPhoto_number();
+/*
                     //找到上传按钮
                     String photoLoad = "#SWFUpload_2";
 
@@ -116,19 +117,19 @@ public class InformationModify extends StoreInformation {
                         //循环上传
                         imgGoToPicture(photoLoad, imgNumber);
                     }
-
+*/
                     //打印错误信息
                 } catch (Exception e) {//整体异常集合
                     String clazz = Thread.currentThread().getStackTrace()[1].getClassName();
                     String method = Thread.currentThread().getStackTrace()[1].getMethodName();
                     super.caseOutInformation(clazz, method, e, epb.getZero());
                 }
-
                 break;
 
             case "联系":
+                StoreMovesWindow(900);
                 //读取数据内容
-                String phone = super.bean.getShop_phone();
+                //String phone = StoreStatic.bean.getShop_phone();
 
                 //元素对象的css路径
                 String phoneLoad = "input[id ='contact'][name='contact']";
@@ -152,8 +153,10 @@ public class InformationModify extends StoreInformation {
 
             case "省区":
 
+                StoreMovesWindow(900);
+
                 //读取数据内容
-                String province = super.bean.getProvince();
+                String province = StoreStatic.bean.getProvince();
 
                 //元素对象的css路径
                 //String provinceLoad = "#J_sel select:nth-child(1) > option";
@@ -178,8 +181,10 @@ public class InformationModify extends StoreInformation {
 
             case "城市":
 
+                StoreMovesWindow(900);
+
                 //读取数据内容
-                String city = super.bean.getCity();
+                String city = StoreStatic.bean.getCity();
 
                 //元素对象的css路径
                 //String cityLoad = "#J_sel select:nth-child(2) > option";
@@ -205,8 +210,10 @@ public class InformationModify extends StoreInformation {
 
             case "区县":
 
+                StoreMovesWindow(900);
+
                 //读取数据内容
-                String county = super.bean.getCounty();
+                String county = StoreStatic.bean.getCounty();
 
                 //元素对象的css路径
                 //String countyLoad = "#J_sel select:nth-child(1) > option";
@@ -232,8 +239,10 @@ public class InformationModify extends StoreInformation {
 
             case "位置":
 
+                StoreMovesWindow(900);
+
                 //读取数据内容
-                String address = super.bean.getAddress();
+                String address = StoreStatic.bean.getAddress();
 
                 //元素对象的css路径
                 //String countyLoad = "#J_sel select:nth-child(1) > option";
@@ -259,9 +268,9 @@ public class InformationModify extends StoreInformation {
                 break;
 
             case "经度":
-
+                StoreMovesWindow(900);
                 //读取数据内容
-                String lng = super.bean.getLng();
+                String lng = StoreStatic.bean.getLng();
 
                 try {
                     if (lng == "" | lng.equals(null) | lng.equals("")) {
@@ -285,9 +294,9 @@ public class InformationModify extends StoreInformation {
                 break;
 
             case "纬度":
-
+                StoreMovesWindow(900);
                 //读取数据内容
-                String lat = super.bean.getLat();
+                String lat = StoreStatic.bean.getLat();
 
                 try {
                     if (lat == "" | lat.equals(null) | lat.equals("")) {
@@ -310,6 +319,7 @@ public class InformationModify extends StoreInformation {
                 break;
 
             case "介绍":
+                StoreMovesWindow(900);
                 String iframeLoad = ".ke-edit-iframe";
                 String bodyLoad = ".ke-content";
                 iframeInput(iframeLoad, bodyLoad, epb.getFive() + new Date());

@@ -1,17 +1,15 @@
-import com.google.gson.Gson;
 import common.FoxDriver;
 import common.tool.SystemOut;
 import common.tool.conversion.MutualJsonBean;
 import common.tool.informationException.ErrorException;
-import common.tool.mysqls.MysqlInquire;
-import org.json.JSONObject;
 import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import wap.business.example.bean.GoodsBean;
-import wap.business.example.bean.StoreInformationBean;
 
 import java.io.IOException;
-import java.lang.reflect.Type;
 import java.sql.*;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -67,18 +65,14 @@ public class test<T> {
         }
     }
 
-    @Test
     public void extest() throws ErrorException, IOException {
-        String sql = "select * from ph_exclusive.ph_dianpu;";
-        MysqlInquire mysqlInquire = new MysqlInquire();
-        JSONObject jsonObject = mysqlInquire.dataMysqlColumnAllRow(sql);
+        String k1 = "seller/shop/logo/2017/10/59ddc678855f1.jpg";
+        String k2 = "http://img.t-lianni.com/seller/shop/logo/2017/10/59ddc678855f1.jpg";
 
-        Gson gson = new Gson();
-        StoreInformationBean bran = new StoreInformationBean();
-        bran = gson.fromJson(jsonObject.toString(), (Type) bran.getClass());
-        //bran = gson.fromJson(jsonObject.toString(), new TypeToken<StoreInformationBean>() {}.getType());
 
-        SystemOut.getStringOut(bran.toString());
+
+        SystemOut.getStringOut(k2.indexOf(k1) + ":");
+        SystemOut.getStringOut(k2.lastIndexOf(k1) + ":");
     }
 
     @Test
@@ -93,17 +87,18 @@ public class test<T> {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         //        设置测试的网页
-        driver.get("C:\\Users\\70486\\Desktop\\连你·生活商家管理中心-信息 _ lianni.com.html");
+        driver.get("C:\\Users\\Administrator\\Desktop\\连你·生活商家管理中心-信息 _ lianni.com.html");
 
+        String phoneLoad = "#contact";
+        WebElement element = driver.findElement(By.cssSelector(phoneLoad));
+       /* ((JavascriptExecutor) driver).executeScript(
+                "arguments[0].scrollIntoView(true);", element);*/
+        ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 900)");
+        SystemOut.getStringOut(element.getText());
 
-        /*
-        String load = "E:\\drivers\\CasePlan\\CasrScene\\BusinessInformation\\StoreManagement\\店铺管理.xlsx";
-        EnumProgramBean bean = StartData.readLoad(load, 1, 1);
-        SystemOut.getStringOut(bean.toString());
-
-        StoreInformation information = new StoreInformation(bean);
-        information.informationStore();*/
-
+        element.click();
+        element.clear();
+        element.sendKeys("111");
     }
 
 }
