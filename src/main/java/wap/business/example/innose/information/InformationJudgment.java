@@ -39,7 +39,7 @@ public class InformationJudgment extends StoreInformation {
                     String shopLoad = InformationBean.needNmae();
 
                     //需要打印的日志
-                    String shopMessage = epb.getFour() + "进行验证";
+                    String shopMessage = epb.getZero() + "进行验证";
 
                     //传入参数判断数据内容跟界面显示的是否一致
                     judgmentParameterAttribute(shopName, shopLoad, "value", shopMessage);
@@ -55,7 +55,7 @@ public class InformationJudgment extends StoreInformation {
                     String wpCss = InformationBean.needWarehouse();
 
                     //需要打印的日志
-                    String wM = epb.getFour() + "进行验证";
+                    String wM = epb.getZero() + "进行验证";
 
                     //传入参数判断数据内容跟界面显示的是否一致
                     judgmentParameterText(warehouse, wpCss, wM);
@@ -71,7 +71,7 @@ public class InformationJudgment extends StoreInformation {
                     String cpCss = InformationBean.needCategory();
 
                     //需要打印的日志
-                    String categoryMessage = epb.getFour() + "进行验证";
+                    String categoryMessage = epb.getZero() + "进行验证";
 
                     //传入参数判断数据内容跟界面显示的是否一致
                     judgmentParameterText(category, cpCss, categoryMessage);
@@ -86,7 +86,7 @@ public class InformationJudgment extends StoreInformation {
                     String logoLoad = "div#shop-logo > img";
 
                     //需要打印的日志
-                    String logoMessage = epb.getFour() + "进行验证";
+                    String logoMessage = epb.getZero() + "进行验证";
                     //传入参数判断数据内容跟界面显示的是否一致
                     judgmentParameterAttribute(logo, logoLoad, "src", logoMessage);
 */
@@ -98,10 +98,10 @@ public class InformationJudgment extends StoreInformation {
                     String license = StoreStatic.bean.getLicense_number();
 
                     //需要打印的日志
-                    String licenseMessage = epb.getFour() + "进行验证";
+                    String licenseMessage = epb.getZero() + "进行验证";
 
                     //传入参数判断数据内容跟界面显示的是否一致
-                    judgmentParameterNumber(license, super.piczzFile, epb.getFour() + "进行验证");
+                    judgmentParameterNumber(license, super.piczzFile, epb.getZero() + "进行验证");
 */
                     break;
 
@@ -111,7 +111,7 @@ public class InformationJudgment extends StoreInformation {
                     String photo = StoreStatic.bean.getPhoto_number();
 
                     //需要打印的日志
-                    String photoMessage = epb.getFour() + "进行验证";
+                    String photoMessage = epb.getZero() + "进行验证";
 
                     //传入参数判断数据内容跟界面显示的是否一致
                     judgmentParameterNumber(photo, super.picFile, photoMessage);
@@ -127,7 +127,7 @@ public class InformationJudgment extends StoreInformation {
                     String phoneLoad = InformationBean.needPhoneLoad();;
 
                     //需要打印的日志
-                    String pM = epb.getFour() + "进行验证";
+                    String pM = epb.getZero() + "进行验证";
 
                     //传入参数判断数据内容跟界面显示的是否一致
                     judgmentParameterAttribute(phone, phoneLoad, "value", pM);
@@ -144,7 +144,7 @@ public class InformationJudgment extends StoreInformation {
                     //String provinceLoad = "#J_sel select:nth-child(1) > option";
 
                     //需要打印的日志
-                    String provinceMessage = epb.getFour() + "进行验证";
+                    String provinceMessage = epb.getZero() + "进行验证";
 
                     //传入参数判断数据内容跟界面显示的是否一致
                     judgmentParameterText(province,provinceSele, provinceMessage);
@@ -163,7 +163,7 @@ public class InformationJudgment extends StoreInformation {
                     //String cityLoad = "#J_sel select:nth-child(2) > option";
 
                     //需要打印的日志
-                    String cityMessage = epb.getFour() + "进行验证";
+                    String cityMessage = epb.getZero() + "进行验证";
 
                     //传入参数判断数据内容跟界面显示的是否一致
                     judgmentParameterText(city, citySele, cityMessage);
@@ -182,7 +182,7 @@ public class InformationJudgment extends StoreInformation {
                     //String countyLoad = "#J_sel select:nth-child(1) > option";
 
                     //需要打印的日志
-                    String countyMessage = epb.getFour() + "进行验证";
+                    String countyMessage = epb.getZero() + "进行验证";
 
                     //传入参数判断数据内容跟界面显示的是否一致
                     judgmentParameterText(county, countySele, countyMessage);
@@ -201,7 +201,7 @@ public class InformationJudgment extends StoreInformation {
                     //String countyLoad = "#J_sel select:nth-child(1) > option";
 
                     //需要打印的日志
-                    String addressMessage = epb.getFour() + "进行验证";
+                    String addressMessage = epb.getZero() + "进行验证";
 
                     //传入参数判断数据内容跟界面显示的是否一致
                     judgmentParameterAttribute(address, detailed, "value", addressMessage);
@@ -217,7 +217,7 @@ public class InformationJudgment extends StoreInformation {
                     String lng = StoreStatic.bean.getLng();
 
                     //需要打印的日志
-                    String lngMessage = epb.getFour() + "进行验证";
+                    String lngMessage = epb.getZero() + "进行验证";
 
                     //传入参数判断数据内容跟界面显示的是否一致
                     judgmentParameterAttribute(lng, longitude, "value", lngMessage);
@@ -233,7 +233,7 @@ public class InformationJudgment extends StoreInformation {
                     String lat = StoreStatic.bean.getLat();
 
                     //需要打印的日志
-                    String latMessage = epb.getFour() + "进行验证";
+                    String latMessage = epb.getZero() + "进行验证";
 
                     //传入参数判断数据内容跟界面显示的是否一致
                     judgmentParameterAttribute(lat, latitude, "value", latMessage);
@@ -264,7 +264,7 @@ public class InformationJudgment extends StoreInformation {
                     break;
 
                 default:
-                    SystemOut.getStringOut("没有这个内容数据" + epb.getFour());
+                    SystemOut.getStringOut("没有这个内容数据" + epb.getZero());
                     break;
             }
         } catch (Exception e) {
@@ -280,45 +280,6 @@ public class InformationJudgment extends StoreInformation {
     }
 
     /**
-     * 目前针对可直接获取text的内容，然后直接进行比较的对象
-     *
-     * @param argument  数据库中查询到该页面的内容
-     * @param parameter css路径对象
-     * @param message   打印的数据
-     */
-    private void judgmentParameterText(String argument, String parameter, String message) {
-        //移动页面
-        StoreMovesWindow(parameter);
-        //创建对象
-        WebElement eleName = driver.findElement(By.cssSelector(parameter));
-        //获取对象信息并去除空格
-        String eleText = eleName.getText().trim();
-        //数据判断
-        super.assertEqualsMessage(message, argument, eleText);
-    }
-
-    /**
-     * 目前针对于需要通过Attribute来读取数据，并进行比较的对象
-     *
-     * @param argument  sql读取的数据
-     * @param parameter css的路径
-     * @param name      Attribute的读取数据
-     * @param message   打印的信息
-     */
-    private void judgmentParameterAttribute(String argument, String parameter, String value, String message) {
-        StoreMovesWindow(parameter);
-        WebElement eleName = driver.findElement(By.cssSelector(parameter));
-        String eleText = eleName.getAttribute(value);
-        int indexOf = getLastIndexOf(argument, eleText);
-        if (indexOf!=-1){
-            eleText = eleText.substring(indexOf, argument.length());
-            super.assertEqualsMessage(message, argument, eleText);
-        }else {
-            SystemOut.getStringOut("图片验证错误。。。。。。。。。。坑呀");
-        }
-    }
-
-    /**
      * 目前针对于统计数量的比较
      *
      * @param argument  数据库中的数据
@@ -328,6 +289,6 @@ public class InformationJudgment extends StoreInformation {
     private void judgmentParameterNumber(String argument, String parameter, String message) {
         List<WebElement> phEles = driver.findElements(By.cssSelector(parameter));
         String phSize = phEles.size() + "";
-        judgmentParameterText(argument, phSize, epb.getFour() + "进行验证");
+        judgmentParameterText(argument, phSize, epb.getZero() + "进行验证");
     }
 }

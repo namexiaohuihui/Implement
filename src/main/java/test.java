@@ -7,7 +7,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import wap.business.StartData;
+import wap.business.example.bean.EnumProgramBean;
 import wap.business.example.bean.GoodsBean;
+import wap.business.example.innose.information.ShopNotices;
 
 import java.io.IOException;
 import java.sql.*;
@@ -67,14 +70,12 @@ public class test<T> {
         }
     }
 
+    @Test
     public void extest() throws ErrorException, IOException {
-        String k1 = "seller/shop/logo/2017/10/59ddc678855f1.jpg";
-        String k2 = "http://img.t-lianni.com/seller/shop/logo/2017/10/59ddc678855f1.jpg";
-
-
-
-        SystemOut.getStringOut(k2.indexOf(k1) + ":");
-        SystemOut.getStringOut(k2.lastIndexOf(k1) + ":");
+        String qianmian = "E:\\drivers\\CasePlan\\CasrScene\\BusinessInformation\\";
+        String load = qianmian + "StoreManagement\\店铺管理.xlsx";
+        EnumProgramBean bean = StartData.readLoad(load, 1, 2);
+        SystemOut.getStringOut(bean.toString());
     }
 
     @Test
@@ -85,32 +86,11 @@ public class test<T> {
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         //        设置测试的网页
         //driver.get("C:\\Users\\70486\\Desktop\\连你·生活商家管理中心-信息 _ lianni.com.html");
-        driver.get("C:\\Users\\70486\\Desktop\\连你·生活商家管理中心 -信息_ lianni.com.html");
-        String phoneLoad = "#contact";
-      //  ((JavascriptExecutor) driver).executeScript(
-      //          "arguments[0].scrollIntoView();", driver.findElement(By.cssSelector(phoneLoad)));
-        WebElement element = By.cssSelector(phoneLoad).findElement(driver);
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoViewIfNeeded(true);",
-                element);
-
-        //document.readyState
-        try {
-            sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-       // ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 900)");
-        SystemOut.getStringOut("内容呢"+element.getAttribute("value"));
-        try {
-            sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        element.click();
-        element.clear();
-        element.sendKeys("111");
+        driver.get("C:\\Users\\70486\\Desktop\\连你·生活商家管理中心-公告 _ lianni.com.html");
+        String qianmian = "E:\\drivers\\CasePlan\\CasrScene\\BusinessInformation\\";
+        String load = qianmian + "StoreManagement\\店铺管理.xlsx";
+        EnumProgramBean bean = StartData.readLoad(load, 1, 2);
+        new ShopNotices().getAnnouncement(bean);
     }
 
 }

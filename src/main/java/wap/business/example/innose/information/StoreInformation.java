@@ -68,7 +68,6 @@ public class StoreInformation extends Information {
                 case "验证":
                     new InformationJudgment(epb).judgmentInformation();
                     StoreMovesWindow(0);
-                    preservation.buttonCssSelector(".btn.btn-primary");
                     break;
 
                 case "修改":
@@ -84,17 +83,6 @@ public class StoreInformation extends Information {
         }
     }
 
-    //返回查询语句的内容。
-    private void mysqlInquire() {
-        //sql = "select * from ph_exclusive.ph_dianpu;";
-        StoreStatic.bean = new StoreInformationBean();
-        //数据库连接及查询
-        JSONObject jsonObject = new MysqlInquire().dataMysqlColumnAllRow(sql);
-        Gson gson = new Gson();
-        StoreStatic.bean = gson.fromJson(jsonObject.toString(),
-                (Type) StoreStatic.bean.getClass());
-        SystemOut.getStringOut("查询到的数据内容" + StoreStatic.bean);
-    }
 
     protected StoreInformationBean getMysqlInquire(){
         return StoreStatic.bean;
@@ -113,41 +101,6 @@ public class StoreInformation extends Information {
 
     protected void bedGoToPicture(String cssSelector, String route, String massage) throws IOException, InterruptedException {
         PictureImage.setLogoCssSelector(driver, cssSelector, route, massage);
-    }
-
-    /**
-     * 父类定义断言给子类用
-     *
-     * @param message
-     * @param expected
-     * @param actual
-     */
-    protected void assertEqualsMessage(String message, Object expected, Object actual) {
-        assertEquals(message, expected, actual);
-    }
-
-
-    /**
-     * 父类定义输入对象，让子类进行调用
-     * 根据cssSelector来进行元素输入
-     *
-     * @param parameter   数据库中读取到数据信息
-     * @param cssSelector 路径
-     * @param message     输入的信息
-     * @param useCase     用例编号
-     */
-    public void elementInput(String parameter,String cssSelector, String message, String useCase) {
-
-        if (parameter == "" | parameter.equals(null) | parameter.equals("")) {
-            //元素输入内容
-            ElementInput eleInput = new ElementInput();
-            eleInput.accordingToCssSelector(cssSelector, message);
-
-            //打印数据
-            SystemOut.caseSuccess(useCase, message);
-        } else {
-            SystemOut.caseEditSuccess(useCase);
-        }
     }
 
 
@@ -187,58 +140,13 @@ public class StoreInformation extends Information {
     }
 
 
-    /**
-     * 页面移动。默认为0.
-     *
-     * @param number 向下移动的距离
-     */
-    protected void StoreMovesWindow(int number) {
-        if (number==0){
-            try {
-                //移动到底部
-                ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
-                //等待时间
-                sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }else {
-            ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, "+number+")");
-        }
-    }
 
-    /**
-     * 页面移动，移动到指定的元素位置。该元素位于屏幕中间
-     * @param cssLoad  元素路径
-     */
-    protected void StoreMovesWindow(String  cssLoad) {
-        try {
-            sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        WebElement element = By.cssSelector(cssLoad).findElement(driver);
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoViewIfNeeded(true);",
-                element);
-    }
-
-
-    /**
-     * 返回某个元素在另一个元素中的位置
-     * @param message
-     * @param parameter
-     * @return
-     */
-    protected int getLastIndexOf(String message,String parameter){
-        int index = message.lastIndexOf(parameter);
-        return index;
-    }
 
 
     //内部类用于保存局部信息
-    static class StoreStatic {
+    public static class StoreStatic {
         //mysql语句所查询到的内容
-        static StoreInformationBean bean;
+        public static StoreInformationBean bean;
 
         public StoreInformationBean getBean() {
             return bean;
@@ -249,5 +157,15 @@ public class StoreInformation extends Information {
         }
     }
 
-
+    //返回查询语句的内容。
+    protected void mysqlInquire() {
+        //sql = "select * from ph_exclusive.ph_dianpu;";
+        StoreInformation.StoreStatic.bean = new StoreInformationBean();
+        //数据库连接及查询
+        JSONObject jsonObject = new MysqlInquire().dataMysqlColumnAllRow(sql);
+        Gson gson = new Gson();
+        StoreInformation.StoreStatic.bean = gson.fromJson(jsonObject.toString(),
+                (Type) StoreInformation.StoreStatic.bean.getClass());
+        //SystemOut.getStringOut("查询到的数据内容" + StoreStatic.bean);
+    }
 }

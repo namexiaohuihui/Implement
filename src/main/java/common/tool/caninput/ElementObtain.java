@@ -83,7 +83,7 @@ public class ElementObtain extends ElementExistence {
         return content;
     }
 
-    //  通过content来判断获取值的类型
+    //  通过content来判断获取元素兑现的值
     public String operation(WebElement element, String content) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoViewIfNeeded(true);",
                 element);

@@ -2,18 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a41ba70-32a3-43a6-aa3c-a0189bf6bfbd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/wap/business/example/bean/elementBean/InformationBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/ElementInput.class" afterPath="$PROJECT_DIR$/target/classes/common/tool/caninput/ElementInput.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/ElementObtain.class" afterPath="$PROJECT_DIR$/target/classes/common/tool/caninput/ElementObtain.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/wap/business/example/bean/ShopNoticesBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/wap/business/example/bean/elementBean/noticesBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/noticesModifyJudge.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/common/parameter/QueryStatement.class" afterPath="$PROJECT_DIR$/target/classes/common/parameter/QueryStatement.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test.class" afterPath="$PROJECT_DIR$/target/classes/test.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wap/business/example/innose/Information.class" afterPath="$PROJECT_DIR$/target/classes/wap/business/example/innose/Information.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wap/business/example/innose/information/InformationJudgment.class" afterPath="$PROJECT_DIR$/target/classes/wap/business/example/innose/information/InformationJudgment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wap/business/example/innose/information/ShopNotices.class" afterPath="$PROJECT_DIR$/target/classes/wap/business/example/innose/information/ShopNotices.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/wap/business/example/innose/information/StoreInformation.class" afterPath="$PROJECT_DIR$/target/classes/wap/business/example/innose/information/StoreInformation.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementInput.java" afterPath="$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementInput.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/common/parameter/QueryStatement.java" afterPath="$PROJECT_DIR$/src/main/java/common/parameter/QueryStatement.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementObtain.java" afterPath="$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementObtain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/content/file/Javascript" afterPath="$PROJECT_DIR$/src/main/java/content/file/Javascript" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/common/tool/conversion/TimeConversionDate.java" afterPath="$PROJECT_DIR$/src/main/java/common/tool/conversion/TimeConversionDate.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/test.java" afterPath="$PROJECT_DIR$/src/main/java/test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wap/business/example/innose/Information.java" afterPath="$PROJECT_DIR$/src/main/java/wap/business/example/innose/Information.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/InformationJudgment.java" afterPath="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/InformationJudgment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/InformationModify.java" afterPath="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/InformationModify.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/ShopNotices.java" afterPath="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/ShopNotices.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/StoreInformation.java" afterPath="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/StoreInformation.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -30,11 +35,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="StoreInformation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/StoreInformation.java">
+      <file leaf-file-name="noticesModifyJudge.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/noticesModifyJudge.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="143" column="43" lean-forward="false" selection-start-line="143" selection-start-column="21" selection-end-line="143" selection-end-column="43" />
+            <state relative-caret-position="138">
+              <caret line="28" column="43" lean-forward="false" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TimeConversionDate.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/conversion/TimeConversionDate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="30" column="12" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -43,28 +60,34 @@
       <file leaf-file-name="InformationModify.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/InformationModify.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="206" column="17" lean-forward="false" selection-start-line="206" selection-start-column="17" selection-end-line="206" selection-end-column="17" />
+            <state relative-caret-position="3825">
+              <caret line="164" column="31" lean-forward="false" selection-start-line="164" selection-start-column="23" selection-end-line="164" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InformationJudgment.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/InformationJudgment.java">
+      <file leaf-file-name="ShopNotices.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/ShopNotices.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="295" column="14" lean-forward="false" selection-start-line="295" selection-start-column="14" selection-end-line="295" selection-end-column="14" />
-              <folding />
+            <state relative-caret-position="213">
+              <caret line="65" column="32" lean-forward="true" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4589#4590#0" expanded="true" />
+                <element signature="e#4624#4625#0" expanded="true" />
+                <element signature="e#4677#4678#0" expanded="true" />
+                <element signature="e#4717#4718#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InformationBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/bean/elementBean/InformationBean.java">
+      <file leaf-file-name="test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="87" column="31" lean-forward="false" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="31" />
+            <state relative-caret-position="163">
+              <caret line="90" column="62" lean-forward="true" selection-start-line="90" selection-start-column="62" selection-end-line="90" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -73,10 +96,10 @@
       <file leaf-file-name="Information.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/Information.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="36" />
+            <state relative-caret-position="152">
+              <caret line="256" column="39" lean-forward="false" selection-start-line="256" selection-start-column="32" selection-end-line="256" selection-end-column="39" />
               <folding>
-                <marker date="1508154508879" expanded="true" signature="3786:3792" ph="{...}" />
+                <marker date="1508256777626" expanded="true" signature="4385:4391" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -95,14 +118,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>new ElementExistence()</find>
-      <find>wedDriver();</find>
-      <find>Node</find>
-      <find>static</find>
-      <find>{ get; set; }</find>
-      <find>private</find>
-      <find>LOGIN_STATUS</find>
-      <find>账号未登录不能进行菜单的操作</find>
       <find>strings</find>
       <find>该元素不存在</find>
       <find>data</find>
@@ -125,9 +140,16 @@
       <find>cfmpassword</find>
       <find>protected</find>
       <find>public</find>
+      <find>打开页面的标题</find>
+      <find>次成功打开页面</find>
+      <find>登录成功</find>
+      <find>mysql</find>
+      <find>private</find>
+      <find>getLastIndexOf</find>
+      <find>assertEqualsMessage</find>
+      <find>getFour</find>
     </findStrings>
     <replaceStrings>
-      <replace>Parameter</replace>
       <replace>preservation</replace>
       <replace>wapUrl</replace>
       <replace>parameter</replace>
@@ -156,7 +178,8 @@
       <replace>StoreStatic.bean</replace>
       <replace>element</replace>
       <replace>public</replace>
-      <replace>public static</replace>
+      <replace>protected</replace>
+      <replace>getZero</replace>
     </replaceStrings>
     <dirStrings>
       <dir>E:\Implement\src\main\java\common\tool\upload</dir>
@@ -177,9 +200,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/wap/business/example/StartDistinguish.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/parameter/WapUrl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/wechat/ConfirmOrder.java" />
         <option value="$PROJECT_DIR$/src/main/java/wap/backstage/AssignRedPackets.java" />
         <option value="$PROJECT_DIR$/src/main/java/wap/business/example/cooperation/boundary/TopTransaction.java" />
         <option value="$PROJECT_DIR$/src/main/java/common/tool/enumTool/ChineseToEnglish.java" />
@@ -211,23 +231,26 @@
         <option value="$PROJECT_DIR$/src/main/java/common/tool/SystemOut.java" />
         <option value="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/StoreSettings.java" />
         <option value="$PROJECT_DIR$/src/main/java/wap/business/StartData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/tool/conversion/TimeConversionDate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/ShopNotices.java" />
         <option value="$PROJECT_DIR$/src/main/java/common/tool/upload/PictureImage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/parameter/QueryStatement.java" />
-        <option value="$PROJECT_DIR$/src/main/java/wap/business/example/innose/Information.java" />
         <option value="$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/Assert.java" />
         <option value="$PROJECT_DIR$/src/main/java/test2.java" />
         <option value="$PROJECT_DIR$/src/main/java/wap/business/example/Signin.java" />
         <option value="$PROJECT_DIR$/src/main/java/content/file/Javascript" />
         <option value="$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementInput.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementObtain.java" />
-        <option value="$PROJECT_DIR$/src/main/java/test.java" />
         <option value="$PROJECT_DIR$/src/main/java/common/tool/caninput/InfoSelect.java" />
-        <option value="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/StoreInformation.java" />
         <option value="$PROJECT_DIR$/src/main/java/wap/business/example/bean/elementBean/InformationBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/InformationModify.java" />
+        <option value="$PROJECT_DIR$/src/main/java/common/parameter/QueryStatement.java" />
+        <option value="$PROJECT_DIR$/src/main/java/test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wap/business/example/bean/ShopNoticesBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/StoreInformation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementObtain.java" />
         <option value="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/InformationJudgment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/ShopNotices.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/noticesModifyJudge.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wap/business/example/innose/Information.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wap/business/example/bean/elementBean/noticesBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/common/tool/conversion/TimeConversionDate.java" />
       </list>
     </option>
   </component>
@@ -254,9 +277,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -285,13 +307,9 @@
             <path>
               <item name="Implement" type="58d84e3e:PackageViewProjectNode" />
               <item name="Implement" type="616d4139:PackageViewModuleNode" />
-              <item name="content" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="Implement" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Implement" type="616d4139:PackageViewModuleNode" />
-              <item name="content" type="1f31426a:PackageElementNode" />
-              <item name="file" type="1f31426a:PackageElementNode" />
+              <item name="common" type="1f31426a:PackageElementNode" />
+              <item name="tool" type="1f31426a:PackageElementNode" />
+              <item name="conversion" type="1f31426a:PackageElementNode" />
             </path>
             <path>
               <item name="Implement" type="58d84e3e:PackageViewProjectNode" />
@@ -350,6 +368,7 @@
         </subPane>
       </pane>
       <pane id="ProjectPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -362,17 +381,17 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/Implement/src/main/java/wap/business/example/Signin.java" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Implement\src\libs\mysqls" />
-      <recent name="E:\Implement\src\libs\js" />
-      <recent name="E:\Implement\src\libs\xlss" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Implement\src\main\java\common\tool\excelfile" />
       <recent name="E:\Implement\src\main" />
       <recent name="E:\Implement\src\main\java\content\file" />
       <recent name="E:\Implement\src\main\java\content" />
       <recent name="E:\Implement\src\libs" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Implement\src\libs\mysqls" />
+      <recent name="E:\Implement\src\libs\js" />
+      <recent name="E:\Implement\src\libs\xlss" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -707,8 +726,8 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.test.readExcle" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.StartEntrance" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.test.extest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.test.extest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.StartEntrance" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.test" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.ShopScene.getManagementScene" />
       </list>
@@ -788,34 +807,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="test_readExcle - 2017.10.16 at 21h 30m 48s.xml">
+    <history-entry file="test_readExcle - 2017.10.17 at 23h 30m 17s.xml">
       <configuration name="test.readExcle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_readExcle - 2017.10.16 at 21h 32m 33s.xml">
+    <history-entry file="test_readExcle - 2017.10.17 at 23h 32m 59s.xml">
       <configuration name="test.readExcle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_readExcle - 2017.10.16 at 21h 34m 04s.xml">
+    <history-entry file="test_readExcle - 2017.10.17 at 23h 37m 26s.xml">
       <configuration name="test.readExcle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_readExcle - 2017.10.16 at 21h 35m 35s.xml">
+    <history-entry file="test_readExcle - 2017.10.17 at 23h 40m 44s.xml">
       <configuration name="test.readExcle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_readExcle - 2017.10.16 at 21h 42m 17s.xml">
+    <history-entry file="test_readExcle - 2017.10.17 at 23h 45m 17s.xml">
       <configuration name="test.readExcle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_readExcle - 2017.10.16 at 21h 48m 16s.xml">
+    <history-entry file="test_readExcle - 2017.10.17 at 23h 52m 44s.xml">
       <configuration name="test.readExcle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_readExcle - 2017.10.16 at 21h 49m 01s.xml">
+    <history-entry file="test_readExcle - 2017.10.17 at 23h 56m 37s.xml">
       <configuration name="test.readExcle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_readExcle - 2017.10.16 at 21h 51m 05s.xml">
+    <history-entry file="test_readExcle - 2017.10.18 at 00h 09m 19s.xml">
       <configuration name="test.readExcle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_readExcle - 2017.10.16 at 21h 53m 07s.xml">
+    <history-entry file="test_readExcle - 2017.10.18 at 00h 14m 17s.xml">
       <configuration name="test.readExcle" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_readExcle - 2017.10.16 at 22h 00m 46s.xml">
+    <history-entry file="test_readExcle - 2017.10.18 at 00h 18m 53s.xml">
       <configuration name="test.readExcle" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -838,13 +857,15 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30948418" sideWeight="0.51348436" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="449" y="283" width="467" height="161" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20491803" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33781514" sideWeight="0.48651564" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20512821" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2081448" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48603353" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -857,9 +878,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="449" y="283" width="467" height="161" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48603353" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -935,14 +954,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/StoreInformation.java</url>
-          <line>66</line>
-          <properties />
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
@@ -952,17 +963,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/Override.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/Interface/InheritInput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-50">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/Throwable.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/Exception.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/RuntimeException.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/IllegalArgumentException.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/3.4.0/selenium-support-3.4.0-sources.jar!/org/openqa/selenium/support/ui/ExpectedConditions.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -986,13 +986,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/FoxDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="116" column="52" lean-forward="false" selection-start-line="116" selection-start-column="52" selection-end-line="116" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/homeAddress/ManagementHomepage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1300">
@@ -1004,13 +997,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-41">
           <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementExistence.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1600">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1035,42 +1021,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/conversion/TimeConversionDate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="23" column="55" lean-forward="false" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/StartData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1625">
-          <caret line="72" column="30" lean-forward="false" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/Date.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/ShopNotices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2275">
-          <caret line="93" column="7" lean-forward="false" selection-start-line="93" selection-start-column="7" selection-end-line="93" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/parameter/QueryStatement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/mysqls/DBHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="40" column="34" lean-forward="false" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/informationException/ErrorException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -1085,24 +1036,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/mysqls/MysqlInquire.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="104" column="22" lean-forward="false" selection-start-line="104" selection-start-column="22" selection-end-line="104" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/content/file/mysql.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-28">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/Assert.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="108" column="23" lean-forward="false" selection-start-line="108" selection-start-column="23" selection-end-line="108" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1129,13 +1066,6 @@
           <folding>
             <element signature="e#820#821#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/caninput/Preservation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="40" column="16" lean-forward="false" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -1167,28 +1097,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/Signin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="88" column="18" lean-forward="false" selection-start-line="88" selection-start-column="18" selection-end-line="88" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/Information.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="36" />
-          <folding>
-            <marker date="1508154508879" expanded="true" signature="3786:3792" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/content/file/Javascript">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1200,18 +1112,141 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/caninput/InfoSelect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="93" column="25" lean-forward="true" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
+        <state relative-caret-position="75">
+          <caret line="31" column="31" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/conversion/CharacterString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="33" column="20" lean-forward="false" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/mysqls/MysqlInquire.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementObtain.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/parameter/QueryStatement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="103" column="7" lean-forward="true" selection-start-line="103" selection-start-column="7" selection-end-line="104" selection-end-column="26" />
+        <state relative-caret-position="328">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/mysqls/DBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="40" column="34" lean-forward="true" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/Signin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="671">
+          <caret line="58" column="26" lean-forward="false" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/FoxDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="129" column="49" lean-forward="false" selection-start-line="129" selection-start-column="49" selection-end-line="129" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/excelfile/ReadExcel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/StartData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/conversion/DateConversionTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="86" column="16" lean-forward="false" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementExistence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="61" column="19" lean-forward="false" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/bean/StoreInformationBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1250">
+          <caret line="58" column="18" lean-forward="false" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
+          <folding>
+            <element signature="e#1756#1757#0" expanded="true" />
+            <element signature="e#1792#1793#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/bean/ShopNoticesBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-29">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/StoreInformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="59" column="8" lean-forward="false" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/InformationJudgment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="67" column="52" lean-forward="false" selection-start-line="67" selection-start-column="52" selection-end-line="67" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/caninput/Preservation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="90" column="62" lean-forward="true" selection-start-line="90" selection-start-column="62" selection-end-line="90" selection-end-column="62" />
           <folding />
         </state>
       </provider>
@@ -1227,69 +1262,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementInput.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementObtain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="61" column="38" lean-forward="false" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="38" />
+        <state relative-caret-position="121">
+          <caret line="86" column="18" lean-forward="false" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/bean/StoreInformationBean.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/Assert.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1600">
-          <caret line="98" column="18" lean-forward="false" selection-start-line="98" selection-start-column="18" selection-end-line="98" selection-end-column="18" />
+        <state relative-caret-position="256">
+          <caret line="117" column="33" lean-forward="false" selection-start-line="117" selection-start-column="26" selection-end-line="117" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="105" column="25" lean-forward="false" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/Information.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="256" column="39" lean-forward="false" selection-start-line="256" selection-start-column="32" selection-end-line="256" selection-end-column="39" />
           <folding>
-            <element signature="e#2629#2630#0" expanded="true" />
-            <element signature="e#2660#2661#0" expanded="true" />
+            <marker date="1508256777626" expanded="true" signature="4385:4391" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/caninput/InfoSelect.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/InformationModify.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="31" column="31" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/conversion/CharacterString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="33" column="20" lean-forward="false" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+        <state relative-caret-position="3825">
+          <caret line="164" column="31" lean-forward="false" selection-start-line="164" selection-start-column="23" selection-end-line="164" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/bean/elementBean/InformationBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="87" column="31" lean-forward="false" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="31" />
+        <state relative-caret-position="-787">
+          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/StoreInformation.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/bean/elementBean/noticesBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="143" column="43" lean-forward="false" selection-start-line="143" selection-start-column="21" selection-end-line="143" selection-end-column="43" />
+        <state relative-caret-position="175">
+          <caret line="14" column="61" lean-forward="false" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/InformationModify.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/ShopNotices.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="206" column="17" lean-forward="false" selection-start-line="206" selection-start-column="17" selection-end-line="206" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="213">
+          <caret line="65" column="32" lean-forward="true" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4589#4590#0" expanded="true" />
+            <element signature="e#4624#4625#0" expanded="true" />
+            <element signature="e#4677#4678#0" expanded="true" />
+            <element signature="e#4717#4718#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/InformationJudgment.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/noticesModifyJudge.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="295" column="14" lean-forward="false" selection-start-line="295" selection-start-column="14" selection-end-line="295" selection-end-column="14" />
+        <state relative-caret-position="138">
+          <caret line="28" column="43" lean-forward="false" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/conversion/TimeConversionDate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="30" column="12" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
           <folding />
         </state>
       </provider>

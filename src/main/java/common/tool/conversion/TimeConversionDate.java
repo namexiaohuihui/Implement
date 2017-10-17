@@ -28,9 +28,10 @@ public class TimeConversionDate {
         return sdf.format(new Date(Long.valueOf(seconds+"000")));
     }
 
+    //返回当前时间
     public  static String  stringToday() {
         Date currentTime = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy:MM:dd HH:mm:ss");
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String dateString = formatter.format(currentTime);
         return dateString;
     }

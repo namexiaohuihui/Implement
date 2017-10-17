@@ -16,6 +16,6 @@ public class QueryStatement {
                 "com.mysql.jdbc.Driver", "root", "xiaodingdong"};
        String[] mysqlData2 = {"jdbc:mysql://192.168.10.204:3306/lnlife_2?characterEncoding=utf8&autoReconnect=true&useSSL=false",
                 "com.mysql.jdbc.Driver", "root", "123456"};
-        return mysqlData2;
+        return mysqlData;
     }
 }
