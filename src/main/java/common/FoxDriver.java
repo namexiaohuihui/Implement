@@ -47,6 +47,7 @@ public class FoxDriver {
 
     private static int recording = 1;//统计网页打开错误次数
 
+
     public static WebDriver getWebDrivaer() {
         if (driver == null) {
             SystemOut.getStringOut("调用时提示：浏览器对象为空");
@@ -66,9 +67,16 @@ public class FoxDriver {
         if (driver == null) {
             SystemOut.getStringOut("创建时---火狐：浏览器对象为空");
             System.setProperty("webdriver.firefox.bin", "E:\\Program Files\\Mozilla Firefox\\firefox.exe");
-           // System.setProperty("webdriver.firefox.driver", loadRoute + "geckodriver.exe");
+            // System.setProperty("webdriver.firefox.driver", loadRoute + "geckodriver.exe");
             driver = new FirefoxDriver();
         }
+		/**
+		System.setProperty("webdriver.opera.driver",
+		"/home/pc-name/Downloads/operadriver");
+
+		OperaDriver driver = new OperaDriver();
+		driver.get("http://www.google.co.in/");
+		*/
         return driver;
     }
 
@@ -99,7 +107,7 @@ public class FoxDriver {
     public static WebDriver getChromeDriver() {
         if (driver == null) {
             SystemOut.getStringOut("创建时---谷歌：浏览器对象为空");
-            System.setProperty("webdriver.chrome.driver", loadRoute + "chromedriver59-61.exe");
+            System.setProperty("webdriver.chrome.driver", loadRoute + "chromedriver238-67.exe");
             driver = new ChromeDriver();
 
         }
@@ -112,7 +120,8 @@ public class FoxDriver {
         //        是浏览器的大小
         driver.manage().window().maximize();
         //        设置测试的网页
-        driver.get(WapUrl.urlTop);
+        String openUrl = WapUrl.urlFamily;
+        driver.get(openUrl);
         //        设置网页超时的时间
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
@@ -120,10 +129,10 @@ public class FoxDriver {
         System.out.println("打开页面的标题" + title);
 
         if (title.equals("页面载入出错")) {
-            recordingStatistics(WapUrl.urlTop);//重新加载网页
+            recordingStatistics(openUrl);//重新加载网页
             driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         } else if (title.equals("连接超时")) {
-            recordingStatistics(WapUrl.urlTop);//重新加载网页
+            recordingStatistics(openUrl);//重新加载网页
             driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         }
         recording = 1;//网址能打开之后就情况统计次数

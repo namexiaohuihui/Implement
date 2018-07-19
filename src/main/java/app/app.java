@@ -1,12 +1,15 @@
 package app;
 
 
+import common.tool.SystemOut;
 import io.appium.java_client.android.AndroidDriver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
+import java.util.NoSuchElementException;
 
 import static java.lang.Thread.sleep;
 
@@ -22,15 +25,15 @@ public class app {
     //before test Annotation makes a java function to run every time before a TestNG test case
     @BeforeTest
     protected void createAppiumDriver() throws MalformedURLException, InterruptedException {
-        driver =  StartSystem.start(driver,wait);
+        driver = StartSystem.start(driver, wait);
     }
 
     @Test
     public void setUp() throws MalformedURLException {
-      //  driver =  StartSystem.start();
+        //  driver =  StartSystem.start();
         System.out.println("开始");
         try {
-            sleep(3000);
+            sleep(9000);
             login();
             sleep(6000);
         } catch (InterruptedException e) {
@@ -48,9 +51,17 @@ public class app {
     */
 
 
-    private void login(){
-       driver.findElementById("com.lianni.delivery.develop:id/edt_account").click();
-       driver.findElementById("com.lianni.delivery.develop:id/edt_account").clear();
-       driver.findElementById("com.lianni.delivery.develop:id/edt_account").sendKeys("11111");
+    private void login() {
+        try {
+//            driver.switchTo().alert();
+//            driver.findElementByName("始终允许");
+            driver.findElementById("com.lianni.delivery.develop:id/edt_account").click();
+            driver.findElementById("com.lianni.delivery.develop:id/edt_account").clear();
+            driver.findElementById("com.lianni.delivery.develop:id/edt_account").sendKeys("11111");
+            driver.hideKeyboard();
+        }catch (Exception e){
+            SystemOut.getStringOut(e.toString());
+        }
     }
+
 }

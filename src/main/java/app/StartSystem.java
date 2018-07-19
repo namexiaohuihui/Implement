@@ -19,24 +19,25 @@ public class StartSystem {
         //relative path to apk file
         // final File classpathRoot = new File(System.getProperty("user.dir"));
         //final File appDir = new File(classpathRoot, "E:\\drivers");
-        final File appDir = new File("C:\\Users\\Administrator\\Desktop");
-        final File app = new File(appDir, "app-Test_-release_08101700.apk");
+//        final File appDir = new File("C:\\Users\\Administrator\\Desktop");
+//        final File app = new File(appDir, "app-Test_-release_08101700.apk");
 
         //setting up desired capability
         DesiredCapabilities caps = new DesiredCapabilities();
         //指定测试机的ID,通过adb命令`adb devices`获取
-        caps.setCapability("browserName", "192.168.10.155:5555");
+//        caps.setCapability("browserName", "192.168.10.155:5555");
+        caps.setCapability("deviceName", "64535188");
         //指定测试平台
         caps.setCapability("platform", "ANDROID");
-        caps.setCapability("platformVersion", "5.1.1");
+        caps.setCapability("platformVersion", "7.1.1");
         caps.setCapability("deviceName", "ANDROID");
-        caps.setCapability("app", app.getAbsolutePath());
+//        caps.setCapability("app", app.getAbsolutePath());
 
         //将上面获取到的包名和Activity名设置为值
-        caps.setCapability("appPackage", "com.lianni.delivery.develop");
-        caps.setCapability("appActivity", "com.lianni.delivery.StartActivity");
+        caps.setCapability("appPackage", "com.lianni.delivery");
+        caps.setCapability("appActivity", ".StartActivity");
         //A new session could not be created的解决方法(A new session could not be created:无法创建新会话)
-        caps.setCapability("appWaitActivity", "com.lianni.delivery.StartActivity");
+        caps.setCapability("appWaitActivity", ".StartActivity");
         //每次启动时覆盖session，否则第二次后运行会报错不能新建session
         caps.setCapability("sessionOverride", true);
 

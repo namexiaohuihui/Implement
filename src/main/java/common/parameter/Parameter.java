@@ -13,11 +13,11 @@ public class Parameter {
     //文档存放位置
     public static  String load = "E:\\drivers\\CasePlan\\测试计划.xlsx";
 
-    //大佬的入口
-    public static String accountTop = "--";
-    public static String passWordTop = "//";
+    //大佬的账号密码
+    public static String accountTop = "**";
+    public static String passWordTop = "--";
 
-    //老板的入口
+    //老板的账号密码
     public static String accountStart = "---";
     public static String passWordStrat = "//";
 
