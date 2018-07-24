@@ -2,12 +2,16 @@ package common;
 
 import common.parameter.WapUrl;
 import common.tool.SystemOut;
+import org.apache.commons.lang3.ObjectUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -70,13 +74,13 @@ public class FoxDriver {
             // System.setProperty("webdriver.firefox.driver", loadRoute + "geckodriver.exe");
             driver = new FirefoxDriver();
         }
-		/**
-		System.setProperty("webdriver.opera.driver",
-		"/home/pc-name/Downloads/operadriver");
+        /**
+         System.setProperty("webdriver.opera.driver",
+         "/home/pc-name/Downloads/operadriver");
 
-		OperaDriver driver = new OperaDriver();
-		driver.get("http://www.google.co.in/");
-		*/
+         OperaDriver driver = new OperaDriver();
+         driver.get("http://www.google.co.in/");
+         */
         return driver;
     }
 
@@ -103,15 +107,55 @@ public class FoxDriver {
         return driver;
     }
 
+    public static void setProperty() {
+        SystemOut.getStringOut("创建时---谷歌：浏览器对象为空");
+        System.setProperty("webdriver.chrome.driver", loadRoute + "chromedriver238-67.exe");
+    }
+
     //   获取对象：谷歌
     public static WebDriver getChromeDriver() {
         if (driver == null) {
-            SystemOut.getStringOut("创建时---谷歌：浏览器对象为空");
-            System.setProperty("webdriver.chrome.driver", loadRoute + "chromedriver238-67.exe");
+            setProperty();
             driver = new ChromeDriver();
 
         }
         return driver;
+    }
+    public static Map<String, String> phoneMobile(String deviceName){
+        setProperty();
+        Map<String, String> mobileEmulation = new HashMap<String, String>();
+        //设置设备,例如:Google Nexus 7/Apple iPhone 6
+        mobileEmulation.put("deviceName", deviceName);   //这里是要使用的模拟器名称，就是浏览器中模拟器中的顶部型号
+        return mobileEmulation ;
+    }
+
+    public static WebDriver chromePhoneMobile() {
+        if (driver == null) {
+            Map<String, String> mobileEmulation  = phoneMobile("iPhone X");
+
+            ChromeOptions chromeOptions = new ChromeOptions();
+            chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
+
+            driver = new ChromeDriver(chromeOptions);
+            return driver;
+        }
+        return null;
+    }
+
+    public static WebDriver desiredPhoneMobile() {
+        if (driver == null) {
+            Map<String, String> mobileEmulation  = phoneMobile("iPhone X");
+
+            Map<String, Object> chromeOptions = new HashMap<String, Object>();
+            chromeOptions.put("mobileEmulation", mobileEmulation);
+
+            DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+            capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+
+            driver = new ChromeDriver(capabilities);
+            return driver;
+        }
+        return null;
     }
 
     public static WebDriver openBrowser() {

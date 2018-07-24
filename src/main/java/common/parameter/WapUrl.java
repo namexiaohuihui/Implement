@@ -11,7 +11,7 @@ import org.openqa.selenium.WebDriver;
 public class WapUrl {
 
     //大王前缀
-    public static String urlFamily = "http://66666";
+    public static String urlFamily = "http://admin5.t-lianni.com";
     //老板前缀
     public static String urlTop = "http://----/";
     //上帝前缀

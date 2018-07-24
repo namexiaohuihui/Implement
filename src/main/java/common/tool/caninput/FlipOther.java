@@ -2,7 +2,6 @@ package common.tool.caninput;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import sun.rmi.runtime.Log;
 
 import java.util.ArrayList;
 import java.util.List;

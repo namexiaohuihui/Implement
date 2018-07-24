@@ -14,7 +14,7 @@
     <properties>
         <junit.version>4.12</junit.version>
         <appium.version>3.3.0</appium.version>
-        <driver.version>3.4.0</driver.version>
+        <driver.version>3.13.0</driver.version>
         <testng.version>6.10</testng.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
