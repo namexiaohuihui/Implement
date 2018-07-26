@@ -2,7 +2,6 @@ package common;
 
 import common.parameter.WapUrl;
 import common.tool.SystemOut;
-import org.apache.commons.lang3.ObjectUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;

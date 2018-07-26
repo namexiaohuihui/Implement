@@ -8,4 +8,5 @@ package buyer;
  * @project : Implement
  */
 public class BuyerLogin {
+
 }
