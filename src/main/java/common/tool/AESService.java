@@ -9,7 +9,6 @@ import java.util.Base64;
 public class AESService {
 
 	public String encrypt(String sSrc, String key) {
-		// TODO Auto-generated method stub
 		String res = null;
 		try{
 			Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
@@ -36,7 +35,6 @@ public class AESService {
 	}
 
 	public String decrypt(String sSrc, String key) {
-		// TODO Auto-generated method stub
 		try {
             byte[] raw = key.getBytes("ASCII");
             SecretKeySpec skeySpec = new SecretKeySpec(raw, "AES");

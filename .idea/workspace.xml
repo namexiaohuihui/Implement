@@ -2,95 +2,84 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a41ba70-32a3-43a6-aa3c-a0189bf6bfbd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_25_0_jre.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_3_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okio_okio_1_14_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_8_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_compat_qual_2_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_3_13_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_3_13_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_3_13_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_3_13_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_3_13_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_3_13_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_opera_driver_3_13_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_3_13_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_3_13_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_3_13_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_3_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_nodep_3_2_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_48.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_48.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_codeborne_phantomjsdriver_1_4_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_21_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_digester_commons_digester_1_8_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_digester_commons_digester_1_8_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_validator_commons_validator_1_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_validator_commons_validator_1_4_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_appium_java_client_3_3_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_appium_java_client_3_3_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_4_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_platform_4_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_cssparser_cssparser_0_9_22.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_2_26.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_core_js_2_26.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_neko_htmlunit_2_25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_exec_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_exec_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_5_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_9.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_9.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_9.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_3_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_3_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_client_9_4_3_v20170317.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_9_4_3_v20170317.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_4_1_v20170120.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_4_1_v20170120.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_api_9_4_3_v20170317.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_client_9_4_3_v20170317.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_common_9_4_3_v20170317.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_java5_16_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_java5_16_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20170516.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20170516.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_4_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_4_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_htmlunit_driver_2_26.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_3_4_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_3_4_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_3_4_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_3_4_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_3_4_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_3_4_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_opera_driver_3_4_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_3_4_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_3_4_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_3_4_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_6_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_6_10.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_w3c_css_sac_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_serializer_2_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_xalan_2_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xerces_xercesImpl_2_11_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_4_01.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_8_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_8_15.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_java5_16_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_java5_16_0_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_3_13_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_3_14_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_3_13_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_3_14_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_3_13_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_3_14_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_3_13_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_3_14_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_3_13_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_3_14_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_3_13_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_3_14_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_opera_driver_3_13_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_opera_driver_3_14_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_3_13_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_3_14_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_3_13_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_3_14_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_3_13_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_3_14_0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Implement.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Implement.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/buyer/BuyerLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/buyer/BuyerLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/common/FoxDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/FoxDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/backstage/AssignRedPackets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backstage/AssignRedPackets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/parameter/Parameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/parameter/Parameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/parameter/WapUrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/parameter/WapUrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/AESService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/tool/AESService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/emailSend/SimpleMailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/tool/emailSend/SimpleMailSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/StartSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/StartSystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/app.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/app.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/FoxDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/FoxDriver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/parameter/Parameter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/parameter/Parameter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/parameter/QueryStatement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/parameter/QueryStatement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/parameter/WapUrl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/parameter/WapUrl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/Interface/InheritInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/Interface/InheritInput.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/SystemOut.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/SystemOut.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/ConfirmByEle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/caninput/ConfirmByEle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/ElementExistence$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/caninput/ElementExistence$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/ElementExistence$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/caninput/ElementExistence$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/ElementExistence.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/caninput/ElementExistence.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/ElementInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/caninput/ElementInput.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/ElementObtain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/caninput/ElementObtain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/FlipOther.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/caninput/FlipOther.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/InfoFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/caninput/InfoFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/InfoSelect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/caninput/InfoSelect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/Preservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/caninput/Preservation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/PromptBox.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/caninput/PromptBox.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/ReadList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/caninput/ReadList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/conversion/CharacterString.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/conversion/CharacterString.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/conversion/DateConversionTime.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/conversion/DateConversionTime.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/conversion/MutuaMapBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/conversion/MutuaMapBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/conversion/MutualJsonBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/conversion/MutualJsonBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/conversion/RegularExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/conversion/RegularExpression.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/conversion/TesseractTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/conversion/TesseractTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/conversion/TimeConversionDate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/conversion/TimeConversionDate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/emailSend/MailAuthenticator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/emailSend/MailAuthenticator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/emailSend/SendEmail$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/emailSend/SendEmail$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/emailSend/SendEmail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/emailSend/SendEmail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/emailSend/SendFileEmail$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/emailSend/SendFileEmail$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/emailSend/SendFileEmail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/emailSend/SendFileEmail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/emailSend/SendHTMLEmail$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/emailSend/SendHTMLEmail$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/emailSend/SendHTMLEmail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/emailSend/SendHTMLEmail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/emailSend/SendMail$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/emailSend/SendMail$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/emailSend/SendMail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/emailSend/SendMail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/emailSend/SimpleMailSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/emailSend/SimpleMailSender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/enumTool/ChineseToEnglish.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/enumTool/ChineseToEnglish.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/enumTool/EmployEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/enumTool/EmployEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/excelfile/ComparatorExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/excelfile/ComparatorExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/excelfile/DocumentTableau.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/excelfile/DocumentTableau.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/excelfile/DocumentTableauRealization.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/excelfile/DocumentTableauRealization.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/excelfile/ExcelOperating.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/excelfile/ExcelOperating.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/excelfile/FileMonitorExample$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/excelfile/FileMonitorExample$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/excelfile/FileMonitorExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/excelfile/FileMonitorExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/excelfile/ReadExcel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/excelfile/ReadExcel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/excelfile/ReadFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/excelfile/ReadFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/excelfile/WriteExcel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/excelfile/WriteExcel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/excelfile/WriteFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/excelfile/WriteFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/informationException/ErrorException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/informationException/ErrorException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/mysqls/DBHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/mysqls/DBHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/mysqls/MysqlInquire.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/mysqls/MysqlInquire.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/mysqls/StatementOperation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/mysqls/StatementOperation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/mysqls/TextMysql.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/mysqls/TextMysql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/upload/PictureImage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/tool/upload/PictureImage.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -106,11 +95,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BuyerLogin.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/buyer/BuyerLogin.java">
+      <file leaf-file-name="AssignRedPackets.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/backstage/AssignRedPackets.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="290">
+              <caret line="99" column="72" selection-start-line="99" selection-start-column="72" selection-end-line="99" selection-end-column="72" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Parameter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/common/parameter/Parameter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WapUrl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/common/parameter/WapUrl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="166">
+              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -128,10 +150,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>data</find>
-      <find>tiaoshi</find>
-      <find>账户登录进来了。账户登录</find>
-      <find>账户登录进来了</find>
       <find>账户登录进来</find>
       <find>账户登录进</find>
       <find>账户登录</find>
@@ -158,6 +176,10 @@
       <find>getFour</find>
       <find>getNumericCellValue</find>
       <find>ObjectUtils</find>
+      <find>selectByVisibleText</find>
+      <find>TODO Auto-generated catch block</find>
+      <find>ModJavaFiles</find>
+      <find>plugin</find>
     </findStrings>
     <replaceStrings>
       <replace>preservation</replace>
@@ -205,10 +227,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/common/tool/excelfile/ReadExcel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/wap/StartEntrance.java" />
-        <option value="$PROJECT_DIR$/src/main/java/wap/business/example/Exitsysos.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/tool/conversion/CharacterString.java" />
         <option value="$PROJECT_DIR$/src/main/java/wap/StartDistinguish.java" />
         <option value="$PROJECT_DIR$/src/main/java/wap/business/example/homeAddress/ManagementHomepage.java" />
         <option value="$PROJECT_DIR$/src/main/java/common/tool/conversion/BeanToMapUtil.java" />
@@ -250,12 +268,16 @@
         <option value="$PROJECT_DIR$/src/main/java/app/StartSystem.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/app.java" />
         <option value="$PROJECT_DIR$/src/main/java/wap/backstage/AssignRedPackets.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/parameter/WapUrl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/parameter/Parameter.java" />
         <option value="$PROJECT_DIR$/src/main/java/common/parameter/nihao.form" />
         <option value="$PROJECT_DIR$/src/main/java/common/FoxDriver.java" />
         <option value="$PROJECT_DIR$/src/main/java/buyer/wsfrwerwe.java" />
         <option value="$PROJECT_DIR$/src/main/java/buyer/BuyerLogin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/common/tool/AESService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/common/tool/emailSend/SimpleMailSender.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/backstage/AssignRedPackets.java" />
+        <option value="$PROJECT_DIR$/src/main/java/common/parameter/Parameter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/common/parameter/WapUrl.java" />
       </list>
     </option>
   </component>
@@ -268,11 +290,14 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="11" />
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="363" />
-    <option name="y" value="31" />
+    <option name="x" value="353" />
+    <option name="y" value="66" />
     <option name="width" value="1386" />
-    <option name="height" value="962" />
+    <option name="height" value="901" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -282,7 +307,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Implement" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Implement" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -314,7 +351,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="buyer" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Implement" type="b2602c69:ProjectViewProjectNode" />
@@ -323,6 +360,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="parameter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Implement" type="b2602c69:ProjectViewProjectNode" />
@@ -339,19 +377,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="file" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="tool" type="462c0819:PsiDirectoryNode" />
+              <item name="emailSend" type="462c0819:PsiDirectoryNode" />
             </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
             <path>
-              <item name="Implement" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Implement" type="616d4139:PackageViewModuleNode" />
+              <item name="Implement" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Implement" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -362,11 +395,11 @@
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/Implement/src/main/java/wap/business/example/Signin.java" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="G:/.m2/repository/org/seleniumhq/selenium/selenium-support/3.14.0/selenium-support-3.14.0.jar!/" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.593318" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -398,18 +431,6 @@
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
-    <configuration name="AESService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.szkingdom.wsp.common.service.AESService" />
-      <module name="Implement" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.szkingdom.wsp.common.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="app.app" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -419,14 +440,14 @@
       <module name="Implement" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="wap.backstage.*" />
+          <option name="PATTERN" value="backstage.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="wap.backstage" />
-      <option name="MAIN_CLASS_NAME" value="wap.backstage.AssignRedPackets" />
+      <option name="PACKAGE_NAME" value="backstage" />
+      <option name="MAIN_CLASS_NAME" value="backstage.AssignRedPackets" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
@@ -442,14 +463,14 @@
       <module name="Implement" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="wap.backstage.*" />
+          <option name="PATTERN" value="backstage.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="wap.backstage" />
-      <option name="MAIN_CLASS_NAME" value="wap.backstage.AssignRedPackets" />
+      <option name="PACKAGE_NAME" value="backstage" />
+      <option name="MAIN_CLASS_NAME" value="backstage.AssignRedPackets" />
       <option name="METHOD_NAME" value="redEnvelope" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
@@ -470,64 +491,6 @@
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <properties />
-      <listeners />
-    </configuration>
-    <configuration name="app" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Implement" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="app" />
-      <option name="MAIN_CLASS_NAME" value="app.app" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <properties />
-      <listeners />
-    </configuration>
-    <configuration name="app.setUp" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Implement" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="app" />
-      <option name="MAIN_CLASS_NAME" value="app.app" />
-      <option name="METHOD_NAME" value="setUp" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -569,19 +532,14 @@
       <method />
     </configuration>
     <list>
-      <item itemvalue="Application.AESService" />
-      <item itemvalue="TestNG.app" />
-      <item itemvalue="TestNG.app.setUp" />
-      <item itemvalue="JUnit.AssignRedPackets.redEnvelope" />
       <item itemvalue="JUnit.AssignRedPackets" />
+      <item itemvalue="JUnit.AssignRedPackets.redEnvelope" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.AssignRedPackets" />
         <item itemvalue="JUnit.AssignRedPackets.redEnvelope" />
-        <item itemvalue="TestNG.app" />
-        <item itemvalue="TestNG.app.setUp" />
-        <item itemvalue="Application.AESService" />
+        <item itemvalue="JUnit.AssignRedPackets" />
       </list>
     </recent_temporary>
   </component>
@@ -656,35 +614,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AssignRedPackets - 2018.06.07 at 09h 51m 13s.xml">
+    <history-entry file="AssignRedPackets_redEnvelope - 2018.12.03 at 21h 42m 02s.xml">
+      <configuration name="AssignRedPackets.redEnvelope" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AssignRedPackets - 2018.12.03 at 21h 42m 27s.xml">
       <configuration name="AssignRedPackets" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AssignRedPackets - 2018.06.07 at 09h 52m 07s.xml">
+    <history-entry file="AssignRedPackets_redEnvelope - 2018.12.07 at 12h 00m 24s.xml">
+      <configuration name="AssignRedPackets.redEnvelope" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AssignRedPackets_redEnvelope - 2018.12.07 at 12h 01m 38s.xml">
+      <configuration name="AssignRedPackets.redEnvelope" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AssignRedPackets - 2018.12.07 at 12h 15m 48s.xml">
       <configuration name="AssignRedPackets" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AssignRedPackets - 2018.06.07 at 09h 53m 40s.xml">
+    <history-entry file="AssignRedPackets_redEnvelope - 2018.12.07 at 12h 22m 23s.xml">
+      <configuration name="AssignRedPackets.redEnvelope" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AssignRedPackets - 2018.12.07 at 15h 45m 11s.xml">
       <configuration name="AssignRedPackets" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AssignRedPackets - 2018.06.07 at 09h 54m 49s.xml">
+    <history-entry file="AssignRedPackets - 2018.12.07 at 15h 47m 41s.xml">
       <configuration name="AssignRedPackets" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AssignRedPackets - 2018.06.12 at 13h 55m 10s.xml">
+    <history-entry file="AssignRedPackets_redEnvelope - 2018.12.07 at 15h 53m 14s.xml">
+      <configuration name="AssignRedPackets.redEnvelope" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AssignRedPackets - 2018.12.07 at 15h 53m 33s.xml">
       <configuration name="AssignRedPackets" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AssignRedPackets - 2018.07.10 at 16h 11m 45s.xml">
-      <configuration name="AssignRedPackets" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AssignRedPackets - 2018.07.10 at 16h 19m 42s.xml">
-      <configuration name="AssignRedPackets" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="app_setUp - 2018.05.11 at 11h 37m 33s.xml">
-      <configuration name="app.setUp" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="test_readExcle - 2017.10.18 at 00h 14m 17s.xml">
-      <configuration name="test.readExcle" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test_readExcle - 2017.10.18 at 00h 18m 53s.xml">
-      <configuration name="test.readExcle" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -697,38 +655,38 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="363" y="31" width="1386" height="962" extended-state="0" />
+    <frame x="353" y="66" width="1386" height="901" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3262295" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32421875" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.2578125" />
       <window_info id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.51348436" side_tool="true" weight="0.30948418" />
       <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.20491803" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48651564" weight="0.31585518" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32786885" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48651564" weight="0.3138021" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.20442708" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32509753" />
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="right" id="Designer" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23649634" />
-      <window_info id="Learn" order="8" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2662142" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.48591548" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="5" />
       <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.40364584" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.40422723" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.2625571" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" x="449" y="283" width="467" height="161" id="Documentation" order="8" type="FLOATING" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Nl-Palette" order="2" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Properties" order="5" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Learn" order="8" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.48591548" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
@@ -812,49 +770,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/content/file/Javascript">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/3.4.0/selenium-api-3.4.0-sources.jar!/org/openqa/selenium/By.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/caninput/InfoSelect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="31" column="31" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/conversion/CharacterString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/mysqls/MysqlInquire.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/parameter/QueryStatement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/mysqls/DBHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="40" column="34" lean-forward="true" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/Signin.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/StartData.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/conversion/DateConversionTime.java">
@@ -882,13 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/SystemOut.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementObtain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
@@ -897,13 +805,6 @@
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/Assert.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementInput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="105" column="25" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/bean/elementBean/InformationBean.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/bean/elementBean/noticesBean.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/InformationModify.java" />
@@ -957,55 +858,118 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/common/parameter/nihao.form" />
     <entry file="file://$PROJECT_DIR$/src/main/java/common/parameter/nihao.java" />
-    <entry file="file://$PROJECT_DIR$/Implement.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/buyer/wsfrwerwe.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/EnumProgramBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2223">
-          <caret line="117" column="34" lean-forward="true" selection-start-line="117" selection-start-column="34" selection-end-line="117" selection-end-column="34" />
+        <state relative-caret-position="152">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/AESService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/buyer/BuyerLogin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/parameter/WapUrl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/parameter/Parameter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
+        <state relative-caret-position="190">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/common/FoxDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="32" column="45" lean-forward="true" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+        <state relative-caret-position="-38">
+          <caret line="159" column="28" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1562">
+          <caret line="73" column="51" lean-forward="true" selection-start-line="73" selection-start-column="51" selection-end-line="73" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/.m2/repository/org/seleniumhq/selenium/selenium-support/3.14.0/selenium-support-3.14.0.jar!/org/openqa/selenium/support/ui/Select.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="67" column="35" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/Program Files/Java/jdk-11/lib/src.zip!/java.base/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="299" column="30" selection-start-line="299" selection-start-column="30" selection-end-line="299" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/AESService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/mysqls/StatementOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/.m2/repository/org/seleniumhq/selenium/selenium-support/3.14.0/selenium-support-3.14.0-sources.jar!/org/openqa/selenium/support/ui/Select.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="75" column="47" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/SystemOut.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-627">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/emailSend/SimpleMailSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1584">
+          <caret line="79" column="11" selection-start-line="79" selection-start-column="11" selection-end-line="79" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Implement.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/backstage/AssignRedPackets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="99" column="72" selection-start-line="99" selection-start-column="72" selection-end-line="99" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/buyer/wsfrwerwe.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/buyer/BuyerLogin.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/parameter/Parameter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="308">
+          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/parameter/WapUrl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1049,7 +1013,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

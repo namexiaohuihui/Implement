@@ -12,20 +12,23 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import static java.lang.Thread.sleep;
 
 /**
- * 头头红包类
  * Created by ${XiaoHuiHui} on 2017/5/26 on 16:28.
  * XiaoHiiHui [704866169@qq.com]
+ * 红包发放
  */
 public class AssignRedPackets {
     private WebDriver driver;
     private WapUrl wapUrl;
-    private String USER_ID = "243617";
+    private String USER_ID = "560817";
+//    private String USER_ID = "445106";
 
     @Before
     public void openBrowser() {
@@ -60,24 +63,62 @@ public class AssignRedPackets {
 
         driver.findElement(By.linkText("红包设置")).click();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        DingDongRenBao(2);
+//
+//        for (int i = 1; i <= 20; i++) {
+//            SystemOut.getStringOut("红包发放:" + i);
+//            driver.findElement(By.xpath("//*[@id='datatatle']/tbody/tr[3]/td[7]/button[2]")).click();
+//            sleep(1000);
+//            WebElement element = driver.findElement(By.cssSelector("input[class=form-control][id=userid][name=userids]"));
+//            driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+//            element.click();
+//            element.clear();
+//            element.sendKeys(USER_ID);
+//            sleep(1000);
+//
+//            WebElement bountCause = driver.findElement(By.id("cause"));
+//            Select bountSelect = new Select(bountCause);
+//            bountSelect.selectByVisibleText("其他");
+////            sleep(1000);
+//            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+//
+//            //   driver.findElement(By.cssSelector("button[id=sendFormBut][type=button]")).click();
+//            driver.findElement(By.xpath(".//*[@id='sendFormBut']")).click();
+////            sleep(1000);
+//
+//            driver.navigate().refresh();
+//            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+//        }
 
-        for (int i = 1; i <= 1; i++) {
-            SystemOut.getStringOut("红包发放:" + i);
+    }
+
+    public void DingDongRenBao(int number) throws InterruptedException {
+        if (number == 0) {
+            SystemOut.getStringOut("红包发送完毕");
+        } else {
+            SystemOut.getStringOut("红包剩余发送量:" + number);
             driver.findElement(By.xpath("//*[@id='datatatle']/tbody/tr[1]/td[7]/button[2]")).click();
-            sleep(2000);
+            sleep(1000);
             WebElement element = driver.findElement(By.cssSelector("input[class=form-control][id=userid][name=userids]"));
+            driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
             element.click();
             element.clear();
             element.sendKeys(USER_ID);
             sleep(1000);
 
+            WebElement bountCause = driver.findElement(By.id("cause"));
+            Select bountSelect = new Select(bountCause);
+            bountSelect.selectByVisibleText("其他");
+//            sleep(1000);
+            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
             //   driver.findElement(By.cssSelector("button[id=sendFormBut][type=button]")).click();
             driver.findElement(By.xpath(".//*[@id='sendFormBut']")).click();
-            sleep(1000);
+//            sleep(1000);
 
             driver.navigate().refresh();
             driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+            DingDongRenBao(number - 1);
         }
-        SystemOut.getStringOut("红包发放完毕...");
     }
 }

@@ -14,8 +14,8 @@ public class Parameter {
     public static  String load = "E:\\drivers\\CasePlan\\测试计划.xlsx";
 
     //大佬的账号密码
-    public static String accountTop = "xianguo";
-    public static String passWordTop = "123456";
+    public static String accountTop = "--";
+    public static String passWordTop = "+++";
 
     //老板的账号密码
     public static String accountStart = "---";

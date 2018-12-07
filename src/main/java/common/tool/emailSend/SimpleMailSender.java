@@ -24,7 +24,6 @@ public class SimpleMailSender {
         try {
             init(username, password, smtpHostName);
         } catch (Exception e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
@@ -53,7 +52,6 @@ public class SimpleMailSender {
 //        try {
 //            transport.connect("smtp.qq.com", 25, "530486639@qq.com", "llg9004_d");
 //        } catch (MessagingException e) {
-//            // TODO Auto-generated catch block
 //            e.printStackTrace();
 //        }
     }
