@@ -14,7 +14,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import java.util.List;
+//import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import static java.lang.Thread.sleep;
@@ -26,9 +26,16 @@ import static java.lang.Thread.sleep;
  */
 public class AssignRedPackets {
     private WebDriver driver;
+    /**
+     * 浏览器对象
+     */
     private WapUrl wapUrl;
-    private String USER_ID = "560817";
-//    private String USER_ID = "445106";
+
+    // 发放人的ID
+    private String USER_ID = "243617";
+
+    // 需要发放红包处于第几行
+    private String RedBao = "1";
 
     @Before
     public void openBrowser() {
@@ -63,32 +70,9 @@ public class AssignRedPackets {
 
         driver.findElement(By.linkText("红包设置")).click();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-        DingDongRenBao(2);
-//
-//        for (int i = 1; i <= 20; i++) {
-//            SystemOut.getStringOut("红包发放:" + i);
-//            driver.findElement(By.xpath("//*[@id='datatatle']/tbody/tr[3]/td[7]/button[2]")).click();
-//            sleep(1000);
-//            WebElement element = driver.findElement(By.cssSelector("input[class=form-control][id=userid][name=userids]"));
-//            driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-//            element.click();
-//            element.clear();
-//            element.sendKeys(USER_ID);
-//            sleep(1000);
-//
-//            WebElement bountCause = driver.findElement(By.id("cause"));
-//            Select bountSelect = new Select(bountCause);
-//            bountSelect.selectByVisibleText("其他");
-////            sleep(1000);
-//            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-//
-//            //   driver.findElement(By.cssSelector("button[id=sendFormBut][type=button]")).click();
-//            driver.findElement(By.xpath(".//*[@id='sendFormBut']")).click();
-////            sleep(1000);
-//
-//            driver.navigate().refresh();
-//            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-//        }
+
+        // 方法的数量
+        DingDongRenBao(10);
 
     }
 
@@ -97,7 +81,7 @@ public class AssignRedPackets {
             SystemOut.getStringOut("红包发送完毕");
         } else {
             SystemOut.getStringOut("红包剩余发送量:" + number);
-            driver.findElement(By.xpath("//*[@id='datatatle']/tbody/tr[1]/td[7]/button[2]")).click();
+            driver.findElement(By.xpath("//*[@id='datatatle']/tbody/tr[" + RedBao + "]/td[7]/button[2]")).click();
             sleep(1000);
             WebElement element = driver.findElement(By.cssSelector("input[class=form-control][id=userid][name=userids]"));
             driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);

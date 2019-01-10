@@ -15,7 +15,7 @@ public class Parameter {
 
     //大佬的账号密码
     public static String accountTop = "--";
-    public static String passWordTop = "+++";
+    public static String passWordTop = "--";
 
     //老板的账号密码
     public static String accountStart = "---";
