@@ -1,11 +1,11 @@
 package backstage;
 
 
-import common.FoxDriver;
-import common.parameter.Parameter;
-import common.parameter.WapUrl;
-import common.tool.SystemOut;
-import common.tool.caninput.ElementInput;
+import toolskit.FoxDriver;
+import toolskit.parameters.Parameter;
+import toolskit.parameters.WapUrl;
+import toolskit.tools.SystemOut;
+import toolskit.tools.caninput.ElementInput;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -72,7 +72,7 @@ public class AssignRedPackets {
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
         // 方法的数量
-        DingDongRenBao(10);
+        DingDongRenBao(1);
 
     }
 

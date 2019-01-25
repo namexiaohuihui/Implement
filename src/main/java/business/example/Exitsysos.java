@@ -1,6 +1,6 @@
 package business.example;
 
-import common.tool.caninput.Preservation;
+import toolskit.tools.caninput.Preservation;
 
 /**
  * 实现退出登录功能

@@ -1,9 +1,9 @@
 package business.example;
 
-import common.FoxDriver;
-import common.parameter.Parameter;
-import common.parameter.WapUrl;
-import common.tool.caninput.ElementInput;
+import toolskit.FoxDriver;
+import toolskit.parameters.Parameter;
+import toolskit.parameters.WapUrl;
+import toolskit.tools.caninput.ElementInput;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

@@ -2,29 +2,169 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a41ba70-32a3-43a6-aa3c-a0189bf6bfbd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_3_10_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_3_11_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okio_okio_1_14_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okio_okio_1_14_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_3_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_3_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_3_141_59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_3_141_59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_3_141_59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_3_141_59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_3_141_59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_3_141_59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_opera_driver_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_opera_driver_3_141_59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_3_141_59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_3_141_59.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_3_141_59.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/backstage/ReleaseRedPackets.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/backstage/hellowrod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/toolskit/说明" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_48.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_48.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_1_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_25_0_jre.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_25_0_jre.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_3_11_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_3_11_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okio_okio_1_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okio_okio_1_14_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_digester_commons_digester_1_8_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_digester_commons_digester_1_8_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_validator_commons_validator_1_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_validator_commons_validator_1_4_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_appium_java_client_3_3_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_appium_java_client_3_3_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_8_15.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_8_15.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_exec_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_exec_1_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_3_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_3_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_3_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_9.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_9.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_9.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_3_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_3_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_compat_qual_2_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_compat_qual_2_0_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_java5_16_0_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_java5_16_0_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20170516.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20170516.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_4_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_4_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_3_141_59.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_3_141_59.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_3_141_59.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_3_141_59.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_3_141_59.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_3_141_59.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_3_141_59.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_3_141_59.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_3_141_59.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_3_141_59.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_3_141_59.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_3_141_59.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_opera_driver_3_141_59.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_opera_driver_3_141_59.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_3_141_59.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_3_141_59.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_3_141_59.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_3_141_59.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_3_141_59.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_3_141_59.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_6_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_6_10.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Implement.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Implement.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/app.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/app.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/backstage/AssignRedPackets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backstage/AssignRedPackets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/common/parameter/Parameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/parameter/Parameter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/common/parameter/WapUrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/parameter/WapUrl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/common/parameter/WapUrl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/common/parameter/WapUrl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/business/StartData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/business/StartData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/business/example/Exitsysos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/business/example/Exitsysos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/business/example/Possessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/business/example/Possessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/FoxDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/FoxDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/common" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/parameter/Parameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/parameters/Parameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/parameter/QueryStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/parameters/QueryStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/parameter/WapUrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/parameters/WapUrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/AESService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/AESService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/EnumProgramBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/EnumProgramBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/Interface/InheritInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/Interface/InheritInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/SystemOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/SystemOut.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/caninput/ConfirmByEle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/caninput/ConfirmByEle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementExistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/caninput/ElementExistence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/caninput/ElementInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementObtain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/caninput/ElementObtain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/caninput/FlipOther.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/caninput/FlipOther.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/caninput/InfoFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/caninput/InfoFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/caninput/InfoSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/caninput/InfoSelect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/caninput/Preservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/caninput/Preservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/caninput/PromptBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/caninput/PromptBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/caninput/ReadList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/caninput/ReadList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/conversion/BeanToMapUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/conversion/BeanToMapUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/conversion/CharacterString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/conversion/CharacterString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/conversion/DateConversionTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/conversion/DateConversionTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/conversion/MutuaMapBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/conversion/MutuaMapBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/conversion/MutualJsonBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/conversion/MutualJsonBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/conversion/RegularExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/conversion/RegularExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/conversion/TesseractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/conversion/TesseractTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/conversion/TimeConversionDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/conversion/TimeConversionDate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/emailSend/MailAuthenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/emailSend/MailAuthenticator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/emailSend/SendEmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/emailSend/SendEmail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/emailSend/SendFileEmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/emailSend/SendFileEmail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/emailSend/SendHTMLEmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/emailSend/SendHTMLEmail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/emailSend/SendMail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/emailSend/SendMail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/emailSend/SimpleMailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/emailSend/SimpleMailSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/enumTool/ChineseToEnglish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/enumTool/ChineseToEnglish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/enumTool/EmployEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/enumTool/EmployEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/excelfile/ComparatorExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/excelfile/ComparatorExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/excelfile/DocumentTableau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/excelfile/DocumentTableau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/excelfile/DocumentTableauRealization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/excelfile/DocumentTableauRealization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/excelfile/ExcelOperating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/excelfile/ExcelOperating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/excelfile/FileMonitorExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/excelfile/FileMonitorExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/excelfile/ReadExcel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/excelfile/ReadExcel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/excelfile/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/excelfile/ReadFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/excelfile/WriteExcel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/excelfile/WriteExcel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/excelfile/WriteFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/excelfile/WriteFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/excelfile/org.apache.commons.io的使用" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/excelfile/org.apache.commons.io的使用" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/informationException/ErrorException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/informationException/ErrorException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/mysqls/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/mysqls/DBHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/mysqls/MysqlInquire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/mysqls/MysqlInquire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/mysqls/StatementOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/mysqls/StatementOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/mysqls/TextMysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/mysqls/TextMysql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/tool/upload/PictureImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/toolskit/tools/upload/PictureImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/app.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/app.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/FoxDriver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/parameter/Parameter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/parameter/QueryStatement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/parameter/WapUrl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/Interface/InheritInput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/SystemOut.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/ConfirmByEle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/ElementExistence$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/ElementExistence$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/ElementExistence.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/ElementInput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/ElementObtain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/FlipOther.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/InfoFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/InfoSelect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/Preservation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/PromptBox.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/caninput/ReadList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/conversion/CharacterString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/conversion/DateConversionTime.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/conversion/MutuaMapBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/conversion/MutualJsonBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/conversion/RegularExpression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/conversion/TesseractTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/conversion/TimeConversionDate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/emailSend/MailAuthenticator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/emailSend/SendEmail$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/emailSend/SendEmail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/emailSend/SendFileEmail$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/emailSend/SendFileEmail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/emailSend/SendHTMLEmail$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/emailSend/SendHTMLEmail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/emailSend/SendMail$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/emailSend/SendMail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/emailSend/SimpleMailSender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/enumTool/ChineseToEnglish.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/enumTool/EmployEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/excelfile/ComparatorExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/excelfile/DocumentTableau.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/excelfile/DocumentTableauRealization.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/excelfile/ExcelOperating.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/excelfile/FileMonitorExample$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/excelfile/FileMonitorExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/excelfile/ReadExcel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/excelfile/ReadFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/excelfile/WriteExcel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/excelfile/WriteFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/informationException/ErrorException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/mysqls/DBHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/mysqls/MysqlInquire.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/mysqls/StatementOperation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/mysqls/TextMysql.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/common/tool/upload/PictureImage.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,34 +180,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AssignRedPackets.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/backstage/AssignRedPackets.java">
+      <file leaf-file-name="hellowrod.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/backstage/hellowrod.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="107" column="1" lean-forward="true" selection-start-line="107" selection-start-column="1" selection-end-line="107" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="22">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Parameter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/common/parameter/Parameter.java">
+      <file leaf-file-name="ReleaseRedPackets.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/backstage/ReleaseRedPackets.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="19" selection-start-line="19" selection-end-line="21" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WapUrl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/common/parameter/WapUrl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+            <state relative-caret-position="440">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#168#169#0" expanded="true" />
+                <element signature="e#205#206#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -81,6 +211,7 @@
         <option value="FxmlFile" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="package-info" />
       </list>
     </option>
   </component>
@@ -163,9 +294,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/wap/StartDistinguish.java" />
-        <option value="$PROJECT_DIR$/src/main/java/wap/business/example/homeAddress/ManagementHomepage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/tool/conversion/BeanToMapUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/InformationSet.java" />
         <option value="$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/runners/model/FrameworkMethod.java" />
         <option value="$PROJECT_DIR$/src/main/java/common/tool/mysqls/DBHelper.java" />
@@ -211,29 +339,40 @@
         <option value="$PROJECT_DIR$/src/main/java/common/tool/AESService.java" />
         <option value="$PROJECT_DIR$/src/main/java/common/tool/emailSend/SimpleMailSender.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/backstage/AssignRedPackets.java" />
         <option value="$PROJECT_DIR$/src/main/java/common/parameter/Parameter.java" />
         <option value="$PROJECT_DIR$/src/main/java/common/parameter/WapUrl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/backstage/AssignRedPackets.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hellowrod.java" />
+        <option value="$PROJECT_DIR$/src/main/java/backstage/ReleaseRedPackets.java" />
+        <option value="$PROJECT_DIR$/src/main/java/backstage/hellowrod.java" />
       </list>
     </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="G:\.m2\repository" />
-        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
-        <option name="userSettingsFile" value="G:\.m2\settings.xml" />
+        <option name="localRepository" value="G:\Program Files\maven-repository" />
+        <option name="mavenHome" value="G:/Program Files/apache-maven-3.5.4" />
+        <option name="userSettingsFile" value="G:\Program Files\apache-maven-3.5.4\conf\settings.xml" />
       </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="createModuleGroups" value="true" />
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenRunner">
     <option name="jreName" value="11" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="353" />
-    <option name="y" value="66" />
+    <option name="x" value="491" />
+    <option name="y" value="58" />
     <option name="width" value="1386" />
-    <option name="height" value="901" />
+    <option name="height" value="963" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -276,52 +415,10 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="backstage" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Implement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Implement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Implement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Implement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="parameter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Implement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Implement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="tool" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Implement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Implement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="tool" type="462c0819:PsiDirectoryNode" />
-              <item name="emailSend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Implement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Implement" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
@@ -334,16 +431,17 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/Implement/src/main/java/wap/business/example/Signin.java" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
-    <property name="last_opened_file_path" value="G:/.m2/repository/org/seleniumhq/selenium/selenium-support/3.14.0/selenium-support-3.14.0.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.593318" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -371,7 +469,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AssignRedPackets">
+  <component name="RunManager" selected="JUnit.ReleaseRedPackets">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -417,6 +515,29 @@
       <option name="MAIN_CLASS_NAME" value="backstage.AssignRedPackets" />
       <option name="METHOD_NAME" value="redEnvelope" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ReleaseRedPackets" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Implement" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="backstage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="backstage" />
+      <option name="MAIN_CLASS_NAME" value="backstage.ReleaseRedPackets" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
@@ -478,9 +599,11 @@
     <list>
       <item itemvalue="JUnit.AssignRedPackets" />
       <item itemvalue="JUnit.AssignRedPackets.redEnvelope" />
+      <item itemvalue="JUnit.ReleaseRedPackets" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ReleaseRedPackets" />
         <item itemvalue="JUnit.AssignRedPackets" />
         <item itemvalue="JUnit.AssignRedPackets.redEnvelope" />
         <item itemvalue="JUnit.AssignRedPackets" />
@@ -558,15 +681,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AssignRedPackets_redEnvelope - 2018.12.07 at 12h 22m 23s.xml">
-      <configuration name="AssignRedPackets.redEnvelope" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AssignRedPackets - 2018.12.07 at 15h 45m 11s.xml">
-      <configuration name="AssignRedPackets" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AssignRedPackets - 2018.12.07 at 15h 47m 41s.xml">
-      <configuration name="AssignRedPackets" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AssignRedPackets_redEnvelope - 2018.12.07 at 15h 53m 14s.xml">
       <configuration name="AssignRedPackets.redEnvelope" configurationId="JUnit" />
     </history-entry>
@@ -588,6 +702,15 @@
     <history-entry file="AssignRedPackets - 2019.01.10 at 11h 50m 44s.xml">
       <configuration name="AssignRedPackets" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AssignRedPackets_redEnvelope - 2019.01.25 at 14h 55m 50s.xml">
+      <configuration name="AssignRedPackets.redEnvelope" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ReleaseRedPackets - 2019.01.25 at 15h 04m 57s.xml">
+      <configuration name="ReleaseRedPackets" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ReleaseRedPackets - 2019.01.25 at 16h 25m 59s.xml">
+      <configuration name="ReleaseRedPackets" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -599,22 +722,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="353" y="66" width="1386" height="901" extended-state="0" />
+    <frame x="491" y="58" width="1386" height="963" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32421875" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.2578125" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.25662652" />
       <window_info id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.51348436" side_tool="true" weight="0.30948418" />
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.20442708" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48651564" weight="0.3138021" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32421875" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48651564" weight="0.31325302" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.34096387" />
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="right" id="Designer" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29185522" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1907994" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="5" />
@@ -636,14 +759,15 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="9" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48651564" visible="true" weight="0.3452514" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20779221" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.20491803" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info id="Nl-Palette" order="2" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3262295" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.20491803" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48651564" visible="true" weight="0.3452514" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="right" id="Designer" order="7" />
       <window_info anchor="right" id="Properties" order="5" />
@@ -656,12 +780,11 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.51348436" side_tool="true" weight="0.30948418" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.26393443" />
       <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20779221" />
+      <window_info id="Favorites" order="6" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -706,7 +829,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="16" />
+      <option name="time" value="17" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -714,56 +837,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/Signin.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/StartData.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/conversion/DateConversionTime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="86" column="16" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementExistence.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="61" column="19" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/bean/StoreInformationBean.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/bean/ShopNoticesBean.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/StoreInformation.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/InformationJudgment.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/caninput/Preservation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementObtain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="86" column="18" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/Assert.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/bean/elementBean/InformationBean.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/bean/elementBean/noticesBean.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/InformationModify.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/conversion/TimeConversionDate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/AESService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/Information.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/test.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/io/File.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/ShopNotices.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/app/app.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="356">
@@ -782,7 +855,7 @@
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/concurrent/TimeUnit.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/wap/business/example/innose/information/noticesModifyJudge.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.9/poi-3.9.jar!/org/apache/poi/ss/usermodel/Cell.class" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/excelfile/ExcelOperating.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolskit/tools/excelfile/ExcelOperating.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
           <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
@@ -793,7 +866,7 @@
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.9/poi-3.9.jar!/org/apache/poi/ss/usermodel/Sheet.class" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.9/poi-3.9-sources.jar!/org/apache/poi/ss/usermodel/Sheet.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/wap/backstage/AssignRedPackets.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/excelfile/ReadExcel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolskit/tools/excelfile/ReadExcel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
           <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
@@ -803,31 +876,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/common/parameter/nihao.form" />
     <entry file="file://$PROJECT_DIR$/src/main/java/common/parameter/nihao.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/buyer/wsfrwerwe.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/EnumProgramBean.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolskit/tools/EnumProgramBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/buyer/BuyerLogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/FoxDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-38">
-          <caret line="159" column="28" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/caninput/ElementInput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1562">
-          <caret line="73" column="51" lean-forward="true" selection-start-line="73" selection-start-column="51" selection-end-line="73" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -845,14 +897,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/AESService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/mysqls/StatementOperation.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolskit/tools/mysqls/StatementOperation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="429">
           <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
@@ -866,14 +911,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/SystemOut.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolskit/tools/SystemOut.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-627">
           <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/tool/emailSend/SimpleMailSender.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolskit/tools/emailSend/SimpleMailSender.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1584">
           <caret line="79" column="11" selection-start-line="79" selection-start-column="11" selection-end-line="79" selection-end-column="11" />
@@ -890,29 +935,218 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/backstage/AssignRedPackets.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolskit/tools/caninput/ConfirmByEle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="107" column="1" lean-forward="true" selection-start-line="107" selection-start-column="1" selection-end-line="107" selection-end-column="1" />
+        <state relative-caret-position="43">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolskit/tools/caninput/ElementExistence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1338">
+          <caret line="61" column="13" lean-forward="true" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/parameter/Parameter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolskit/tools/caninput/ElementInput.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="19" selection-start-line="19" selection-end-line="21" selection-end-column="46" />
+        <state relative-caret-position="1606">
+          <caret line="73" column="51" lean-forward="true" selection-start-line="73" selection-start-column="51" selection-end-line="73" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/parameter/WapUrl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolskit/tools/caninput/ElementObtain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+        <state relative-caret-position="87">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolskit/tools/caninput/FlipOther.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolskit/tools/caninput/InfoFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolskit/tools/caninput/InfoSelect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolskit/tools/caninput/Preservation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolskit/tools/informationException/ErrorException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolskit/tools/caninput/PromptBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolskit/tools/caninput/ReadList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolskit/tools/conversion/BeanToMapUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1694">
+          <caret line="77" column="55" lean-forward="true" selection-start-line="77" selection-start-column="55" selection-end-line="77" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/.m2/repository/junit/junit/4.12/junit-4.12.jar!/org/junit/Test.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/.m2/repository/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="65" column="18" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/backstage/AssignRedPackets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="80" column="11" selection-start-line="80" selection-start-column="11" selection-end-line="80" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar!/okio/Base64.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolskit/说明">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolskit/parameters/Parameter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolskit/parameters/WapUrl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolskit/parameters/QueryStatement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolskit/tools/AESService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolskit/FoxDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/buyer/BuyerLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/toolskit/package-info.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/backstage/hellowrod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/backstage/ReleaseRedPackets.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#539#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/backstage/ReleaseRedPackets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#168#169#0" expanded="true" />
+            <element signature="e#205#206#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,9 +1,0 @@
-parameter :存放参数以及网址
-
-tool:主要是一些工具
-    caninput:元素的操作
-    conversion:支付串以及一些时间
-    emailSend：邮件发送
-    excelfile：文件以及excle的读写
-    mysqls：数据库的操作
-    upload：图片的上传

@@ -1,15 +1,13 @@
 package app;
 
 
-import common.tool.SystemOut;
+import toolskit.tools.SystemOut;
 import io.appium.java_client.android.AndroidDriver;
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
-import java.util.NoSuchElementException;
 
 import static java.lang.Thread.sleep;
 
