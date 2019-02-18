@@ -72,11 +72,11 @@ public class AssignRedPackets {
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
         // 方法的数量
-        DingDongRenBao(1);
+        DingDongRenBao(1, elementInput);
 
     }
 
-    public void DingDongRenBao(int number) throws InterruptedException {
+    public void DingDongRenBao(int number, ElementInput elementInput) throws InterruptedException {
         if (number == 0) {
             SystemOut.getStringOut("红包发送完毕");
         } else {
@@ -96,13 +96,16 @@ public class AssignRedPackets {
 //            sleep(1000);
             driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
+//           详细信息输入
+            elementInput.accordingToId("remark", "自动输入的跑到流程然后输入详细的说明");
+            driver.findElement(By.id("remark"));
             //   driver.findElement(By.cssSelector("button[id=sendFormBut][type=button]")).click();
             driver.findElement(By.xpath(".//*[@id='sendFormBut']")).click();
 //            sleep(1000);
 
             driver.navigate().refresh();
             driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-            DingDongRenBao(number - 1);
+            DingDongRenBao(number - 1, elementInput);
         }
     }
 }
