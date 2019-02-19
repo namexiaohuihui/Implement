@@ -1,9 +1,9 @@
 package toolskit.tools.excelfile;
 
-
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import toolskit.tools.SystemOut;
 import toolskit.tools.enumTool.EmployEnum;
@@ -11,8 +11,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.*;
 
 
@@ -22,6 +21,25 @@ import java.util.*;
  * XiaoHiiHui [704866169@qq.com]
  */
 public class ReadExcel extends ExcelOperating {
+
+//    public static void main(String[] args) {
+//        try {
+//            ReadExcel obj = new ReadExcel();
+//            File file = new File("C:\\Users\\DingDonf\\Desktop\\红包发放.xlsx");
+//            InputStream inputStream = new FileInputStream(file);
+//            List<Map<String, String>> excelList = obj.readExcel(inputStream, "发放");
+//            System.out.println("从excel读取数据并开始使用:");
+//            for (Map<String, String> list : excelList) {
+//                System.out.println(list.get("用户ID"));
+//                System.out.println(list.get("发放原因"));
+//                System.out.println(list.get("详细说明"));
+//                System.out.println();
+//            }
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//
+//    }
 
     /**
      * 通过Workbook来读取excle表格上的数据
@@ -76,7 +94,7 @@ public class ReadExcel extends ExcelOperating {
         Workbook xssfWorkbook = distinguishWorkbook(load);
         Map<String, String> aMap = new HashMap<>();
         EmployEnum employEnum = new EmployEnum();
-        if (numSheet <= xssfWorkbook.getNumberOfSheets()){
+        if (numSheet <= xssfWorkbook.getNumberOfSheets()) {
             // 获取指定工作薄
             Sheet xssfSheet = xssfWorkbook.getSheetAt(numSheet);
             if (xssfSheet != null) {
@@ -95,7 +113,7 @@ public class ReadExcel extends ExcelOperating {
                     SystemOut.getStringOut("xssfRow为空");
                 }
             }
-        }else {
+        } else {
             SystemOut.getStringOut("想获取的表格簿位置大于了当前表格的最大值。");
         }
         return aMap;
@@ -121,9 +139,10 @@ public class ReadExcel extends ExcelOperating {
     }
 
     /**
-            * 读取Excel文件的内容
+     * 读取Excel文件的内容
+     *
      * @param inputStream excel文件，以InputStream的形式传入
-     * @param sheetName sheet名字
+     * @param sheetName   sheet名字
      * @return 以List返回excel中内容
      */
     public static List<Map<String, String>> readExcel(InputStream inputStream, String sheetName) {
@@ -137,7 +156,9 @@ public class ReadExcel extends ExcelOperating {
         }
 
         //定义工作表
+
         XSSFSheet xssfSheet;
+//        XSSFSheet xssfSheet;
         if (sheetName.equals("")) {
             // 默认取第一个子表
             xssfSheet = xssfWorkbook.getSheetAt(0);
@@ -163,15 +184,29 @@ public class ReadExcel extends ExcelOperating {
             for (int cellIndex = 0; cellIndex < xssfRow.getPhysicalNumberOfCells(); cellIndex++) {
                 XSSFCell titleCell = titleRow.getCell(cellIndex);
                 XSSFCell xssfCell = xssfRow.getCell(cellIndex);
-                map.put(getString(titleCell),getString(xssfCell));
+                map.put(getString(titleCell), getString(xssfCell));
             }
             list.add(map);
         }
+
         return list;
     }
 
     /**
      * 把单元格的内容转为字符串
+     * 高版本的import org.apache.poi.ss.usermodel.CellType变为了import org.apache.poi.ss.usermodel.Cell; 
+     * 同时cellRowName.setCellType(CellType.STRING);变为了cellRowName.setCellType(Cell.CELL_TYPE_STRING);
+     * 原文：https://blog.csdn.net/qq_20200047/article/details/82223898
+     * 并且xssfCell.getCellTypeEnum()变成xssfCell.getCellType()
+     * CellType	                类型	        值
+     * CELL_TYPE_NUMERIC	    数值型	        0
+     * CELL_TYPE_STRING	        字符串型	    1
+     * CELL_TYPE_FORMULA	    公式型	        2
+     * CELL_TYPE_BLANK	        空值	        3
+     * CELL_TYPE_BOOLEAN	    布尔型	        4
+     * CELL_TYPE_ERROR	        错误	        5
+     * 原文:https://blog.csdn.net/nanshaowei/article/details/52815483
+     *
      * @param xssfCell 单元格
      * @return 字符串
      */
@@ -179,18 +214,27 @@ public class ReadExcel extends ExcelOperating {
         if (xssfCell == null) {
             return "";
         }
-        if (xssfCell.getCellTypeEnum() == CellType.NUMERIC) {
+
+        if (xssfCell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
             return String.valueOf(xssfCell.getNumericCellValue());
-        } else if (xssfCell.getCellTypeEnum() == CellType.BOOLEAN) {
+        } else if (xssfCell.getCellType() == Cell.CELL_TYPE_BOOLEAN) {
             return String.valueOf(xssfCell.getBooleanCellValue());
         } else {
             return xssfCell.getStringCellValue();
         }
+//        if (xssfCell.getCellTypeEnum() == CellType.NUMERIC) {
+//            return String.valueOf(xssfCell.getNumericCellValue());
+//        } else if (xssfCell.getCellTypeEnum() == CellType.BOOLEAN) {
+//            return String.valueOf(xssfCell.getBooleanCellValue());
+//        } else {
+//            return xssfCell.getStringCellValue();
+//        }
     }
 
     /**
      * 把一个Map中的所有键和值分别放到一个list中，
      * 再把这两个list整个放到一个大的list里面，即 [ [key1,key2,key3...] , [value1,value2,value3...] ]
+     *
      * @param map
      * @return
      */
@@ -199,8 +243,8 @@ public class ReadExcel extends ExcelOperating {
         List<String> key_list = new LinkedList<String>();
         List<String> value_list = new LinkedList<String>();
 
-        Set<Map.Entry<String,String>> set = map.entrySet();
-        Iterator<Map.Entry<String,String>> iter1 = set.iterator();
+        Set<Map.Entry<String, String>> set = map.entrySet();
+        Iterator<Map.Entry<String, String>> iter1 = set.iterator();
         while (iter1.hasNext()) {
             key_list.add(iter1.next().getKey());
         }
@@ -214,4 +258,6 @@ public class ReadExcel extends ExcelOperating {
         list.add(value_list);
         return list;
     }
+
+
 }
