@@ -1,6 +1,7 @@
 package app;
 
 
+import org.testng.annotations.AfterTest;
 import toolskit.tools.SystemOut;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -8,6 +9,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
+import java.util.Set;
 
 import static java.lang.Thread.sleep;
 
@@ -31,22 +33,29 @@ public class app {
         //  driver =  StartSystem.start();
         System.out.println("开始");
         try {
-            sleep(9000);
-            login();
-            sleep(6000);
+            sleep(10000);
+            Set<String> contextHandles = driver.getContextHandles();
+            for (String context : contextHandles) {
+                System.out.println("context" + context);
+                if(context.contains("contextWEBVIEW")){
+                    driver.context(context);
+                    System.out.println(driver.getPageSource());
+                }
+            }
+//            login();
+            sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
+
     //After test Annotation makes a java function to run every time after a TestNG test case
-    /*
     @AfterTest
-    public void afterTest(){
+    public void afterTest() {
         System.out.println("结束");
         //quit the driver
         driver.quit();
     }
-    */
 
 
     private void login() {
@@ -57,7 +66,7 @@ public class app {
             driver.findElementById("com.lianni.delivery.develop:id/edt_account").clear();
             driver.findElementById("com.lianni.delivery.develop:id/edt_account").sendKeys("11111");
             driver.hideKeyboard();
-        }catch (Exception e){
+        } catch (Exception e) {
             SystemOut.getStringOut(e.toString());
         }
     }
