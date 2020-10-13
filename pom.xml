@@ -12,7 +12,7 @@
 
     <!--jar架包版本号-->
     <properties>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <appium.version>3.3.0</appium.version>
         <driver.version>3.141.59</driver.version>
         <!--<driver.version>3.14.0</driver.version>-->
