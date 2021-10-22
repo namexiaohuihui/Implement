@@ -135,6 +135,16 @@
             <version>1.2.17</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.google.android/android -->
+        <!--    Call the API from the Settings menu：https://www.cnblogs.com/bluestorm/p/3665596.html    -->
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+            <version>4.1.1.4</version>
+            <scope>provided</scope>
+        </dependency>
+
+
     </dependencies>
 
 

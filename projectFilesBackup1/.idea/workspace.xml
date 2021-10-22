@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2a41ba70-32a3-43a6-aa3c-a0189bf6bfbd" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_android_android_4_1_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_java5_20_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_khronos_opengl_api_gl1_1_android_2_1_r1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xerces_xmlParserAPIs_2_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xpp3_xpp3_1_1_4c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_java5_17_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Implement.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Implement.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UiAutoTest/TestUi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/buyer/BuyerLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/buyer/BuyerLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/StartSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/StartSystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/app.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/app.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Interface" />
+        <option value="package-info" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\MavenRepository" />
+        <option name="mavenHome" value="D:\apache-maven" />
+        <option name="userSettingsFile" value="D:\apache-maven\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="createModuleGroups" value="true" />
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="11" />
+  </component>
+  <component name="ProjectId" id="1T5iwOCv3YdhudlnQjWEvm7cHF7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/Implement/src/main/java/wap/business/example/Signin.java" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553581209077" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
+    <property name="last_opened_file_path" value="D:/" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.593318" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Implement\src\main\resources" />
+      <recent name="E:\Implement\src\libs\mysqls" />
+      <recent name="E:\Implement\src\libs\js" />
+      <recent name="E:\Implement\src\libs\xlss" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Implement\src\main\java\source" />
+      <recent name="E:\Implement\src" />
+      <recent name="E:\Implement\src\main" />
+      <recent name="E:\Implement\src\main\java\common\tool\excelfile" />
+      <recent name="E:\Implement\src\main\java\content\file" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.AssignRedPackets">
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCase.Addition" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Implement" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="app" />
+      <option name="MAIN_CLASS_NAME" value="app.TestCase" />
+      <option name="METHOD_NAME" value="Addition" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BuyerLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="buyer.BuyerLogin" />
+      <module name="Implement" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="buyer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="app.app" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="hellowrod" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="backstage.hellowrod" />
+      <module name="Implement" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="backstage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AssignRedPackets" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Implement" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="backstage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="backstage" />
+      <option name="MAIN_CLASS_NAME" value="backstage.AssignRedPackets" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Implement" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="app" />
+      <option name="MAIN_CLASS_NAME" value="app.app" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Android JUnit.TestCase.Addition" />
+      <item itemvalue="Application.BuyerLogin" />
+      <item itemvalue="TestNG.app" />
+      <item itemvalue="Application.hellowrod" />
+      <item itemvalue="JUnit.AssignRedPackets" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AssignRedPackets" />
+        <item itemvalue="Application.hellowrod" />
+        <item itemvalue="Application.BuyerLogin" />
+        <item itemvalue="TestNG.app" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2a41ba70-32a3-43a6-aa3c-a0189bf6bfbd" name="Default" comment="" />
+      <created>1500272594876</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1500272594876</updated>
+      <workItem from="1557993970787" duration="423000" />
+      <workItem from="1559008075665" duration="57000" />
+      <workItem from="1597489226712" duration="62000" />
+      <workItem from="1598081975609" duration="207000" />
+    </task>
+    <task id="LOCAL-00001" summary="11">
+      <created>1500991203023</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1500991203023</updated>
+    </task>
+    <task id="LOCAL-00002" summary="学习一下io流">
+      <created>1500999135399</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1500999135399</updated>
+    </task>
+    <task id="LOCAL-00003" summary="添加了模式">
+      <created>1501149073406</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1501149073406</updated>
+    </task>
+    <task id="LOCAL-00004" summary="格式好乱，整理一下。">
+      <created>1505915537554</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1505915537554</updated>
+    </task>
+    <task id="LOCAL-00005" summary="格式好乱，整理一下。">
+      <created>1506179683248</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1506179683248</updated>
+    </task>
+    <task id="LOCAL-00006" summary="格式好乱，整理一下。">
+      <created>1506349484680</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1506349484680</updated>
+    </task>
+    <task id="LOCAL-00007" summary="格式好乱，整理一下。">
+      <created>1506530193530</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1506530193530</updated>
+    </task>
+    <task id="LOCAL-00008" summary="格式好乱，整理一下。">
+      <created>1507734056958</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1507734056958</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
+    <MESSAGE value="11" />
+    <MESSAGE value="学习一下io流" />
+    <MESSAGE value="添加了模式" />
+    <MESSAGE value="格式好乱，整理一下。" />
+    <option name="LAST_COMMIT_MESSAGE" value="格式好乱，整理一下。" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="453" y="125" key="FileChooserDialogImpl" timestamp="1606225785871">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="453" y="125" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606225785871" />
+    <state width="923" height="182" key="GridCell.Tab.0.bottom" timestamp="1606226870162">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="923" height="182" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606226870162" />
+    <state width="923" height="182" key="GridCell.Tab.0.center" timestamp="1606226870162">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="923" height="182" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1606226870162" />
+    <state width="923" height="182" key="GridCell.Tab.0.left" timestamp="1606226870162">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="923" height="182" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1606226870162" />
+    <state width="923" height="182" key="GridCell.Tab.0.right" timestamp="1606226870162">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="923" height="182" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606226870162" />
+    <state x="326" y="0" key="SettingsEditor" timestamp="1606226072452">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="326" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1606226072452" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand>
+      <path>
+        <item name="Implement" type="b2602c69:ProjectViewProjectNode" />
+        <item name="Implement" type="462c0819:PsiDirectoryNode" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+</project>
